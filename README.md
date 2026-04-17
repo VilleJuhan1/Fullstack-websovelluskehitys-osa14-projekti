@@ -14,7 +14,7 @@ The app itself will be a game that I already piloted in another course part. How
 - Kubernetes is installed on hardened VM hosts (free tier) using some lighter version, ie. k3s.
 - The Kubernetes environment has logging and monitoring tools.
 - Automation level is high (testing, CI/CD etc.)
-- The frontend, most likely a game of sorts, is written on React Native so that it can also be compiled into an Android App in a later increment.
+- The frontend is written on React Native so that it can also be compiled into an Android App in a later increment.
 - The backend uses GraphQL, which although not necessary, is chosen to showcase the course technologies.
 - Instead of javascript, the project will use typescript as a baseline.
 - A relational database will be used, but is not in focus
