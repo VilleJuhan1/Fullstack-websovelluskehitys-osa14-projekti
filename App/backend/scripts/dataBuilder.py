@@ -1,7 +1,8 @@
 import requests
 import json
 
-URL = "https://studies.cs.helsinki.fi/restcountries/api/all"
+# URL = "https://studies.cs.helsinki.fi/restcountries/api/all"
+URL = "https://restcountries.com/v3.1/all?fields=name,translations,flags,region"
 
 # This helper script fetches country data from the REST Countries API and saves it to a local JSON file.
 def main():
@@ -15,10 +16,12 @@ def main():
         name = country.get("name", {}).get("common")
         region = country.get("region")
         flag = country.get("flags", {}).get("png")
+        translation = country.get("translations", {}).get("fin", {}).get("common")
 
         if name and flag:
             filtered.append({
                 "name": name,
+                "translation": translation,
                 "region": region,
                 "flag": flag
             })
