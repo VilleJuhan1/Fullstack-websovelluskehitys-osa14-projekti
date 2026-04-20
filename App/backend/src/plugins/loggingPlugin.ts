@@ -1,12 +1,13 @@
 import { ApolloServerPlugin } from "@apollo/server";
 import { logger } from "../utils/logger";
 
+// A plugin to log GraphQL requests and errors using Pino
 export const loggingPlugin: ApolloServerPlugin = {
   async requestDidStart(requestContext) {
     const start = Date.now();
     const operationName = requestContext.request.operationName ?? "Unnamed";
 
-    logger.info({ operationName }, "➡️ Incoming request");
+    logger.info({ operationName }, "Incoming request");
 
     return {
       async didEncounterErrors(ctx) {
@@ -15,7 +16,7 @@ export const loggingPlugin: ApolloServerPlugin = {
             errors: ctx.errors,
             operationName,
           },
-          "❌ GraphQL errors",
+          "Request failed with GraphQL errors:",
         );
       },
 
@@ -27,7 +28,7 @@ export const loggingPlugin: ApolloServerPlugin = {
             operationName: ctx.operationName ?? "Unnamed",
             duration,
           },
-          "✅ Request completed",
+          "[x] Request completed:",
         );
       },
     };
