@@ -16,7 +16,6 @@ async function startServer() {
       resolvers,
       plugins: [loggingPlugin],
 
-      // Test change
       formatError: (formattedError, error) => {
         const graphQLError = error as GraphQLError;
 
@@ -26,7 +25,7 @@ async function startServer() {
             path: graphQLError.path,
             code: formattedError.extensions?.code,
           },
-          "GraphQL Error",
+          "GraphQL Error while starting the server:",
         );
 
         return {
@@ -44,19 +43,19 @@ async function startServer() {
 
     logger.info({ url, port: PORT }, "🚀 Server ready");
   } catch (error) {
-    logger.fatal(error, "❌ Failed to start server");
+    logger.fatal(error, "Failed to start server");
     process.exit(1);
   }
 }
 
 // Graceful shutdown
 process.on("SIGINT", () => {
-  logger.info("🛑 SIGINT received, shutting down");
+  logger.info("SIGINT received, shutting down");
   process.exit(0);
 });
 
 process.on("SIGTERM", () => {
-  logger.info("🛑 SIGTERM received, shutting down");
+  logger.info("SIGTERM received, shutting down");
   process.exit(0);
 });
 
