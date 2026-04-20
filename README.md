@@ -6,7 +6,7 @@ This repository is my thesis for the University of Helsinki [Fullstack Web Devel
 
 The app itself will be a game that I already piloted in another course part. However, as it was a mono repo container implementation using node and react, I need to review the whole code and refactor it into separate front and backends. The code can be used for multiple purposes but as an example, the aim of my game is to recognize the flag that is represented in a picture and choose the correct option from four possible candidates.
 
-## Initial requirements
+## Requirements
 
 - The infrastructure is deployed to OCI using IaaC (mainly Terraform and Ansible).
 - The OCI LZ is hardened and adheres to some CIS LVL standards.
