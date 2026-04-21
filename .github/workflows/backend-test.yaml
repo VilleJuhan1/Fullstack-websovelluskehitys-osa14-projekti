@@ -1,0 +1,45 @@
+name: Backend tests
+
+on:
+  push:
+    paths:
+      - 'App/backend/**'
+      - '.github/workflows/backend-test.yaml'
+  pull_request:
+    paths:
+      - 'App/backend/**'
+      - '.github/workflows/backend-test.yaml'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: App/backend
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Using Node 20 as standard for modern apps
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run linter
+        run: npm run lint
+
+      - name: Build Docker image
+        run: docker build -t backend-app .
+
+      - name: Run app in Docker container
+        run: docker run -d -p 4000:4000 --name backend-service backend-app
+        
+      - name: Wait for service to start
+        run: sleep 5
+
+      - name: Test queries
+        run: npm test
