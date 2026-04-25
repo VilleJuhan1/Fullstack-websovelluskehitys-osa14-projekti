@@ -9,6 +9,6 @@
 | April 23rd    | Planned the infrastructure layout for the OCI deployment        | 1,5           |
 | April 25th    | Continued planning and cut all non free-tier resources, generated terraform code for project LZ       | 2,5            |
 | April 25th    | Python virtual environment installation               | 1,5           |
-| April         |                                                       |               |
+| April 25th    | OCI-CLI configuration tested and instructed           | 1,5           |
 | April         |                                                       |               |
 | April         |                                                       |               |

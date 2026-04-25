@@ -27,7 +27,7 @@ variable "region" {
 variable "budget_amount" {
   description = "Monthly budget amount in tenancy currency to alert on (to prevent unexpected Free Tier charges)"
   type        = number
-  default     = 10 
+  default     = 1 
 }
 
 variable "project_name" {

@@ -6,9 +6,8 @@ The Terraform codebase was generated using Gemini 3.1 Pro and Antigravity IDE an
 
 ## Prerequisites
 
-- Terraform installed
-- OCI CLI installed and configured
-- OCI API key and config file set up
+- Terraform and OCI CLI installed and configured, refer to readme in ../venv/readme.md for instructions
+- OCI API key and config file set up, see above for instructions.
 
 ## Bootstrapping State (The "Chicken & Egg" Problem)
 
