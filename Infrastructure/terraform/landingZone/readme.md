@@ -6,8 +6,35 @@ The Terraform codebase was generated using Gemini 3.1 Pro and Antigravity IDE an
 
 ## Prerequisites
 
-- Terraform and OCI CLI installed and configured, refer to readme in ../venv/readme.md for instructions
+- Terraform and OCI CLI installed and configured, refer to readme in ../venv/readme.md for instructions.
 - OCI API key and config file set up, see above for instructions.
+- Local backend.conf and terraform.tfvars files created.
+
+### Templates for Terraform configuration and variables files
+
+backend.conf:
+```conf
+address       = "https://objectstorage.<region>.oraclecloud.com/p/<pre-authenticated-request-url>/n/<namespace>/b/<bucket-name>/o/terraform.tfstate"
+update_method = "PUT"
+```
+
+terraform.tfvars:
+```tfvars
+# -----------------------------------------------------------------------------
+# Authentication placeholders
+# -----------------------------------------------------------------------------
+tenancy_ocid     = "ocid1.tenancy.oc1..placeholder"
+user_ocid        = "ocid1.user.oc1..placeholder"
+fingerprint      = "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00"
+private_key_path = "~/.oci/oci_api_key.pem"
+region           = "eu-frankfurt-1"
+
+# -----------------------------------------------------------------------------
+# Tenancy Configuration
+# -----------------------------------------------------------------------------
+budget_amount    = 1 # This won't prevent costs, but will alert from them
+project_name     = "Example-project"
+```
 
 ## Bootstrapping State (The "Chicken & Egg" Problem)
 

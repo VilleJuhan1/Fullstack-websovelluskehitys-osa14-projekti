@@ -1,0 +1,33 @@
+name: Landing Zone creation via Terraform (only plan)
+
+on:
+  push:
+    paths:
+      - 'Infrastructure/terraform/landingZone/**'
+      - '.github/workflows/terraform-lz.yaml'
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+    env:
+      # Terraform automatically maps these to your variables
+      TF_VAR_tenancy_ocid:      ${{ secrets.OCI_TENANCY_OCID }}
+      TF_VAR_user_ocid:         ${{ secrets.OCI_USER_OCID }}
+      TF_VAR_fingerprint:       ${{ secrets.OCI_FINGERPRINT }}
+      TF_VAR_private_key:       ${{ secrets.OCI_PRIVATE_KEY }}
+      TF_VAR_region:            "eu-frankfurt-1" # Can be hardcoded or a secret
+      TF_VAR_budget_amount:     "1" # Example budget value, can be adjusted or made a secret
+      TF_VAR_project_name:      ${{ secrets.OCI_PROJECT_NAME }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: HashiCorp - Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Terraform Init
+              run: |
+                terraform init \
+                  -backend-config="address=${{ secrets.OCI_STATE_PAR_URL }}" \
+                  -backend-config="update_method=PUT"
+
+      - name: Terraform Plan
+        run: terraform plan

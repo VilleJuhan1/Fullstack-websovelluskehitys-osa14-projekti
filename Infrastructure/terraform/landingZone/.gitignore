@@ -3,3 +3,5 @@ terraform.tfstate.backup
 .terraform
 *.tfvars
 *.pem
+*.conf
+local/*
