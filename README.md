@@ -19,3 +19,10 @@ The app itself will be a game that I already piloted in another course part. How
 - Instead of javascript, the project will use typescript as a baseline.
 - A relational database will be used, but is not in focus
 - The architecture of the project is displayed on various levels in mermaid diagrams.
+
+## Use of AI
+
+In this project, I've used the following AI models for dialog and references mainly through VS-code Github Copilot and Gemini extensions:
+
+- Gemini 3.1 Pro
+- Claude Haiku 4.5
