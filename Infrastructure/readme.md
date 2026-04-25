@@ -1,9 +1,6 @@
 # Infrastructure
 
 The project will, hopefully, be deployed to OCI using free tier tenancy. Below are some initial plans on how to organize the assets there.
-## Tools
-
-To create the python virtual environment:
 
 ## Compartments
 ```text
@@ -11,7 +8,7 @@ To create the python virtual environment:
     ├── Tenancy Level Resources
     │    └── Cloud Guard, Events, Notifications, Flow Logs, IAM Policies, Budget (All Free Tier)
     │
-    └── Thesis-project (Parent Compartment)
+    └── Project compartment (Parent Compartment)
          ├── 1. Network (Child Compartment)
          │    └── Resources: VCN, Public Subnet, IGW, Route Tables, NSGs
          │
@@ -24,18 +21,18 @@ To create the python virtual environment:
 
 ## Resources
 
-The assets are divided into two categories, the ones created by the tenancy administrator in the initial phase (Tenancy level resources) and the project assets created by either the tenancy administrator or a service account (Thesis-project resources).
+The assets are divided into two categories, the ones created by the tenancy administrator in the initial phase (Tenancy level resources) and the project assets created by either the tenancy administrator or a service account (Project resources).
 
 ### Tenancy resources
 
 These are the foundational resources created by the tenancy administrator during the initial setup to establish the environment and security framework:
 
 - **Compartments:**
-  - `Thesis-project` (Parent Compartment)
+  - `Project compartment` (Parent Compartment)
   - Child Compartments: `Network`, `Compute`, `Security & Access`
 - **Identity and Access Management (IAM):**
   - Administrators Group
-  - Thesis-project admins group
+  - Project admins group
   - IAM Policies (e.g., Compartment Admin Policy for the service account)
 - **Security & Observability:**
   - Object storage bucket for backend.tf
@@ -44,9 +41,9 @@ These are the foundational resources created by the tenancy administrator during
   - Flow Logs
   - Budget
 
-### Thesis-project
+### Project resources
 
-These resources are created and managed strictly within the `Thesis-project` compartment scope, potentially by automated CI/CD pipelines or service accounts:
+These resources are created and managed strictly within the `Project compartment` scope, potentially by automated CI/CD pipelines or service accounts:
 
 - **Network:**
   - Virtual Cloud Network (VCN) - 10.0.0.0/16
@@ -72,15 +69,15 @@ As this is a solo project, there's not much need to fine-tune IAM policies on te
     ├── Administrators Group (Solo Developer)
     │    └── Full access to all tenancy resources
     │
-    └── Thesis-project admins group (Service Account)
+    └── Project admins group (Service Account)
          └── Compartment Admin Policy
-              └── Scoped access to 'Thesis-project' Compartment
+              └── Scoped access to 'Project compartment'
 ```
 
 ### Service account policies
 
 ```text
-Allow group ThesisProjectAdminsGroup to manage all-resources in compartment 'Thesis-project'
+Allow group ProjectAdminsGroup to manage all-resources in compartment 'Project compartment'
 ```
 
 ## Layout
