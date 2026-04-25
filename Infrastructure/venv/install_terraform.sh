@@ -10,7 +10,7 @@ BINARY_NAME="terraform_${TF_VERSION}_${OS}_${ARCH}.zip"
 CHECKSUM_FILE="terraform_${TF_VERSION}_SHA256SUMS"
 VENV_BIN="./oci-automation/bin"
 
-# 2. Ensure we are in a python virtual environment to prevent package conflicts
+# 2. Ensure the python virtual environment exists in the provided path (VENV_BIN)
 if [ ! -d "$VENV_BIN" ]; then
     echo "Error: Virtual environment directory '$VENV_BIN' not found."
     exit 1
