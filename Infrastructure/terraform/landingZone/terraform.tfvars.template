@@ -1,4 +1,7 @@
 # Generated with Gemini 3.1 Pro
+
+# This is a template file for the terraform.tfvars file than can be used with the project.
+
 # -----------------------------------------------------------------------------
 # Authentication placeholders
 # -----------------------------------------------------------------------------

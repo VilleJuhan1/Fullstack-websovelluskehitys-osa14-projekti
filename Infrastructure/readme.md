@@ -1,6 +1,9 @@
 # Infrastructure
 
 The project will, hopefully, be deployed to OCI using free tier tenancy. Below are some initial plans on how to organize the assets there.
+## Tools
+
+To create the python virtual environment:
 
 ## Compartments
 ```text

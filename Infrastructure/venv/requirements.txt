@@ -1,0 +1,4 @@
+# Requirements for Python virtual environment
+
+oci-cli
+ansible
