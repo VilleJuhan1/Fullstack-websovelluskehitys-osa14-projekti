@@ -1,0 +1,15 @@
+# Generated with Gemini 3.1 Pro
+# -----------------------------------------------------------------------------
+# Authentication placeholders
+# -----------------------------------------------------------------------------
+tenancy_ocid     = "ocid1.tenancy.oc1..placeholder"
+user_ocid        = "ocid1.user.oc1..placeholder"
+fingerprint      = "00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00"
+private_key_path = "~/.oci/oci_api_key.pem"
+region           = "eu-frankfurt-1"
+
+# -----------------------------------------------------------------------------
+# Tenancy Configuration
+# -----------------------------------------------------------------------------
+budget_amount    = 5 # 5 USD/EUR limit to catch non-free tier usage
+project_name     = "Thesis-project"

@@ -7,7 +7,7 @@
 | April 20th    | MVP for backend with logging                          | 2             |
 | April 21st    | Added a smoke test and a simple pipeline              | 2             |
 | April 23rd    | Planned the infrastructure layout for the OCI deployment        | 1,5           |
-| April         |                                                       |               |
+| April 25th    | Continued planning and cut all non free-tier resources, generated terraform code for project LZ            | 3            |
 | April         |                                                       |               |
 | April         |                                                       |               |
 | April         |                                                       |               |

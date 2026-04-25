@@ -32,9 +32,10 @@ These are the foundational resources created by the tenancy administrator during
   - Child Compartments: `Network`, `Compute`, `Security & Access`
 - **Identity and Access Management (IAM):**
   - Administrators Group
-  - Service Accounts & Pipelines Group
+  - Thesis-project admins group
   - IAM Policies (e.g., Compartment Admin Policy for the service account)
 - **Security & Observability:**
+  - Object storage bucket for backend.tf
   - OCI Cloud Guard
   - Events & Notifications
   - Flow Logs
@@ -68,7 +69,7 @@ As this is a solo project, there's not much need to fine-tune IAM policies on te
     ├── Administrators Group (Solo Developer)
     │    └── Full access to all tenancy resources
     │
-    └── Service Accounts & Pipelines Group
+    └── Thesis-project admins group (Service Account)
          └── Compartment Admin Policy
               └── Scoped access to 'Thesis-project' Compartment
 ```
@@ -76,7 +77,7 @@ As this is a solo project, there's not much need to fine-tune IAM policies on te
 ### Service account policies
 
 ```text
-Allow group ServiceAccountsGroup to manage all-resources in compartment 'Thesis-project'
+Allow group ThesisProjectAdminsGroup to manage all-resources in compartment 'Thesis-project'
 ```
 
 ## Layout
