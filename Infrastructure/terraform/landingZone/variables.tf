@@ -32,14 +32,10 @@ variable "region" {
   type        = string
 }
 
-variable "budget_amount" {
-  description = "Monthly budget amount in tenancy currency to alert on (to prevent unexpected Free Tier charges)"
-  type        = number
-  default     = 1 
-}
-
-variable "project_name" {
-  description = "The name of the project, used to label compartments, groups, and policies."
-  type        = string
-  default     = "Thesis-project"
+variable "projects" {
+  description = "A map of projects with their respective configurations."
+  type = map(object({
+    name          = string
+    budget_amount = number
+  }))
 }

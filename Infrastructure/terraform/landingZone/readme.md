@@ -10,7 +10,9 @@ The Terraform codebase was generated using Gemini 3.1 Pro and Antigravity IDE an
 - OCI API key and config file set up, see above for instructions.
 - Local backend.conf and terraform.tfvars files created.
 
-### Templates for Terraform configuration and variables files
+### Templates for Terraform configuration and variables files for local dev
+
+You need to create two files that you should also put immediately to your .gitignore file. Below are examples on the contents of these files.
 
 backend.conf:
 ```conf
@@ -32,8 +34,13 @@ region           = "eu-frankfurt-1"
 # -----------------------------------------------------------------------------
 # Tenancy Configuration
 # -----------------------------------------------------------------------------
-budget_amount    = 1 # This won't prevent costs, but will alert from them
-project_name     = "Example-project"
+# Defines the projects that will be created in the tenancy (multiple can be created with the same code)
+projects = {
+  "Thesis-project" = {
+    name          = "Thesis-project"
+    budget_amount = 1
+  }
+}
 ```
 
 ## Bootstrapping State (The "Chicken & Egg" Problem)
@@ -59,3 +66,7 @@ terraform init -backend-config=backend.conf
 terraform plan -var-file=terraform.tfvars
 terraform apply -var-file=terraform.tfvars
 ```
+
+## Using an automated or manually triggered CI/CD pipeline via Github actions
+
+--- Will be added later ---

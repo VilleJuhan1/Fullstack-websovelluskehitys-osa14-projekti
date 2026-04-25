@@ -3,28 +3,32 @@
 # Compartments
 # -----------------------------------------------------------------------------
 resource "oci_identity_compartment" "project" {
+  for_each       = var.projects
   compartment_id = var.tenancy_ocid
-  description    = "Parent compartment for the ${var.project_name} project"
-  name           = var.project_name
+  description    = "Parent compartment for the ${each.value.name} project"
+  name           = each.value.name
   enable_delete  = true
 }
 
 resource "oci_identity_compartment" "network" {
-  compartment_id = oci_identity_compartment.project.id
+  for_each       = var.projects
+  compartment_id = oci_identity_compartment.project[each.key].id
   description    = "Child compartment for Network resources"
   name           = "Network"
   enable_delete  = true
 }
 
 resource "oci_identity_compartment" "compute" {
-  compartment_id = oci_identity_compartment.project.id
+  for_each       = var.projects
+  compartment_id = oci_identity_compartment.project[each.key].id
   description    = "Child compartment for Compute resources"
   name           = "Compute"
   enable_delete  = true
 }
 
 resource "oci_identity_compartment" "security_access" {
-  compartment_id = oci_identity_compartment.project.id
+  for_each       = var.projects
+  compartment_id = oci_identity_compartment.project[each.key].id
   description    = "Child compartment for Security & Access resources"
   name           = "Security-and-Access"
   enable_delete  = true
@@ -34,29 +38,33 @@ resource "oci_identity_compartment" "security_access" {
 # Identity and Access Management (IAM)
 # -----------------------------------------------------------------------------
 resource "oci_identity_group" "project_admins" {
+  for_each       = var.projects
   compartment_id = var.tenancy_ocid
-  description    = "Service accounts and pipelines group for ${var.project_name}"
-  name           = "${replace(var.project_name, "-", "")}AdminsGroup"
+  description    = "Service accounts and pipelines group for ${each.value.name}"
+  name           = "${replace(each.value.name, "-", "")}AdminsGroup"
 }
 
 resource "oci_identity_policy" "project_admin_policy" {
+  for_each       = var.projects
   compartment_id = var.tenancy_ocid
-  description    = "Allows ${oci_identity_group.project_admins.name} to manage all resources in the ${var.project_name} compartment"
-  name           = "${replace(var.project_name, "-", "")}CompartmentAdminPolicy"
+  description    = "Allows ${oci_identity_group.project_admins[each.key].name} to manage all resources in the ${each.value.name} compartment"
+  name           = "${replace(each.value.name, "-", "")}CompartmentAdminPolicy"
   
   statements = [
-    "Allow group ${oci_identity_group.project_admins.name} to manage all-resources in compartment id ${oci_identity_compartment.project.id}"
+    "Allow group ${oci_identity_group.project_admins[each.key].name} to manage all-resources in compartment id ${oci_identity_compartment.project[each.key].id}"
   ]
 }
 
 # (Optional Placeholder) Service Account User for CI/CD
 resource "oci_identity_user" "github_actions_sa" {
+  for_each       = var.projects
   compartment_id = var.tenancy_ocid
-  description    = "Service Account for GitHub Actions Terraform CI/CD"
-  name           = "github-actions-sa"
+  description    = "Service Account for GitHub Actions Terraform CI/CD for ${each.value.name}"
+  name           = "github-actions-sa-${each.value.name}"
 }
 
 resource "oci_identity_user_group_membership" "github_actions_sa_membership" {
-  group_id = oci_identity_group.project_admins.id
-  user_id  = oci_identity_user.github_actions_sa.id
+  for_each = var.projects
+  group_id = oci_identity_group.project_admins[each.key].id
+  user_id  = oci_identity_user.github_actions_sa[each.key].id
 }

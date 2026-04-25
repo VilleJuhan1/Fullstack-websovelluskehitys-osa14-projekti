@@ -20,7 +20,7 @@ provider "oci" {
   fingerprint      = var.fingerprint
   region           = var.region
 
-  # If var.private_key is null, OCI looks at private_key_path (local dev).
+  # If var.private_key is null, OCI looks at private_key_path (local dev)
   private_key      = var.private_key
   private_key_path = var.private_key_path
 }
