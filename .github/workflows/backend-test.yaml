@@ -5,13 +5,15 @@ on:
     paths:
       - 'App/backend/**'
       - '.github/workflows/backend-test.yaml'
-  pull_request:
-    paths:
-      - 'App/backend/**'
-      - '.github/workflows/backend-test.yaml'
+#  pull_request:
+#    paths:
+#      - 'App/backend/**'
+#      - '.github/workflows/backend-test.yaml'
 
 jobs:
   build-and-test:
+    # Only run this job if the commit messages contain '#backend-test'
+    if: contains(toJSON(github.event.commits.*.message), '#backend-test')
     runs-on: ubuntu-latest
     defaults:
       run:

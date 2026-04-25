@@ -1,5 +1,3 @@
-
-
 ### 1. Network overlay for USER access to app
 
 ```mermaid
