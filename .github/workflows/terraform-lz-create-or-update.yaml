@@ -6,6 +6,8 @@ on:
       - 'Infrastructure/terraform/landingZone/**'
       - '.github/workflows/terraform-lz.yaml'
 
+# For later: Add a functionality that applies the plan when it has been reviewed and is merged to main
+
 jobs:
   terraform:
     # Only run this job if the commit messages contain '#lz'

@@ -82,4 +82,4 @@ Allow group ProjectAdminsGroup to manage all-resources in compartment 'Project c
 
 ## Layout
 
-The architectural layout is shown in a separate file here.
+The architectural layout is shown in a separate file [here](layout.md).

@@ -1,4 +1,5 @@
 ---
+# Not yet tested, just a template for future use.
 name: Destroy Landing Zone via Terraform
 
 on:
