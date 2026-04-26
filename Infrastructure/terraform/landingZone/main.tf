@@ -64,6 +64,17 @@ resource "oci_identity_user" "github_actions_sa" {
   email          = each.value.service_account_email
 }
 
+# Restrict the service account to only use API keys (disables console login and password enforcement)
+resource "oci_identity_user_capabilities_management" "github_actions_sa_capabilities" {
+  for_each                     = var.projects
+  user_id                      = oci_identity_user.github_actions_sa[each.key].id
+  can_use_api_keys             = true
+  can_use_auth_tokens          = false
+  can_use_console_password     = false
+  can_use_customer_secret_keys = false
+  can_use_smtp_credentials     = false
+}
+
 resource "oci_identity_user_group_membership" "github_actions_sa_membership" {
   for_each = var.projects
   group_id = oci_identity_group.project_admins[each.key].id

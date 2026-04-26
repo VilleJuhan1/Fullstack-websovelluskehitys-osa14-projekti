@@ -18,6 +18,7 @@ resource "oci_budget_alert_rule" "project_budget_alert" {
   threshold      = 100
   threshold_type = "PERCENTAGE"
   message        = "Forecasted to exceed the ${each.value.budget_amount} monthly budget for ${each.value.name}."
+  recipients     = each.value.service_account_email
 }
 
 # -----------------------------------------------------------------------------
@@ -27,6 +28,15 @@ resource "oci_ons_notification_topic" "alerts" {
   for_each       = var.projects
   compartment_id = oci_identity_compartment.security_access[each.key].id
   name           = "${replace(each.value.name, "-", "")}Alerts"
+}
+
+# Subscribe the project's service account email to the alerts topic
+resource "oci_ons_subscription" "alerts_subscription" {
+  for_each       = var.projects
+  compartment_id = oci_identity_compartment.security_access[each.key].id
+  endpoint       = each.value.service_account_email
+  protocol       = "EMAIL"
+  topic_id       = oci_ons_notification_topic.alerts[each.key].id
 }
 
 # Event Rule to trigger on specific actions like instance termination
