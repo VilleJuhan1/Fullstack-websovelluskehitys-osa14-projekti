@@ -40,7 +40,7 @@ output "landing_zone_state_backend_url" {
 # Project State Buckets
 # -----------------------------------------------------------------------------
 # Create the Object Storage bucket for storing project-specific terraform.tfstate
-resource "oci_objectstorage_bucket" "terraform_state" {
+resource "oci_objectstorage_bucket" "project_terraform_state" {
   for_each       = var.projects
   # Placing the bucket in the Security & Access compartment for strict control
   compartment_id = oci_identity_compartment.security_access[each.key].id
@@ -54,10 +54,10 @@ resource "oci_objectstorage_bucket" "terraform_state" {
 }
 
 # Automatically generate the Pre-Authenticated Request (PAR) for the state file
-resource "oci_objectstorage_preauthrequest" "terraform_state_par" {
+resource "oci_objectstorage_preauthrequest" "project_terraform_state_par" {
   for_each     = var.projects
   access_type  = "ObjectReadWrite"
-  bucket       = oci_objectstorage_bucket.terraform_state[each.key].name
+  bucket       = oci_objectstorage_bucket.project_terraform_state[each.key].name
   name         = "${each.value.name}-terraform-state-par"
   namespace    = data.oci_objectstorage_namespace.tenancy_namespace.namespace
   # Setting an expiration far in the future (adjust as needed for security policies)
@@ -69,7 +69,7 @@ resource "oci_objectstorage_preauthrequest" "terraform_state_par" {
 output "terraform_state_backend_urls" {
   description = "The secret PAR URLs to use for the HTTP backend for each project. Save this as a GitHub Secret (e.g., OCI_TF_STATE_PAR)."
   value       = {
-    for key, proj in var.projects : key => "https://objectstorage.${var.region}.oraclecloud.com${oci_objectstorage_preauthrequest.terraform_state_par[key].access_uri}"
+    for key, proj in var.projects : key => "https://objectstorage.${var.region}.oraclecloud.com${oci_objectstorage_preauthrequest.project_terraform_state_par[key].access_uri}"
   }
   sensitive   = true
 }

@@ -55,7 +55,7 @@ resource "oci_identity_policy" "project_admin_policy" {
   ]
 }
 
-# (Optional Placeholder) Service Account User for CI/CD
+# Service Account User for CI/CD
 resource "oci_identity_user" "github_actions_sa" {
   for_each       = var.projects
   compartment_id = var.tenancy_ocid

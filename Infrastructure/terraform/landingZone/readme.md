@@ -51,11 +51,11 @@ Because this module creates the Object Storage bucket intended to hold its own s
 1. Comment out the `backend "http" {}` block in `providers.tf`.
 2. Run `terraform init` to initialize the project with local state.
 3. Run `terraform apply -var-file=terraform.tfvars` to create the tenancy resources, which will also provision your new state bucket.
-4. Go to the OCI Console, locate the new bucket (named `<project_name>-terraform-state`) in your `Security-and-Access` compartment.
-5. Create a Pre-Authenticated Request (PAR) for the bucket, making sure to grant **Read/Write** permissions.
-6. Add the PAR URL to your `backend.conf` file as per the template.
-7. Re-enable the `backend "http" {}` block in `providers.tf`.
-8. Run `terraform init -backend-config=backend.conf -migrate-state` and say `yes` to push your local state into the remote bucket!
+4. Run `terraform output landing_zone_state_backend_url` to get the PAR URL for the landing zone state bucket.
+5. Add the PAR URL to your local `backend.conf` file as per the template.
+6. Re-enable the `backend "http" {}` block in `providers.tf`.
+7. Run `terraform init -backend-config=backend.conf -migrate-state` and say `yes` to push your local state into the remote bucket!
+8. Save the PAR URL as a Github secret named `TF_VAR_landing_zone_state_backend_url`.
 
 ## Regular Usage
 
@@ -70,3 +70,11 @@ terraform apply -var-file=terraform.tfvars
 ## Using an automated or manually triggered CI/CD pipeline via Github actions
 
 --- Will be added later ---
+
+## Removing the Tenancy Infrastructure
+
+To remove the tenancy infrastructure, run the following commands:
+
+```bash
+terraform destroy -var-file=terraform.tfvars
+```

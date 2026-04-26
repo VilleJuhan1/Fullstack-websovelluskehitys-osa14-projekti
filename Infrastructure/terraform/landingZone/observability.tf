@@ -21,16 +21,15 @@ resource "oci_budget_alert_rule" "project_budget_alert" {
 }
 
 # -----------------------------------------------------------------------------
-# Notifications & Events (Placeholders)
+# Notifications & Events
 # -----------------------------------------------------------------------------
 resource "oci_ons_notification_topic" "alerts" {
   for_each       = var.projects
   compartment_id = oci_identity_compartment.security_access[each.key].id
-  # Remove hyphens for valid ONS topic name if needed, or keep standard 
   name           = "${replace(each.value.name, "-", "")}Alerts"
 }
 
-# (Placeholder) Event Rule to trigger on specific actions like instance termination
+# Event Rule to trigger on specific actions like instance termination
 resource "oci_events_rule" "security_events" {
   for_each       = var.projects
   compartment_id = oci_identity_compartment.security_access[each.key].id
