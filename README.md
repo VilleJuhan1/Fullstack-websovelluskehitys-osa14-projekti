@@ -4,7 +4,7 @@ This repository is my showcase project for the University of Helsinki [Fullstack
 
 ## The App
 
-The app itself will be a game that I already piloted in another course part. However, as it was a mono repo container implementation using node and react, I need to review the whole code and refactor it into separate front- and backends. The code can be used as a game engine for multiple purposes but as an example, the aim of my game is to recognize the flag that is represented in a picture and choose the correct country from the given four possible countries.
+The app itself will be a game that I already piloted in another course part. However, as it was a mono repo container implementation using node and react, I need to review the whole code and refactor it into separate front- and backends. The code can be used as a game engine for multiple purposes but as an example, the aim of my game is to recognize the flag that is represented in a picture and choose the correct country from the given four possible options.
 
 ## Requirements
 
@@ -23,7 +23,7 @@ The app itself will be a game that I already piloted in another course part. How
 
 ## Use of AI
 
-In this project, I've used the following AI models for dialog and references mainly through VS Code's GitHub Copilot and Gemini extensions. Also Google Antigravity was piloted in the context of this project. LLM models that have been used in the project are:
+In this project, I've used the following AI models for dialog and references mainly through VS Code's GitHub Copilot and Gemini extensions. Google Antigravity was also piloted in the context of this project. LLM models that have been used in the project are:
 
 - Gemini 3.1 Pro
 - Claude Haiku 4.5

@@ -11,7 +11,7 @@ terraform {
   
   # State is stored remotely to allow CI/CD to access it
   # Initialize with: terraform init -backend-config=backend.conf
-  #backend "http" {}
+  backend "http" {}
 }
 
 provider "oci" {

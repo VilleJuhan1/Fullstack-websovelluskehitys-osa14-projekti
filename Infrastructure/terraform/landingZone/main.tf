@@ -61,6 +61,7 @@ resource "oci_identity_user" "github_actions_sa" {
   compartment_id = var.tenancy_ocid
   description    = "Service Account for GitHub Actions Terraform CI/CD for ${each.value.name}"
   name           = "github-actions-sa-${each.value.name}"
+  email          = each.value.service_account_email
 }
 
 resource "oci_identity_user_group_membership" "github_actions_sa_membership" {

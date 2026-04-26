@@ -35,7 +35,8 @@ variable "region" {
 variable "projects" {
   description = "A map of projects with their respective configurations."
   type = map(object({
-    name          = string
-    budget_amount = number
+    name                  = string
+    budget_amount         = number
+    service_account_email = string
   }))
 }

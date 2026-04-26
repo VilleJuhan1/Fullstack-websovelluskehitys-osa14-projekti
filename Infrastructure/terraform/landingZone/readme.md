@@ -37,8 +37,9 @@ region           = "eu-frankfurt-1"
 # Defines the projects that will be created in the tenancy (multiple can be created with the same code)
 projects = {
   "Example-project" = {
-    name          = "Example-project"
-    budget_amount = 1
+    name                  = "Example-project"
+    budget_amount         = 1
+    service_account_email = "placeholder" # Required string for SAs, I'm using a temporary address/alias in Protonmail for this. 
   }
 }
 ```
@@ -69,7 +70,7 @@ terraform apply -var-file=terraform.tfvars
 
 ## Using an automated or manually triggered CI/CD pipeline via Github actions
 
---- Will be added later ---
+When creating the service account via Terraform, we didn't set the API key in the same action. This means that the GitHub action will not be able to authenticate with OCI. To fix this, you will need to manually create an API key for the service account in the OCI Console and add it to the GitHub secrets. This is just a safety measure and gives some more granular control over the API key expiration etc. You can find the service account user in the OCI Console under "Identity & Security" -> "Identity" -> "Users" -> "github-actions-sa-`project name`" -> "API Keys".
 
 ## Removing the Tenancy Infrastructure
 
