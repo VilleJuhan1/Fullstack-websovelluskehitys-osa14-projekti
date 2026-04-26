@@ -74,8 +74,23 @@ When creating the service account via Terraform, we didn't set the API key in th
 
 ## Removing the Tenancy Infrastructure
 
-To remove the tenancy infrastructure, run the following commands:
+As we store the terraform state to OCI, we need to ensure that we have the correct backend configuration before we can destroy the resources. We can't destroy the object storage bucket until we have migrated the state away from it. 
 
 ```bash
+# Ensure the terraform state is stored in the OCI Object Storage bucket. 
+
+# Remove the local files
+rm -rf .terraform
+rm terraform.tfstate
+rm terraform.tfstate.backup
+
+# Initialize the backend from the Object Storage
+terraform init -backend-config=backend.conf
+
+# Migrate state from the remote backend to a local backend.
+# Terraform will prompt you to confirm the migration.
+terraform init -migrate-state
+
+# Then run the destroy command
 terraform destroy -var-file=terraform.tfvars
 ```
