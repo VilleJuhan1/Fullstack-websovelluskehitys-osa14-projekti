@@ -5,13 +5,13 @@ terraform {
   required_providers {
     oci = {
       source  = "oracle/oci"
-      version = "~> 5.0"
+      version = ">= 6.0.0"
     }
   }
   
   # State is stored remotely to allow CI/CD to access it
   # Initialize with: terraform init -backend-config=backend.conf
-  backend "http" {}
+  #backend "http" {}
 }
 
 provider "oci" {

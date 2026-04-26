@@ -36,8 +36,8 @@ region           = "eu-frankfurt-1"
 # -----------------------------------------------------------------------------
 # Defines the projects that will be created in the tenancy (multiple can be created with the same code)
 projects = {
-  "Thesis-project" = {
-    name          = "Thesis-project"
+  "Example-project" = {
+    name          = "Example-project"
     budget_amount = 1
   }
 }
