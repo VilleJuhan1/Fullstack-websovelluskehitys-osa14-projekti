@@ -12,3 +12,14 @@
 | April 25th    | OCI-CLI configuration tested and instructed           | 1,5           |
 | April 25th    | Refactored the LZ terraform code to account multiple projects and created a github action to deploy (or plan atleast for now)    | 1,5           |
 | April 26th    | Fixed the code so that the actual terraform commands can be run and did some other minor changes | 2            |
+| April 26th    | Created the LZ resources, made some changes ie. service account privileges. Github pipeline was tested | 2 |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
