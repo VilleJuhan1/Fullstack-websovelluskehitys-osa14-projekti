@@ -13,11 +13,12 @@ jobs:
         working-directory: Infrastructure/terraform/landingZone
     env:
       TF_VAR_tenancy_ocid:      ${{ secrets.OCI_TENANCY_OCID }}
-      TF_VAR_user_ocid:         ${{ secrets.OCI_USER_OCID }}
-      TF_VAR_fingerprint:       ${{ secrets.OCI_FINGERPRINT }}
-      TF_VAR_private_key:       ${{ secrets.OCI_PRIVATE_KEY }}
-      TF_VAR_region:            ${{ secrets.OCI_REGION }}
-      TF_VAR_projects:          ${{ secrets.OCI_PROJECTS }}
+      TF_VAR_user_ocid:         ${{ secrets.OCI_LZ_USER_OCID }}
+      TF_VAR_fingerprint:       ${{ secrets.OCI_LZ_FINGERPRINT }}
+      TF_VAR_private_key:       ${{ secrets.OCI_LZ_PRIVATE_KEY }}
+      TF_VAR_region:            ${{ secrets.OCI_LZ_REGION }}
+      TF_VAR_projects:          ${{ secrets.OCI_LZ_PROJECTS }}
+      TF_VAR_state_par_url:     ${{ secrets.OCI_LZ_STATE_PAR_URL }}
     steps:
       - uses: actions/checkout@v4
       
@@ -27,7 +28,7 @@ jobs:
       - name: Terraform Init
         run: |
           terraform init \
-            -backend-config="address=${{ secrets.OCI_STATE_PAR_URL }}" \
+            -backend-config="address=${{ secrets.OCI_LZ_STATE_PAR_URL }}" \
             -backend-config="update_method=PUT"
 
       - name: Terraform Destroy
