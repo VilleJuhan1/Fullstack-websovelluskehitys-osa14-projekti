@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'Infrastructure/terraform/landingZone/**'
-      - '.github/workflows/terraform-lz.yaml'
+      - '.github/workflows/terraform-lz-create-or-update.yaml'
 
 # For later: Add a functionality that applies the plan when it has been reviewed and is merged to main
 
@@ -18,6 +18,7 @@ jobs:
         working-directory: Infrastructure/terraform/landingZone
     env:
       # Terraform automatically maps these to your variables
+      # As this is Tenancy level configuration, we need to use tenancy admin level access
       TF_VAR_tenancy_ocid:      ${{ secrets.OCI_TENANCY_OCID }}
       TF_VAR_user_ocid:         ${{ secrets.OCI_LZ_USER_OCID }}
       TF_VAR_fingerprint:       ${{ secrets.OCI_LZ_FINGERPRINT }}

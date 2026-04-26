@@ -1,5 +1,5 @@
 ---
-# Not yet tested, just a template for future use.
+# Not yet tested, just a template and some ideas for future use.
 name: Destroy Landing Zone via Terraform
 
 on:
@@ -30,6 +30,9 @@ jobs:
           terraform init \
             -backend-config="address=${{ secrets.OCI_LZ_STATE_PAR_URL }}" \
             -backend-config="update_method=PUT"
+
+      - name: Migrate state to local backend
+        run: terraform init -migrate-state
 
       - name: Terraform Destroy
         run: terraform destroy -auto-approve
