@@ -49,6 +49,7 @@ These resources are created and managed strictly within the `Project compartment
   - Virtual Cloud Network (VCN) - 10.0.0.0/16
   - Public Subnet (DMZ) - 10.0.1.0/24
   - Internet Gateway (IGW)
+  - Private Subnet (Application) - 10.0.2.0/24
   - Route Tables & Network Security Groups (NSGs)
 - **Compute:**
   - VM 1: k3s Server/Master (Ampere A1 - Free Tier)
