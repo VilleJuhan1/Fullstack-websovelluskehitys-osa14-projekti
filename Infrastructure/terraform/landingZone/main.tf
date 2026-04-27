@@ -51,7 +51,8 @@ resource "oci_identity_policy" "project_admin_policy" {
   name           = "${replace(each.value.name, "-", "")}CompartmentAdminPolicy"
   
   statements = [
-    "Allow group ${oci_identity_group.project_admins[each.key].name} to manage all-resources in compartment id ${oci_identity_compartment.project[each.key].id}"
+    "Allow group ${oci_identity_group.project_admins[each.key].name} to manage all-resources in compartment id ${oci_identity_compartment.project[each.key].id}",
+    "Allow group ${oci_identity_group.project_admins[each.key].name} to inspect compartments in tenancy"
   ]
 }
 

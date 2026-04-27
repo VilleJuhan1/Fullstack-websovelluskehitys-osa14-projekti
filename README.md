@@ -4,9 +4,11 @@ This repository is my showcase project for the University of Helsinki [Fullstack
 
 ## The App
 
-The app itself will be a game that I already piloted in another course part. However, as it was a mono repo container implementation using node and react, I need to review the whole code and refactor it into separate front- and backends. The code can be used as a game engine for multiple purposes but as an example, the aim of my game is to recognize the flag that is represented in a picture and choose the correct country from the given four possible options.
+The app itself is a fairly simple game, where the user tries to guess the correct country based on a flag. It will also include some gamification elements, such as high scores, streaks and levels, to make it more engaging. The app will contain a free version, which is limited in features and content, and a premium version, which unlocks all features and content. Users can upgrade their account to premium by making a payment through a mock payment provider.
 
-## Requirements
+There are three main parts of the project: Frontend (React Native), Backend (GraphQL) and Infrastructure (Terraform, Ansible). The app will be deployed in a kubernetes cluster hosted on Oracle Cloud Infrastructure (OCI). Some cloud services are also used, such as a network load balancer, but most components are built from scratch. Ie. OKE will not be used, but instead k3s will be installed on top of compute instances that are provisioned using Terraform and and configured using Ansible.
+
+## Initial requirements
 
 - The infrastructure is deployed to Oracle Cloud Infrastructure (OCI) using IaaC (mainly Terraform and Ansible).
 - The OCI Landing Zone is hardened and adheres to some Common Internet Security (CIS) Benchmarks.

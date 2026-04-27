@@ -2,3 +2,5 @@
 
 oci-cli
 ansible
+oci
+kubernetes

@@ -8,6 +8,14 @@ terraform {
       source  = "oracle/oci"
       version = ">= 6.0.0"
     }
+    tls = {
+      source  = "hashicorp/tls"
+      version = ">= 4.0.0"
+    }
+    local = {
+      source  = "hashicorp/local"
+      version = ">= 2.0.0"
+    }
   }
   
   # State is stored remotely in the project-specific bucket (created by Landing Zone)
