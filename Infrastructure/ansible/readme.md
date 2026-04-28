@@ -16,7 +16,7 @@ terraform apply -var-file=./local/terraform.tfvars
 We use a script to automatically interact with the OCI CLI, create the required Bastion sessions, and open local SSH tunnels on your laptop.
 ```bash
 cd ../scripts
-./create_tunnels.sh
+./create_tunnels.py
 ```
 This script will prompt you for your public key, create the tunnels in the background, and generate an `inventory.local.ini` file for Ansible.
 

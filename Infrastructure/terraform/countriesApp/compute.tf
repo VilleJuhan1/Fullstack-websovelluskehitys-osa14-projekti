@@ -31,6 +31,16 @@ data "oci_core_images" "ubuntu_arm" {
   sort_order               = "DESC"
 }
 
+# Get the latest Ubuntu 24.04 x86_64 image (for paid instance workaround)
+data "oci_core_images" "ubuntu_x86" {
+  compartment_id           = var.tenancy_ocid
+  operating_system         = "Canonical Ubuntu"
+  operating_system_version = "24.04"
+  shape                    = "VM.Standard.E4.Flex"
+  sort_by                  = "TIMECREATED"
+  sort_order               = "DESC"
+}
+
 # -----------------------------------------------------------------------------
 # K3s Master Node (Primary VNIC in Private Subnet)
 # -----------------------------------------------------------------------------
@@ -38,16 +48,24 @@ resource "oci_core_instance" "k3s_master" {
   compartment_id      = data.oci_identity_compartments.compute.compartments[0].id
   availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   display_name        = "${var.project_name}-k3s-master"
-  shape               = "VM.Standard.A1.Flex"
+  # --- FREE TIER ARM SPECS ---
+  #shape               = "VM.Standard.A1.Flex"
+  #shape_config {
+  #  ocpus         = 1
+  #  memory_in_gbs = 6
+  #}
 
+  # --- PAID TIER (Temporary Workaround) ---
+  shape               = "VM.Standard.A2.Flex"
   shape_config {
-    ocpus         = 2
-    memory_in_gbs = 12
+    ocpus         = 1
+    memory_in_gbs = 6
   }
 
   source_details {
     source_type             = "image"
     source_id               = data.oci_core_images.ubuntu_arm.images[0].id
+    # source_id               = data.oci_core_images.ubuntu_x86.images[0].id
     boot_volume_size_in_gbs = 50
   }
 
@@ -81,16 +99,24 @@ resource "oci_core_instance" "k3s_worker" {
   compartment_id      = data.oci_identity_compartments.compute.compartments[0].id
   availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   display_name        = "${var.project_name}-k3s-worker"
-  shape               = "VM.Standard.A1.Flex"
+  # --- FREE TIER ARM SPECS ---
+  #shape               = "VM.Standard.A1.Flex"
+  #shape_config {
+  #  ocpus         = 1
+  #  memory_in_gbs = 6
+  #}
 
+  # --- PAID TIER (Temporary Workaround) ---
+  shape               = "VM.Standard.A2.Flex"
   shape_config {
-    ocpus         = 2
-    memory_in_gbs = 12
+    ocpus         = 1
+    memory_in_gbs = 6
   }
 
   source_details {
     source_type             = "image"
     source_id               = data.oci_core_images.ubuntu_arm.images[0].id
+    # source_id               = data.oci_core_images.ubuntu_x86.images[0].id
     boot_volume_size_in_gbs = 50
   }
 

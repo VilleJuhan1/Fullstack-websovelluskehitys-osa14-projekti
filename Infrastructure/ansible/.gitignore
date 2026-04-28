@@ -1,2 +1,2 @@
-inventory.local.ini
+inventory.*
 ansible_key.pem

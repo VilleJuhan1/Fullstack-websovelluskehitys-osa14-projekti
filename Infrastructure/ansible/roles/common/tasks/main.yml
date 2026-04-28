@@ -1,16 +1,32 @@
 ---
 # 1. We must ensure the secondary VNIC (Public Subnet) is active and has an IP address.
 # OCI Ubuntu images don't always auto-configure hot-plugged secondary interfaces.
-- name: Configure secondary VNIC for outbound internet access
+- name: Determine secondary interface name
+  set_fact:
+    secondary_iface: "{{ (ansible_interfaces | reject('equalto', 'lo') | reject('equalto', ansible_default_ipv4.interface) | list | sort)[0] }}"
+
+- name: Clean up any misconfigured netplan files
+  shell: rm -f /etc/netplan/99-*.yaml
+
+- name: Create Netplan configuration for secondary VNIC
+  copy:
+    dest: "/etc/netplan/99-{{ secondary_iface }}.yaml"
+    mode: '0600'
+    content: |
+      network:
+        version: 2
+        ethernets:
+          {{ secondary_iface }}:
+            dhcp4: true
+            dhcp4-overrides:
+              route-metric: 50
+  register: netplan_config
+
+- name: Apply Netplan and wait for DHCP
   shell: |
-    # Find the secondary interface (excluding loopback 'lo' and primary 'ens3' or 'enp0s3')
-    INF=$(ip -o link show | awk -F': ' '{print $2}' | grep -vE 'lo|ens3|enp0s3' | head -n1)
-    if [ ! -z "$INF" ]; then
-      # Bring it up and request DHCP (which also updates the default gateway to the public subnet!)
-      ip link set dev $INF up
-      dhclient $INF
-    fi
-  ignore_errors: yes
+    netplan apply
+    sleep 5
+  when: netplan_config.changed
 
 - name: Wait for internet connectivity (ping 8.8.8.8)
   command: ping -c 1 8.8.8.8

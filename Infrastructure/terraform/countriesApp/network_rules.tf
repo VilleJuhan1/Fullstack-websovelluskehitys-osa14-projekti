@@ -9,7 +9,15 @@
 resource "oci_core_security_list" "empty_sl" {
   compartment_id = data.oci_identity_compartments.security.compartments[0].id
   vcn_id         = oci_core_vcn.project_vcn.id
-  display_name   = "${var.project_name}-empty-sl"
+  display_name   = "${var.project_name}-base-sl"
+
+  # We must allow egress at the subnet level so the OCI Bastion Service 
+  # can reach the VMs. Ingress is still locked down by NSGs.
+  egress_security_rules {
+    destination      = oci_core_vcn.project_vcn.cidr_block
+    destination_type = "CIDR_BLOCK"
+    protocol         = "all"
+  }
 }
 
 # -----------------------------------------------------------------------------
