@@ -17,3 +17,5 @@ terraform init -backend-config=./backend.conf # use your local path
 # To apply the terraform code, use the following command:
 terraform apply -var-file=./terraform.tfvars # use your local path
 ```
+
+**NOTE! **

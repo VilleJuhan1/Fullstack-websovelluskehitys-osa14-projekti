@@ -93,3 +93,9 @@ output "nlb_public_ip" {
   description = "The public IP address of the Network Load Balancer"
   value       = [for ip in oci_network_load_balancer_network_load_balancer.public_nlb.ip_addresses : ip.ip_address if ip.is_public == true]
 }
+
+# Output the Bastion ID for automation scripts
+output "bastion_id" {
+  description = "The OCID of the Bastion Service"
+  value       = oci_bastion_bastion.project_bastion.id
+}

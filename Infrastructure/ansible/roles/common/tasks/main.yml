@@ -1,0 +1,25 @@
+---
+# 1. We must ensure the secondary VNIC (Public Subnet) is active and has an IP address.
+# OCI Ubuntu images don't always auto-configure hot-plugged secondary interfaces.
+- name: Configure secondary VNIC for outbound internet access
+  shell: |
+    # Find the secondary interface (excluding loopback 'lo' and primary 'ens3' or 'enp0s3')
+    INF=$(ip -o link show | awk -F': ' '{print $2}' | grep -vE 'lo|ens3|enp0s3' | head -n1)
+    if [ ! -z "$INF" ]; then
+      # Bring it up and request DHCP (which also updates the default gateway to the public subnet!)
+      ip link set dev $INF up
+      dhclient $INF
+    fi
+  ignore_errors: yes
+
+- name: Wait for internet connectivity (ping 8.8.8.8)
+  command: ping -c 1 8.8.8.8
+  register: ping_result
+  until: ping_result.rc == 0
+  retries: 5
+  delay: 5
+
+- name: Update apt cache
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600

@@ -10,7 +10,7 @@ resource "tls_private_key" "ansible_ssh_key" {
 
 resource "local_sensitive_file" "ansible_private_key" {
   content         = tls_private_key.ansible_ssh_key.private_key_pem
-  filename        = "${path.module}/local/ansible_key.pem"
+  filename        = "${path.module}/../../ansible/ansible_key.pem"
   file_permission = "0600"
 }
 
@@ -36,7 +36,7 @@ data "oci_core_images" "ubuntu_arm" {
 # -----------------------------------------------------------------------------
 resource "oci_core_instance" "k3s_master" {
   compartment_id      = data.oci_identity_compartments.compute.compartments[0].id
-  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
+  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[1].name
   display_name        = "${var.project_name}-k3s-master"
   shape               = "VM.Standard.A1.Flex"
 
@@ -79,7 +79,7 @@ resource "oci_core_vnic_attachment" "master_public_vnic" {
 # -----------------------------------------------------------------------------
 resource "oci_core_instance" "k3s_worker" {
   compartment_id      = data.oci_identity_compartments.compute.compartments[0].id
-  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
+  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[1].name
   display_name        = "${var.project_name}-k3s-worker"
   shape               = "VM.Standard.A1.Flex"
 
@@ -123,7 +123,7 @@ resource "oci_core_vnic_attachment" "worker_public_vnic" {
 # This automatically generates the inventory.ini file for Ansible with the 
 # private IPs of the newly provisioned VMs.
 resource "local_file" "ansible_inventory" {
-  filename = "${path.module}/local/inventory.ini"
+  filename = "${path.module}/../../ansible/inventory.ini"
   content  = <<EOF
 [k3s_master]
 ${oci_core_instance.k3s_master.private_ip} ansible_user=ubuntu ansible_ssh_private_key_file=./ansible_key.pem

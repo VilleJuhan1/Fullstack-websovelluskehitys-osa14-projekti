@@ -1,0 +1,25 @@
+---
+- name: Identify the attached Postgres Block Volume (usually /dev/sdb on OCI)
+  stat:
+    path: /dev/sdb
+  register: sdb_disk
+
+- name: Format the Block Volume
+  filesystem:
+    fstype: ext4
+    dev: /dev/sdb
+  when: sdb_disk.stat.exists
+
+- name: Create mount directory for Postgres Data
+  file:
+    path: /mnt/postgres-data
+    state: directory
+    mode: '0755'
+
+- name: Mount the Block Volume securely
+  mount:
+    path: /mnt/postgres-data
+    src: /dev/sdb
+    fstype: ext4
+    state: mounted
+  when: sdb_disk.stat.exists

@@ -1,0 +1,46 @@
+---
+- name: Download and install K3s Server (Master)
+  shell: |
+    curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --node-ip {{ ansible_host }} --flannel-backend=vxlan --disable servicelb --disable traefik" sh -s -
+  args:
+    creates: /usr/local/bin/k3s
+
+- name: Wait for K3s node-token to be generated
+  wait_for:
+    path: /var/lib/rancher/k3s/server/node-token
+
+- name: Read node-token securely
+  slurp:
+    path: /var/lib/rancher/k3s/server/node-token
+  register: node_token_b64
+
+- name: Store node-token as fact for worker nodes to use
+  set_fact:
+    k3s_token: "{{ node_token_b64['content'] | b64decode | trim }}"
+
+- name: Wait for kubeconfig to be generated
+  wait_for:
+    path: /etc/rancher/k3s/k3s.yaml
+
+- name: Fetch kubeconfig to your local machine
+  fetch:
+    src: /etc/rancher/k3s/k3s.yaml
+    dest: ../kubernetes/kubeconfig.yaml
+    flat: yes
+
+- name: Ensure correct permissions for the local kubeconfig file
+  local_action:
+    module: file
+    path: ../kubernetes/kubeconfig.yaml
+    mode: '0600'
+  become: no
+
+# Warning: Modifying the IP inside the kubeconfig locally isn't flawlessly supported 
+# directly via ansible replace in some environments, but this is the standard pattern.
+- name: Update kubeconfig server IP to match the master's private IP
+  local_action:
+    module: replace
+    path: ../kubernetes/kubeconfig.yaml
+    regexp: '127\.0\.0\.1'
+    replace: "{{ ansible_host }}"
+  become: no

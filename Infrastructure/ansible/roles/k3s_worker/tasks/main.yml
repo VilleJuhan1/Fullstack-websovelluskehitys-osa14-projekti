@@ -1,0 +1,6 @@
+---
+- name: Download and install K3s Agent (Worker)
+  shell: |
+    curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="agent --server https://{{ hostvars[groups['k3s_master'][0]]['ansible_host'] }}:6443 --token {{ hostvars[groups['k3s_master'][0]]['k3s_token'] }} --node-ip {{ ansible_host }}" sh -s -
+  args:
+    creates: /usr/local/bin/k3s
