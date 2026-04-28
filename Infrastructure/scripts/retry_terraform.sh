@@ -15,8 +15,8 @@ while true; do
     break
   else
     echo "====================================================="
-    echo "Still out of capacity. Sleeping for 5 minutes..."
+    echo "Still out of capacity. Sleeping for 2 minutes..."
     echo "====================================================="
-    sleep 300
+    sleep 120
   fi
 done

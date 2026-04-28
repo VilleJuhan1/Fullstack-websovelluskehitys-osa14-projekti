@@ -36,7 +36,7 @@ data "oci_core_images" "ubuntu_arm" {
 # -----------------------------------------------------------------------------
 resource "oci_core_instance" "k3s_master" {
   compartment_id      = data.oci_identity_compartments.compute.compartments[0].id
-  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[1].name
+  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   display_name        = "${var.project_name}-k3s-master"
   shape               = "VM.Standard.A1.Flex"
 
@@ -79,7 +79,7 @@ resource "oci_core_vnic_attachment" "master_public_vnic" {
 # -----------------------------------------------------------------------------
 resource "oci_core_instance" "k3s_worker" {
   compartment_id      = data.oci_identity_compartments.compute.compartments[0].id
-  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[1].name
+  availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   display_name        = "${var.project_name}-k3s-worker"
   shape               = "VM.Standard.A1.Flex"
 
