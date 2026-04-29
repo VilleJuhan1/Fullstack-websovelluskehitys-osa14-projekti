@@ -16,8 +16,8 @@
 | April 27th | Generated the app compartment Terraform code via rigorous dialog with Gemini  | 2 |
 | April 28th | Started working with Ansible. Deployed the project terraform code but faced problems deploying the compute instances due to insufficient ARM capacity. | 2 |
 | April 28th | Debugged OCI Bastion and Ansible. | 1,5 |
-|  |  |  |
-|  |  |  |
+| April 29th | Some minor changes and fixing an issue with the OCI  | 1 |
+| April 29th | Did some network debugging by deploying the environment. Still issues. Destroyed it for the night. | 1,5 |
 |  |  |  |
 |  |  |  |
 |  |  |  |
