@@ -172,10 +172,10 @@ if success:
     print(f"[*] Generating {local_inv_path}...")
     with open(local_inv_path, "w") as f:
         f.write("""[k3s_master]
-127.0.0.1 ansible_port=2222 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem
+master ansible_host=127.0.0.1 ansible_port=2222 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem
 
 [k3s_worker]
-127.0.0.1 ansible_port=2223 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem
+worker ansible_host=127.0.0.1 ansible_port=2223 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem
 
 [k3s_cluster:children]
 k3s_master

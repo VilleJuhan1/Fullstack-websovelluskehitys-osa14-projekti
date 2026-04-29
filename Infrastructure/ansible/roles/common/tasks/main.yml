@@ -17,6 +17,8 @@
         version: 2
         ethernets:
           {{ secondary_iface }}:
+            match:
+              name: {{ secondary_iface }}
             dhcp4: true
             dhcp4-overrides:
               route-metric: 50
@@ -32,8 +34,8 @@
   command: ping -c 1 8.8.8.8
   register: ping_result
   until: ping_result.rc == 0
-  retries: 5
-  delay: 5
+  retries: 10
+  delay: 10
 
 - name: Update apt cache
   apt:
