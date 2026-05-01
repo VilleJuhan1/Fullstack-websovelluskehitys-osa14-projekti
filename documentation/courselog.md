@@ -18,8 +18,8 @@
 | April 28th | Debugged OCI Bastion and Ansible. | 1,5 |
 | April 29th | Some minor changes and fixing an issue with the OCI  | 1 |
 | April 29th | Did some network debugging by deploying the environment. Still issues. Destroyed it for the night. | 1,5 |
-|  |  |  |
-|  |  |  |
+| April 30th | Did research on OCI network infrastructure and came up with a new plan, but didn't have time to implement it | 1 |
+| May 1st | Drew the new network layout and refactored the project compartment terraform code | 2 | 
 |  |  |  |
 |  |  |  |
 |  |  |  |
