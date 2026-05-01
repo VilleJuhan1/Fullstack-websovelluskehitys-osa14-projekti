@@ -82,7 +82,7 @@ if not os.path.exists(oci_cmd) and os.path.exists("../venv/oci-automation/bin/oc
     oci_cmd = "../venv/oci-automation/bin/oci"
 
 # Function to create a bastion tunnel
-def create_tunnel(target_ip, target_port, local_port, name):
+def create_tunnel(target_ip, target_port, local_port, name, extra_opts=""):
     print(f"\n[*] Creating Bastion session for {name} ({target_ip}:{target_port})... this takes ~30 seconds.")
     
     cmd = [
@@ -148,6 +148,10 @@ def create_tunnel(target_ip, target_port, local_port, name):
     ssh_cmd = ssh_cmd.replace("<localPort>", str(local_port))
     ssh_cmd = ssh_cmd.replace("ssh -i", "ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -i")
     
+    # Add extra options (like secondary port forwards)
+    if extra_opts:
+        ssh_cmd = ssh_cmd.replace("ssh -o", f"ssh {extra_opts} -o")
+
     print(f"[*] Opening local tunnel on port {local_port}...")
     
     # Run the SSH tunnel in the background
@@ -161,12 +165,11 @@ if os.path.exists("bastion_pids.txt"):
 
 
 success = True
-success &= create_tunnel(master_ip, 22, 2222, "Master-SSH")
+# List of tunnels to create
+# For the Master, we use a single SSH tunnel to forward both port 22 (SSH) and 6443 (KubeAPI)
+# This is more reliable than separate OCI Bastion port-forwarding sessions.
+success &= create_tunnel(master_ip, 22, 2222, "Master-SSH", extra_opts="-L 8443:localhost:6443")
 success &= create_tunnel(worker_ip, 22, 2223, "Worker-SSH")
-
-# The tunnels below are now enabled for kubectl and web testing
-success &= create_tunnel(master_ip, 6443, 6443, "Master-KubeAPI")
-success &= create_tunnel(master_ip, 8080, 8080, "App-HTTP")
 
 if success:
     with open("bastion_pids.txt", "w") as f:

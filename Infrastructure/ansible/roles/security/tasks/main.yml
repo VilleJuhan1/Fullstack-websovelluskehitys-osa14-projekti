@@ -41,6 +41,27 @@
       APT::Periodic::Update-Package-Lists "1";
       APT::Periodic::Unattended-Upgrade "1";
 
+# 2.1. Disable legacy iptables rules so that UFW can manage the firewall
+- name: Check if K3s is already installed (to avoid re-purging iptables)
+  stat:
+    path: /usr/local/bin/k3s
+  register: k3s_installed_check
+
+- name: Purge legacy OCI iptables rules (prevents 'admin prohibited' errors), only run if k3s is not installed or if force_reinstall is set
+  shell: |
+    iptables -F
+    iptables -X
+    iptables -t nat -F
+    iptables -t nat -X
+    iptables -P INPUT ACCEPT
+    iptables -P FORWARD ACCEPT
+    iptables -P OUTPUT ACCEPT
+  become: yes
+  ignore_errors: yes
+  when: >
+    (not k3s_installed_check.stat.exists) or
+    (force_reinstall | default(false) | bool)
+
 # 3. Fail2Ban for another layer of security even though we're blocking ingress already
 - name: Install Fail2Ban
   apt:
@@ -71,6 +92,18 @@
   ufw:
     rule: allow
     port: '22'
+    proto: tcp
+
+- name: Allow KubeAPI (6443) in UFW
+  ufw:
+    rule: allow
+    port: '6443'
+    proto: tcp
+
+- name: Allow App testing (8080-8085) in UFW
+  ufw:
+    rule: allow
+    port: '8080:8085'
     proto: tcp
 
 - name: Allow all traffic from the VCN CIDR, a blanket rule for internal traffic which relies on the NSG-layer to handle the actual security

@@ -32,11 +32,15 @@ python3 create_tunnels.py
 ```
 This script will interact with the OCI CLI, create the required Bastion sessions, open local SSH tunnels in the background, and generate an `inventory.local.ini` file for Ansible.
 
-### 4. Run the Playbook
+### 4. Run the Playbooks
 Now that the secure tunnels are open, simply activate your python environment and run the playbook!
 ```bash
 cd ../ansible
+ansible-playbook -i inventory.local.ini update_and_reboot.yaml
 ansible-playbook -i inventory.local.ini main.yml
+
+# If for some reason you want a clean k3s install, add "force_reinstall=true" to the playbook command like this:
+ansible-playbook -i inventory.local.ini main.yml --extra-vars "force_reinstall=true"
 ```
 
 ### 5. Verify Kubernetes

@@ -1,9 +1,29 @@
 ---
+# If for some reason you want a clean k3s install, add "force_reinstall=true" to the playbook command like this:
+# ansible-playbook -i inventory.local.ini main.yml --extra-vars "force_reinstall=true"
+
+- name: Uninstall K3s if force_reinstall is set
+  shell: /usr/local/bin/k3s-uninstall.sh
+  when: force_reinstall | default(false) | bool
+  ignore_errors: yes
+
+- name: Wipe K3s data directory if force_reinstall is set
+  file:
+    path: /var/lib/rancher/k3s
+    state: absent
+  when: force_reinstall | default(false) | bool
+
+- name: Check if K3s is already installed
+  stat:
+    path: /usr/local/bin/k3s
+  register: k3s_binary
+
 - name: Download and install K3s Server (Master)
   shell: |
-    curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --node-ip {{ ansible_host }} --flannel-backend=vxlan --disable servicelb --disable traefik" sh -s -
-  args:
-    creates: /usr/local/bin/k3s
+    curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --node-ip {{ private_ip }} --flannel-backend=vxlan --disable servicelb --disable traefik" sh -s -
+  when: >
+    (not k3s_binary.stat.exists) or
+    (force_reinstall | default(false) | bool)
 
 - name: Wait for K3s node-token to be generated
   wait_for:
