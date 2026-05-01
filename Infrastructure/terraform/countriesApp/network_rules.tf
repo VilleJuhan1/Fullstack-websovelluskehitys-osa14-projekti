@@ -24,21 +24,21 @@ resource "oci_core_security_list" "empty_sl" {
 # Network Security Groups (NSGs)
 # -----------------------------------------------------------------------------
 
-# 1. NSG for the Internal k3s Cluster (Primary VNICs in Private Subnet)
-resource "oci_core_network_security_group" "nsg_private_k3s" {
+# 1. NSG for the k3s Cluster Nodes (VNICs in K3s Subnet)
+resource "oci_core_network_security_group" "nsg_k3s_nodes" {
   compartment_id = data.oci_identity_compartments.security.compartments[0].id
   vcn_id         = oci_core_vcn.project_vcn.id
-  display_name   = "${var.project_name}-nsg-private-k3s"
+  display_name   = "${var.project_name}-nsg-k3s-nodes"
 }
 
 # --- INGRESS RULES ---
 
-# 1. SSH from VCN (Allows OCI Bastion to connect to nodes)
+# 1. SSH from Bastion (Allows OCI Bastion Service to connect to nodes)
 resource "oci_core_network_security_group_security_rule" "k3s_ssh_ingress" {
-  network_security_group_id = oci_core_network_security_group.nsg_private_k3s.id
+  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_vcn.project_vcn.cidr_block
+  source                    = oci_core_subnet.bastion_subnet.cidr_block
   source_type               = "CIDR_BLOCK"
   tcp_options {
     destination_port_range {
@@ -48,12 +48,12 @@ resource "oci_core_network_security_group_security_rule" "k3s_ssh_ingress" {
   }
 }
 
-# 2. Kubernetes API Server (Allows nodes to talk to master, and Bastion kubectl)
-resource "oci_core_network_security_group_security_rule" "k3s_api_ingress" {
-  network_security_group_id = oci_core_network_security_group.nsg_private_k3s.id
+# 2a. Kubernetes API Server (Allows nodes to talk to master)
+resource "oci_core_network_security_group_security_rule" "k3s_api_node_ingress" {
+  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_vcn.project_vcn.cidr_block
+  source                    = oci_core_subnet.k3s_subnet.cidr_block
   source_type               = "CIDR_BLOCK"
   tcp_options {
     destination_port_range {
@@ -63,12 +63,28 @@ resource "oci_core_network_security_group_security_rule" "k3s_api_ingress" {
   }
 }
 
+# 2b. Kubernetes API Server (Allows Bastion kubectl management)
+resource "oci_core_network_security_group_security_rule" "k3s_api_bastion_ingress" {
+  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
+  direction                 = "INGRESS"
+  protocol                  = "6" # TCP
+  source                    = oci_core_subnet.bastion_subnet.cidr_block
+  source_type               = "CIDR_BLOCK"
+  tcp_options {
+    destination_port_range {
+      max = 6443
+      min = 6443
+    }
+  }
+}
+
+
 # 3. Flannel VXLAN (Pod-to-Pod networking between nodes)
 resource "oci_core_network_security_group_security_rule" "k3s_flannel_ingress" {
-  network_security_group_id = oci_core_network_security_group.nsg_private_k3s.id
+  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "17" # UDP
-  source                    = oci_core_subnet.private_subnet.cidr_block
+  source                    = oci_core_subnet.k3s_subnet.cidr_block
   source_type               = "CIDR_BLOCK"
   udp_options {
     destination_port_range { 
@@ -80,10 +96,10 @@ resource "oci_core_network_security_group_security_rule" "k3s_flannel_ingress" {
 
 # 4. Kubelet API (Metrics and logs between nodes)
 resource "oci_core_network_security_group_security_rule" "k3s_kubelet_ingress" {
-  network_security_group_id = oci_core_network_security_group.nsg_private_k3s.id
+  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_subnet.private_subnet.cidr_block
+  source                    = oci_core_subnet.k3s_subnet.cidr_block
   source_type               = "CIDR_BLOCK"
   tcp_options {
     destination_port_range { 
@@ -95,10 +111,10 @@ resource "oci_core_network_security_group_security_rule" "k3s_kubelet_ingress" {
 
 # 5. NodePorts (Allows the Public Load Balancer to reach the k3s ingress controller)
 resource "oci_core_network_security_group_security_rule" "k3s_nodeport_ingress" {
-  network_security_group_id = oci_core_network_security_group.nsg_private_k3s.id
+  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_subnet.public_subnet.cidr_block # Only from LB subnet
+  source                    = oci_core_subnet.lb_subnet.cidr_block # Only from LB subnet
   source_type               = "CIDR_BLOCK"
   tcp_options {
     destination_port_range {
@@ -108,29 +124,28 @@ resource "oci_core_network_security_group_security_rule" "k3s_nodeport_ingress" 
   }
 }
 
-# 6. HTTP/HTTPS Host Ports (If the Ingress Controller binds directly to host ports 80/443 instead of NodePorts)
-resource "oci_core_network_security_group_security_rule" "k3s_hostport_ingress" {
-  network_security_group_id = oci_core_network_security_group.nsg_private_k3s.id
+# 6. Service Ports (Allows the Public Load Balancer to reach the Ingress Controller)
+resource "oci_core_network_security_group_security_rule" "k3s_service_port_ingress" {
+  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_subnet.public_subnet.cidr_block
+  source                    = oci_core_subnet.lb_subnet.cidr_block
   source_type               = "CIDR_BLOCK"
   tcp_options {
     destination_port_range { 
-      max = 443
-      min = 80 
+      max = 8085
+      min = 8080 
     } 
 
   }
 }
 
+
 # --- EGRESS RULES ---
 
-# Allow all outbound traffic to the VCN. 
-# (Strict egress filtering is notoriously difficult for k3s due to OCI metadata/DNS/NTP requirements. 
-# Since ingress is locked down, internal egress is safe).
+# 1. Allow all outbound traffic to the VCN. 
 resource "oci_core_network_security_group_security_rule" "k3s_internal_egress" {
-  network_security_group_id = oci_core_network_security_group.nsg_private_k3s.id
+  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "EGRESS"
   protocol                  = "all"
   destination               = oci_core_vcn.project_vcn.cidr_block
@@ -199,11 +214,11 @@ resource "oci_core_network_security_group_security_rule" "lb_https_ingress" {
   }
 }
 
-# Allow LB to send traffic to the Private Subnet (where the VMs are listening)
+# Allow LB to send traffic to the K3s Subnet (where the VMs are listening)
 resource "oci_core_network_security_group_security_rule" "lb_internal_egress" {
   network_security_group_id = oci_core_network_security_group.nsg_public_lb.id
   direction                 = "EGRESS"
   protocol                  = "all"
-  destination               = oci_core_subnet.private_subnet.cidr_block
+  destination               = oci_core_subnet.k3s_subnet.cidr_block
   destination_type          = "CIDR_BLOCK"
 }

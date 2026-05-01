@@ -6,7 +6,7 @@
 resource "oci_bastion_bastion" "project_bastion" {
   bastion_type     = "STANDARD"
   compartment_id   = data.oci_identity_compartments.security.compartments[0].id
-  target_subnet_id = oci_core_subnet.private_subnet.id
+  target_subnet_id = oci_core_subnet.k3s_subnet.id
   client_cidr_block_allow_list = ["0.0.0.0/0"] # Consider restricting to your home IP address
   name             = "${var.project_name}-Bastion"
   
@@ -40,7 +40,7 @@ resource "oci_kms_key" "master_key" {
 resource "oci_network_load_balancer_network_load_balancer" "public_nlb" {
   compartment_id = data.oci_identity_compartments.security.compartments[0].id
   display_name   = "${var.project_name}-NLB"
-  subnet_id      = oci_core_subnet.public_subnet.id
+  subnet_id      = oci_core_subnet.lb_subnet.id
   
   is_private                     = false
   is_preserve_source_destination = true
@@ -54,7 +54,7 @@ resource "oci_network_load_balancer_backend_set" "http_backend_set" {
   
   health_checker {
     protocol = "TCP"
-    port     = 80
+    port     = 8080
   }
 }
 
@@ -66,7 +66,7 @@ resource "oci_network_load_balancer_backend_set" "https_backend_set" {
   
   health_checker {
     protocol = "TCP"
-    port     = 443
+    port     = 8081
   }
 }
 

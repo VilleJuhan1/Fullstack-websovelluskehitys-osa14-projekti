@@ -49,18 +49,18 @@ resource "oci_core_instance" "k3s_master" {
   availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   display_name        = "${var.project_name}-k3s-master"
   # --- FREE TIER ARM SPECS ---
-  #shape               = "VM.Standard.A1.Flex"
-  #shape_config {
-  #  ocpus         = 1
-  #  memory_in_gbs = 6
-  #}
+  shape               = "VM.Standard.A1.Flex"
+  shape_config {
+    ocpus         = 2
+    memory_in_gbs = 12
+  }
 
   # --- PAID TIER (Temporary Workaround) ---
-  shape               = "VM.Standard.A2.Flex"
-  shape_config {
-    ocpus         = 1
-    memory_in_gbs = 6
-  }
+  # shape               = "VM.Standard.A2.Flex"
+  # shape_config {
+  #   ocpus         = 1
+  #   memory_in_gbs = 6
+  # }
 
   source_details {
     source_type             = "image"
@@ -70,26 +70,15 @@ resource "oci_core_instance" "k3s_master" {
   }
 
   create_vnic_details {
-    subnet_id                 = oci_core_subnet.private_subnet.id
-    assign_public_ip          = false
-    display_name              = "primary-private"
-    nsg_ids                   = [oci_core_network_security_group.nsg_private_k3s.id]
+    subnet_id                 = oci_core_subnet.k3s_subnet.id
+    assign_public_ip          = true
+    display_name              = "primary-public"
+    nsg_ids                   = [oci_core_network_security_group.nsg_k3s_nodes.id, oci_core_network_security_group.nsg_public_egress.id]
   }
 
   metadata = {
     ssh_authorized_keys = tls_private_key.ansible_ssh_key.public_key_openssh
   }
-}
-
-# Secondary VNIC for Master (Public Subnet for outbound internet)
-resource "oci_core_vnic_attachment" "master_public_vnic" {
-  create_vnic_details {
-    subnet_id        = oci_core_subnet.public_subnet.id
-    assign_public_ip = true
-    display_name     = "secondary-public"
-    nsg_ids          = [oci_core_network_security_group.nsg_public_egress.id]
-  }
-  instance_id = oci_core_instance.k3s_master.id
 }
 
 # -----------------------------------------------------------------------------
@@ -100,18 +89,18 @@ resource "oci_core_instance" "k3s_worker" {
   availability_domain = data.oci_identity_availability_domains.ads.availability_domains[0].name
   display_name        = "${var.project_name}-k3s-worker"
   # --- FREE TIER ARM SPECS ---
-  #shape               = "VM.Standard.A1.Flex"
-  #shape_config {
-  #  ocpus         = 1
-  #  memory_in_gbs = 6
-  #}
+  shape               = "VM.Standard.A1.Flex"
+  shape_config {
+    ocpus         = 2
+    memory_in_gbs = 12
+  }
 
   # --- PAID TIER (Temporary Workaround) ---
-  shape               = "VM.Standard.A2.Flex"
-  shape_config {
-    ocpus         = 1
-    memory_in_gbs = 6
-  }
+  # shape               = "VM.Standard.A2.Flex"
+  # shape_config {
+  #   ocpus         = 1
+  #   memory_in_gbs = 6
+  # }
 
   source_details {
     source_type             = "image"
@@ -121,26 +110,15 @@ resource "oci_core_instance" "k3s_worker" {
   }
 
   create_vnic_details {
-    subnet_id                 = oci_core_subnet.private_subnet.id
-    assign_public_ip          = false
-    display_name              = "primary-private"
-    nsg_ids                   = [oci_core_network_security_group.nsg_private_k3s.id]
+    subnet_id                 = oci_core_subnet.k3s_subnet.id
+    assign_public_ip          = true
+    display_name              = "primary-public"
+    nsg_ids                   = [oci_core_network_security_group.nsg_k3s_nodes.id, oci_core_network_security_group.nsg_public_egress.id]
   }
 
   metadata = {
     ssh_authorized_keys = tls_private_key.ansible_ssh_key.public_key_openssh
   }
-}
-
-# Secondary VNIC for Worker (Public Subnet for outbound internet)
-resource "oci_core_vnic_attachment" "worker_public_vnic" {
-  create_vnic_details {
-    subnet_id        = oci_core_subnet.public_subnet.id
-    assign_public_ip = true
-    display_name     = "secondary-public"
-    nsg_ids          = [oci_core_network_security_group.nsg_public_egress.id]
-  }
-  instance_id = oci_core_instance.k3s_worker.id
 }
 
 # -----------------------------------------------------------------------------

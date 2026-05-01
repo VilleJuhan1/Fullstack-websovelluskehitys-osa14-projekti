@@ -36,43 +36,47 @@ resource "oci_core_route_table" "public_rt" {
   }
 }
 
-# Private Route Table (No internet routing since we use no NAT Gateway)
-resource "oci_core_route_table" "private_rt" {
-  compartment_id = data.oci_identity_compartments.network.compartments[0].id
-  vcn_id         = oci_core_vcn.project_vcn.id
-  display_name   = "${var.project_name}-private-rt"
-
-  # Internal VCN traffic is automatically routed implicitly. 
-  # We leave this without external routes to enforce complete isolation.
-}
-
 # -----------------------------------------------------------------------------
 # Subnets
 # -----------------------------------------------------------------------------
-# Public Subnet (For Secondary VNICs: Outbound Internet Access & Load Balancer)
-resource "oci_core_subnet" "public_subnet" {
+
+# 1. Bastion Subnet (Public - For OCI Bastion Service)
+resource "oci_core_subnet" "bastion_subnet" {
   compartment_id = data.oci_identity_compartments.network.compartments[0].id
   vcn_id         = oci_core_vcn.project_vcn.id
   cidr_block     = "10.0.1.0/24"
-  display_name   = "${var.project_name}-public-subnet"
-  dns_label      = "public"
+  display_name   = "${var.project_name}-bastion-subnet"
+  dns_label      = "bastion"
   route_table_id = oci_core_route_table.public_rt.id
   security_list_ids = [oci_core_security_list.empty_sl.id]
   
-  # Ensure public IP addresses can be assigned
   prohibit_public_ip_on_vnic = false
 }
 
-# Private Subnet (For Primary VNICs: Internal Cluster Communication)
-resource "oci_core_subnet" "private_subnet" {
+# 2. Load Balancer Subnet (Public - For Public NLB)
+resource "oci_core_subnet" "lb_subnet" {
   compartment_id = data.oci_identity_compartments.network.compartments[0].id
   vcn_id         = oci_core_vcn.project_vcn.id
   cidr_block     = "10.0.2.0/24"
-  display_name   = "${var.project_name}-private-subnet"
-  dns_label      = "private"
-  route_table_id = oci_core_route_table.private_rt.id
+  display_name   = "${var.project_name}-lb-subnet"
+  dns_label      = "lb"
+  route_table_id = oci_core_route_table.public_rt.id
   security_list_ids = [oci_core_security_list.empty_sl.id]
   
-  # Strictly prohibit public IPs
-  prohibit_public_ip_on_vnic = true
+  prohibit_public_ip_on_vnic = false
+}
+
+# 3. K3s Subnet (Public - For Master and Worker nodes)
+# Note: We use a public subnet here to allow egress without a paid NAT Gateway.
+# Ingress will be strictly controlled via NSGs.
+resource "oci_core_subnet" "k3s_subnet" {
+  compartment_id = data.oci_identity_compartments.network.compartments[0].id
+  vcn_id         = oci_core_vcn.project_vcn.id
+  cidr_block     = "10.0.3.0/24"
+  display_name   = "${var.project_name}-k3s-subnet"
+  dns_label      = "k3s"
+  route_table_id = oci_core_route_table.public_rt.id
+  security_list_ids = [oci_core_security_list.empty_sl.id]
+  
+  prohibit_public_ip_on_vnic = false
 }

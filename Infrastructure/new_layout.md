@@ -38,7 +38,7 @@ graph TD
     end
 
     %% 3. Force Vertical Stacking (Invisible Link)
-    Admin ~~~ OCI-API
+    OCI-API
 
     %% 4. Connections (Flowing Downward)
     
@@ -59,8 +59,8 @@ graph TD
     LB -- "App Traffic" --> AgentVM1
 
     %% Egress & Images
-    MasterVM -- "Egress" --> IGW
-    AgentVM1 -- "Egress" --> IGW
+    MasterVM -- "Egress Only" --> IGW
+    AgentVM1 -- "Egress Only" --> IGW
     IGW -. "Image Pulls" .-> Dockerhub
 
     %% Styling
