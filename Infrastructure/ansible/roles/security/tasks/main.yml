@@ -100,10 +100,10 @@
     port: '6443'
     proto: tcp
 
-- name: Allow App testing (8080-8085) in UFW
+- name: Allow Kubernetes NodePort range in UFW
   ufw:
     rule: allow
-    port: '8080:8085'
+    port: 30000:32767
     proto: tcp
 
 - name: Allow all traffic from the VCN CIDR, a blanket rule for internal traffic which relies on the NSG-layer to handle the actual security

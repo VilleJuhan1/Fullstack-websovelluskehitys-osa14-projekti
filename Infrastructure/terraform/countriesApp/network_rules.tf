@@ -14,9 +14,29 @@ resource "oci_core_security_list" "empty_sl" {
   # We must allow egress at the subnet level so the OCI Bastion Service 
   # can reach the VMs. Ingress is still locked down by NSGs.
   egress_security_rules {
-    destination      = oci_core_vcn.project_vcn.cidr_block
+    destination      = "0.0.0.0/0"
     destination_type = "CIDR_BLOCK"
     protocol         = "all"
+  }
+
+  ingress_security_rules {
+    protocol    = "6" # TCP
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    tcp_options {
+      max = 80
+      min = 80
+    }
+  }
+
+  ingress_security_rules {
+    protocol    = "6" # TCP
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    tcp_options {
+      max = 443
+      min = 443
+    }
   }
 }
 
@@ -221,5 +241,14 @@ resource "oci_core_network_security_group_security_rule" "lb_internal_egress" {
   direction                 = "EGRESS"
   protocol                  = "all"
   destination               = oci_core_subnet.k3s_subnet.cidr_block
+  destination_type          = "CIDR_BLOCK"
+}
+
+# 2. Allow outbound traffic to the internet (to reply to clients)
+resource "oci_core_network_security_group_security_rule" "lb_public_egress" {
+  network_security_group_id = oci_core_network_security_group.nsg_public_lb.id
+  direction                 = "EGRESS"
+  protocol                  = "all"
+  destination               = "0.0.0.0/0"
   destination_type          = "CIDR_BLOCK"
 }

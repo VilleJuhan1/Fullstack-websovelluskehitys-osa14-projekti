@@ -23,3 +23,7 @@
 | May 1st | Worked on the k3s cluster, can't get bastion tunnel to work with kubectl but otherwise the cluster looks great | 4 |
 |  |  |  |
 |  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |

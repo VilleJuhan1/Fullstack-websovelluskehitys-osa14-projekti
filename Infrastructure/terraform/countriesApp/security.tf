@@ -43,7 +43,9 @@ resource "oci_network_load_balancer_network_load_balancer" "public_nlb" {
   subnet_id      = oci_core_subnet.lb_subnet.id
   
   is_private                     = false
-  is_preserve_source_destination = true
+  is_preserve_source_destination = false
+
+  network_security_group_ids = [oci_core_network_security_group.nsg_public_lb.id]
 }
 
 # Backend Set for HTTP (Port 80)
@@ -54,7 +56,7 @@ resource "oci_network_load_balancer_backend_set" "http_backend_set" {
   
   health_checker {
     protocol = "TCP"
-    port     = 8080
+    port     = 30080
   }
 }
 
@@ -66,7 +68,7 @@ resource "oci_network_load_balancer_backend_set" "https_backend_set" {
   
   health_checker {
     protocol = "TCP"
-    port     = 8081
+    port     = 30081
   }
 }
 
@@ -86,6 +88,22 @@ resource "oci_network_load_balancer_listener" "https_listener" {
   default_backend_set_name = oci_network_load_balancer_backend_set.https_backend_set.name
   port                     = 443
   protocol                 = "TCP"
+}
+
+# Backend for Master Node
+resource "oci_network_load_balancer_backend" "master_backend" {
+  network_load_balancer_id = oci_network_load_balancer_network_load_balancer.public_nlb.id
+  backend_set_name         = oci_network_load_balancer_backend_set.http_backend_set.name
+  port                     = 30080
+  target_id                = oci_core_instance.k3s_master.id
+}
+
+# Backend for Worker Node
+resource "oci_network_load_balancer_backend" "worker_backend" {
+  network_load_balancer_id = oci_network_load_balancer_network_load_balancer.public_nlb.id
+  backend_set_name         = oci_network_load_balancer_backend_set.http_backend_set.name
+  port                     = 30080
+  target_id                = oci_core_instance.k3s_worker.id
 }
 
 # Output the public IP of the Network Load Balancer
