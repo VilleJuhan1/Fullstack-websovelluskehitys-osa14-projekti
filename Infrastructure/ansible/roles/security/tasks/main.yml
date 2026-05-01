@@ -1,0 +1,100 @@
+---
+# Host Hardening Tasks
+
+# 1. SSH Hardening (via drop-in file to avoid modifying system defaults)
+- name: Ensure sshd_config.d directory exists
+  file:
+    path: /etc/ssh/sshd_config.d
+    state: directory
+    mode: '0755'
+
+- name: Create SSH hardening override file
+  copy:
+    dest: /etc/ssh/sshd_config.d/99-ansible-hardening.conf
+    mode: '0644'
+    content: |
+      # Managed by Ansible - Host Hardening
+      PasswordAuthentication no
+      PermitRootLogin no
+      MaxAuthTries 3
+      PubkeyAuthentication yes
+  notify: Restart SSH
+
+- name: Ensure main sshd_config includes the .d directory
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    line: "Include /etc/ssh/sshd_config.d/*.conf"
+    insertbefore: BOF
+    state: present
+  notify: Restart SSH
+
+# 2. Automatic security updates for the OS
+- name: Install unattended-upgrades
+  apt:
+    name: unattended-upgrades
+    state: present
+
+- name: Enable automatic security updates
+  copy:
+    dest: /etc/apt/apt.conf.d/20auto-upgrades
+    content: |
+      APT::Periodic::Update-Package-Lists "1";
+      APT::Periodic::Unattended-Upgrade "1";
+
+# 3. Fail2Ban for another layer of security even though we're blocking ingress already
+- name: Install Fail2Ban
+  apt:
+    name: fail2ban
+    state: present
+
+- name: Ensure Fail2Ban is started and enabled
+  systemd:
+    name: fail2ban
+    state: started
+    enabled: yes
+
+# 4. Kernel hardening, just in case
+- name: Disable ICMP redirects (prevents MITM)
+  sysctl:
+    name: net.ipv4.conf.all.accept_redirects
+    value: '0'
+    state: present
+    reload: yes
+
+# 5. Firewall management to account for K3s and Bastion SSH
+- name: Install UFW
+  apt:
+    name: ufw
+    state: present
+
+- name: Allow SSH in UFW
+  ufw:
+    rule: allow
+    port: '22'
+    proto: tcp
+
+- name: Allow all traffic from the VCN CIDR, a blanket rule for internal traffic which relies on the NSG-layer to handle the actual security
+  ufw:
+    rule: allow
+    src: '10.0.0.0/16'
+
+- name: Allow K3s Pod CIDR
+  ufw:
+    rule: allow
+    src: '10.42.0.0/16'
+
+- name: Allow K3s Service CIDR
+  ufw:
+    rule: allow
+    src: '10.43.0.0/16'
+
+- name: Set UFW default forward policy to ACCEPT (Required by K3s)
+  lineinfile:
+    path: /etc/default/ufw
+    regexp: '^DEFAULT_FORWARD_POLICY='
+    line: 'DEFAULT_FORWARD_POLICY="ACCEPT"'
+
+- name: Enable UFW and set default deny policy
+  ufw:
+    state: enabled
+    policy: deny

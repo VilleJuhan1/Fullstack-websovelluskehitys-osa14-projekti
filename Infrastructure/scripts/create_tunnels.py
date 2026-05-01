@@ -92,7 +92,7 @@ def create_tunnel(target_ip, target_port, local_port, name):
         "--ssh-public-key-file", public_key_path,
         "--target-private-ip", target_ip,
         "--target-port", str(target_port),
-        "--session-ttl", "10800" # Session time to live in seconds, 10800 = 3 hours
+        "--session-ttl", "1800" # Session time to live in seconds, 1800 = 30 minutes
     ]
     
     try:
@@ -163,7 +163,10 @@ if os.path.exists("bastion_pids.txt"):
 success = True
 success &= create_tunnel(master_ip, 22, 2222, "Master-SSH")
 success &= create_tunnel(worker_ip, 22, 2223, "Worker-SSH")
+
+# The tunnels below are now enabled for kubectl and web testing
 success &= create_tunnel(master_ip, 6443, 6443, "Master-KubeAPI")
+success &= create_tunnel(master_ip, 8080, 8080, "App-HTTP")
 
 if success:
     with open("bastion_pids.txt", "w") as f:
@@ -175,11 +178,11 @@ if success:
     local_inv_path = "../ansible/inventory.local.ini"
     print(f"[*] Generating {local_inv_path}...")
     with open(local_inv_path, "w") as f:
-        f.write("""[k3s_master]
-master ansible_host=127.0.0.1 ansible_port=2222 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem
+        f.write(f"""[k3s_master]
+master ansible_host=127.0.0.1 ansible_port=2222 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem private_ip={master_ip}
 
 [k3s_worker]
-worker ansible_host=127.0.0.1 ansible_port=2223 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem
+worker ansible_host=127.0.0.1 ansible_port=2223 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem private_ip={worker_ip}
 
 [k3s_cluster:children]
 k3s_master

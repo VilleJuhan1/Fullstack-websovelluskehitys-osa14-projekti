@@ -35,12 +35,10 @@
     mode: '0600'
   become: no
 
-# Warning: Modifying the IP inside the kubeconfig locally isn't flawlessly supported 
-# directly via ansible replace in some environments, but this is the standard pattern.
-- name: Update kubeconfig server IP to match the master's private IP
-  local_action:
-    module: replace
-    path: ../kubernetes/kubeconfig.yaml
-    regexp: '127\.0\.0\.1'
-    replace: "{{ ansible_host }}"
-  become: no
+# Note: We do NOT replace 127.0.0.1 in the kubeconfig here.
+# Since we use OCI Bastion Service, we connect via a tunnel (localhost:6443).
+# Keeping the server at 127.0.0.1 allows kubectl to work through that tunnel.
+
+# --- IMPORTANT ---
+# Ingress controllers (Traefik/Nginx) must be configured to listen on 
+# host ports 8080-8085 to match the NSG and NLB health check rules.
