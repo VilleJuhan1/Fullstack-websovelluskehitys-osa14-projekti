@@ -1,9 +1,29 @@
 ---
+# If for some reason you want a clean k3s install, add "force_reinstall=true" to the playbook command like this:
+# ansible-playbook -i inventory.local.ini main.yml --extra-vars "force_reinstall=true"
+
+- name: Uninstall K3s if force_reinstall is set
+  shell: /usr/local/bin/k3s-uninstall.sh
+  when: force_reinstall | default(false) | bool
+  ignore_errors: yes
+
+- name: Wipe K3s data directory if force_reinstall is set
+  file:
+    path: /var/lib/rancher/k3s
+    state: absent
+  when: force_reinstall | default(false) | bool
+
+- name: Check if K3s is already installed
+  stat:
+    path: /usr/local/bin/k3s
+  register: k3s_binary
+
 - name: Download and install K3s Server (Master)
   shell: |
-    curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --node-ip {{ ansible_host }} --flannel-backend=vxlan --disable servicelb --disable traefik" sh -s -
-  args:
-    creates: /usr/local/bin/k3s
+    curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --node-ip {{ private_ip }} --flannel-backend=vxlan --disable servicelb --disable traefik" sh -s -
+  when: >
+    (not k3s_binary.stat.exists) or
+    (force_reinstall | default(false) | bool)
 
 - name: Wait for K3s node-token to be generated
   wait_for:
@@ -35,12 +55,10 @@
     mode: '0600'
   become: no
 
-# Warning: Modifying the IP inside the kubeconfig locally isn't flawlessly supported 
-# directly via ansible replace in some environments, but this is the standard pattern.
-- name: Update kubeconfig server IP to match the master's private IP
-  local_action:
-    module: replace
-    path: ../kubernetes/kubeconfig.yaml
-    regexp: '127\.0\.0\.1'
-    replace: "{{ ansible_host }}"
-  become: no
+# Note: We do NOT replace 127.0.0.1 in the kubeconfig here.
+# Since we use OCI Bastion Service, we connect via a tunnel (localhost:6443).
+# Keeping the server at 127.0.0.1 allows kubectl to work through that tunnel.
+
+# --- IMPORTANT ---
+# Ingress controllers (Traefik/Nginx) must be configured to listen on 
+# host ports 8080-8085 to match the NSG and NLB health check rules.

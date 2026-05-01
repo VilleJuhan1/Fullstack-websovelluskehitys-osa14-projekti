@@ -1,6 +1,37 @@
 ---
+- name: Uninstall K3s Agent if force_reinstall is set
+  shell: /usr/local/bin/k3s-agent-uninstall.sh
+  when: force_reinstall | default(false) | bool
+  ignore_errors: yes
+
+- name: Wipe K3s data directory if force_reinstall is set
+  file:
+    path: /var/lib/rancher/k3s
+    state: absent
+  when: force_reinstall | default(false) | bool
+
+- name: Check if K3s is already installed
+  stat:
+    path: /usr/local/bin/k3s
+  register: k3s_binary
+
 - name: Download and install K3s Agent (Worker)
   shell: |
-    curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="agent --server https://{{ hostvars[groups['k3s_master'][0]]['ansible_host'] }}:6443 --token {{ hostvars[groups['k3s_master'][0]]['k3s_token'] }} --node-ip {{ ansible_host }}" sh -s -
-  args:
-    creates: /usr/local/bin/k3s
+    curl -sfL https://get.k3s.io | K3S_TOKEN={{ hostvars[groups['k3s_master'][0]]['k3s_token'] }} INSTALL_K3S_EXEC="agent --server https://{{ hostvars[groups['k3s_master'][0]]['private_ip'] }}:6443 --node-ip {{ private_ip }}" sh -s -
+  when: >
+    (not k3s_binary.stat.exists) or
+    (force_reinstall | default(false) | bool)
+
+- name: Check if node is already labeled as worker
+  delegate_to: master
+  shell: |
+    k3s kubectl get node kube-worker -o jsonpath='{.metadata.labels}' | grep -q "node-role.kubernetes.io/worker"
+  register: worker_label_check
+  failed_when: false
+  changed_when: false
+
+- name: Label the node as a worker
+  delegate_to: master
+  shell: |
+    k3s kubectl label node kube-worker node-role.kubernetes.io/worker=worker --overwrite
+  when: worker_label_check.rc != 0

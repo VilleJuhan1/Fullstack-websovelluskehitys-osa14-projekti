@@ -4,6 +4,7 @@
   become: yes
   roles:
     - common
+    - security
 
 - name: Configure Master Node
   hosts: k3s_master

@@ -33,12 +33,12 @@ resource "oci_core_network_security_group" "nsg_k3s_nodes" {
 
 # --- INGRESS RULES ---
 
-# 1. SSH from Bastion (Allows OCI Bastion Service to connect to nodes)
+# 1. SSH from VCN (Allows OCI Bastion Service to connect to nodes)
 resource "oci_core_network_security_group_security_rule" "k3s_ssh_ingress" {
   network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_subnet.bastion_subnet.cidr_block
+  source                    = oci_core_vcn.project_vcn.cidr_block
   source_type               = "CIDR_BLOCK"
   tcp_options {
     destination_port_range {
@@ -47,6 +47,7 @@ resource "oci_core_network_security_group_security_rule" "k3s_ssh_ingress" {
     }
   }
 }
+
 
 # 2a. Kubernetes API Server (Allows nodes to talk to master)
 resource "oci_core_network_security_group_security_rule" "k3s_api_node_ingress" {
@@ -63,12 +64,12 @@ resource "oci_core_network_security_group_security_rule" "k3s_api_node_ingress" 
   }
 }
 
-# 2b. Kubernetes API Server (Allows Bastion kubectl management)
+# 2b. Kubernetes API Server (Allows direct management for debugging)
 resource "oci_core_network_security_group_security_rule" "k3s_api_bastion_ingress" {
   network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_subnet.bastion_subnet.cidr_block
+  source                    = oci_core_vcn.project_vcn.cidr_block
   source_type               = "CIDR_BLOCK"
   tcp_options {
     destination_port_range {

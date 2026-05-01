@@ -1,1 +1,3 @@
 venv/oci-automation/
+__pycache__/
+*.pyc
