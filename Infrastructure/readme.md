@@ -47,14 +47,14 @@ These resources are created and managed strictly within the `Project compartment
 
 - **Network:**
   - Virtual Cloud Network (VCN) - 10.0.0.0/16
-  - Public Subnet (DMZ) - 10.0.1.0/24
+  - Public Subnet (Bastion subnet) - 10.0.1.0/24
+  - Public Subnet (Load Balancer subnet) - 10.0.2.0/24
+  - Public Subnet (K3s subnet) - 10.0.3.0/24
   - Internet Gateway (IGW)
-  - Private Subnet (Application) - 10.0.2.0/24
   - Route Tables & Network Security Groups (NSGs)
 - **Compute:**
   - VM 1: k3s Server/Master (Ampere A1 - Free Tier)
   - VM 2: k3s Agent/Worker (Ampere A1 - Free Tier)
-  - VM 3: k3s Agent/Worker (Ampere A1 - Free Tier)
   - Boot and Block Volumes
 - **Security & Access:**
   - OCI Bastion Service (Ephemeral & Audited SSH)
@@ -83,4 +83,4 @@ Allow group ProjectAdminsGroup to manage all-resources in compartment 'Project c
 
 ## Layout
 
-The architectural layout is shown in a separate file [here](layout.md).
+The architectural layout is shown in a separate file [here](new_layout.md).

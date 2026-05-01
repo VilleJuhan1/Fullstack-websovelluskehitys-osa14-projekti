@@ -1,3 +1,7 @@
+# Obsolete, don't use!
+
+This is here for posterity and documentation purposes. New and improved version is [here](new_layout.md).
+
 ### 1. Network overlay for USER access to app
 
 ```mermaid
