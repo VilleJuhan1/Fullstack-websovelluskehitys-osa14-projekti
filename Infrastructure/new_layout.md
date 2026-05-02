@@ -22,15 +22,12 @@ graph TD
         subgraph "VCN (10.0.0.0/16)"
             IGW[("Internet Gateway")]
 
-            subgraph "Bastion Subnet (10.0.1.0/24)"
-                Bastion[("OCI Bastion Service")]
-            end
-
             subgraph "Load Balancer Subnet (10.0.2.0/24)"
                 LB[("Public NLB<br/>Free Tier")]
             end
 
             subgraph "K3s Subnet (10.0.3.0/24)"
+                Bastion[("OCI Bastion Service<br/>(Anchored here)")]
                 MasterVM[("VM 1: k3s Server/Master<br/>(ArgoCD Installed)")]
                 AgentVM1[("VM 2: k3s Agent/Worker")]
             end        

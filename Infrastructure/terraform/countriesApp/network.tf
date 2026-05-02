@@ -40,18 +40,7 @@ resource "oci_core_route_table" "public_rt" {
 # Subnets
 # -----------------------------------------------------------------------------
 
-# 1. Bastion Subnet (Public - For OCI Bastion Service)
-resource "oci_core_subnet" "bastion_subnet" {
-  compartment_id = data.oci_identity_compartments.network.compartments[0].id
-  vcn_id         = oci_core_vcn.project_vcn.id
-  cidr_block     = "10.0.1.0/24"
-  display_name   = "${var.project_name}-bastion-subnet"
-  dns_label      = "bastion"
-  route_table_id = oci_core_route_table.public_rt.id
-  security_list_ids = [oci_core_security_list.empty_sl.id]
-  
-  prohibit_public_ip_on_vnic = false
-}
+# (Bastion Subnet removed - Service is anchored in K3s Subnet)
 
 # 2. Load Balancer Subnet (Public - For Public NLB)
 resource "oci_core_subnet" "lb_subnet" {

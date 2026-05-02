@@ -21,7 +21,7 @@
 | April 30th | Did research on OCI network infrastructure and came up with a new plan, but didn't have time to implement it | 1 |
 | May 1st | Drew the new network layout and refactored the project compartment terraform code | 2 | 
 | May 1st | Worked on the k3s cluster, can't get bastion tunnel to work with kubectl but otherwise the cluster looks great | 4 |
-|  |  |  |
+| May 2nd | Got the Nginx test page working via the LB, reviewed all SL/NSG rules, added descriptions and removed overlapping rules. | 2 |
 |  |  |  |
 |  |  |  |
 |  |  |  |

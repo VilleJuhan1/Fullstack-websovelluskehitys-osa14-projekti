@@ -3,39 +3,21 @@
 # -----------------------------------------------------------------------------
 # Security Lists (SL)
 # -----------------------------------------------------------------------------
-# We create an empty Security List to override the VCN's default security list 
-# (which dangerously allows Port 22 from 0.0.0.0/0). 
-# We will rely entirely on Network Security Groups (NSGs) for granular access.
 resource "oci_core_security_list" "empty_sl" {
   compartment_id = data.oci_identity_compartments.security.compartments[0].id
   vcn_id         = oci_core_vcn.project_vcn.id
   display_name   = "${var.project_name}-base-sl"
 
-  # We must allow egress at the subnet level so the OCI Bastion Service 
-  # can reach the VMs. Ingress is still locked down by NSGs.
+  # Managed OCI Services (like Bastion) require subnet-level egress.
   egress_security_rules {
-    destination      = "0.0.0.0/0"
+    destination      = oci_core_vcn.project_vcn.cidr_block
     destination_type = "CIDR_BLOCK"
-    protocol         = "all"
-  }
-
-  ingress_security_rules {
-    protocol    = "6" # TCP
-    source      = "0.0.0.0/0"
-    source_type = "CIDR_BLOCK"
+    protocol         = "6" # TCP
+    description      = "Allow Bastion Service to reach nodes via SSH"
+    
     tcp_options {
-      max = 80
-      min = 80
-    }
-  }
-
-  ingress_security_rules {
-    protocol    = "6" # TCP
-    source      = "0.0.0.0/0"
-    source_type = "CIDR_BLOCK"
-    tcp_options {
-      max = 443
-      min = 443
+      max = 22
+      min = 22
     }
   }
 }
@@ -58,8 +40,10 @@ resource "oci_core_network_security_group_security_rule" "k3s_ssh_ingress" {
   network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_vcn.project_vcn.cidr_block
+  source                    = oci_core_subnet.k3s_subnet.cidr_block
   source_type               = "CIDR_BLOCK"
+  description               = "Allow SSH access from the local subnet for Bastion Service"
+  
   tcp_options {
     destination_port_range {
       max = 22
@@ -69,13 +53,15 @@ resource "oci_core_network_security_group_security_rule" "k3s_ssh_ingress" {
 }
 
 
-# 2a. Kubernetes API Server (Allows nodes to talk to master)
+# 2. Kubernetes API Server from other Nodes
 resource "oci_core_network_security_group_security_rule" "k3s_api_node_ingress" {
   network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
   source                    = oci_core_subnet.k3s_subnet.cidr_block
   source_type               = "CIDR_BLOCK"
+  description               = "Allow nodes and Bastion to communicate with the API server"
+  
   tcp_options {
     destination_port_range {
       max = 6443
@@ -84,59 +70,49 @@ resource "oci_core_network_security_group_security_rule" "k3s_api_node_ingress" 
   }
 }
 
-# 2b. Kubernetes API Server (Allows direct management for debugging)
-resource "oci_core_network_security_group_security_rule" "k3s_api_bastion_ingress" {
-  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
-  direction                 = "INGRESS"
-  protocol                  = "6" # TCP
-  source                    = oci_core_vcn.project_vcn.cidr_block
-  source_type               = "CIDR_BLOCK"
-  tcp_options {
-    destination_port_range {
-      max = 6443
-      min = 6443
-    }
-  }
-}
-
-
-# 3. Flannel VXLAN (Pod-to-Pod networking between nodes)
+# 3. Flannel VXLAN (Overlay Network)
 resource "oci_core_network_security_group_security_rule" "k3s_flannel_ingress" {
   network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "17" # UDP
-  source                    = oci_core_subnet.k3s_subnet.cidr_block
-  source_type               = "CIDR_BLOCK"
+  source                    = oci_core_network_security_group.nsg_k3s_nodes.id
+  source_type               = "NETWORK_SECURITY_GROUP"
+  description               = "Allow Flannel overlay network traffic between nodes"
+  
   udp_options {
-    destination_port_range { 
+    destination_port_range {
       max = 8472
       min = 8472
     }
   }
 }
 
-# 4. Kubelet API (Metrics and logs between nodes)
+# 4. Kubelet API
 resource "oci_core_network_security_group_security_rule" "k3s_kubelet_ingress" {
   network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_subnet.k3s_subnet.cidr_block
-  source_type               = "CIDR_BLOCK"
+  source                    = oci_core_network_security_group.nsg_k3s_nodes.id
+  source_type               = "NETWORK_SECURITY_GROUP"
+  description               = "Allow Kubelet API communication between nodes"
+  
   tcp_options {
-    destination_port_range { 
+    destination_port_range {
       max = 10250
-      min = 10250 
+      min = 10250
     }
   }
 }
 
-# 5. NodePorts (Allows the Public Load Balancer to reach the k3s ingress controller)
+# 5. K8s NodePort Range (for Public LB)
 resource "oci_core_network_security_group_security_rule" "k3s_nodeport_ingress" {
   network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
   direction                 = "INGRESS"
   protocol                  = "6" # TCP
-  source                    = oci_core_subnet.lb_subnet.cidr_block # Only from LB subnet
-  source_type               = "CIDR_BLOCK"
+  source                    = oci_core_network_security_group.nsg_public_lb.id
+  source_type               = "NETWORK_SECURITY_GROUP"
+  description               = "Allow the Load Balancer to reach Kubernetes NodePort services"
+  
   tcp_options {
     destination_port_range {
       max = 32767
@@ -145,33 +121,10 @@ resource "oci_core_network_security_group_security_rule" "k3s_nodeport_ingress" 
   }
 }
 
-# 6. Service Ports (Allows the Public Load Balancer to reach the Ingress Controller)
-resource "oci_core_network_security_group_security_rule" "k3s_service_port_ingress" {
-  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
-  direction                 = "INGRESS"
-  protocol                  = "6" # TCP
-  source                    = oci_core_subnet.lb_subnet.cidr_block
-  source_type               = "CIDR_BLOCK"
-  tcp_options {
-    destination_port_range { 
-      max = 8085
-      min = 8080 
-    } 
-
-  }
-}
-
 
 # --- EGRESS RULES ---
 
-# 1. Allow all outbound traffic to the VCN. 
-resource "oci_core_network_security_group_security_rule" "k3s_internal_egress" {
-  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
-  direction                 = "EGRESS"
-  protocol                  = "all"
-  destination               = oci_core_vcn.project_vcn.cidr_block
-  destination_type          = "CIDR_BLOCK"
-}
+# (Redundant VCN rule removed as nodes have 0.0.0.0/0 egress for internet access)
 
 # -----------------------------------------------------------------------------
 
@@ -182,13 +135,14 @@ resource "oci_core_network_security_group" "nsg_public_egress" {
   display_name   = "${var.project_name}-nsg-public-egress"
 }
 
-# Allow outbound traffic to the entire internet (for pulling images, ArgoCD, etc.)
+# 1. Allow outbound traffic to the internet (for pulling images, ArgoCD, etc.)
 resource "oci_core_network_security_group_security_rule" "public_vnic_internet_egress" {
   network_security_group_id = oci_core_network_security_group.nsg_public_egress.id
   direction                 = "EGRESS"
   protocol                  = "all"
   destination               = "0.0.0.0/0"
   destination_type          = "CIDR_BLOCK"
+  description               = "Allow instances to reach the public internet for updates and image pulls"
 }
 
 # NO INGRESS RULES FOR PUBLIC VNICs! 
@@ -210,6 +164,7 @@ resource "oci_core_network_security_group_security_rule" "lb_http_ingress" {
   protocol                  = "6" # TCP
   source                    = "0.0.0.0/0"
   source_type               = "CIDR_BLOCK"
+  description               = "Allow public HTTP traffic"
   
   tcp_options {
     destination_port_range {
@@ -226,6 +181,7 @@ resource "oci_core_network_security_group_security_rule" "lb_https_ingress" {
   protocol                  = "6" # TCP
   source                    = "0.0.0.0/0"
   source_type               = "CIDR_BLOCK"
+  description               = "Allow public HTTPS traffic"
   
   tcp_options {
     destination_port_range {
@@ -235,13 +191,26 @@ resource "oci_core_network_security_group_security_rule" "lb_https_ingress" {
   }
 }
 
-# Allow LB to send traffic to the K3s Subnet (where the VMs are listening)
+# 3. All Internal Traffic from K3s Nodes (for Health Checks and diagnostics)
+resource "oci_core_network_security_group_security_rule" "lb_internal_ingress" {
+  network_security_group_id = oci_core_network_security_group.nsg_public_lb.id
+  direction                 = "INGRESS"
+  protocol                  = "all"
+  source                    = oci_core_network_security_group.nsg_k3s_nodes.id
+  source_type               = "NETWORK_SECURITY_GROUP"
+  description               = "Allow any internal traffic coming from the K3s nodes"
+}
+
+# --- EGRESS RULES ---
+
+# 1. Forward Traffic to K3s Nodes
 resource "oci_core_network_security_group_security_rule" "lb_internal_egress" {
   network_security_group_id = oci_core_network_security_group.nsg_public_lb.id
   direction                 = "EGRESS"
   protocol                  = "all"
-  destination               = oci_core_subnet.k3s_subnet.cidr_block
-  destination_type          = "CIDR_BLOCK"
+  destination               = oci_core_network_security_group.nsg_k3s_nodes.id
+  destination_type          = "NETWORK_SECURITY_GROUP"
+  description               = "Allow the LB to forward traffic to the K3s nodes"
 }
 
 # 2. Allow outbound traffic to the internet (to reply to clients)
@@ -251,4 +220,5 @@ resource "oci_core_network_security_group_security_rule" "lb_public_egress" {
   protocol                  = "all"
   destination               = "0.0.0.0/0"
   destination_type          = "CIDR_BLOCK"
+  description               = "Allow the LB to send response packets back to clients on the internet"
 }
