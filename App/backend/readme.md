@@ -15,36 +15,46 @@ npm run dev
 App/backend/
 ├── src/
 │   ├── database/
-│   │   ├── connect.ts      # Sequelize initialization for db connection
-│   │   └── migrations.ts   # Umzug configuration for db migrations
-│   ├── models/             # Sequelize Model definitions
+│   │   ├── connect.ts          # Sequelize initialization for db connection
+│   │   └── migrations.ts       # Umzug configuration for db migrations
+│   ├── services/
+│   │   └── paymentProvider.ts  # Mock payment provider for testing
+│   ├── plugins/
+│   │   └── loggingPlugin.ts    # Apollo server plugin for logging
+│   ├── models/                 # Sequelize Model definitions
 │   │   ├── User.ts
 │   │   ├── Country.ts
 │   │   └── Score.ts
-│   ├── schema/             # GraphQL Layer
-│   │   ├── typeDefs.ts
-│   │   └── resolvers.ts
-│   ├── middleware/         # Auth & Logging
-│   │   ├── auth.ts
-│   │   └── logger.ts
-│   └── index.ts            # Entry point (Express + Apollo)
-├── .env                    # Local environment variables
+│   ├── schema/                 # GraphQL Layer
+│   │   ├── typeDefs.ts         # Type definitions for GraphQL
+│   │   └── resolvers.ts        # Resolvers for GraphQL
+│   ├── middleware/             # Auth & Logging middleware for Express
+│   │   ├── auth.ts             # Authentication middleware
+│   │   └── logger.ts           # Logging middleware
+│   └── index.ts                # Entry point (Express + Apollo)
+├── .env                        # Local environment variables
 └── package.json
 
 ### Tech stack
 
-* Node.js
-* Express
-* Apollo Server
-* Sequelize
-* Umzug
-* GraphQL
-* Jsonwebtoken
-* Pg
-* Nodemon
-* Bcrypt
-* Pino
-* Dotenv
+* Node.js               #Runtime environment
+* Axios                 #HTTP client for communicating with the mock payment provider
+* Express               #Web framework
+* Apollo Server         #GraphQL framework
+* Sequelize             #ORM for database
+* Umzug                 #Database migration tool
+* GraphQL               #API query language
+* Jsonwebtoken          #JSON web token utility for authentication and authorization
+* Pg                    #PostgreSQL driver
+* Nodemon               #Development server hot-reloader
+* Bcrypt                #Password hashing utility
+* Pino                  #Logging utility
+* Dotenv                #Environment variable management utility
+* Jest                  #Unit testing framework
+* Supertest             #API testing utility
+* Prettier              #Code formatter
+* ESLint                #Linting utility
+* Typescript            #TypeScript compiler
 
 ## TBD
 
