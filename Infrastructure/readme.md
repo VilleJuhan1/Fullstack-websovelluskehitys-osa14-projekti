@@ -47,7 +47,6 @@ These resources are created and managed strictly within the `Project compartment
 
 - **Network:**
   - Virtual Cloud Network (VCN) - 10.0.0.0/16
-  - Public Subnet (Bastion subnet) - 10.0.1.0/24
   - Public Subnet (Load Balancer subnet) - 10.0.2.0/24
   - Public Subnet (K3s subnet) - 10.0.3.0/24
   - Internet Gateway (IGW)
@@ -73,12 +72,6 @@ As this is a solo project, there's not much need to fine-tune IAM policies on te
     └── Project admins group (Service Account)
          └── Compartment Admin Policy
               └── Scoped access to 'Project compartment'
-```
-
-### Service account policies
-
-```text
-Allow group ProjectAdminsGroup to manage all-resources in compartment 'Project compartment'
 ```
 
 ## Layout

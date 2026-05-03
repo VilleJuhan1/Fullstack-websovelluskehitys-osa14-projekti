@@ -1,4 +1,4 @@
-# Terraform tenancy
+# Terraform for the tenancy LZ (Landing Zone)
 
 This module creates the basic infrastructure for creating project compartments and IAM policies in OCI. It assumes that the tenancy is already created and that you have the necessary permissions to create compartments and IAM policies.
 
@@ -74,7 +74,7 @@ When creating the service account via Terraform, we didn't set the API key in th
 
 ## Removing the Tenancy Infrastructure
 
-As we store the terraform state to OCI, we need to ensure that we have the correct backend configuration before we can destroy the resources. We can't destroy the object storage bucket until we have migrated the state away from it. 
+As we store the terraform state to OCI, we need to ensure that we have the correct backend configuration before we can destroy the resources. We can't destroy the object storage bucket until we have migrated the state away from it. Also, if there are resources in the project compartment, they need to be deleted first.
 
 ```bash
 # Ensure the terraform state is stored in the OCI Object Storage bucket. 

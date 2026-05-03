@@ -44,19 +44,16 @@ ansible-playbook -i inventory.local.ini main.yml --extra-vars "force_reinstall=t
 ```
 
 ### 5. Verify Kubernetes
-Ansible will automatically fetch the `kubeconfig` down to your local machine and place it in the `../kubernetes/` directory.
+As is, bastion tunnels don't work with kubectl. This might be an OCI limit. To verify the cluster is working, SSH to the node via bastion and run `kubectl get nodes`.
 
-> [!NOTE]
-> The `create_tunnels.py` script contains commented-out lines for the Kubernetes API and Web tunnels. If you need to interact with the cluster via `kubectl`, uncomment those lines in the script and restart the tunnels.
-
-Once active, you can interact with your cluster:
 ```bash
-export KUBECONFIG=../kubernetes/kubeconfig.yaml
+ssh -i ansible/ansible_key.pem ubuntu@localhost -p 2222 # use the same SSH private key that Ansible uses
+# Then, on the node
 kubectl get nodes
 ```
 
 ### 6. Clean Up
-When you are done, you can safely close all the background tunnels by running:
+When you are done, you can safely close all the background tunnels by running (or just wait for the sessions to drop):
 ```bash
 cd ../scripts
 ps -fp $(cat bastion_pids.txt)  # See which processes are running and if the tunnels are still up
