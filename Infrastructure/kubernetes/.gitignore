@@ -1,2 +1,3 @@
 kubeconfig*
 nginx-test.yaml
+*.env
