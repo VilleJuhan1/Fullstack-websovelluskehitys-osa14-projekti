@@ -14,15 +14,14 @@ export const typeDefs = `#graphql
   }
 
   type ObjectType {
+    id: Int!
     name: String!
     translations: TranslationsType
-    category: String!
-    image: String!
+    categories: [String!]
+    imageUrl: String!
   }
   
   type TranslationsType {
-    common: String!
-    official: String
     fin: String
     swe: String
   }

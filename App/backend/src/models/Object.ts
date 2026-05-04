@@ -10,15 +10,17 @@ interface Translations {
 
 // A type of object, ie. Pokemon, monument, landmark or a country.
 export class ObjectType {
+    id: number;
     name: string; // Identifier, like Pikachu or Finland
     translations: Translations;
-    category: string; // Category, like water-type for Pokemon or Europe for countries
-    image: string; // Image of the object
+    categories: string[]; // List of categories, like ["grass", "poison"] for Pokemon or ["Europe", "Asia"] for Turkey
+    imageUrl: string; // Image of the object
 
-    constructor(name: string, translations: Translations, category: string, image: string) {
+    constructor(id: number, name: string, translations: Translations, categories: string[], imageUrl: string) {
+        this.id = id;
         this.name = name;
         this.translations = translations;
-        this.category = category;
-        this.image = image;
+        this.categories = categories;
+        this.imageUrl = imageUrl;
     }
 }
