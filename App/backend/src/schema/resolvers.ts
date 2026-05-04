@@ -1,6 +1,7 @@
 import { Country } from '../models/country';
 import countries from '../data/countries.json';
 
+// Legacy, will be changed
 export const resolvers = {
   Query: {
     allCountries: (): Country[] => countries,

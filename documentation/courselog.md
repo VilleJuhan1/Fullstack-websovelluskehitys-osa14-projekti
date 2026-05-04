@@ -23,7 +23,7 @@
 | May 1st | Worked on the k3s cluster, can't get bastion tunnel to work with kubectl but otherwise the cluster looks great | 4 |
 | May 2nd | Got the Nginx test page working via the LB, reviewed all SL/NSG rules, added descriptions and removed overlapping rules. | 2 |
 | May 3rd | Researched about implementing OCI Cloud Guard, but it's no longer available for free users. Reviewed documentation. Kubernetes planning. | 1,5 |
-|  |  |  |
+| May 4th | Back to work with the backend. Refactored the schema and worked with the helper script | 2 |
 |  |  |  |
 |  |  |  |
 |  |  |  |

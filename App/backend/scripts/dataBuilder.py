@@ -31,6 +31,7 @@ def countryDataBuilder():
 
     print(f"Saved {len(filtered)} countries to countries.json")
 
+# This helper function fetches pokemon data from the PokeAPI and saves it to a local JSON file.
 def pokemonDataBuilder():
     pokemons = 151 # Generate data for the original 151 pokemon
 
