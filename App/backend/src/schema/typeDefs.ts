@@ -12,4 +12,18 @@ export const typeDefs = `#graphql
     allCountries: [Country!]!
     country(name: String!): Country
   }
+
+  type ObjectType {
+    name: String!
+    translations: TranslationsType
+    category: String!
+    image: String!
+  }
+  
+  type TranslationsType {
+    common: String!
+    official: String
+    fin: String
+    swe: String
+  }
 `;
