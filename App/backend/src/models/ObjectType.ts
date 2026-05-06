@@ -1,7 +1,6 @@
 //models/Object.ts
 
-// 
-interface Translations {
+export interface Translations {
     common: string;
     official: string;
     fin: string;

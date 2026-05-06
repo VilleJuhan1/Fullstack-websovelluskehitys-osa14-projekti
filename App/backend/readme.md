@@ -55,6 +55,26 @@ App/backend/
 * Prettier              #Code formatter
 * ESLint                #Linting utility
 * Typescript            #TypeScript compiler
+* Redis
+
+### Flow
+
+```mermaid
+graph TD
+    A[Client] --> B[Apollo Server]
+    B --> C[Resolvers]
+    C --> D{Cache Check<br/>Redis}
+    D -->|Cache Hit| E[Return Cached Data/Images]
+    D -->|Cache Miss| F[ORM Layer<br/>Sequelize]
+    F --> G[PostgreSQL]
+    G --> H[Fetch/Process Images<br/>if needed]
+    H --> I[Store in Cache<br/>Redis]
+    I --> J[Return Data/Images]
+    E --> J
+    J --> C
+    C --> B
+    B --> A
+```
 
 ## TBD
 

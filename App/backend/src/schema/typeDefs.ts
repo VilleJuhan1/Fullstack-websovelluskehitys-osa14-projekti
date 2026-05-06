@@ -9,8 +9,10 @@ export const typeDefs = `#graphql
   }
 
   type Query {
-    allCountries: [Country!]!
-    country(name: String!): Country
+    allCountries: [ObjectType!]!
+    allPokemon: [ObjectType!]!
+    country(name: String!): ObjectType
+    pokemon(name: String!): ObjectType
   }
 
   type ObjectType {
