@@ -90,7 +90,7 @@ export const up = async ({ context: queryInterface }: any) => {
 
   // Seed Pokemon table with initial data
   const formattedPokemon = pokemonData.map((p: any) => {
-    const { id, ...rest } = p;
+    const { id, ...rest } = p; // Remove duplicate id=1
     return {
       ...rest,
       categories: JSON.stringify(rest.categories),
