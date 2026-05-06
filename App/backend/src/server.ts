@@ -9,8 +9,12 @@ import { GraphQLError } from 'graphql';
 const PORT = process.env.PORT ? Number(process.env.PORT) : 4000;
 const isDev = process.env.NODE_ENV !== 'production';
 
+import { runMigrations } from './db';
+
 export async function startServer() {
   try {
+    await runMigrations();
+    
     const server = new ApolloServer({
       typeDefs,
       resolvers,
