@@ -25,5 +25,5 @@
 | May 3rd | Researched about implementing OCI Cloud Guard, but it's no longer available for free users. Reviewed documentation. Kubernetes planning. | 1,5 |
 | May 4th | Back to work with the backend. Refactored the schema and worked with the helper script | 2 |
 | May 6th | Changed the backend to connect to a postgres database (docker for dev) | 2,5 |
-|  |  |  |
+| May 7th | Backend production build works in containers with postgres | 1,5 |
 |  |  |  |
