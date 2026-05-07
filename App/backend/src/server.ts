@@ -14,7 +14,7 @@ import { runMigrations } from './db';
 export async function startServer() {
   try {
     await runMigrations();
-    
+
     const server = new ApolloServer({
       typeDefs,
       resolvers,
@@ -45,7 +45,7 @@ export async function startServer() {
       listen: { port: PORT },
     });
 
-    logger.info({ url, port: PORT }, '🚀 Server ready');
+    logger.info({ url, port: PORT }, 'Apollo server ready');
     return { server, url };
   } catch (error) {
     logger.fatal(error, 'Failed to start server');
