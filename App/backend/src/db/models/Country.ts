@@ -36,7 +36,7 @@ Country.init(
   },
   {
     sequelize,
-    underscored: true,
+    underscored: false,
     timestamps: true,
     modelName: 'country',
   }

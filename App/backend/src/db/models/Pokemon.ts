@@ -36,7 +36,7 @@ Pokemon.init(
   },
   {
     sequelize,
-    underscored: true,
+    underscored: false,
     timestamps: true,
     modelName: 'pokemon',
     tableName: 'pokemon', // ensure pluralization doesn't mess it up

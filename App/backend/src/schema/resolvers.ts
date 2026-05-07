@@ -1,24 +1,40 @@
 import { ObjectType, Translations } from '../models/ObjectType';
-import countries from '../data/countries.json';
-import pokemon from '../data/pokemon.json';
+import { Country } from '../db/models/Country';
+import { Pokemon } from '../db/models/Pokemon';
+import { Op } from 'sequelize';
 
 export const resolvers = {
   Query: {
-    allCountries: (): ObjectType[] => countries.map((c) => new ObjectType(c.id, c.name, c.translations as Translations, c.categories, c.imageUrl)),
-    allPokemon: (): ObjectType[] => pokemon.map((p) => new ObjectType(p.id, p.name, {} as Translations, p.categories, p.imageUrl)),
-
-    country: (_: unknown, args: { name: string }): ObjectType | undefined => {
-      const country = countries.find(
-        (c) => c.name.toLowerCase() === args.name.toLowerCase()
-      );
-      return country ? new ObjectType(country.id, country.name, country.translations as Translations, country.categories, country.imageUrl) : undefined;
+    allCountries: async (): Promise<ObjectType[]> => {
+      const countries = await Country.findAll();
+      return countries.map((c) => new ObjectType(c.id, c.name, c.translations as Translations, c.categories, c.imageUrl));
     },
 
-    pokemon: (_: unknown, args: { name: string }): ObjectType | undefined => {
-      const foundPokemon = pokemon.find(
-        (p) => p.name.toLowerCase() === args.name.toLowerCase()
-      );
-      return foundPokemon ? new ObjectType(foundPokemon.id, foundPokemon.name, {} as Translations, foundPokemon.categories, foundPokemon.imageUrl) : undefined;
+    allPokemon: async (): Promise<ObjectType[]> => {
+      const pokemon = await Pokemon.findAll();
+      return pokemon.map((p) => new ObjectType(p.id, p.name, (p.translations as Translations) || ({} as Translations), p.categories, p.imageUrl));
+    },
+
+    country: async (_: unknown, args: { name: string }): Promise<ObjectType | null> => {
+      const country = await Country.findOne({
+        where: {
+          name: {
+            [Op.iLike]: args.name,
+          },
+        },
+      });
+      return country ? new ObjectType(country.id, country.name, country.translations as Translations, country.categories, country.imageUrl) : null;
+    },
+
+    pokemon: async (_: unknown, args: { name: string }): Promise<ObjectType | null> => {
+      const foundPokemon = await Pokemon.findOne({
+        where: {
+          name: {
+            [Op.iLike]: args.name,
+          },
+        },
+      });
+      return foundPokemon ? new ObjectType(foundPokemon.id, foundPokemon.name, (foundPokemon.translations as Translations) || ({} as Translations), foundPokemon.categories, foundPokemon.imageUrl) : null;
     },
   },
 };
