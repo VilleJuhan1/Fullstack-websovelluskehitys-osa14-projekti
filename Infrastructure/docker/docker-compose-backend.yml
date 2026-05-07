@@ -1,0 +1,36 @@
+# Docker-compose file for the backend and PostgreSQL
+
+services:
+  # connect to the postgres container while dev with `docker exec -it local_dev_db psql -U admin -d mydatabase`
+  postgres:
+    image: postgres:18-alpine
+    container_name: local_dev_db
+    restart: always
+    # environment variables are loaded from a separate env file
+    # POSTGRES_USER=admin
+    # POSTGRES_PASSWORD=mysecretpassword
+    # POSTGRES_DB=mydatabase
+    env_file:
+      - ../../App/backend/.env
+    ports:
+      - '5432'
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d mydatabase"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  graphql-api:
+    depends_on:
+      postgres:
+        condition: service_healthy
+    build:
+      context: ../../App/backend
+      dockerfile: Dockerfile
+    container_name: graphql-api
+    restart: always
+    env_file:
+      - ../../App/backend/.env
+    environment:
+      - POSTGRES_HOST=postgres
+    ports:
+      - '4000:4000'

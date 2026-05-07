@@ -6,11 +6,11 @@ services:
     image: postgres:18-alpine
     container_name: local_dev_db
     restart: always
-    # environment variables are loaded from .env, ie.
+    # environment variables are loaded from a separate env file
     # POSTGRES_USER=admin
     # POSTGRES_PASSWORD=mysecretpassword
     # POSTGRES_DB=mydatabase
     env_file:
-      - .env
+      - ../../App/backend/.env
     ports:
       - '5432:5432'

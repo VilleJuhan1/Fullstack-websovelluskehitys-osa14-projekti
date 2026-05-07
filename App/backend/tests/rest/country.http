@@ -1,0 +1,17 @@
+### Get a single country by name
+POST http://localhost:4000/
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+query GetCountry($name: String!) {
+  country(name: $name) {
+    id
+    name
+    categories
+    imageUrl
+  }
+}
+
+{
+  "name": "Finland"
+}
