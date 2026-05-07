@@ -1,8 +1,8 @@
-import { DataTypes } from 'sequelize';
+import { DataTypes, QueryInterface } from 'sequelize';
 import countriesData from '../data/countries.json';
 import pokemonData from '../data/pokemon.json';
 
-export const up = async ({ context: queryInterface }: any) => {
+export const up = async ({ context: queryInterface }: { context: QueryInterface }) => {
   // Create Countries Table
   await queryInterface.createTable('countries', {
     id: {
@@ -76,7 +76,8 @@ export const up = async ({ context: queryInterface }: any) => {
   });
 
   // Seed Countries table with initial data
-  const formattedCountries = countriesData.map((c: any) => {
+  const formattedCountries = countriesData.map((c: Record<string, unknown>) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { id, ...rest } = c; // Remove duplicate id=1
     return {
       ...rest,
@@ -89,7 +90,8 @@ export const up = async ({ context: queryInterface }: any) => {
   await queryInterface.bulkInsert('countries', formattedCountries);
 
   // Seed Pokemon table with initial data
-  const formattedPokemon = pokemonData.map((p: any) => {
+  const formattedPokemon = pokemonData.map((p: Record<string, unknown>) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { id, ...rest } = p; // Remove duplicate id=1
     return {
       ...rest,
@@ -101,7 +103,7 @@ export const up = async ({ context: queryInterface }: any) => {
   await queryInterface.bulkInsert('pokemon', formattedPokemon);
 };
 
-export const down = async ({ context: queryInterface }: any) => {
+export const down = async ({ context: queryInterface }: { context: QueryInterface }) => {
   await queryInterface.dropTable('countries');
   await queryInterface.dropTable('pokemon');
 };

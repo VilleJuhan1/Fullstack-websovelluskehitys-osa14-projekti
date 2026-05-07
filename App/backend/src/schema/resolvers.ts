@@ -12,7 +12,7 @@ export const resolvers = {
           new ObjectType(
             c.id,
             c.name,
-            c.translations as Translations,
+            c.translations as unknown as Translations, // We're unsure which languages are available, so we cast to unknown first
             c.categories,
             c.imageUrl
           )
@@ -26,7 +26,7 @@ export const resolvers = {
           new ObjectType(
             p.id,
             p.name,
-            (p.translations as Translations) || ({} as Translations),
+            (p.translations as unknown as Translations) || ({} as Translations),
             p.categories,
             p.imageUrl
           )
@@ -46,12 +46,12 @@ export const resolvers = {
       });
       return country
         ? new ObjectType(
-            country.id,
-            country.name,
-            country.translations as Translations,
-            country.categories,
-            country.imageUrl
-          )
+          country.id,
+          country.name,
+          country.translations as unknown as Translations,
+          country.categories,
+          country.imageUrl
+        )
         : null;
     },
 
@@ -68,12 +68,12 @@ export const resolvers = {
       });
       return foundPokemon
         ? new ObjectType(
-            foundPokemon.id,
-            foundPokemon.name,
-            (foundPokemon.translations as Translations) || ({} as Translations),
-            foundPokemon.categories,
-            foundPokemon.imageUrl
-          )
+          foundPokemon.id,
+          foundPokemon.name,
+          (foundPokemon.translations as unknown as Translations) || ({} as Translations),
+          foundPokemon.categories,
+          foundPokemon.imageUrl
+        )
         : null;
     },
   },

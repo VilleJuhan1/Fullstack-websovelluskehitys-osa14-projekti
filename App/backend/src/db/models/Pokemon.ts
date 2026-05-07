@@ -4,7 +4,7 @@ import { sequelize } from '../index';
 export class Pokemon extends Model {
   declare id: number;
   declare name: string;
-  declare translations: any;
+  declare translations: Record<string, string> | null;
   declare categories: string[];
   declare imageUrl: string;
 }
