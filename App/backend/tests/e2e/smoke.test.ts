@@ -1,3 +1,5 @@
+import { test, expect } from '@jest/globals';
+
 const API_test_url = process.env.API_URL || 'http://localhost:4000/graphql';
 
 test('basic query returns 200 and json data', async () => {
