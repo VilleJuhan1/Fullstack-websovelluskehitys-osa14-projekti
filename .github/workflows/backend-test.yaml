@@ -53,10 +53,10 @@ jobs:
           node-version: '20' # Using Node 20 as standard for modern apps
 
       - name: Build Docker image
-        run: docker compose -f docker-compose-backend-dev.yml build
+        run: docker compose -f docker-compose-backend.yml build
 
       - name: Run app in Docker container
-        run: docker compose -f docker-compose-backend-dev.yml up -d
+        run: docker compose -f docker-compose-backend.yml up -d
         
       - name: Wait for service to start
         run: sleep 5
