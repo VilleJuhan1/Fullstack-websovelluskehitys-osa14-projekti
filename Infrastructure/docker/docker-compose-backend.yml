@@ -35,3 +35,5 @@ services:
       - POSTGRES_HOST=postgres
     ports:
       - '4000:4000'
+
+# change

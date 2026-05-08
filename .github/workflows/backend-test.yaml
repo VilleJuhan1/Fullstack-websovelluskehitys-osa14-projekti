@@ -5,6 +5,7 @@ on:
     paths:
       - 'App/backend/**'
       - '.github/workflows/backend-test.yaml'
+      - 'Infrastructure/docker/docker-compose-backend*.yml'
 #  pull_request:
 #    paths:
 #      - 'App/backend/**'
