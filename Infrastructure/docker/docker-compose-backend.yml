@@ -37,7 +37,6 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=mysecretpassword
       - POSTGRES_DB=mydatabase
-      - POSTGRES_HOST=localhost
       - POSTGRES_PORT=5432
     ports:
       - '4000:4000'
