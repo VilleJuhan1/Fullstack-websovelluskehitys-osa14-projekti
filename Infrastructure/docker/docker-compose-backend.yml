@@ -29,10 +29,16 @@ services:
       dockerfile: Dockerfile
     container_name: graphql-api
     restart: always
-    env_file:
-      - ../../App/backend/.env
+    #env_file:
+    #  - ../../App/backend/.env
+    # only for dev, use secrets in production
     environment:
       - POSTGRES_HOST=postgres
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_HOST=localhost
+      - POSTGRES_PORT=5432
     ports:
       - '4000:4000'
 
