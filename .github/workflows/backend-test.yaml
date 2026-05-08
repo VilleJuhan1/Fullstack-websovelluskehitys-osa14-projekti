@@ -27,7 +27,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Using Node 20 as standard for modern apps
+          node-version: '24'
 
       - name: Install dependencies
         run: npm install
@@ -51,7 +51,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Using Node 20 as standard for modern apps
+          node-version: '24'
 
       - name: Build Docker image
         run: docker compose -f docker-compose-backend.yml build
@@ -61,6 +61,10 @@ jobs:
         
       - name: Wait for service to start
         run: sleep 10
+
+      - name: Delete package-lock.json
+        working-directory: App/backend
+        run: rm -f package-lock.json
 
       - name: Install test dependencies
         working-directory: App/backend
