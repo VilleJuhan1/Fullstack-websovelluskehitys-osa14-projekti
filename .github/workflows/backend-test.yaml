@@ -36,6 +36,7 @@ jobs:
         run: npm run lint
 
   build-and-test:
+    needs: linter
     # Only run this job if the commit messages contain '#backend-test'
     if: contains(toJSON(github.event.commits.*.message), '#backend-test')
     runs-on: ubuntu-latest
@@ -59,16 +60,12 @@ jobs:
         run: docker compose -f docker-compose-backend.yml up -d
         
       - name: Wait for service to start
-        run: sleep 5
-
-      - name: Run database migrations
-        run: docker exec local_dev_db npm run db:migrate
-
-      - name: Change directory to backend
-        run: cd ../App/backend
+        run: sleep 10
 
       - name: Install test dependencies
+        working-directory: App/backend
         run: npm install
 
       - name: Test queries
+        working-directory: App/backend
         run: npm test
