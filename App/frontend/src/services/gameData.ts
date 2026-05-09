@@ -61,7 +61,7 @@ export const useGameData = (type: GameDataType) => {
   const { data, loading, error, refetch } = useQuery<QueryData>(query);
 
   let items: GameItem[] = [];
-  if (data && data[dataKey]) {
+  if (!loading && data && data[dataKey]) {
     items = data[dataKey] || [];
   }
 

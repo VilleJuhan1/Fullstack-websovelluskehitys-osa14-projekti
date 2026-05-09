@@ -1,13 +1,61 @@
+import { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useGameData } from '../services/gameData';
-import type { GameDataType } from '../services/gameData';
+import type { GameDataType, GameItem } from '../services/gameData';
+import QuizGrid from '../components/quiz/QuizGrid';
 
 export default function Quiz() {
   const { category } = useParams<{ category: string }>();
-
-  // Define type dynamically from router parameter
   const type = (category === 'countries' ? 'countries' : 'pokemon') as GameDataType;
   const { items, loading, error } = useGameData(type);
+
+  const [options, setOptions] = useState<GameItem[]>([]);
+  const [targetItem, setTargetItem] = useState<GameItem | null>(null);
+  const [feedback, setFeedback] = useState<{ message: string; color: string } | null>(null);
+
+  // Reset state when category changes or component unmounts to avoid mixing data
+  useEffect(() => {
+    setOptions([]);
+    setTargetItem(null);
+    setFeedback(null);
+
+    return () => {
+      setOptions([]);
+      setTargetItem(null);
+      setFeedback(null);
+    };
+  }, [category]);
+
+  // Function to pick 4 random items and one target
+  const generateQuestion = useCallback(() => {
+    if (items.length < 4) return;
+
+    // Shuffle and pick 4
+    const shuffled = [...items].sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, 4);
+
+    setOptions(selected);
+    // Pick one of the selected as the correct answer
+    setTargetItem(selected[Math.floor(Math.random() * 4)]);
+    setFeedback(null);
+  }, [items]);
+
+  // Generate first question when items are loaded
+  useEffect(() => {
+    if (items.length > 0 && options.length === 0) {
+      generateQuestion();
+    }
+  }, [items, options.length, generateQuestion]);
+
+  const handleSelect = (selectedItem: GameItem) => {
+    if (selectedItem.id === targetItem?.id) {
+      setFeedback({ message: 'Correct! 🎉', color: 'var(--color-primary)' });
+      // Move to next question after a short delay
+      setTimeout(generateQuestion, 1200);
+    } else {
+      setFeedback({ message: 'Wrong! Try again. ❌', color: 'var(--color-danger)' });
+    }
+  };
 
   if (loading) {
     return (
@@ -27,29 +75,40 @@ export default function Quiz() {
 
   return (
     <div className="container flex-center" style={{ minHeight: '100vh', padding: '2rem 0' }}>
-      <div className="glass-panel" style={{ padding: '2rem', width: '100%', maxWidth: '800px', textAlign: 'center' }}>
-        <h1 className="text-gradient">{category?.toUpperCase()}</h1>
-        <p>Found {items.length} {category} loaded from the backend.</p>
+      <div className="glass-panel" style={{ padding: '2rem', width: '100%', maxWidth: '600px', textAlign: 'center' }}>
+        <h1 className="text-gradient">{category?.toUpperCase()} QUIZ</h1>
 
-        {/* Placeholder for the Kahoot-style quiz logic */}
-        <div className="grid-2x2" style={{ margin: '3rem 0' }}>
-          {/* Random items to test that backend works */}
-          {items.slice(0, 4).map(item => (
-            <div key={item.id} className="quiz-option" style={{ pointerEvents: 'none' }}>
-              <h3>{item.name}</h3>
-              {item.imageUrl && (
-                <img
-                  src={item.imageUrl}
-                  alt={item.name}
-                  style={{ width: '80px', height: '80px', objectFit: 'contain', marginTop: '1rem' }}
-                />
-              )}
+        {targetItem && (
+          <div style={{ margin: '1.5rem 0' }}>
+            <p style={{ opacity: 0.8, marginBottom: '0.5rem' }}>Which one is:</p>
+            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>{targetItem.name}</h2>
+          </div>
+        )}
+
+        {options.length > 0 && (
+          <QuizGrid options={options} onSelect={handleSelect} />
+        )}
+
+        <div style={{ height: '60px', marginTop: '1rem' }}>
+          {feedback && (
+            <div style={{
+              padding: '0.8rem',
+              borderRadius: 'var(--radius-sm)',
+              background: feedback.color,
+              color: 'white',
+              fontWeight: '600',
+              animation: 'bounceIn 0.4s ease-out'
+            }}>
+              {feedback.message}
             </div>
-          ))}
+          )}
         </div>
 
-        <Link to="/" className="btn btn-primary">Back to Menu</Link>
+        <div style={{ marginTop: '2rem' }}>
+          <Link to="/" className="btn btn-primary">Back to Menu</Link>
+        </div>
       </div>
     </div>
   );
 }
+
