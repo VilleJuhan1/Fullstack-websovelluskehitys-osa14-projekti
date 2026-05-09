@@ -36,7 +36,10 @@ export const sequelize = new Sequelize(DATABASE_URL, {
 
 export const migrator = new Umzug({
   migrations: {
-    glob: process.env.NODE_ENV === 'production' ? 'dist/migrations/*.js' : 'src/migrations/*.ts',
+    glob:
+      process.env.NODE_ENV === 'production'
+        ? 'dist/migrations/*.js'
+        : 'src/migrations/*.ts',
   },
   context: sequelize.getQueryInterface(),
   storage: new SequelizeStorage({ sequelize }),

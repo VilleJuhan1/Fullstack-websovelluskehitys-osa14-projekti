@@ -2,7 +2,11 @@ import { DataTypes, QueryInterface } from 'sequelize';
 import countriesData from '../data/countries.json';
 import pokemonData from '../data/pokemon.json';
 
-export const up = async ({ context: queryInterface }: { context: QueryInterface }) => {
+export const up = async ({
+  context: queryInterface,
+}: {
+  context: QueryInterface;
+}) => {
   // Create Countries Table
   await queryInterface.createTable('countries', {
     id: {
@@ -103,7 +107,11 @@ export const up = async ({ context: queryInterface }: { context: QueryInterface 
   await queryInterface.bulkInsert('pokemon', formattedPokemon);
 };
 
-export const down = async ({ context: queryInterface }: { context: QueryInterface }) => {
+export const down = async ({
+  context: queryInterface,
+}: {
+  context: QueryInterface;
+}) => {
   await queryInterface.dropTable('countries');
   await queryInterface.dropTable('pokemon');
 };
