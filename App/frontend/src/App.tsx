@@ -1,5 +1,3 @@
-import './App.css';
-
 function App() {
   return (
     <div className="container flex-center" style={{ minHeight: '100vh' }}>

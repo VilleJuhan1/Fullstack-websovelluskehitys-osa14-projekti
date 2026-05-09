@@ -49,14 +49,20 @@ export interface QueryData {
   allCountries?: GameItem[];
 }
 
+// Map each data type to its corresponding query and the key it returns
+const QUERY_MAP: Record<GameDataType, { query: any, dataKey: keyof QueryData }> = {
+  pokemon: { query: GET_ALL_POKEMON, dataKey: 'allPokemon' },
+  countries: { query: GET_ALL_COUNTRIES, dataKey: 'allCountries' }
+};
+
 /* React hook to fetch data inside components using ApolloClient*/
 export const useGameData = (type: GameDataType) => {
-  const query = type === 'pokemon' ? GET_ALL_POKEMON : GET_ALL_COUNTRIES;
+  const { query, dataKey } = QUERY_MAP[type];
   const { data, loading, error, refetch } = useQuery<QueryData>(query);
 
   let items: GameItem[] = [];
-  if (data) {
-    items = type === 'pokemon' ? data.allPokemon || [] : data.allCountries || [];
+  if (data && data[dataKey]) {
+    items = data[dataKey] || [];
   }
 
   return { items, loading, error, refetch };
@@ -64,8 +70,8 @@ export const useGameData = (type: GameDataType) => {
 
 /* Standalone service to use outside React components*/
 export const fetchGameData = async (type: GameDataType): Promise<GameItem[]> => {
-  const query = type === 'pokemon' ? GET_ALL_POKEMON : GET_ALL_COUNTRIES;
+  const { query, dataKey } = QUERY_MAP[type];
 
   const { data } = await client.query<QueryData>({ query });
-  return type === 'pokemon' ? data.allPokemon || [] : data.allCountries || [];
+  return data?.[dataKey] || [];
 };
