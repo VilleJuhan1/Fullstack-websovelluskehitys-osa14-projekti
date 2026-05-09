@@ -119,6 +119,12 @@ p {
     gap: var(--space-md);
 }
 
+.grid-1-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+}
+
 /* Interactive Elements (Buttons & Quiz Options) */
 .btn {
     display: inline-flex;
