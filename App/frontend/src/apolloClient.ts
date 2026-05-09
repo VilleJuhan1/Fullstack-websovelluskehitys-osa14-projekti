@@ -19,7 +19,6 @@ const errorLink = new ErrorLink(({ error }) => {
   }
 });
 
-// Separate ApolloClient component for all components
 export const client = new ApolloClient({
   link: from([errorLink, httpLink]),
   cache: new InMemoryCache(),

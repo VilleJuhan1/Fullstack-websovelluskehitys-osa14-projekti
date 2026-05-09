@@ -6,29 +6,30 @@ interface QuizButtonProps {
   onClick: (item: GameItem) => void;
 }
 
+// A component that renders the quiz options as a button with the image of the item
 const QuizButton: React.FC<QuizButtonProps> = ({ item, onClick }) => {
   return (
-    <button 
-      className="quiz-option" 
-      onClick={() => onClick(item)} 
-      style={{ 
-        padding: '0.5rem', 
-        overflow: 'hidden', 
+    <button
+      className="quiz-option"
+      onClick={() => onClick(item)}
+      style={{
+        padding: '0.5rem',
+        overflow: 'hidden',
         aspectRatio: '1/1',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        background: 'var(--bg-surface-elevated)'
+        background: 'var(--bg-surface-elevated)',
       }}
     >
-      <img 
-        src={item.imageUrl} 
-        alt="Quiz option" 
-        style={{ 
-          width: '100%', 
-          height: '100%', 
-          objectFit: 'contain' 
-        }} 
+      <img
+        src={item.imageUrl}
+        alt="Quiz option"
+        style={{
+          width: '100%',
+          height: '100%',
+          objectFit: 'contain',
+        }}
       />
     </button>
   );

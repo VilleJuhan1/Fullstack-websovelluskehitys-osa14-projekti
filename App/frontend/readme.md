@@ -8,8 +8,6 @@ Other components are top bar navigation and bottom bar for info and links.
 
 The app will be developed for both mobile and web platforms.
 
-The UI framework used are 
-
 ## Starting the server
 
 ```shell

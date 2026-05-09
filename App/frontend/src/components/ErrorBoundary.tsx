@@ -15,7 +15,7 @@ interface State {
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false
+    hasError: false,
   };
 
   public static getDerivedStateFromError(error: Error): State {
@@ -25,7 +25,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log the error to an error reporting service or console
-    console.error("Uncaught error logged from ErrorBoundary:");
+    console.error('Uncaught error logged from ErrorBoundary:');
     console.error(error, errorInfo);
   }
 
@@ -37,17 +37,32 @@ export class ErrorBoundary extends Component<Props, State> {
 
       // Default fallback UI
       return (
-        <div className="container flex-center" style={{ minHeight: '100vh', padding: '2rem' }}>
-          <div className="glass-panel" style={{ padding: '3rem', textAlign: 'center', maxWidth: '600px' }}>
-            <h1 style={{ color: 'var(--color-danger)', marginBottom: '1rem' }}>Oops!</h1>
+        <div
+          className="container flex-center"
+          style={{ minHeight: '100vh', padding: '2rem' }}
+        >
+          <div
+            className="glass-panel"
+            style={{ padding: '3rem', textAlign: 'center', maxWidth: '600px' }}
+          >
+            <h1 style={{ color: 'var(--color-danger)', marginBottom: '1rem' }}>
+              Oops!
+            </h1>
             <h2 style={{ fontSize: '1.25rem' }}>Something went wrong.</h2>
-            <p style={{ marginTop: '1rem', padding: '1rem', background: 'rgba(0,0,0,0.2)', borderRadius: 'var(--radius-sm)' }}>
-              {this.state.error?.message || "Unknown Application Error"}
+            <p
+              style={{
+                marginTop: '1rem',
+                padding: '1rem',
+                background: 'rgba(0,0,0,0.2)',
+                borderRadius: 'var(--radius-sm)',
+              }}
+            >
+              {this.state.error?.message || 'Unknown Application Error'}
             </p>
             <button
               className="btn btn-primary"
               style={{ marginTop: '2rem' }}
-              onClick={() => window.location.href = '/'}
+              onClick={() => (window.location.href = '/')}
             >
               Return to Menu
             </button>

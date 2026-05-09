@@ -7,6 +7,7 @@ interface QuizGridProps {
   onSelect: (item: GameItem) => void;
 }
 
+// The componentthat renders the quiz options as a 2x2 grid
 const QuizGrid: React.FC<QuizGridProps> = ({ options, onSelect }) => {
   return (
     <div className="grid-2x2" style={{ margin: '2rem 0', width: '100%' }}>
