@@ -27,7 +27,7 @@
 | May 6th | Changed the backend to connect to a postgres database (docker for dev) | 2,5 |
 | May 7th | Backend production build works in containers with postgres | 1,5 |
 | May 8th | Backend E2E tests locally and in the pipeline | 2 |
-|  |  |  |
+| May 9th | Working frontend, although still quite barebones. Fetches data properly and renders basic quizzes. | 6 |
 |  |  |  |
 |  |  |  |
 |  |  |  |
