@@ -6,7 +6,7 @@ This repository is my showcase project for the University of Helsinki [Fullstack
 
 The app itself is a fairly simple game, where the user tries to guess the correct country based on a flag. It will also include some gamification elements, such as high scores, streaks and levels, to make it more engaging. The app will contain a free version, which is limited in features and content, and a premium version, which unlocks all features and content. Users can upgrade their account to premium by making a payment through a mock payment provider. Both the backend and frontend will support multiple data types, ie. same code can be used for countries and flags as well as Pokemon, animals etc.
 
-There are many parts in the project: Frontend (React Native), Backend (GraphQL), Container Orchestration (Kubernetes with k3s), CI/CD (Github actions, ArgoCD), and Infrastructure as Code (Terraform, Ansible). The application will be deployed in a kubernetes cluster hosted on Oracle Cloud Infrastructure (OCI). Some cloud services are also used, such as a network loadbalancer, but most components are built from scratch. Ie. OKE will not be used, but instead k3s will be installed on top of compute instances that are provisioned using Terraform and and configured using Ansible. Instead of native DBaaS, a self-managed PostgreSQL running in the cluster will be used.
+There are many parts in the project: Frontend (React/Vite), Backend (GraphQL), Container Orchestration (Kubernetes with k3s), CI/CD (Github actions, ArgoCD), and Infrastructure as Code (Terraform, Ansible). The application will be deployed in a kubernetes cluster hosted on Oracle Cloud Infrastructure (OCI). Some cloud services are also used, such as a network loadbalancer, but most components are built from scratch. Ie. OKE will not be used, but instead k3s will be installed on top of compute instances that are provisioned using Terraform and and configured using Ansible. Instead of native DBaaS, a self-managed PostgreSQL running in the cluster will be used.
 
 ## Initial requirements
 
@@ -16,7 +16,7 @@ There are many parts in the project: Frontend (React Native), Backend (GraphQL),
 - Kubernetes is installed on hardened Compute VM hosts (OCI free tier) using k3s, a lightweight kubernetes distribution.
 - The Kubernetes environment has logging and monitoring tools.
 - Automation level is high (testing, CI/CD etc.)
-- The frontend is written on React Native so that it can also be compiled into an Android App in a later increment.
+- The frontend is written on React / Vite.
 - The backend uses GraphQL, which although not necessary, is chosen to showcase the course technologies.
 - Instead of javascript, the project will use typescript as a baseline.
 - A relational database will be used, but is not in focus

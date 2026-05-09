@@ -9,13 +9,21 @@ export const typeDefs = `#graphql
   }
 
   type Query {
-    allCountries: [ObjectType!]!
-    allPokemon: [ObjectType!]!
-    country(name: String!): ObjectType
-    pokemon(name: String!): ObjectType
+    allCountries: [CountryType!]!
+    allPokemon: [PokemonType!]!
+    country(name: String!): CountryType
+    pokemon(name: String!): PokemonType
   }
 
-  type ObjectType {
+  type PokemonType {
+    id: Int!
+    name: String!
+    translations: TranslationsType
+    categories: [String!]
+    imageUrl: String!
+  }
+
+  type CountryType {
     id: Int!
     name: String!
     translations: TranslationsType
