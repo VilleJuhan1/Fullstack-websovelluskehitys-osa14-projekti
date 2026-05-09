@@ -1,7 +1,26 @@
-import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
+import { ApolloClient, InMemoryCache, HttpLink, from } from '@apollo/client';
+import { ErrorLink } from '@apollo/client/link/error';
+import { CombinedGraphQLErrors } from '@apollo/client/errors';
+
+const graphqlUri = import.meta.env.VITE_GRAPHQL_URI || 'http://localhost:4000/';
+
+const httpLink = new HttpLink({ uri: graphqlUri });
+
+// Global Error Logging Middleware for Apollo v4
+const errorLink = new ErrorLink(({ error }) => {
+  if (CombinedGraphQLErrors.is(error)) {
+    error.errors.forEach(({ message, locations, path }) =>
+      console.error(
+        `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
+      )
+    );
+  } else {
+    console.error(`[Network error]: ${error}`);
+  }
+});
 
 // Separate ApolloClient component for all components
 export const client = new ApolloClient({
-  link: new HttpLink({ uri: 'http://localhost:4000/' }),
+  link: from([errorLink, httpLink]),
   cache: new InMemoryCache(),
 });
