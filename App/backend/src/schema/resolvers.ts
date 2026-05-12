@@ -35,9 +35,10 @@ export const resolvers = {
     },
 
     // Return all users, but only username and isActive status
-    allUsers: async (): Promise<{ id: number; username: string; isActive: boolean }[]> => {
-      const users = await User.findAll({ attributes: ['id', 'username', 'isActive'] });
-      return users;
+    allUsers: async (): Promise<User[]> => {
+      return User.findAll({
+        attributes: ['id', 'username', 'isActive'],
+      });
     },
 
     country: async (
