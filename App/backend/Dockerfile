@@ -15,7 +15,7 @@ COPY package*.json ./
 RUN npm install --omit=dev
 COPY --from=builder /usr/src/app/dist ./dist
 
-# Run as a non-root user for better security
+# Run as a non-root user for better security 
 USER node
 EXPOSE 4000
 CMD ["npm", "start"]
