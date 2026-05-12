@@ -36,6 +36,5 @@ services:
       - POSTGRES_PORT=5432
       - PASSWORD_SECRET=test-environment-super-secret-key
       - JWT_SECRET=super-secure-test-jwt-secret
-      #- NODE_ENV=development #overwrites the default 'production' in the dockerfile
     ports:
       - '4000:4000'

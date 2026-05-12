@@ -6,13 +6,11 @@ services:
     image: postgres:18-alpine
     container_name: local_dev_db
     restart: always
-    # use secrets for environment variables in production! these are only for dev
+    # only for dev and as an example, use proper secrets management in production
     environment:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=mysecretpassword
       - POSTGRES_DB=mydatabase
-    #env_file:
-    #  - ../../App/backend/.env
     ports:
       - '5432'
     healthcheck:
@@ -29,9 +27,7 @@ services:
       dockerfile: Dockerfile
     container_name: graphql-api
     restart: always
-    #env_file:
-    #  - ../../App/backend/.env
-    # only for dev, use secrets in production
+    # only for dev and as an example, use proper secrets management in production
     environment:
       - POSTGRES_HOST=postgres
       - POSTGRES_USER=admin
