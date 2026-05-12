@@ -56,12 +56,12 @@ export const resolvers = {
       });
       return country
         ? new ObjectType(
-          country.id,
-          country.name,
-          country.translations as unknown as Translations,
-          country.categories,
-          country.imageUrl
-        )
+            country.id,
+            country.name,
+            country.translations as unknown as Translations,
+            country.categories,
+            country.imageUrl
+          )
         : null;
     },
 
@@ -78,13 +78,13 @@ export const resolvers = {
       });
       return foundPokemon
         ? new ObjectType(
-          foundPokemon.id,
-          foundPokemon.name,
-          (foundPokemon.translations as unknown as Translations) ||
-          ({} as Translations),
-          foundPokemon.categories,
-          foundPokemon.imageUrl
-        )
+            foundPokemon.id,
+            foundPokemon.name,
+            (foundPokemon.translations as unknown as Translations) ||
+              ({} as Translations),
+            foundPokemon.categories,
+            foundPokemon.imageUrl
+          )
         : null;
     },
   },
