@@ -1,4 +1,4 @@
-# Docker-compose file for the backend and PostgreSQL
+# Docker-compose file for the backend and PostgreSQL (DEVELOPMENT!)
 
 services:
   # connect to the postgres container while dev with `docker exec -it local_dev_db psql -U admin -d mydatabase`
@@ -11,8 +11,6 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=mysecretpassword
       - POSTGRES_DB=mydatabase
-    #env_file:
-    #  - ../../App/backend/.env
     ports:
       - '5432'
     healthcheck:
@@ -29,14 +27,15 @@ services:
       dockerfile: Dockerfile
     container_name: graphql-api
     restart: always
-    #env_file:
-    #  - ../../App/backend/.env
-    # only for dev, use secrets in production
+    # these secrets are only for dev, use secrets from vault in the build in production (Also CI/CD)
     environment:
       - POSTGRES_HOST=postgres
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=mysecretpassword
       - POSTGRES_DB=mydatabase
       - POSTGRES_PORT=5432
+      - PASSWORD_SECRET=test-environment-super-secret-key
+      - JWT_SECRET=super-secure-test-jwt-secret
+      - NODE_ENV=test # so that the migration 02 is run on automated tests in CI/CD, but no dev dependencies are installed
     ports:
       - '4000:4000'

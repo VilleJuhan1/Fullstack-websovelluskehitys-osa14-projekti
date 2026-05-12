@@ -54,10 +54,10 @@ jobs:
           node-version: '24'
 
       - name: Build Docker image
-        run: docker compose -f docker-compose-backend.yml build
+        run: docker compose -f docker-compose-backend-dev.yml build
 
       - name: Run app in Docker container
-        run: docker compose -f docker-compose-backend.yml up -d
+        run: docker compose -f docker-compose-backend-dev.yml up -d
         
       - name: Wait for service to start
         run: sleep 10
