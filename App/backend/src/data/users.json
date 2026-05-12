@@ -1,0 +1,34 @@
+[
+    {
+        "username": "test_premium_user",
+        "hashedpassword": "testpassword",
+        "email": "[EMAIL_ADDRESS]",
+        "is_admin": false,
+        "is_premium_user": true,
+        "is_active": true
+    },
+    {
+        "username": "test_standard_user",
+        "hashedpassword": "testpassword2",
+        "email": "[EMAIL_ADDRESS]",
+        "is_admin": false,
+        "is_premium_user": false,
+        "is_active": true
+    },
+    {
+        "username": "test_admin_user",
+        "hashedpassword": "testpassword3",
+        "email": "[EMAIL_ADDRESS]",
+        "is_admin": true,
+        "is_premium_user": true,
+        "is_active": true
+    },
+    {
+        "username": "test_banned_user",
+        "hashedpassword": "testpassword4",
+        "email": "[EMAIL_ADDRESS]",
+        "is_admin": false,
+        "is_premium_user": false,
+        "is_active": false
+    }
+]
