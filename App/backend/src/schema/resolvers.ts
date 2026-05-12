@@ -1,6 +1,7 @@
 import { ObjectType, Translations } from '../models/ObjectType';
 import { Country } from '../db/models/Country';
 import { Pokemon } from '../db/models/Pokemon';
+import { User } from '../db/models/User';
 import { Op } from 'sequelize';
 
 export const resolvers = {
@@ -33,6 +34,12 @@ export const resolvers = {
       );
     },
 
+    // Return all users, but only username and isActive status
+    allUsers: async (): Promise<{ id: number; username: string; isActive: boolean }[]> => {
+      const users = await User.findAll({ attributes: ['id', 'username', 'isActive'] });
+      return users;
+    },
+
     country: async (
       _: unknown,
       args: { name: string }
@@ -46,12 +53,12 @@ export const resolvers = {
       });
       return country
         ? new ObjectType(
-            country.id,
-            country.name,
-            country.translations as unknown as Translations,
-            country.categories,
-            country.imageUrl
-          )
+          country.id,
+          country.name,
+          country.translations as unknown as Translations,
+          country.categories,
+          country.imageUrl
+        )
         : null;
     },
 
@@ -68,13 +75,13 @@ export const resolvers = {
       });
       return foundPokemon
         ? new ObjectType(
-            foundPokemon.id,
-            foundPokemon.name,
-            (foundPokemon.translations as unknown as Translations) ||
-              ({} as Translations),
-            foundPokemon.categories,
-            foundPokemon.imageUrl
-          )
+          foundPokemon.id,
+          foundPokemon.name,
+          (foundPokemon.translations as unknown as Translations) ||
+          ({} as Translations),
+          foundPokemon.categories,
+          foundPokemon.imageUrl
+        )
         : null;
     },
   },

@@ -8,11 +8,23 @@ export const typeDefs = `#graphql
     capital: String
   }
 
+  type User {
+    id: Int!
+    username: String!
+    email: String
+    hashedPassword: String!
+    isAdmin: Boolean!
+    isPremiumUser: Boolean!
+    isActive: Boolean!
+  }
+
   type Query {
     allCountries: [CountryType!]!
     allPokemon: [PokemonType!]!
     country(name: String!): CountryType
     pokemon(name: String!): PokemonType
+    allUsers: [User!]!
+    user(username: String!): User
   }
 
   type PokemonType {
