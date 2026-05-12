@@ -27,6 +27,14 @@ export const typeDefs = `#graphql
     user(username: String!): User
   }
 
+  type Mutation {
+    login(username: String!, password: String!): Token
+  }
+
+  type Token {
+    value: String!
+  }
+
   type PokemonType {
     id: Int!
     name: String!
