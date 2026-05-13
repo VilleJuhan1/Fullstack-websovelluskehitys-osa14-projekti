@@ -2,9 +2,18 @@ import { describe, it, expect } from '@jest/globals';
 
 const API_test_url = process.env.API_URL || 'http://localhost:4000/';
 
-describe('Auth and User API E2E', () => {
-  let userToken: string;
+interface GraphQLUser {
+  username: string;
+  isActive: boolean;
+}
 
+interface GraphQLScore {
+  category: string;
+  totalRight: number;
+  highestStreak: number;
+}
+
+describe('Auth and User API E2E', () => {
   it('can login with test_admin_user', async () => {
     const res = await fetch(API_test_url, {
       method: 'POST',
@@ -27,7 +36,6 @@ describe('Auth and User API E2E', () => {
     const json = await res.json();
     expect(res.status).toBe(200);
     expect(json.data.login.value).toBeDefined();
-    userToken = json.data.login.value; // Store for future tests if needed
   });
 
   it('returns a list of users', async () => {
@@ -50,7 +58,9 @@ describe('Auth and User API E2E', () => {
     expect(res.status).toBe(200);
     expect(json.data.allUsers).toBeDefined();
     expect(json.data.allUsers.length).toBeGreaterThan(0);
-    expect(json.data.allUsers.find((u: any) => u.username === 'test_admin_user')).toBeDefined();
+    expect(
+      json.data.allUsers.find((u: GraphQLUser) => u.username === 'test_admin_user')
+    ).toBeDefined();
   });
 
   it('can fetch a user profile with their scores', async () => {
@@ -106,7 +116,7 @@ describe('Auth and User API E2E', () => {
     expect(json.data.topScores).toBeDefined();
     expect(json.data.topScores.length).toBeGreaterThan(0);
     // Verify all returned scores match the requested category
-    json.data.topScores.forEach((score: any) => {
+    json.data.topScores.forEach((score: GraphQLScore) => {
       expect(score.category).toBe('pokemon');
     });
   });
