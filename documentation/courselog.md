@@ -35,7 +35,7 @@
 | May 8th | Backend E2E tests locally and in the pipeline | 2 |
 | May 9th | Skeleton framework for frontend, yay! Fetches data properly and renders basic quizzes. | 6 |
 | May 12th | Added some user management elements to the backend, also implemented login mutation | 2,5 |
-|  |  |  |
+| May 13th | Backend development with scores table and user tests | 2 |
 |  |  |  |
 |  |  |  |
 |  |  |  |

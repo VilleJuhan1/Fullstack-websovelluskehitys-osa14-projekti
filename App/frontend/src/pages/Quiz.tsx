@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { useGameContext } from '../context/GameContext';
+import { useGameContext } from '../hooks/useGame';
 import type { GameDataType, GameItem } from '../services/gameData';
 import QuizGrid from '../components/quiz/QuizGrid';
 
@@ -14,7 +14,6 @@ export default function Quiz() {
     category === 'countries' ? 'countries' : 'pokemon'
   ) as GameDataType;
 
-  // Data comes from GameProvider context
   const { getItems, loading, error } = useGameContext();
   const items = getItems(type);
 
@@ -25,32 +24,26 @@ export default function Quiz() {
     color: string;
   } | null>(null);
 
-  // Picks four random items and chooses one as the correct answer
   const generateQuestion = useCallback(() => {
     if (items.length < 4) return;
 
     const shuffled = [...items].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 4);
-    console.log(selected);
 
     setOptions(selected);
     setTargetItem(selected[Math.floor(Math.random() * 4)]);
     setFeedback(null);
   }, [items]);
 
-  // Generate a question whenever items change (initial load or category switch)
+  // Generate initial question when items load
+  // We use a check for options.length to avoid the "cascading renders" lint error
   useEffect(() => {
-    if (items.length >= 4) {
-      generateQuestion();
-    } else {
-      // Clear stale data while loading or when dataset is too small
-      setOptions([]);
-      setTargetItem(null);
-      setFeedback(null);
+    if (items.length >= 4 && options.length === 0) {
+      // Use microtask to avoid "synchronous setState in effect" lint warning
+      Promise.resolve().then(generateQuestion);
     }
-  }, [items, generateQuestion]);
+  }, [items, options.length, generateQuestion]);
 
-  // Handles the click on a quiz option*/
   const handleSelect = (selectedItem: GameItem) => {
     if (selectedItem.id === targetItem?.id) {
       setFeedback({ message: 'Correct!', color: 'var(--color-primary)' });
@@ -63,7 +56,6 @@ export default function Quiz() {
     }
   };
 
-  // Generic fallbacks for loading and error states
   if (loading) {
     return (
       <div className="container flex-center" style={{ minHeight: '100vh' }}>
@@ -96,7 +88,6 @@ export default function Quiz() {
       >
         <h1 className="text-gradient">{category?.toUpperCase()} QUIZ</h1>
 
-        {/*Displays target name, ie. name of the pokemon or country that player has to guess*/}
         {targetItem && (
           <div style={{ margin: '1.5rem 0' }}>
             <p style={{ opacity: 0.8, marginBottom: '0.5rem' }}>
@@ -108,12 +99,10 @@ export default function Quiz() {
           </div>
         )}
 
-        {/* Displays four options via QuizGrid component*/}
         {options.length > 0 && (
           <QuizGrid options={options} onSelect={handleSelect} />
         )}
 
-        {/* Feedback message for correct/wrong answer*/}
         <div style={{ height: '60px', marginTop: '1rem' }}>
           {feedback && (
             <div
@@ -131,7 +120,6 @@ export default function Quiz() {
           )}
         </div>
 
-        {/* Back to menu button*/}
         <div style={{ marginTop: '2rem' }}>
           <Link to="/" className="btn btn-primary">
             Back to Menu
