@@ -1,5 +1,6 @@
-import { Model, DataTypes } from 'sequelize';
-import { sequelize } from '../index';
+import { Model, DataTypes, HasManyGetAssociationsMixin } from 'sequelize';
+import { sequelize } from '../sequelize';
+import { Score } from './Score';
 
 export class User extends Model {
   declare id: number;
@@ -9,6 +10,9 @@ export class User extends Model {
   declare isAdmin: boolean;
   declare isPremiumUser: boolean;
   declare isActive: boolean;
+
+  // Association mixins
+  declare getScores: HasManyGetAssociationsMixin<Score>;
 }
 
 User.init(

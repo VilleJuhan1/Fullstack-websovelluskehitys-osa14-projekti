@@ -31,6 +31,7 @@ export default function Quiz() {
 
     const shuffled = [...items].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 4);
+    console.log(selected);
 
     setOptions(selected);
     setTargetItem(selected[Math.floor(Math.random() * 4)]);

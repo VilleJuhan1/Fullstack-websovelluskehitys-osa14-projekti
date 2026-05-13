@@ -16,6 +16,16 @@ export const typeDefs = `#graphql
     isAdmin: Boolean!
     isPremiumUser: Boolean!
     isActive: Boolean!
+    scores: [Score!]!
+  }
+
+  type Score {
+    id: Int!
+    category: String!
+    totalRounds: Int!
+    totalRight: Int!
+    totalWrong: Int!
+    highestStreak: Int!
   }
 
   type Query {
@@ -25,6 +35,7 @@ export const typeDefs = `#graphql
     pokemon(name: String!): PokemonType
     allUsers: [User!]!
     user(username: String!): User
+    topScores(category: String, limit: Int): [Score!]!
   }
 
   type Mutation {

@@ -8,8 +8,16 @@ export const userResolvers = {
       });
     },
 
-    user: async (_: unknown, { username }: { username: string }): Promise<User | null> => {
+    user: async (
+      _: unknown,
+      { username }: { username: string }
+    ): Promise<User | null> => {
       return User.findOne({ where: { username } });
+    },
+  },
+  User: {
+    scores: async (user: User) => {
+      return user.getScores();
     },
   },
 };
