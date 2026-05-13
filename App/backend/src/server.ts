@@ -45,7 +45,7 @@ export async function startServer() {
       listen: { port: PORT },
     });
 
-    logger.info({ url, port: PORT }, 'Apollo server ready');
+    logger.info({ url, port: PORT }, 'Server started');
     return { server, url };
   } catch (error) {
     logger.fatal(error, 'Failed to start server');
