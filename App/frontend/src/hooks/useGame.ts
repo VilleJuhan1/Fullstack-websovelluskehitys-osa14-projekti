@@ -9,7 +9,9 @@ export interface GameContextType {
   getItems: (type: GameDataType) => GameItem[];
 }
 
-export const GameContext = createContext<GameContextType | undefined>(undefined);
+export const GameContext = createContext<GameContextType | undefined>(
+  undefined
+);
 
 export const useGameContext = (): GameContextType => {
   const ctx = useContext(GameContext);
