@@ -78,8 +78,15 @@ jobs:
 
       - name: Push Images
         run: |
+          # Push specific version tags
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}
+          
+          # Also tag and push as latest
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
+          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
 
       - name: Update Kustomize Manifests
         run: |
