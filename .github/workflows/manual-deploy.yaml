@@ -59,12 +59,12 @@ jobs:
           npm install
           npm run lint
           
-          # Use production secrets if target_env is prod
+          # Use production/dev secrets for API URL
           if [ "${{ github.event.inputs.target_env }}" == "prod" ]; then
-            API_URL="${{ secrets.PROD_VITE_API_URL }}"
+            API_URL="/graphql" # Proxied via Frontend Nginx
             SHOW_DEV_BAR="false"
           else
-            API_URL="http://backend/graphql"
+            API_URL="/graphql" # Proxied via Frontend Nginx
             SHOW_DEV_BAR="true"
           fi
 
