@@ -83,7 +83,8 @@ jobs:
           
           # Also update the VITE_APP_VERSION in the patch if dev
           if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
-            sed -i "s/value: dev-latest/value: ${{ steps.generate-tag.outputs.tag }}/g" kustomization.yaml
+            # Find the line after 'name: VITE_APP_VERSION' and update its value
+            sed -i "/name: VITE_APP_VERSION/{n;s/value: .*/value: ${{ steps.generate-tag.outputs.tag }}/}" kustomization.yaml
           fi
 
       - name: Commit and Push Changes

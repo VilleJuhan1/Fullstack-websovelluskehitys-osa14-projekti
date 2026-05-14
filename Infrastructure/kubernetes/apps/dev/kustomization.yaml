@@ -24,7 +24,7 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: brave-wolf-40df495
+        value: swift-wolf-baffa9e
   target:
     kind: Deployment
     name: frontend
