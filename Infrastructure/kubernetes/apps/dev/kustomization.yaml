@@ -31,7 +31,7 @@ patches:
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: brave-wolf-40df495
+  newTag: swift-wolf-baffa9e
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: brave-wolf-40df495
+  newTag: swift-wolf-baffa9e
