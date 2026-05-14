@@ -49,5 +49,37 @@ graph TD
 
     %% Flow: Observability
     Prometheus -- "Scrape" --> Backend
-    Grafana -- "Query" --> Prometheus
+## Deployment Setup
+
+### 1. Configure Secrets
+The application requires several secrets to be present in the target namespace (`dev` or `prod`).
+
+```bash
+# Database Secrets
+kubectl create secret generic db-secret \
+  --from-literal=DATABASE_URL="postgres://postgres:mypassword@postgres:5432/quiz_db" \
+  --from-literal=POSTGRES_PASSWORD="mypassword" \
+  -n <namespace>
+
+# Application Secrets
+kubectl create secret generic app-secret \
+  --from-literal=JWT_SECRET="your-super-secret-jwt-key" \
+  --from-literal=PASSWORD_SECRET="your-password-pepper-secret" \
+  -n <namespace>
+```
+
+### 2. Manual Deployments
+We use a **GitHub Action** for manual branch deployments.
+- **Trigger**: Go to `Actions` -> `Manual Branch Deploy` -> `Run workflow`.
+- **Inputs**: Choose your branch and target environment (`dev` or `prod`).
+- **Result**: 
+  - Images are built with a pseudo-random tag (e.g. `happy-dolphin-v123`).
+  - Images are pushed to Docker Hub.
+  - The `kustomization.yaml` in `Infrastructure/kubernetes/apps/<env>` is automatically updated and committed back to the branch.
+  - ArgoCD (if configured) will automatically pick up the change and sync the cluster.
+
+## Kustomize Structure
+- `Infrastructure/kubernetes/base/`: Core manifests (Deployments, Services).
+- `Infrastructure/kubernetes/apps/dev/`: Development environment with seeds and DevBar enabled.
+- `Infrastructure/kubernetes/apps/prod/`: Production environment (no seeds, strict settings).
 ```
