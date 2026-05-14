@@ -24,14 +24,14 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: mighty-owl-96bb1c5
+        value: obvious-dolphin-d8c27ec
   target:
     kind: Deployment
     name: frontend
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: mighty-owl-96bb1c5
+  newTag: obvious-dolphin-d8c27ec
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: mighty-owl-96bb1c5
+  newTag: obvious-dolphin-d8c27ec
