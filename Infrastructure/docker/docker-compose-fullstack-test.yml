@@ -18,13 +18,11 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
-  graphql-api:
+  backend:
+    image: villejuhan1/quiz-backend:shiny-owl-81fd4d4
     depends_on:
       postgres:
         condition: service_healthy
-    build:
-      context: ../../App/backend
-      dockerfile: Dockerfile
     container_name: graphql-api
     restart: always
     # only for dev and as an example, use proper secrets management in production
@@ -34,14 +32,15 @@ services:
       - POSTGRES_PASSWORD=mysecretpassword
       - POSTGRES_DB=mydatabase
       - POSTGRES_PORT=5432
+      - NODE_ENV=dev
+      - PASSWORD_SECRET=test-environment-super-secret-key
+      - JWT_SECRET=super-secure-test-jwt-secret
     ports:
       - '4000:4000'
   frontend:
+    image: villejuhan1/quiz-frontend:shiny-owl-81fd4d4
     depends_on:
-      - graphql-api
-    build:
-      context: ../../App/frontend
-      args:
-        VITE_GRAPHQL_URI: http://localhost:4000/
+      - backend
+    container_name: quiz-frontend
     ports:
       - '8080:80'
