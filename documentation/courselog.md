@@ -36,7 +36,7 @@
 | May 9th | Skeleton framework for frontend, yay! Fetches data properly and renders basic quizzes. | 6 |
 | May 12th | Added some user management elements to the backend, also implemented login mutation | 2,5 |
 | May 13th | Backend development with scores table and user tests, frontend bottom bar with social links | 2,5 |
-|  |  |  |
+| May 14th | Made quite a lot of progress in CI/CD deployment, but still has manual steps | 5 |
 |  |  |  |
 |  |  |  |
 |  |  |  |
