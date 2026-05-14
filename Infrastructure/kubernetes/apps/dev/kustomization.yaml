@@ -24,14 +24,14 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: happy-eagle-7f35154
+        value: obvious-dolphin-3a138b8
   target:
     kind: Deployment
     name: frontend
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: happy-eagle-7f35154
+  newTag: obvious-dolphin-3a138b8
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: happy-eagle-7f35154
+  newTag: obvious-dolphin-3a138b8
