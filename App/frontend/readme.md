@@ -13,3 +13,5 @@ The app will be developed for both mobile and web platforms.
 ```shell
 npm run dev
 ```
+
+#
