@@ -24,14 +24,14 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: swift-wolf-baffa9e
+        value: happy-eagle-7f35154
   target:
     kind: Deployment
     name: frontend
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: swift-wolf-baffa9e
+  newTag: happy-eagle-7f35154
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: swift-wolf-baffa9e
+  newTag: happy-eagle-7f35154
