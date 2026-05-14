@@ -2,20 +2,30 @@
 /* Stylesheet for the frontend (CSS is beyond me) */
 :root {
   /* Core Color Palette (Brightened Dark Teal) */
-  --bg-base: #081e24; /* Deep Sea Teal */
-  --bg-surface: #132f38; /* Ocean Surface Teal */
-  --bg-surface-elevated: #1d4552; /* Lagoon Teal */
+  --bg-base: #081e24;
+  /* Deep Sea Teal */
+  --bg-surface: #132f38;
+  /* Ocean Surface Teal */
+  --bg-surface-elevated: #1d4552;
+  /* Lagoon Teal */
 
-  --text-primary: #f0f9ff; /* Very Light Blue-White */
-  --text-secondary: #94a3b8; /* Slate gray (keeps readability) */
+  --text-primary: #f0f9ff;
+  /* Very Light Blue-White */
+  --text-secondary: #94a3b8;
+  /* Slate gray (keeps readability) */
 
   /* Vibrant Game Accents */
-  --color-primary: #0ea5e9; /* Electric Cyan */
+  --color-primary: #0ea5e9;
+  /* Electric Cyan */
   --color-primary-hover: #0284c7;
-  --color-secondary: #2dd4bf; /* Mint/Teal Secondary */
-  --color-success: #10b981; /* Emerald */
-  --color-danger: #f43f5e; /* Rose (compliments teal better than pure red) */
-  --color-warning: #fbbf24; /* Amber */
+  --color-secondary: #2dd4bf;
+  /* Mint/Teal Secondary */
+  --color-success: #10b981;
+  /* Emerald */
+  --color-danger: #f43f5e;
+  /* Rose (compliments teal better than pure red) */
+  --color-warning: #fbbf24;
+  /* Amber */
 
   /* Typography */
   --font-base:
@@ -112,8 +122,26 @@ p {
 /* Grid Layout for Quiz Cards */
 .grid-2x2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-md);
+}
+
+@media (min-width: 768px) {
+  .grid-2x2 {
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns on desktop, otherwise 2*/
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-2x2 {
+    gap: var(--space-sm);
+  }
+
+  .quiz-option {
+    padding: var(--space-md) var(--space-sm);
+    font-size: 1rem;
+  }
 }
 
 .grid-1-col {
@@ -179,11 +207,9 @@ p {
 
 /* Gradient Text Effect */
 .text-gradient {
-  background: linear-gradient(
-    135deg,
-    var(--color-secondary),
-    var(--color-primary)
-  );
+  background: linear-gradient(135deg,
+      var(--color-secondary),
+      var(--color-primary));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -194,6 +220,7 @@ p {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -205,13 +232,16 @@ p {
     transform: scale(0.3);
     opacity: 0;
   }
+
   50% {
     transform: scale(1.05);
     opacity: 1;
   }
+
   70% {
     transform: scale(0.9);
   }
+
   100% {
     transform: scale(1);
   }
@@ -251,7 +281,8 @@ p {
 .social-icon {
   width: 24px;
   height: 24px;
-  filter: invert(1); /* Since it's a black SVG and we have a dark theme */
+  filter: invert(1);
+  /* Since it's a black SVG and we have a dark theme */
   opacity: 0.8;
   transition: opacity var(--transition-fast);
 }
