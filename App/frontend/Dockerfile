@@ -17,6 +17,9 @@ ENV VITE_API_URL=$VITE_API_URL
 ARG VITE_APP_VERSION
 ENV VITE_APP_VERSION=$VITE_APP_VERSION
 
+ARG VITE_SHOW_DEV_BAR
+ENV VITE_SHOW_DEV_BAR=$VITE_SHOW_DEV_BAR
+
 # Build the project (compiles TypeScript and creates the production bundle)
 RUN npm run build
 

@@ -62,8 +62,10 @@ jobs:
           # Use production secrets if target_env is prod
           if [ "${{ github.event.inputs.target_env }}" == "prod" ]; then
             API_URL="${{ secrets.PROD_VITE_API_URL }}"
+            SHOW_DEV_BAR="false"
           else
             API_URL="http://backend/graphql"
+            SHOW_DEV_BAR="true"
           fi
 
           # Build production image for ARM64 (OCI Ampere)
@@ -71,6 +73,7 @@ jobs:
             --platform linux/arm64 \
             --build-arg VITE_APP_VERSION=${{ steps.generate-tag.outputs.tag }} \
             --build-arg VITE_API_URL="$API_URL" \
+            --build-arg VITE_SHOW_DEV_BAR="$SHOW_DEV_BAR" \
             -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }} .
 
       - name: Push Images
