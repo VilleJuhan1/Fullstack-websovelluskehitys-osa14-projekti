@@ -55,13 +55,13 @@ graph TD
 The application requires several secrets to be present in the target namespace (`dev` or `prod`).
 
 ```bash
-# Database Secrets
+# Database Secrets for DEV environment
 kubectl create secret generic db-secret \
   --from-literal=DATABASE_URL="postgres://postgres:mypassword@postgres:5432/quiz_db" \
   --from-literal=POSTGRES_PASSWORD="mypassword" \
   -n <namespace>
 
-# Application Secrets
+# Application Secrets for DEV environment
 kubectl create secret generic app-secret \
   --from-literal=JWT_SECRET="your-super-secret-jwt-key" \
   --from-literal=PASSWORD_SECRET="your-password-pepper-secret" \
