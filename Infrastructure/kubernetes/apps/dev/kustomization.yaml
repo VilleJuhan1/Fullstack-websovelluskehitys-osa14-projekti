@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../base
+- ../../base
 
 namespace: dev
 
@@ -10,21 +10,28 @@ commonLabels:
   env: dev
 
 patches:
-  - target:
-      kind: Deployment
-      name: backend
-    patch: |-
-      - op: add
-        path: /spec/template/spec/containers/0/env/-
-        value:
-          name: NODE_ENV
-          value: development
-  - target:
-      kind: Deployment
-      name: frontend
-    patch: |-
-      - op: add
-        path: /spec/template/spec/containers/0/env/-
-        value:
-          name: VITE_APP_VERSION
-          value: dev-latest
+- patch: |-
+    - op: add
+      path: /spec/template/spec/containers/0/env/-
+      value:
+        name: NODE_ENV
+        value: development
+  target:
+    kind: Deployment
+    name: backend
+- patch: |-
+    - op: add
+      path: /spec/template/spec/containers/0/env/-
+      value:
+        name: VITE_APP_VERSION
+        value: brave-wolf-40df495
+  target:
+    kind: Deployment
+    name: frontend
+images:
+- name: villejuhan1/quiz-backend
+  newName: villejuhan1/quiz-backend
+  newTag: brave-wolf-40df495
+- name: villejuhan1/quiz-frontend
+  newName: villejuhan1/quiz-frontend
+  newTag: brave-wolf-40df495
