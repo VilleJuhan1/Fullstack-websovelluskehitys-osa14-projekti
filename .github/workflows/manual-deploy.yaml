@@ -47,17 +47,27 @@ jobs:
           # Run linting
           npm install
           npm run lint
-          # Build image
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }} .
+          # Build image for ARM64 (OCI Ampere)
+          docker build --platform linux/arm64 -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }} .
 
       - name: Build and Test Frontend
         run: |
           cd App/frontend
           npm install
           npm run lint
-          # Build production image
+          
+          # Use production secrets if target_env is prod
+          if [ "${{ github.event.inputs.target_env }}" == "prod" ]; then
+            API_URL="${{ secrets.PROD_VITE_API_URL }}"
+          else
+            API_URL="http://backend/graphql"
+          fi
+
+          # Build production image for ARM64 (OCI Ampere)
           docker build \
+            --platform linux/arm64 \
             --build-arg VITE_APP_VERSION=${{ steps.generate-tag.outputs.tag }} \
+            --build-arg VITE_API_URL="$API_URL" \
             -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }} .
 
       - name: Push Images

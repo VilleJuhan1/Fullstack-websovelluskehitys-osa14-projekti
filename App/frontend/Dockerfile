@@ -10,9 +10,12 @@ RUN npm ci
 # Copy the rest of the application
 COPY . .
 
-# Pass the GraphQL URI as a build argument so Vite can inject it into the static bundle
-ARG VITE_GRAPHQL_URI
-ENV VITE_GRAPHQL_URI=$VITE_GRAPHQL_URI
+# Pass build arguments so Vite can inject them into the static bundle
+ARG VITE_API_URL
+ENV VITE_API_URL=$VITE_API_URL
+
+ARG VITE_APP_VERSION
+ENV VITE_APP_VERSION=$VITE_APP_VERSION
 
 # Build the project (compiles TypeScript and creates the production bundle)
 RUN npm run build
