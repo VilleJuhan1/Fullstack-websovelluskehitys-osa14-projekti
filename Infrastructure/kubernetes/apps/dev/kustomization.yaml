@@ -15,7 +15,7 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: NODE_ENV
-        value: development
+        value: dev
   target:
     kind: Deployment
     name: backend

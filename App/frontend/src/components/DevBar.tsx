@@ -1,10 +1,10 @@
 import React from 'react';
 
 const DevBar: React.FC = () => {
-    const isProduction = import.meta.env.PROD;
+    const showDevBar = import.meta.env.VITE_SHOW_DEV_BAR === 'true';
     const version = import.meta.env.VITE_APP_VERSION || 'v0.0.0-unknown';
 
-    if (isProduction) return null;
+    if (!showDevBar) return null;
 
     return (
         <div className="dev-bar">
