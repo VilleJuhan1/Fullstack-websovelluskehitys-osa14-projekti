@@ -47,7 +47,7 @@ export default function Quiz() {
   const handleSelect = (selectedItem: GameItem) => {
     if (selectedItem.id === targetItem?.id) {
       setFeedback({ message: 'Correct!', color: 'var(--color-primary)' });
-      setTimeout(generateQuestion, 1200);
+      setTimeout(generateQuestion, 600);
     } else {
       setFeedback({
         message: 'Wrong! Try again.',

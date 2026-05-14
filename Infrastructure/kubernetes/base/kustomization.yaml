@@ -6,6 +6,7 @@ resources:
   - frontend.yaml
   - postgres.yaml
   - network-policy.yaml
+  - ingress.yaml
 
 images:
   - name: villejuhan1/quiz-backend

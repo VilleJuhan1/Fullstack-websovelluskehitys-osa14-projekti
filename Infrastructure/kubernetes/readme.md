@@ -82,4 +82,18 @@ We use a **GitHub Action** for manual branch deployments.
 - `Infrastructure/kubernetes/base/`: Core manifests (Deployments, Services).
 - `Infrastructure/kubernetes/apps/dev/`: Development environment with seeds and DevBar enabled.
 - `Infrastructure/kubernetes/apps/prod/`: Production environment (no seeds, strict settings).
+
+## Enabling HTTPS (Future Step)
+Once you have a domain name, follow these steps to enable encrypted traffic:
+
+1. **Install Infrastructure**: Run the Ansible playbook `Infrastructure/ansible/cluster-addons.yml`. This installs the Nginx Ingress Controller and Cert-Manager.
+2. **Update Domain & Email**: 
+   - Set your email in `Infrastructure/kubernetes/ingress/cluster-issuer.yaml`.
+   - Set your real domain in `Infrastructure/kubernetes/base/ingress.yaml` (or via Kustomize overlays).
+3. **Switch to Ingress**:
+   - In `Infrastructure/kubernetes/base/frontend.yaml`, change the service type to `ClusterIP`.
+   - In `Infrastructure/kubernetes/base/kustomization.yaml`, uncomment the `- ingress.yaml` line.
+4. **Update DNS**: Point your domain's A record to the Public IP of the new LoadBalancer created by the Nginx Ingress Controller.
+
+Cert-Manager will automatically handle the handshake with Let's Encrypt and provide a valid certificate!
 ```

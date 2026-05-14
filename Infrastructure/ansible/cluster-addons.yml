@@ -1,0 +1,33 @@
+---
+- name: Install Kubernetes Add-ons (Ingress & Cert-Manager)
+  hosts: master
+  become: true
+  tasks:
+    - name: Create manifests directory
+      file:
+        path: /tmp/k8s-manifests
+        state: directory
+
+    - name: Apply Nginx Ingress Controller
+      kubernetes.core.k8s:
+        src: https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.15.1/deploy/static/provider/cloud/deploy.yaml
+        state: present
+
+    - name: Apply Cert-Manager
+      kubernetes.core.k8s:
+        src: https://github.com/cert-manager/cert-manager/releases/download/v1.20.2/cert-manager.yaml
+        state: present
+
+    - name: Wait for Cert-Manager to be ready
+      pause:
+        seconds: 30
+
+    - name: Copy ClusterIssuer manifest
+      copy:
+        src: ../kubernetes/ingress/cluster-issuer.yaml
+        dest: /tmp/k8s-manifests/cluster-issuer.yaml
+
+    - name: Apply ClusterIssuer
+      kubernetes.core.k8s:
+        state: present
+        src: /tmp/k8s-manifests/cluster-issuer.yaml
