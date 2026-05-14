@@ -24,14 +24,14 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: obvious-dolphin-d8c27ec
+        value: shiny-owl-81fd4d4
   target:
     kind: Deployment
     name: frontend
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: obvious-dolphin-d8c27ec
+  newTag: shiny-owl-81fd4d4
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: obvious-dolphin-d8c27ec
+  newTag: shiny-owl-81fd4d4
