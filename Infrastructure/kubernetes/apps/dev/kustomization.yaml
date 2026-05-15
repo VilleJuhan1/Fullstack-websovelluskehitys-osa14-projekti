@@ -24,14 +24,24 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: swift-fox-69baaff
+        value: shiny-whale-eeecfa8
   target:
     kind: Deployment
     name: frontend
+- patch: |-
+    - op: replace
+      path: /spec/tls/0/hosts/0
+      value: dev.quizgame.hiekkalaatikko.tech
+    - op: replace
+      path: /spec/rules/0/host
+      value: dev.quizgame.hiekkalaatikko.tech
+  target:
+    kind: Ingress
+    name: quiz-ingress
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: swift-fox-69baaff
+  newTag: shiny-whale-eeecfa8
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: swift-fox-69baaff
+  newTag: shiny-whale-eeecfa8

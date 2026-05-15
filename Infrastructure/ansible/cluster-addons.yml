@@ -1,0 +1,77 @@
+---
+- name: Install Kubernetes Add-ons (Ingress & Cert-Manager)
+  hosts: master
+  become: true
+  vars_files:
+    - vars.yml
+
+  # Installs kubernetes python library and setups ingress and cert-manager for k3s
+  tasks:
+    - name: Prompt for email if not defined in vars.yml
+      pause:
+        prompt: "Enter email for Let's Encrypt certificates"
+      register: email_input
+      when: cert_manager_email is not defined
+
+    - name: Set cert_manager_email fact from input
+      set_fact:
+        cert_manager_email: "{{ email_input.user_input }}"
+      when: cert_manager_email is not defined
+
+    - name: Install Python kubernetes library via apt
+      apt:
+        name: python3-kubernetes
+        state: present
+        update_cache: yes
+
+    - name: Create manifests directory
+      file:
+        path: /tmp/k8s-manifests
+        state: directory
+
+    - name: Apply Nginx Ingress Controller
+      kubernetes.core.k8s:
+        src: https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.15.1/deploy/static/provider/cloud/deploy.yaml
+        state: present
+        kubeconfig: /etc/rancher/k3s/k3s.yaml
+
+    - name: Patch Ingress Service to use existing NLB ports
+      kubernetes.core.k8s:
+        state: patched
+        kind: Service
+        name: ingress-nginx-controller
+        namespace: ingress-nginx
+        kubeconfig: /etc/rancher/k3s/k3s.yaml
+        definition:
+          spec:
+            type: NodePort
+            ports:
+              - name: http
+                port: 80
+                targetPort: http
+                nodePort: 30080  # Matches the existing NLB setup
+              - name: https
+                port: 443
+                targetPort: https
+                nodePort: 30443  # Listener for 443 -> 30443 in NLB should be added
+
+    - name: Apply Cert-Manager
+      kubernetes.core.k8s:
+        src: https://github.com/cert-manager/cert-manager/releases/download/v1.20.2/cert-manager.yaml
+        state: present
+        kubeconfig: /etc/rancher/k3s/k3s.yaml
+
+    - name: Wait for Cert-Manager to be ready
+      pause:
+        seconds: 30
+
+    - name: Generate ClusterIssuer from template
+      template:
+        src: templates/cluster-issuer.yaml.j2
+        dest: /tmp/k8s-manifests/cluster-issuer.yaml
+
+    - name: Apply ClusterIssuer
+      kubernetes.core.k8s:
+        state: present
+        src: /tmp/k8s-manifests/cluster-issuer.yaml
+        kubeconfig: /etc/rancher/k3s/k3s.yaml

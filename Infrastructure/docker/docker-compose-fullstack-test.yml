@@ -19,7 +19,7 @@ services:
       timeout: 5s
       retries: 5
   backend:
-    image: villejuhan1/quiz-backend:shiny-owl-81fd4d4
+    image: villejuhan1/quiz-backend:latest
     depends_on:
       postgres:
         condition: service_healthy
@@ -38,7 +38,7 @@ services:
     ports:
       - '4000:4000'
   frontend:
-    image: villejuhan1/quiz-frontend:shiny-owl-81fd4d4
+    image: villejuhan1/quiz-frontend:latest
     depends_on:
       - backend
     container_name: quiz-frontend

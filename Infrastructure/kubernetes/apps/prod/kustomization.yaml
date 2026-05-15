@@ -29,6 +29,16 @@ patches:
           name: VITE_APP_VERSION
           value: prod-latest
   - target:
+      kind: Ingress
+      name: quiz-ingress
+    patch: |-
+      - op: replace
+        path: /spec/tls/0/hosts/0
+        value: quizgame.hiekkalaatikko.tech
+      - op: replace
+        path: /spec/rules/0/host
+        value: quizgame.hiekkalaatikko.tech
+  - target:
       kind: Deployment
       name: backend
     patch: |-

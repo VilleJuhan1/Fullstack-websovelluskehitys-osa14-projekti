@@ -6,6 +6,7 @@ resources:
   - frontend.yaml
   - postgres.yaml
   - network-policy.yaml
+  - ingress.yaml # Disabled until Nginx Ingress is properly deployed 
 
 images:
   - name: villejuhan1/quiz-backend
