@@ -33,6 +33,6 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30080 # <- Change, when starting using Nginx Ingress (clusterIP)
-  type: NodePort
-  # type: ClusterIP <- Change, when starting using Nginx Ingress
+      #nodePort: 30080 # <- Change, when starting using Nginx Ingress (clusterIP)
+  #type: NodePort
+  type: ClusterIP # <- Used when starting using Nginx Ingress

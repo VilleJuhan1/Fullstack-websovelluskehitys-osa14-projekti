@@ -68,7 +68,7 @@ resource "oci_network_load_balancer_backend_set" "https_backend_set" {
   
   health_checker {
     protocol = "TCP"
-    port     = 30081
+    port     = 30443 # Updated to match Ingress NodePort
   }
 }
 
@@ -90,19 +90,33 @@ resource "oci_network_load_balancer_listener" "https_listener" {
   protocol                 = "TCP"
 }
 
-# Backend for Master Node
-resource "oci_network_load_balancer_backend" "master_backend" {
+# --- HTTP Backends ---
+resource "oci_network_load_balancer_backend" "master_http_backend" {
   network_load_balancer_id = oci_network_load_balancer_network_load_balancer.public_nlb.id
   backend_set_name         = oci_network_load_balancer_backend_set.http_backend_set.name
   port                     = 30080
   target_id                = oci_core_instance.k3s_master.id
 }
 
-# Backend for Worker Node
-resource "oci_network_load_balancer_backend" "worker_backend" {
+resource "oci_network_load_balancer_backend" "worker_http_backend" {
   network_load_balancer_id = oci_network_load_balancer_network_load_balancer.public_nlb.id
   backend_set_name         = oci_network_load_balancer_backend_set.http_backend_set.name
   port                     = 30080
+  target_id                = oci_core_instance.k3s_worker.id
+}
+
+# --- HTTPS Backends ---
+resource "oci_network_load_balancer_backend" "master_https_backend" {
+  network_load_balancer_id = oci_network_load_balancer_network_load_balancer.public_nlb.id
+  backend_set_name         = oci_network_load_balancer_backend_set.https_backend_set.name
+  port                     = 30443
+  target_id                = oci_core_instance.k3s_master.id
+}
+
+resource "oci_network_load_balancer_backend" "worker_https_backend" {
+  network_load_balancer_id = oci_network_load_balancer_network_load_balancer.public_nlb.id
+  backend_set_name         = oci_network_load_balancer_backend_set.https_backend_set.name
+  port                     = 30443
   target_id                = oci_core_instance.k3s_worker.id
 }
 
