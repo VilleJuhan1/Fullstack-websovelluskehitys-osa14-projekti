@@ -32,6 +32,12 @@ python3 create_tunnels.py
 ```
 This script will interact with the OCI CLI, create the required Bastion sessions, open local SSH tunnels in the background, and generate an `inventory.local.ini` file for Ansible.
 
+### Optional: Create a variables file
+If you want to use a custom email for Let's Encrypt (https), create a `vars.yml` file in the `ansible` directory:
+```yaml
+cert_manager_email: "[EMAIL_ADDRESS]"
+```
+
 ### 4. Run the Playbooks
 Now that the secure tunnels are open, simply activate your python environment and run the playbook!
 ```bash

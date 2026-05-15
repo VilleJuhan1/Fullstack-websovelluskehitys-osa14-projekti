@@ -9,10 +9,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-    - example.com # TODO: Replace with your domain in overlays
+    - example.com # replaced with Kustomize
     secretName: quiz-app-tls
   rules:
-  - host: example.com # TODO: Replace with your domain in overlays
+  - host: example.com # Replaced with Kustomize
     http:
       paths:
       - path: /

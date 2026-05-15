@@ -2,6 +2,15 @@
 - name: Install Kubernetes Add-ons (Ingress & Cert-Manager)
   hosts: master
   become: true
+  vars_files:
+    - vars.yml
+
+  vars_prompt:
+    - name: cert_manager_email
+      prompt: "Enter email for Let's Encrypt certificates (ignored if defined in vars.yml)"
+      private: false
+      when: cert_manager_email is not defined
+
   tasks:
     - name: Create manifests directory
       file:
@@ -22,9 +31,9 @@
       pause:
         seconds: 30
 
-    - name: Copy ClusterIssuer manifest
-      copy:
-        src: ../kubernetes/ingress/cluster-issuer.yaml
+    - name: Generate ClusterIssuer from template
+      template:
+        src: templates/cluster-issuer.yaml.j2
         dest: /tmp/k8s-manifests/cluster-issuer.yaml
 
     - name: Apply ClusterIssuer

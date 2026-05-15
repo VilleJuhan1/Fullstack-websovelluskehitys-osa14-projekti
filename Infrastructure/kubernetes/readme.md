@@ -86,10 +86,10 @@ We use a **GitHub Action** for manual branch deployments.
 ## Enabling HTTPS (Future Step)
 Once you have a domain name, follow these steps to enable encrypted traffic:
 
-1. **Install Infrastructure**: Run the Ansible playbook `Infrastructure/ansible/cluster-addons.yml`. This installs the Nginx Ingress Controller and Cert-Manager.
+1. **Install Infrastructure**: Run the Ansible playbook `Infrastructure/ansible/cluster-addons.yml`. This installs the Nginx Ingress Controller and Cert-Manager + configures the ClusterIssuer via a j2 template.
 2. **Update Domain & Email**: 
-   - Set your email in `Infrastructure/kubernetes/ingress/cluster-issuer.yaml`.
    - Set your real domain in `Infrastructure/kubernetes/base/ingress.yaml` (or via Kustomize overlays).
+   - Set your email in `Infrastructure/ansible/vars.yml` (or pass it as an argument to the Ansible playbook).
 3. **Switch to Ingress**:
    - In `Infrastructure/kubernetes/base/frontend.yaml`, change the service type to `ClusterIP`.
    - In `Infrastructure/kubernetes/base/kustomization.yaml`, uncomment the `- ingress.yaml` line.
