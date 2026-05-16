@@ -66,13 +66,13 @@ jobs:
         id: info
         run: |
           DATE=$(date +'%Y-%m-%d')
-          echo "date=$DATE" >> $GITHUB_OUTPUT
-
-          DEV_TAG=$(grep -A 2 "name: villejuhan1/quiz-backend" Infrastructure/kubernetes/apps/dev/kustomization.yaml | grep newTag | awk '{print $2}')
-          PROD_TAG=$(grep -A 2 "name: villejuhan1/quiz-backend" Infrastructure/kubernetes/apps/prod/kustomization.yaml | grep newTag | awk '{print $2}')
+          # Get Tags from Kustomize using yq (more robust than grep)
+          DEV_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/dev/kustomization.yaml)
+          PROD_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/prod/kustomization.yaml)
           
-          echo "dev_tag=$DEV_TAG" >> $GITHUB_OUTPUT
-          echo "prod_tag=$PROD_TAG" >> $GITHUB_OUTPUT
+          # Fallback to "unknown" if yq fails
+          echo "dev_tag=${DEV_TAG:-unknown}" >> $GITHUB_OUTPUT
+          echo "prod_tag=${PROD_TAG:-unknown}" >> $GITHUB_OUTPUT
 
           DESC=$(echo "${{ github.event.pull_request.body }}" | tr '\n' ' ' | sed 's/|/\\|/g')
           echo "desc=$DESC" >> $GITHUB_OUTPUT
