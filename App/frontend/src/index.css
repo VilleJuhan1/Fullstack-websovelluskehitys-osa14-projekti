@@ -315,6 +315,12 @@ p {
   opacity: 0.9;
 }
 
+.dev-bar-prod {
+  background: var(--color-danger);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
 .dev-bar-badge {
   font-size: 0.6rem;
   opacity: 0.8;

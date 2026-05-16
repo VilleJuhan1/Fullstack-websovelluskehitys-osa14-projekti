@@ -20,6 +20,9 @@ ENV VITE_APP_VERSION=$VITE_APP_VERSION
 ARG VITE_SHOW_DEV_BAR
 ENV VITE_SHOW_DEV_BAR=$VITE_SHOW_DEV_BAR
 
+ARG VITE_APP_ENV
+ENV VITE_APP_ENV=$VITE_APP_ENV
+
 # Build the project (compiles TypeScript and creates the production bundle)
 RUN npm run build
 
