@@ -15,7 +15,8 @@ const App: React.FC = () => {
         <div className="hero-text">
           <h1 className="text-gradient">Under Construction</h1>
           <p>
-            Welcome to my cloud sandbox landing page! While you're here, please check out this {' '}
+            Welcome to my cloud sandbox landing page! While you're here, please
+            check out this{' '}
             <a
               href="https://quizgame.hiekkalaatikko.tech"
               target="_blank"
