@@ -22,7 +22,9 @@
   --radius-pill: 9999px;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -48,7 +50,11 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary),
+    var(--color-primary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -113,6 +119,19 @@ body {
   font-size: 1.1rem;
   max-width: 450px;
   margin: 0 auto;
+}
+
+.inline-link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  border-bottom: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.inline-link:hover {
+  color: var(--color-secondary);
+  border-bottom-color: var(--color-secondary);
 }
 
 /* Bottom Bar */

@@ -5,7 +5,6 @@ import BottomBar from './components/BottomBar';
 const App: React.FC = () => {
   return (
     <div className="landing-container">
-      {/* Main Content */}
       <main className="hero-section">
         <div className="robot-wrapper">
           <div className="sandbox">
@@ -15,7 +14,17 @@ const App: React.FC = () => {
 
         <div className="hero-text">
           <h1 className="text-gradient">Under Construction</h1>
-          <p>The Antigravity team is currently digging in the sandbox to build something amazing.</p>
+          <p>
+            Welcome to my cloud sandbox landing page! While you're here, please check out this {' '}
+            <a
+              href="https://quizgame.hiekkalaatikko.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-link"
+            >
+              quiz-game!
+            </a>
+          </p>
         </div>
       </main>
 
