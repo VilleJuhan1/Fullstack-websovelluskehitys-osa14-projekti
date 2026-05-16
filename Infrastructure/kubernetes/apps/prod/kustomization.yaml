@@ -49,12 +49,12 @@ patches:
     kind: Ingress
     name: frontpage-ingress
 images:
+- name: villejuhan1/frontpage
+  newName: villejuhan1/frontpage
+  newTag: front-playful-robot-7af0c19
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
   newTag: happy-wolf-77d7f62
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: happy-wolf-77d7f62
-- name: villejuhan1/frontpage
-  newName: villejuhan1/frontpage
   newTag: happy-wolf-77d7f62
