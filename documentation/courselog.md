@@ -38,6 +38,6 @@
 | May 13th | Backend development with scores table and user tests, frontend bottom bar with social links | 2,5 |
 | May 14th | Made quite a lot of progress in CI/CD deployment, but still has manual steps | 5 |
 | May 14th | Initial steps for enabling https in the future | 2 |
-|  |  |  |
+| May 15th | Researched domains and certificates. Bought a domain. Used the domain provider's DNS service to link it to the NLB via A-record. Added cert manager to cluster. | 5 |
 |  |  |  |
 |  |  |  | 

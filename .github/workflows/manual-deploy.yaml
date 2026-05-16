@@ -72,13 +72,9 @@ jobs:
           npm run lint
           
           # Use production/dev secrets for API URL
-          if [ "${{ github.event.inputs.target_env }}" == "prod" ]; then
-            API_URL="/graphql" # Proxied via Frontend Nginx
-            SHOW_DEV_BAR="false"
-          else
-            API_URL="/graphql" # Proxied via Frontend Nginx
-            SHOW_DEV_BAR="true"
-          fi
+          API_URL="/graphql" # Proxied via Frontend Nginx
+          SHOW_DEV_BAR="true"
+          APP_ENV="${{ github.event.inputs.target_env }}"
 
           # Build production image for ARM64 (OCI Ampere)
           docker build \
@@ -86,6 +82,7 @@ jobs:
             --build-arg VITE_APP_VERSION=${{ steps.generate-tag.outputs.tag }} \
             --build-arg VITE_API_URL="$API_URL" \
             --build-arg VITE_SHOW_DEV_BAR="$SHOW_DEV_BAR" \
+            --build-arg VITE_APP_ENV="$APP_ENV" \
             -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }} .
 
       - name: Push Images
@@ -94,21 +91,28 @@ jobs:
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}
           
-          # Also tag and push as latest
-          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
-          docker tag ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
+          # ONLY update 'latest' if we are building for dev
+          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
+            docker tag ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
+            docker tag ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
+            docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
+            docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
+          fi
 
       - name: Update Kustomize Manifests
         run: |
           cd Infrastructure/kubernetes/apps/${{ github.event.inputs.target_env }}
-          kustomize edit set image villejuhan1/quiz-backend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}
-          kustomize edit set image villejuhan1/quiz-frontend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}
           
-          # Also update the VITE_APP_VERSION in the patch if dev
-          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
-            # Find the line after 'name: VITE_APP_VERSION' and update its value
+          if [ "${{ github.event.inputs.target_env }}" == "prod" ]; then
+            # Prod points to specific version
+            kustomize edit set image villejuhan1/quiz-backend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}
+            kustomize edit set image villejuhan1/quiz-frontend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}
+          else
+            # Dev points to latest
+            kustomize edit set image villejuhan1/quiz-backend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
+            kustomize edit set image villejuhan1/quiz-frontend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
+            
+            # Update the version label in the UI to match the generated tag
             sed -i "/name: VITE_APP_VERSION/{n;s/value: .*/value: ${{ steps.generate-tag.outputs.tag }}/}" kustomization.yaml
           fi
 
