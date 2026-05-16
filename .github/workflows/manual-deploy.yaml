@@ -12,6 +12,10 @@ on:
           - dev
           - prod
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.inputs.target_env }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
