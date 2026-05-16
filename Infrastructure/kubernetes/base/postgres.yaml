@@ -35,7 +35,7 @@ spec:
                   key: POSTGRES_USER
           volumeMounts:
             - name: postgres-storage
-              mountPath: /var/lib/postgresql/data
+              mountPath: /var/lib/postgresql
       volumes:
         - name: postgres-storage
           emptyDir: {} # For now, simple storage before moving to PVC/Block storage
