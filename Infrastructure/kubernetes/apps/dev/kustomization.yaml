@@ -38,6 +38,16 @@ patches:
   target:
     kind: Ingress
     name: quiz-ingress
+- patch: |-
+    - op: replace
+      path: /spec/tls/0/hosts/0
+      value: dev.hiekkalaatikko.tech
+    - op: replace
+      path: /spec/rules/0/host
+      value: dev.hiekkalaatikko.tech
+  target:
+    kind: Ingress
+    name: frontpage-ingress
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
@@ -45,3 +55,6 @@ images:
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
   newTag: brave-whale-43f0d5e
+- name: villejuhan1/frontpage
+  newName: villejuhan1/frontpage
+  newTag: latest

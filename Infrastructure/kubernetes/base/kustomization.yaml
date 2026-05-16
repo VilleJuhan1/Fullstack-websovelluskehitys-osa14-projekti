@@ -7,9 +7,12 @@ resources:
   - postgres.yaml
   - network-policy.yaml
   - ingress.yaml # Disabled until Nginx Ingress is properly deployed 
+  - frontpage.yaml
 
 images:
   - name: villejuhan1/quiz-backend
     newTag: latest
   - name: villejuhan1/quiz-frontend
+    newTag: latest
+  - name: villejuhan1/frontpage
     newTag: latest

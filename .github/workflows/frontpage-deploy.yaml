@@ -1,0 +1,102 @@
+name: Frontpage Deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_env:
+        description: 'Target Environment'
+        required: true
+        default: 'dev'
+        type: choice
+        options:
+          - dev
+          - prod
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.inputs.target_env }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate Random Tag
+        id: generate-tag
+        run: |
+          ADJECTIVES=("sandy" "digital" "cosmic" "playful" "stable" "future")
+          ANIMALS=("robot" "droid" "bot" "crab" "cat" "sandbox")
+          RAND_ADJ=${ADJECTIVES[$RANDOM % ${#ADJECTIVES[@]}]}
+          RAND_ANI=${ANIMALS[$RANDOM % ${#ANIMALS[@]}]}
+          TAG="front-${RAND_ADJ}-${RAND_ANI}-${GITHUB_SHA::7}"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
+          echo "Generated tag: $TAG"
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v4
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'npm'
+          cache-dependency-path: App/frontpage/package-lock.json
+
+      - name: Build and Lint Frontpage
+        run: |
+          cd App/frontpage
+          npm ci
+          npm run lint
+          
+          # Build production image for ARM64 (OCI Ampere)
+          docker build \
+            --platform linux/arm64 \
+            --build-arg VITE_APP_VERSION=${{ steps.generate-tag.outputs.tag }} \
+            --build-arg VITE_APP_ENV="${{ github.event.inputs.target_env }}" \
+            --build-arg VITE_GITHUB_URL="${{ secrets.VITE_GITHUB_URL }}" \
+            --build-arg VITE_LINKEDIN_URL="${{ secrets.VITE_LINKEDIN_URL }}" \
+            -t ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }} .
+
+      - name: Push Image
+        run: |
+          # Push specific version tag
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }}
+          
+          # Update 'latest' if dev
+          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
+            docker tag ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:latest
+            docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:latest
+          fi
+
+      - name: Update Kustomize Manifests
+        run: |
+          cd Infrastructure/kubernetes/apps/${{ github.event.inputs.target_env }}
+          
+          if [ "${{ github.event.inputs.target_env }}" == "prod" ]; then
+            # Prod points to specific version
+            kustomize edit set image villejuhan1/frontpage=${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }}
+          else
+            # Dev points to latest
+            kustomize edit set image villejuhan1/frontpage=${{ secrets.DOCKERHUB_USERNAME }}/frontpage:latest
+          fi
+
+      - name: Commit and Push Changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add Infrastructure/kubernetes/apps/${{ github.event.inputs.target_env }}/kustomization.yaml
+          git commit -m "Deploy Frontpage ${{ github.event.inputs.target_env }}: ${{ steps.generate-tag.outputs.tag }}"
+          git push origin HEAD:${{ github.ref }}

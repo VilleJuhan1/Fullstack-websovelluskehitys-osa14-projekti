@@ -38,10 +38,23 @@ patches:
   target:
     kind: Ingress
     name: quiz-ingress
+- patch: |-
+    - op: replace
+      path: /spec/tls/0/hosts/0
+      value: hiekkalaatikko.tech
+    - op: replace
+      path: /spec/rules/0/host
+      value: hiekkalaatikko.tech
+  target:
+    kind: Ingress
+    name: frontpage-ingress
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
   newTag: happy-wolf-77d7f62
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
+  newTag: happy-wolf-77d7f62
+- name: villejuhan1/frontpage
+  newName: villejuhan1/frontpage
   newTag: happy-wolf-77d7f62
