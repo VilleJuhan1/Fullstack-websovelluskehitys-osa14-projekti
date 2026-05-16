@@ -24,7 +24,7 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: shiny-whale-eeecfa8
+        value: brave-whale-43f0d5e
   target:
     kind: Deployment
     name: frontend
@@ -41,7 +41,7 @@ patches:
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: shiny-whale-eeecfa8
+  newTag: brave-whale-43f0d5e
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: shiny-whale-eeecfa8
+  newTag: brave-whale-43f0d5e
