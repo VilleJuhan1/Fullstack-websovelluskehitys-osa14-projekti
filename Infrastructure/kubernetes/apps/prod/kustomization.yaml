@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-  - ../../base
+- ../../base
 
 namespace: prod
 
@@ -10,38 +10,45 @@ commonLabels:
   env: prod
 
 patches:
-  - target:
-      kind: Deployment
-      name: backend
-    patch: |-
-      - op: add
-        path: /spec/template/spec/containers/0/env/-
-        value:
-          name: NODE_ENV
-          value: production
-  - target:
-      kind: Deployment
-      name: frontend
-    patch: |-
-      - op: add
-        path: /spec/template/spec/containers/0/env/-
-        value:
-          name: VITE_APP_VERSION
-          value: prod-latest
-  - target:
-      kind: Ingress
-      name: quiz-ingress
-    patch: |-
-      - op: replace
-        path: /spec/tls/0/hosts/0
-        value: quizgame.hiekkalaatikko.tech
-      - op: replace
-        path: /spec/rules/0/host
-        value: quizgame.hiekkalaatikko.tech
-  - target:
-      kind: Deployment
-      name: backend
-    patch: |-
-      - op: replace
-        path: /spec/template/spec/containers/0/image
-        value: villejuhan1/quiz-backend:latest # replaced by workflow
+- patch: |-
+    - op: add
+      path: /spec/template/spec/containers/0/env/-
+      value:
+        name: NODE_ENV
+        value: production
+  target:
+    kind: Deployment
+    name: backend
+- patch: |-
+    - op: add
+      path: /spec/template/spec/containers/0/env/-
+      value:
+        name: VITE_APP_VERSION
+        value: prod-latest
+  target:
+    kind: Deployment
+    name: frontend
+- patch: |-
+    - op: replace
+      path: /spec/tls/0/hosts/0
+      value: quizgame.hiekkalaatikko.tech
+    - op: replace
+      path: /spec/rules/0/host
+      value: quizgame.hiekkalaatikko.tech
+  target:
+    kind: Ingress
+    name: quiz-ingress
+- patch: |-
+    - op: replace
+      path: /spec/template/spec/containers/0/image
+      value: villejuhan1/quiz-backend:latest # replaced by workflow
+  target:
+    kind: Deployment
+    name: backend
+images:
+- name: villejuhan1/quiz-backend
+  newName: villejuhan1/quiz-backend
+  newTag: happy-wolf-77d7f62
+- name: villejuhan1/quiz-frontend
+  newName: villejuhan1/quiz-frontend
+  newTag: happy-wolf-77d7f62
