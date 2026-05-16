@@ -66,6 +66,8 @@ jobs:
         id: info
         run: |
           DATE=$(date +'%Y-%m-%d')
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+
           # Get Tags from Kustomize using yq (more robust than grep)
           DEV_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/dev/kustomization.yaml)
           PROD_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/prod/kustomization.yaml)
