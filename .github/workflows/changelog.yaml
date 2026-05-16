@@ -1,0 +1,97 @@
+name: Update Changelog and Version
+
+# Triggered always when a pull request is closed and merged to main
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+# Updates the project changelog with the details from the merge request
+# and updates the git tag and version number for the project
+jobs:
+  update-changelog:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Necessary for tagging
+
+      # Determines the version increment based on the labels of the merge request, default to patch
+      - name: Determine Version Increment
+        id: version_type
+        run: |
+          if [[ "${{ contains(github.event.pull_request.labels.*.name, 'major') }}" == "true" ]]; then
+            echo "type=major" >> $GITHUB_OUTPUT
+          elif [[ "${{ contains(github.event.pull_request.labels.*.name, 'minor') }}" == "true" ]]; then
+            echo "type=minor" >> $GITHUB_OUTPUT
+          else
+            echo "type=patch" >> $GITHUB_OUTPUT
+          fi
+
+      # Calculates new version number using semver
+      - name: Calculate New Version
+        id: semver
+        run: |
+          CURRENT_VERSION=$(cat VERSION)
+          IFS='.' read -ra ADDR <<< "$CURRENT_VERSION"
+          MAJOR=${ADDR[0]}
+          MINOR=${ADDR[1]}
+          PATCH=${ADDR[2]}
+
+          TYPE="${{ steps.version_type.outputs.type }}"
+
+          if [[ "$TYPE" == "major" ]]; then
+            MAJOR=$((MAJOR + 1))
+            MINOR=0
+            PATCH=0
+          elif [[ "$TYPE" == "minor" ]]; then
+            MINOR=$((MINOR + 1))
+            PATCH=0
+          else
+            PATCH=$((PATCH + 1))
+          fi
+
+          NEW_VERSION="$MAJOR.$MINOR.$PATCH"
+          echo "old=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+          echo "new=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "$NEW_VERSION" > VERSION
+
+      # Extracts information for date and image tags
+      - name: Extract PR Information
+        id: info
+        run: |
+          DATE=$(date +'%Y-%m-%d')
+          echo "date=$DATE" >> $GITHUB_OUTPUT
+
+          DEV_TAG=$(grep -A 2 "name: villejuhan1/quiz-backend" Infrastructure/kubernetes/apps/dev/kustomization.yaml | grep newTag | awk '{print $2}')
+          PROD_TAG=$(grep -A 2 "name: villejuhan1/quiz-backend" Infrastructure/kubernetes/apps/prod/kustomization.yaml | grep newTag | awk '{print $2}')
+          
+          echo "dev_tag=$DEV_TAG" >> $GITHUB_OUTPUT
+          echo "prod_tag=$PROD_TAG" >> $GITHUB_OUTPUT
+
+          DESC=$(echo "${{ github.event.pull_request.body }}" | tr '\n' ' ' | sed 's/|/\\|/g')
+          echo "desc=$DESC" >> $GITHUB_OUTPUT
+
+      # Updates the changelog file with the new version and merge request information
+      - name: Update Changelog File
+        run: |
+          NEW_ROW="| ${{ steps.semver.outputs.new }} | ${{ steps.info.outputs.date }} | ${{ github.event.pull_request.title }} | ${{ steps.info.outputs.desc }} | ${{ steps.info.outputs.dev_tag }} | ${{ steps.info.outputs.prod_tag }} |"
+          echo "$NEW_ROW" >> changelog.md
+
+      # Commits the changes to the repository and pushes them to the main branch
+      - name: Commit, Tag and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          git add VERSION changelog.md
+          git commit -m "chore(release): v${{ steps.semver.outputs.new }} [skip ci]"
+          
+          git tag -a "v${{ steps.semver.outputs.new }}" -m "Release v${{ steps.semver.outputs.new }}"
+          
+          git push origin main --follow-tags

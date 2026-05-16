@@ -38,13 +38,6 @@ patches:
   target:
     kind: Ingress
     name: quiz-ingress
-- patch: |-
-    - op: replace
-      path: /spec/template/spec/containers/0/image
-      value: villejuhan1/quiz-backend:latest # replaced by workflow
-  target:
-    kind: Deployment
-    name: backend
 images:
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
