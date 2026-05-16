@@ -14,23 +14,31 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: postgres:17
+          image: postgres:18-alpine
           ports:
             - containerPort: 5432
           env:
             - name: POSTGRES_DB
-              value: "quiz_db"
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key: POSTGRES_DB
             - name: POSTGRES_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: db-secret
                   key: POSTGRES_PASSWORD
+            - name: POSTGRES_USER
+              valueFrom:
+                secretKeyRef:
+                  name: db-secret
+                  key: POSTGRES_USER
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgresql/data
       volumes:
         - name: postgres-storage
-          emptyDir: {} # For now, simple storage. Use PVC in real prod.
+          emptyDir: {} # For now, simple storage before moving to PVC/Block storage
 ---
 apiVersion: v1
 kind: Service
