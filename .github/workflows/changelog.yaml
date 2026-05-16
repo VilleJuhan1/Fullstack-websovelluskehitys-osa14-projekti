@@ -1,10 +1,13 @@
 name: Update Changelog and Version
 
+# Triggered always when a pull request is closed and merged to main
 on:
   pull_request:
     types: [closed]
     branches: [main]
 
+# Updates the project changelog with the details from the merge request
+# and updates the git tag and version number for the project
 jobs:
   update-changelog:
     if: github.event.pull_request.merged == true
@@ -18,6 +21,7 @@ jobs:
         with:
           fetch-depth: 0 # Necessary for tagging
 
+      # Determines the version increment based on the labels of the merge request, default to patch
       - name: Determine Version Increment
         id: version_type
         run: |
@@ -29,6 +33,7 @@ jobs:
             echo "type=patch" >> $GITHUB_OUTPUT
           fi
 
+      # Calculates new version number using semver
       - name: Calculate New Version
         id: semver
         run: |
@@ -56,6 +61,7 @@ jobs:
           echo "new=$NEW_VERSION" >> $GITHUB_OUTPUT
           echo "$NEW_VERSION" > VERSION
 
+      # Extracts information for date and image tags
       - name: Extract PR Information
         id: info
         run: |
@@ -71,11 +77,13 @@ jobs:
           DESC=$(echo "${{ github.event.pull_request.body }}" | tr '\n' ' ' | sed 's/|/\\|/g')
           echo "desc=$DESC" >> $GITHUB_OUTPUT
 
+      # Updates the changelog file with the new version and merge request information
       - name: Update Changelog File
         run: |
           NEW_ROW="| ${{ steps.semver.outputs.new }} | ${{ steps.info.outputs.date }} | ${{ github.event.pull_request.title }} | ${{ steps.info.outputs.desc }} | ${{ steps.info.outputs.dev_tag }} | ${{ steps.info.outputs.prod_tag }} |"
           echo "$NEW_ROW" >> changelog.md
 
+      # Commits the changes to the repository and pushes them to the main branch
       - name: Commit, Tag and Push
         run: |
           git config --global user.name "github-actions[bot]"
