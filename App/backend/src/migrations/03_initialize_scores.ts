@@ -1,5 +1,6 @@
 import { DataTypes, QueryInterface } from 'sequelize';
 
+// Migration that initializes the scores table
 export const up = async ({
   context: queryInterface,
 }: {

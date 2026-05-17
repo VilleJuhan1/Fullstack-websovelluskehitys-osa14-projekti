@@ -1,3 +1,4 @@
+// The type definitions for the GraphQL schema <- can be refactored into separate files
 export const typeDefs = `#graphql
   type Country {
     name: String!

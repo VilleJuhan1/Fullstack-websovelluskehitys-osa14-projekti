@@ -46,7 +46,7 @@ def pokemonDataBuilder():
                 "id": i,
                 "name": pokemonData.get("name"),
                 "imageUrl": pokemonData.get("sprites", {}).get("front_default"),
-                "categories": [t["type"]["name"] for t in pokemonData.get("types", {})] # returns list of types for this pokemon
+                "categories": [t["type"]["name"] for t in pokemonData.get("types", {})] # returns list of types for this pokemon <- Maybe change this later to use for different generations.
             })
         except Exception as e:
             print(f"Error processing object: {e}")

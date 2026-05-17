@@ -1,5 +1,6 @@
 import { User } from '../../db/models/User';
 
+// Resolvers for user queries
 export const userResolvers = {
   Query: {
     allUsers: async (): Promise<User[]> => {

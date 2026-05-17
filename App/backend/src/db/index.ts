@@ -14,6 +14,7 @@ Score.belongsTo(User, { foreignKey: 'userId', as: 'user' });
 
 export { Country, Pokemon, User, Score, sequelize };
 
+// Sequelize migrator that takes into account production and development builds (js/ts)
 export const migrator = new Umzug({
   migrations: {
     glob: __filename.endsWith('.ts')
@@ -25,6 +26,7 @@ export const migrator = new Umzug({
   logger: console,
 });
 
+// Runs the migrations when the backend is started
 export const runMigrations = async () => {
   try {
     await sequelize.authenticate();

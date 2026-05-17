@@ -10,7 +10,7 @@ npm install
 npm run dev
 ```
 
-## Architecture plan of the backend (to be implemented)
+## Architecture plan of the backend for documentation purposes
 
 App/backend/
 ├── src/
@@ -35,7 +35,7 @@ App/backend/
 ├── .env # Local environment variables
 └── package.json
 
-### Tech stack
+### Tech stack (plan)
 
 - Node.js #Runtime environment
 - Axios #HTTP client for communicating with the mock payment provider

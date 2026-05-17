@@ -39,5 +39,8 @@
 | May 14th | Made quite a lot of progress in CI/CD deployment, but still has manual steps | 5 |
 | May 14th | Initial steps for enabling https in the future | 2 |
 | May 15th | Researched domains and certificates. Bought a domain. Used the domain provider's DNS service to link it to the NLB via A-record. Added cert manager to cluster. | 5 |
-|  |  |  |
+| May 15th | Created a workflow and a process for semantic versioning and changelog. Also added a landing page for the main domain as the apps are in separate subdomains. | 3 |
+| May 16th | Reviewed all files and added more comments. Need proper docstrings later. | 2 | 
+|  |  |  | 
+|  |  |  | 
 |  |  |  | 

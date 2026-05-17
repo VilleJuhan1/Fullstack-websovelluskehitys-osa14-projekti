@@ -2,6 +2,7 @@ import { User } from '../../db/models/User';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
+// Resolvers for authentication mutations
 export const authResolvers = {
   Mutation: {
     login: async (

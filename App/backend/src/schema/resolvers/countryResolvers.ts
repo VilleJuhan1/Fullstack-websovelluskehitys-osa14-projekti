@@ -2,6 +2,7 @@ import { Country } from '../../db/models/Country';
 import { ObjectType, Translations } from '../../models/ObjectType';
 import { Op } from 'sequelize';
 
+// Resolvers for country queries
 export const countryResolvers = {
   Query: {
     allCountries: async (): Promise<ObjectType[]> => {
@@ -31,12 +32,12 @@ export const countryResolvers = {
       });
       return country
         ? new ObjectType(
-            country.id,
-            country.name,
-            country.translations as unknown as Translations,
-            country.categories,
-            country.imageUrl
-          )
+          country.id,
+          country.name,
+          country.translations as unknown as Translations,
+          country.categories,
+          country.imageUrl
+        )
         : null;
     },
   },

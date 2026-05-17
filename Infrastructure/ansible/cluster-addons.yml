@@ -49,11 +49,11 @@
               - name: http
                 port: 80
                 targetPort: http
-                nodePort: 30080  # Matches the existing NLB setup
+                nodePort: 30080 # Only for testing, not needed after getting a domain and configuring DNS and TLS
               - name: https
                 port: 443
                 targetPort: https
-                nodePort: 30443  # Listener for 443 -> 30443 in NLB should be added
+                nodePort: 30443 # Listener is configured via terraform
 
     - name: Apply Cert-Manager
       kubernetes.core.k8s:

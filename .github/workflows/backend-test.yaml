@@ -6,11 +6,9 @@ on:
       - 'App/backend/**'
       - '.github/workflows/backend-test.yaml'
       - 'Infrastructure/docker/docker-compose-backend*.yml'
-#  pull_request:
-#    paths:
-#      - 'App/backend/**'
-#      - '.github/workflows/backend-test.yaml'
 
+# Runs linter and backend tests in Docker container. Should be used when making changes to backend or docker-compose files.
+# Tag triggering on commit messages with '#backend-test' mainly due to having all code in the same repo. Don't wanna run tests on every push or pull request.
 jobs:
   linter:
     # Only run this job if the commit messages contain '#backend-test'

@@ -1,6 +1,7 @@
 import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../sequelize';
 
+// Stores the scores for each category for each user
 export class Score extends Model {
   declare id: number;
   declare userId: number;

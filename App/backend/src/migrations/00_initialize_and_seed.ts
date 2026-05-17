@@ -2,6 +2,7 @@ import { DataTypes, QueryInterface } from 'sequelize';
 import countriesData from '../data/countries.json';
 import pokemonData from '../data/pokemon.json';
 
+// Migration file that initializes the database tables and seeds them with initial data from countries and pokemon json files on which the app was initially developed with
 export const up = async ({
   context: queryInterface,
 }: {

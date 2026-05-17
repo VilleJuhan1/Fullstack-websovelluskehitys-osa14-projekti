@@ -2,6 +2,7 @@ import { Pokemon } from '../../db/models/Pokemon';
 import { ObjectType, Translations } from '../../models/ObjectType';
 import { Op } from 'sequelize';
 
+// Resolvers for pokemon queries
 export const pokemonResolvers = {
   Query: {
     allPokemon: async (): Promise<ObjectType[]> => {
@@ -31,13 +32,13 @@ export const pokemonResolvers = {
       });
       return foundPokemon
         ? new ObjectType(
-            foundPokemon.id,
-            foundPokemon.name,
-            (foundPokemon.translations as unknown as Translations) ||
-              ({} as Translations),
-            foundPokemon.categories,
-            foundPokemon.imageUrl
-          )
+          foundPokemon.id,
+          foundPokemon.name,
+          (foundPokemon.translations as unknown as Translations) ||
+          ({} as Translations),
+          foundPokemon.categories,
+          foundPokemon.imageUrl
+        )
         : null;
     },
   },

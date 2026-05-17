@@ -1,7 +1,7 @@
 import { logger } from './utils/logger';
 import { startServer } from './server';
 
-// Graceful shutdown
+// Graceful shutdown handling
 process.on('SIGINT', () => {
   logger.info('SIGINT received, shutting down');
   process.exit(0);

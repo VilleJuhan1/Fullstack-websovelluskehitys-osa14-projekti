@@ -6,6 +6,7 @@ const LINKEDIN_URL =
   import.meta.env.VITE_LINKEDIN_URL || 'https://linkedin.com';
 const GITHUB_URL = import.meta.env.VITE_GITHUB_URL || 'https://github.com';
 
+// Hovering bottom bar with social media links similar to quiz app
 const BottomBar: React.FC = () => {
   return (
     <footer className="bottom-bar glass-panel">

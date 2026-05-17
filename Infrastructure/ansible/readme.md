@@ -4,12 +4,16 @@ Because our primary compute interfaces are entirely isolated in a private subnet
 
 ## Step-by-Step Deployment Guide
 
-### 1. Activate the python environment (path is oci-automation if you're using the instructions in the venv readme.md file)
+### Create the Python virtual environment
+
+Review `readme.md` in the `oci-automation` directory for instructions on creating and activating the python virtual environment
+
+### Activate the python environment (path is oci-automation if you're using the instructions in the venv readme.md file)
 ```bash
 source oci-automation/bin/activate
 ```
 
-### 2. Provision the Infrastructure
+### Provision the Infrastructure
 Run your Terraform to create the compute instances and automatically generate the base `inventory.ini` and `ansible_key.pem`.
 ```bash
 cd ../terraform/countriesApp
@@ -17,7 +21,7 @@ terraform plan -var-file=./local/terraform.tfvars
 terraform apply -var-file=./local/terraform.tfvars
 ```
 
-### 3. Create the Secure Tunnels
+### Create the Bastion tunnels
 Before running the tunnel script, ensure your private SSH key (the one associated with your OCI account) is added to your local SSH agent. This prevents the script from failing due to passphrase prompts during the background tunnel creation:
 
 ```bash
@@ -30,26 +34,29 @@ Then, run the tunnel automation:
 cd ../scripts
 python3 create_tunnels.py
 ```
-This script will interact with the OCI CLI, create the required Bastion sessions, open local SSH tunnels in the background, and generate an `inventory.local.ini` file for Ansible.
+This script will interact with the OCI CLI, create the required Bastion sessions, open local SSH tunnels in the background, and generate an `inventory.local.ini` file for Ansible. The tunnels are up for 30 minutes at a time.
 
 ### Optional: Create a variables file
 If you want to use a custom email for Let's Encrypt (https), create a `vars.yml` file in the `ansible` directory:
 ```yaml
-cert_manager_email: "[EMAIL_ADDRESS]"
+cert_manager_email: "bob@example.com"
 ```
 
-### 4. Run the Playbooks
-Now that the secure tunnels are open, simply activate your python environment and run the playbook!
+### Run the Playbooks
+Now that the secure tunnels are open, simply activate your python environment and run the playbook from the project ansible directory.
 ```bash
-cd ../ansible
+# Updates and reboots the k3s nodes
 ansible-playbook -i inventory.local.ini update_and_reboot.yaml
+# Installs k3s and configures the nodes
 ansible-playbook -i inventory.local.ini main.yml
+# Installs cert-manager and configures Nginx ingress with Let's Encrypt for https certs
+ansible-playbook -i inventory.local.ini cluster-addons.yml
 
 # If for some reason you want a clean k3s install, add "force_reinstall=true" to the playbook command like this:
 ansible-playbook -i inventory.local.ini main.yml --extra-vars "force_reinstall=true"
 ```
 
-### 5. Verify Kubernetes
+### Verify Kubernetes
 As is, bastion tunnels don't work with kubectl. This might be an OCI limit. To verify the cluster is working, SSH to the node via bastion and run `kubectl get nodes`.
 
 ```bash
@@ -58,10 +65,12 @@ ssh -i ansible/ansible_key.pem ubuntu@localhost -p 2222 # use the same SSH priva
 kubectl get nodes
 ```
 
-### 6. Clean Up
-When you are done, you can safely close all the background tunnels by running (or just wait for the sessions to drop):
+### Clean Up
+When you are done, you can safely close all the background tunnels by running:
 ```bash
 cd ../scripts
 ps -fp $(cat bastion_pids.txt)  # See which processes are running and if the tunnels are still up
 kill $(cat bastion_pids.txt)    # Kill the processes
 ```
+
+However, this is not strictly necessary as the pids file is overwritten every time the tunnel script is run. Also the sessions drop after 30 minutes.
