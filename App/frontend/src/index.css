@@ -50,7 +50,7 @@
   --transition-bouncy: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Base Reset & Styles */
+/* Base Reset & Styles: Normalizes browser defaults and sets up the foundational styling (font, background color, text color) for the entire application. */
 *,
 *::before,
 *::after {
@@ -70,7 +70,7 @@ body {
   flex-direction: column;
 }
 
-/* Glassmorphism Surface */
+/* Glassmorphism Surface: A utility class that creates a frosted glass effect using backdrop-filter and semi-transparent backgrounds. Used for panels like the BottomBar. */
 .glass-panel {
   background: rgba(19, 47, 56, 0.8);
   backdrop-filter: blur(12px);
@@ -80,7 +80,7 @@ body {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-/* Typography Utilities */
+/* Typography Utilities: Defines the styling for headings and paragraphs to ensure consistent text hierarchy and spacing across the app. */
 h1,
 h2,
 h3,
@@ -105,7 +105,7 @@ p {
   color: var(--text-secondary);
 }
 
-/* Layout Utilities */
+/* Layout Utilities: Reusable classes for common layout patterns, such as centering content or wrapping it in a max-width container. */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -119,7 +119,7 @@ p {
   justify-content: center;
 }
 
-/* Grid Layout for Quiz Cards */
+/* Grid Layout for Quiz Cards: Responsive CSS Grid configurations used primarily to display the 4 quiz options. Adjusts column count based on screen size (mobile vs. desktop). */
 .grid-2x2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -150,7 +150,7 @@ p {
   gap: var(--space-md);
 }
 
-/* Interactive Elements (Buttons & Quiz Options) */
+/* Interactive Elements: Base styling for clickable elements like buttons. Includes the primary button style with hover and active states for tactile feedback. */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -182,7 +182,7 @@ p {
   transform: translateY(1px) scale(0.98);
 }
 
-/* Quiz Option Card Micro-animations */
+/* Quiz Option Card Micro-animations: Specific styles for the individual quiz answer cards, featuring hover lift effects and glowing borders to encourage interaction. */
 .quiz-option {
   padding: var(--space-lg);
   background-color: var(--bg-surface);
@@ -205,7 +205,7 @@ p {
   transform: scale(0.95);
 }
 
-/* Gradient Text Effect */
+/* Gradient Text Effect: A utility class that applies the primary-to-secondary brand gradient to text elements (like the main title). */
 .text-gradient {
   background: linear-gradient(135deg,
       var(--color-secondary),
@@ -215,6 +215,8 @@ p {
   background-clip: text;
 }
 
+/* Animation Keyframes: Definitions for reusable CSS animations */
+/* Smooth fade-in used for elements like the bottom bar */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -227,6 +229,7 @@ p {
   }
 }
 
+/* Playful bouncy entrance animation used for quiz elements */
 @keyframes bounceIn {
   0% {
     transform: scale(0.3);
@@ -247,7 +250,7 @@ p {
   }
 }
 
-/* Bottom Bar Styles */
+/* Bottom Bar Styles: Component-specific styles for the fixed social media bar at the bottom right of the screen. Handles layout, spacing, and icon hover effects. */
 .bottom-bar {
   position: fixed;
   bottom: var(--space-lg);
@@ -291,7 +294,7 @@ p {
   opacity: 1;
 }
 
-/* DevBar Styles */
+/* DevBar Styles: Component-specific styles for the environment indicator bar at the very top of the screen. Includes a distinct red variant for the production environment. */
 .dev-bar {
   position: fixed;
   top: 0;

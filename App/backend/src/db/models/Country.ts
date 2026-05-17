@@ -9,6 +9,7 @@ export class Country extends Model {
   declare imageUrl: string;
 }
 
+// Countries table that can be used as a quiz category
 Country.init(
   {
     id: {

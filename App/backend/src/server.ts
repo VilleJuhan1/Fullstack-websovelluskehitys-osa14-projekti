@@ -11,9 +11,10 @@ const isDev = process.env.NODE_ENV !== 'production';
 
 import { runMigrations } from './db';
 
+// Function to start the server
 export async function startServer() {
   try {
-    await runMigrations();
+    await runMigrations(); // Run the migrations first
 
     const server = new ApolloServer({
       typeDefs,

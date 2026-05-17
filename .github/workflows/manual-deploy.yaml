@@ -1,5 +1,6 @@
 name: Manual Branch Deploy
 
+# Manual deployment workflow for the quiz application backend and frontend
 on:
   workflow_dispatch:
     inputs:
@@ -12,6 +13,7 @@ on:
           - dev
           - prod
 
+# Cancel previous deployments of the same workflow and target environment if there's a new deployment
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.inputs.target_env }}-${{ github.ref }}
   cancel-in-progress: true
@@ -25,6 +27,7 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Use pseudo-random tag for image naming
       - name: Generate Random Tag
         id: generate-tag
         run: |
@@ -36,6 +39,7 @@ jobs:
           echo "tag=$TAG" >> $GITHUB_OUTPUT
           echo "Generated tag: $TAG"
 
+      # Set up qemu and docker buildx for multi architecture builds as our environment is ARM64 based
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
 

@@ -1,6 +1,7 @@
 import { QueryInterface } from 'sequelize';
 import testScoresData from '../data/testScores.json';
 
+// Interface defining the structure of a test score <- could be refactored to use the models Score type later
 interface TestScore {
   userId: number;
   category: string;

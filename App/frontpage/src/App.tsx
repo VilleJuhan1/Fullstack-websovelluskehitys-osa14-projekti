@@ -6,6 +6,10 @@ const App: React.FC = () => {
   return (
     <div className="landing-container">
       <main className="hero-section">
+        <div className="hero-text">
+          <h1 className="text-gradient">Hiekkalaatikko</h1>
+        </div>
+
         <div className="robot-wrapper">
           <div className="sandbox">
             <img src={robotImg} className="robot-img" alt="Digging Robot" />
@@ -13,7 +17,6 @@ const App: React.FC = () => {
         </div>
 
         <div className="hero-text">
-          <h1 className="text-gradient">Under Construction</h1>
           <p>
             Welcome to my cloud sandbox landing page! While you're here, please
             check out this{' '}

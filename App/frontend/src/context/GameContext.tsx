@@ -5,7 +5,7 @@ import { GET_ALL_DATA } from '../services/gameData';
 import type { AllGameData, GameDataType, GameItem } from '../services/gameData';
 import { GameContext } from '../hooks/useGame';
 
-/* GameProvider fetches all game data once when the app mounts and provides it via context */
+// GameProvider fetches all game data once when the app mounts and provides it via context
 export function GameProvider({ children }: { children: ReactNode }) {
   const { data, loading, error } = useQuery<AllGameData>(GET_ALL_DATA);
 

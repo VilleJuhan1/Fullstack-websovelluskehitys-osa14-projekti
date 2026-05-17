@@ -3,8 +3,10 @@ import testUsersData from '../data/testUsers.json';
 import bcrypt from 'bcryptjs';
 import { TestUser } from '../models/User';
 
+// The iterations for hashing the passwords
 const SALT_ROUNDS = 10;
 
+// Migration file that seeds the database with test users on dev environment
 export const up = async ({
     context: queryInterface,
 }: {

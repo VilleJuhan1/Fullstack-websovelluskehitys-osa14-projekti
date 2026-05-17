@@ -1,3 +1,3 @@
-# Hiekkalaatikko.tech landing page
+# Landing page
 
-A simple landing page / placeholder for the domain hiekkalaatikko.tech.
+A simple landing page for the cloud sandbox project.

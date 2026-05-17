@@ -9,6 +9,7 @@ export class Pokemon extends Model {
   declare imageUrl: string;
 }
 
+// Pokemon table that can be used as a quiz category
 Pokemon.init(
   {
     id: {

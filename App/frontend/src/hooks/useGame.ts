@@ -1,6 +1,7 @@
 import { createContext, useContext } from 'react';
 import type { GameItem, GameDataType } from '../services/gameData';
 
+// 
 export interface GameContextType {
   pokemon: GameItem[];
   countries: GameItem[];

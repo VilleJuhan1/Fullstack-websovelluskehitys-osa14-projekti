@@ -6,8 +6,8 @@ on:
       - 'Infrastructure/terraform/landingZone/**'
       - '.github/workflows/terraform-lz-create-or-update.yaml'
 
-# For later: Add a functionality that applies the plan when it has been reviewed and is merged to main
-
+# Simple workflow to test the terraform code changes in landingZone directory via GitHub Actions with terraform plan
+# In a multi-developer environment would be the primary way to test and apply the landing zone changes
 jobs:
   terraform:
     # Only run this job if the commit messages contain '#lz'
@@ -17,7 +17,6 @@ jobs:
       run:
         working-directory: Infrastructure/terraform/landingZone
     env:
-      # Terraform automatically maps these to your variables
       # As this is Tenancy level configuration, we need to use tenancy admin level access
       TF_VAR_tenancy_ocid:      ${{ secrets.OCI_TENANCY_OCID }}
       TF_VAR_user_ocid:         ${{ secrets.OCI_LZ_USER_OCID }}

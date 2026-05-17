@@ -1,5 +1,6 @@
 name: Frontpage Deploy
 
+# Manual deployment workflow for the landing page
 on:
   workflow_dispatch:
     inputs:
@@ -12,6 +13,7 @@ on:
           - dev
           - prod
 
+# Cancel previous deployments of the same workflow and target environment if there's a new deployment
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.inputs.target_env }}-${{ github.ref }}
   cancel-in-progress: true
@@ -25,7 +27,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Generate Random Tag
+      - name: Generate Random Tag for the image
         id: generate-tag
         run: |
           ADJECTIVES=("sandy" "digital" "cosmic" "playful" "stable" "future")
@@ -36,6 +38,7 @@ jobs:
           echo "tag=$TAG" >> $GITHUB_OUTPUT
           echo "Generated tag: $TAG"
 
+      # Set up qemu and docker buildx for multi architecture builds as our environment is ARM64 based
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v4
 

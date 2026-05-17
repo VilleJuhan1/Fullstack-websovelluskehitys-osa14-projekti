@@ -2,55 +2,56 @@ import { Model, DataTypes, HasManyGetAssociationsMixin } from 'sequelize';
 import { sequelize } from '../sequelize';
 import { Score } from './Score';
 
+// Stores user data
 export class User extends Model {
-  declare id: number;
-  declare username: string;
-  declare hashedPassword: string;
-  declare email: string;
-  declare isAdmin: boolean;
-  declare isPremiumUser: boolean;
-  declare isActive: boolean;
+    declare id: number;
+    declare username: string;
+    declare hashedPassword: string;
+    declare email: string;
+    declare isAdmin: boolean;
+    declare isPremiumUser: boolean;
+    declare isActive: boolean;
 
-  // Association mixins
-  declare getScores: HasManyGetAssociationsMixin<Score>;
+    // User can have multiple scores, one for each main quiz category
+    declare getScores: HasManyGetAssociationsMixin<Score>;
 }
 
 User.init(
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
+    {
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true,
+        },
+        username: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        hashedPassword: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        isAdmin: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        isPremiumUser: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
+        isActive: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        },
     },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    hashedPassword: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    isAdmin: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    isPremiumUser: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-    isActive: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false,
-    },
-  },
-  {
-    sequelize,
-    underscored: false,
-    timestamps: true,
-    modelName: 'user',
-  }
+    {
+        sequelize,
+        underscored: false,
+        timestamps: true,
+        modelName: 'user',
+    }
 );

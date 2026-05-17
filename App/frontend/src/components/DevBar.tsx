@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Shows version and environment tag on top of the app
 const DevBar: React.FC = () => {
     const showDevBar = import.meta.env.VITE_SHOW_DEV_BAR === 'true';
     const version = import.meta.env.VITE_APP_VERSION || 'v0.0.0-unknown';
@@ -9,6 +10,7 @@ const DevBar: React.FC = () => {
     if (!showDevBar) return null;
 
     return (
+        // Shows version and environment tag on top of the app if visible
         <div className={`dev-bar ${isProd ? 'dev-bar-prod' : ''}`}>
             <span>{isProd ? 'PRODUCTION BUILD' : 'DEVELOPMENT ENVIRONMENT'}</span>
             <span className="dev-bar-badge">VERSION: {version}</span>

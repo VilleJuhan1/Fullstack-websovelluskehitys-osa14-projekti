@@ -1,5 +1,6 @@
 import { Score } from '../../db/models/Score';
 
+// Resolvers for score queries
 export const scoreResolvers = {
   Query: {
     topScores: async (

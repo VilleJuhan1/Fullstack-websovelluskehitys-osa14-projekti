@@ -4,10 +4,7 @@ import { useGameContext } from '../hooks/useGame';
 import type { GameDataType, GameItem } from '../services/gameData';
 import QuizGrid from '../components/quiz/QuizGrid';
 
-/* 
-Generic quiz component for rendering the quiz page
-and handling the quiz logic.
-*/
+// Generic quiz component for rendering the quiz page and handling the quiz logic
 export default function Quiz() {
   const { category } = useParams<{ category: string }>();
   const type = (
@@ -36,7 +33,7 @@ export default function Quiz() {
   }, [items]);
 
   // Generate initial question when items load
-  // We use a check for options.length to avoid the "cascading renders" lint error
+  // Use a check for options.length to avoid the "cascading renders" lint error
   useEffect(() => {
     if (items.length >= 4 && options.length === 0) {
       // Use microtask to avoid "synchronous setState in effect" lint warning
@@ -47,7 +44,7 @@ export default function Quiz() {
   const handleSelect = (selectedItem: GameItem) => {
     if (selectedItem.id === targetItem?.id) {
       setFeedback({ message: 'Correct!', color: 'var(--color-primary)' });
-      setTimeout(generateQuestion, 1000);
+      setTimeout(generateQuestion, 1000); // Generate new question after 1 second
     } else {
       setFeedback({
         message: 'Wrong! Try again.',
