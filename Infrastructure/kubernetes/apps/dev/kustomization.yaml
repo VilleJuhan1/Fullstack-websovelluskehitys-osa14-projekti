@@ -24,7 +24,7 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: obvious-wolf-f17f49a
+        value: swift-owl-62e5aaa
   target:
     kind: Deployment
     name: frontend
