@@ -9,3 +9,4 @@
 | 1.1.1 | 2026-05-16 | Fixed a lint error | Workflow got stuck on some lint errors... My bad! Now fixed.  | brave-whale-43f0d5e | happy-wolf-77d7f62 |
 | 1.1.2 | 2026-05-17 | Code review and documentation | Did a code review for the whole repository. Also changed the landing page layout slightly.  | brave-whale-43f0d5e | happy-wolf-77d7f62 |
 | 1.1.3 | 2026-05-18 | Testing categories for Quiz game | Added a dropdown menu and logic for using the object categories provided by the backend data to have only questions related to that category (ie. Europe or 1996 Red/Blue Pokemon).  | latest | happy-wolf-77d7f62 |
+| 1.1.4 | 2026-05-18 | Just some documentation | Courselog update  | latest | happy-wolf-77d7f62 |
