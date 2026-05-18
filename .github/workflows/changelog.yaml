@@ -68,11 +68,19 @@ jobs:
           DATE=$(date +'%Y-%m-%d')
           echo "date=$DATE" >> $GITHUB_OUTPUT
 
-          # Get Tags from Kustomize using yq (more robust than grep)
+          # Get Tags from Kustomize using yq
           DEV_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/dev/kustomization.yaml)
           PROD_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/prod/kustomization.yaml)
           
-          # Fallback to "unknown" if yq fails
+          # If the dev tag is "latest", extract the actual unique generated tag from VITE_APP_VERSION in kustomization
+          if [ "$DEV_TAG" = "latest" ] || [ -z "$DEV_TAG" ]; then
+            EXTRACTED_DEV_TAG=$(grep -A 1 "VITE_APP_VERSION" Infrastructure/kubernetes/apps/dev/kustomization.yaml | grep "value:" | sed 's/.*value: //' | tr -d ' "')
+            if [ ! -z "$EXTRACTED_DEV_TAG" ]; then
+              DEV_TAG="$EXTRACTED_DEV_TAG"
+            fi
+          fi
+          
+          # Fallback to "unknown" if yq/grep fails
           echo "dev_tag=${DEV_TAG:-unknown}" >> $GITHUB_OUTPUT
           echo "prod_tag=${PROD_TAG:-unknown}" >> $GITHUB_OUTPUT
 
