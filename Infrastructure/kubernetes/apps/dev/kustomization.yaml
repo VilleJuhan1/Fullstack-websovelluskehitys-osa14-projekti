@@ -24,7 +24,7 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: brave-whale-43f0d5e
+        value: shiny-whale-7b0a1cd
   target:
     kind: Deployment
     name: frontend
@@ -49,12 +49,12 @@ patches:
     kind: Ingress
     name: frontpage-ingress
 images:
-- name: villejuhan1/quiz-backend
-  newName: villejuhan1/quiz-backend
-  newTag: brave-whale-43f0d5e
-- name: villejuhan1/quiz-frontend
-  newName: villejuhan1/quiz-frontend
-  newTag: brave-whale-43f0d5e
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
+  newTag: latest
+- name: villejuhan1/quiz-backend
+  newName: villejuhan1/quiz-backend
+  newTag: latest
+- name: villejuhan1/quiz-frontend
+  newName: villejuhan1/quiz-frontend
   newTag: latest
