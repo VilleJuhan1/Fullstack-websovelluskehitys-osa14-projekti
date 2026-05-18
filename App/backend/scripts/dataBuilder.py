@@ -59,9 +59,9 @@ def pokemonDataBuilder():
 def expandedPokemonDataBuilder():
     pokemons = 1025 # Generate data for all pokemon
     generations = [
-        [151, "1996 Red/Green/Blue"], 
-        [251, "1999 Gold/Silver/Crystal"], 
-        [386, "2002 Ruby/Sapphire/Emerald"], 
+        [151, "1996 Red/Blue"], 
+        [251, "1999 Gold/Silver"], 
+        [386, "2002 Ruby/Sapphire"], 
         [493, "2006 Diamond/Pearl"], 
         [649, "2010 Black/White"], 
         [721, "2013 X/Y"], 
@@ -90,7 +90,7 @@ def expandedPokemonDataBuilder():
             })
         except Exception as e:
             print(f"Error processing object: {e}")
-        print(f"Pokemon {i} added: {pokemonData.get('name')}, Gen: {gen[1]}")
+        print(f"Pokemon {i} added: {pokemonData.get('name')}, Gen: {gen}")
 
     with open("../src/data/pokemonAll.json", "w", encoding="utf-8") as f:
         json.dump(filtered, f, indent=2, ensure_ascii=False)
@@ -101,3 +101,4 @@ if __name__ == "__main__":
     #countryDataBuilder()
     #pokemonDataBuilder()
     expandedPokemonDataBuilder()
+    print("Done")
