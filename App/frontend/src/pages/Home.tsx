@@ -14,7 +14,7 @@ export default function Home() {
         }}
       >
         <h1 className="text-gradient">Quiz Platform</h1>
-        <p>Choose your category</p>
+        <p>Choose your theme</p>
 
         {/* Quiz selection with buttons, maybe later will use a dropdown menu and iteratation over available quizzes. */}
         <div className="grid-1-col" style={{ margin: '2rem 0' }}>

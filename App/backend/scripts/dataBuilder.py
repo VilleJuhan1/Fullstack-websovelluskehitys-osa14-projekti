@@ -56,6 +56,48 @@ def pokemonDataBuilder():
 
     print(f"Saved {len(filtered)} pokemon to pokemon.json")
 
+def expandedPokemonDataBuilder():
+    pokemons = 1025 # Generate data for all pokemon
+    generations = [
+        [151, "1996 Red/Green/Blue"], 
+        [251, "1999 Gold/Silver/Crystal"], 
+        [386, "2002 Ruby/Sapphire/Emerald"], 
+        [493, "2006 Diamond/Pearl"], 
+        [649, "2010 Black/White"], 
+        [721, "2013 X/Y"], 
+        [809, "2016 Sun/Moon"], 
+        [905, "2019 Sword/Shield"], 
+        [1025, "2022 Scarlet/Violet"]
+    ]
+
+    filtered = []
+    for i in range(1, pokemons + 1):
+        pokemonDataUrl = f"https://pokeapi.co/api/v2/pokemon/{i}"
+        pokemonDataResponse = requests.get(pokemonDataUrl)
+        pokemonDataResponse.raise_for_status()  # raises error if request failed
+        pokemonData = pokemonDataResponse.json()
+        gen = None
+        for gen in generations:
+            if i <= gen[0]:
+                gen = gen[1]
+                break
+        try:
+            filtered.append({
+                "id": i,
+                "name": pokemonData.get("name"),
+                "imageUrl": pokemonData.get("sprites", {}).get("front_default"),
+                "categories": [f"{gen}"] # returns list of types for this pokemon <- Maybe change this later to use for different generations.
+            })
+        except Exception as e:
+            print(f"Error processing object: {e}")
+        print(f"Pokemon {i} added: {pokemonData.get('name')}, Gen: {gen[1]}")
+
+    with open("../src/data/pokemonAll.json", "w", encoding="utf-8") as f:
+        json.dump(filtered, f, indent=2, ensure_ascii=False)
+
+    print(f"Saved {len(filtered)} pokemon to pokemonAll.json")    
+
 if __name__ == "__main__":
     #countryDataBuilder()
-    pokemonDataBuilder()
+    #pokemonDataBuilder()
+    expandedPokemonDataBuilder()

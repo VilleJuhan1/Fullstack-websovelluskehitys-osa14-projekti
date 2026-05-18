@@ -1,8 +1,9 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useGameContext } from '../hooks/useGame';
 import type { GameDataType, GameItem } from '../services/gameData';
 import QuizGrid from '../components/quiz/QuizGrid';
+import { CategorySelector } from '../components/quiz/CategorySelector';
 
 // Generic quiz component for rendering the quiz page and handling the quiz logic
 export default function Quiz() {
@@ -14,6 +15,7 @@ export default function Quiz() {
   const { getItems, loading, error } = useGameContext();
   const items = getItems(type);
 
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [options, setOptions] = useState<GameItem[]>([]);
   const [targetItem, setTargetItem] = useState<GameItem | null>(null);
   const [feedback, setFeedback] = useState<{
@@ -21,25 +23,48 @@ export default function Quiz() {
     color: string;
   } | null>(null);
 
-  const generateQuestion = useCallback(() => {
-    if (items.length < 4) return;
+  // Extract unique categories from items
+  const availableCategories = useMemo(() => {
+    const cats = new Set<string>();
+    items.forEach((item) => {
+      if (item.categories) {
+        item.categories.forEach((c) => cats.add(c));
+      }
+    });
+    return ['all', ...Array.from(cats)].sort();
+  }, [items]);
 
-    const shuffled = [...items].sort(() => 0.5 - Math.random());
+  // Filter items based on selected category
+  const filteredItems = useMemo(() => {
+    if (selectedCategory === 'all') return items;
+    return items.filter((item) => item.categories?.includes(selectedCategory));
+  }, [items, selectedCategory]);
+
+  const generateQuestion = useCallback(() => {
+    if (filteredItems.length < 4) {
+      setOptions([]);
+      setTargetItem(null);
+      return;
+    }
+
+    const shuffled = [...filteredItems].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 4);
 
     setOptions(selected);
     setTargetItem(selected[Math.floor(Math.random() * 4)]);
     setFeedback(null);
-  }, [items]);
+  }, [filteredItems]);
 
-  // Generate initial question when items load
-  // Use a check for options.length to avoid the "cascading renders" lint error
+  // Generate initial question when items load or category changes
   useEffect(() => {
-    if (items.length >= 4 && options.length === 0) {
+    if (filteredItems.length >= 4) {
       // Use microtask to avoid "synchronous setState in effect" lint warning
       Promise.resolve().then(generateQuestion);
+    } else {
+      setOptions([]);
+      setTargetItem(null);
     }
-  }, [items, options.length, generateQuestion]);
+  }, [filteredItems, generateQuestion]);
 
   const handleSelect = (selectedItem: GameItem) => {
     if (selectedItem.id === targetItem?.id) {
@@ -55,7 +80,7 @@ export default function Quiz() {
 
   if (loading) {
     return (
-      <div className="container flex-center" style={{ minHeight: '100vh' }}>
+      <div className="container flex-center quiz-container">
         <h2 className="text-gradient">Loading {category}...</h2>
       </div>
     );
@@ -63,59 +88,53 @@ export default function Quiz() {
 
   if (error) {
     return (
-      <div className="container flex-center" style={{ minHeight: '100vh' }}>
-        <h2 style={{ color: 'var(--color-danger)' }}>Error loading data!</h2>
+      <div className="container flex-center quiz-container">
+        <h2 className="quiz-error-text">Error loading data!</h2>
       </div>
     );
   }
 
   return (
-    <div
-      className="container flex-center"
-      style={{ minHeight: '100vh', padding: '2rem 0' }}
-    >
-      <div
-        className="glass-panel"
-        style={{
-          padding: '2rem',
-          width: '100%',
-          maxWidth: '600px',
-          textAlign: 'center',
-        }}
-      >
+    <div className="container flex-center quiz-container">
+      <div className="glass-panel quiz-panel">
         <h1 className="text-gradient">{category?.toUpperCase()} QUIZ</h1>
 
-        {targetItem && (
-          <div style={{ margin: '1.5rem 0' }}>
-            <p style={{ opacity: 0.8, marginBottom: '0.5rem' }}>
-              Which one is:
-            </p>
-            <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
-              {targetItem.name}
-            </h2>
+        {filteredItems.length < 4 ? (
+          <div className="quiz-warning">
+            Not enough items in this category to generate a quiz (minimum 4
+            required).
           </div>
+        ) : (
+          <>
+            {targetItem && (
+              <div style={{ margin: '1.5rem 0' }}>
+                <span className="quiz-subtitle">Which one is:</span>
+                <h2 className="quiz-target-name">{targetItem.name}</h2>
+              </div>
+            )}
+
+            {options.length > 0 && (
+              <QuizGrid options={options} onSelect={handleSelect} />
+            )}
+          </>
         )}
 
-        {options.length > 0 && (
-          <QuizGrid options={options} onSelect={handleSelect} />
-        )}
-
-        <div style={{ height: '60px', marginTop: '1rem' }}>
+        <div className="quiz-feedback-container">
           {feedback && (
             <div
-              style={{
-                padding: '0.8rem',
-                borderRadius: 'var(--radius-sm)',
-                background: feedback.color,
-                color: 'white',
-                fontWeight: '600',
-                animation: 'bounceIn 0.4s ease-out',
-              }}
+              className="quiz-feedback"
+              style={{ backgroundColor: feedback.color }}
             >
               {feedback.message}
             </div>
           )}
         </div>
+
+        <CategorySelector
+          categories={availableCategories}
+          selectedCategory={selectedCategory}
+          onSelectCategory={setSelectedCategory}
+        />
 
         <div style={{ marginTop: '2rem' }}>
           <Link to="/" className="btn btn-primary">
