@@ -13,7 +13,10 @@ export const CategorySelector: React.FC<CategorySelectorProps> = ({
   onSelectCategory,
 }) => {
   return (
-    <div className="category-selector-container flex-center" style={{ flexDirection: 'column' }}>
+    <div
+      className="category-selector-container flex-center"
+      style={{ flexDirection: 'column' }}
+    >
       <label className="quiz-subtitle" style={{ fontWeight: 600 }}>
         Category
       </label>

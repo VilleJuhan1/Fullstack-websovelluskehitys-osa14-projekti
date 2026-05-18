@@ -61,8 +61,10 @@ export default function Quiz() {
       // Use microtask to avoid "synchronous setState in effect" lint warning
       Promise.resolve().then(generateQuestion);
     } else {
-      setOptions([]);
-      setTargetItem(null);
+      Promise.resolve().then(() => {
+        setOptions([]);
+        setTargetItem(null);
+      });
     }
   }, [filteredItems, generateQuestion]);
 
