@@ -24,7 +24,7 @@ patches:
       path: /spec/template/spec/containers/0/env/-
       value:
         name: VITE_APP_VERSION
-        value: swift-owl-62e5aaa
+        value: clever-lion-39c7526
   target:
     kind: Deployment
     name: frontend
