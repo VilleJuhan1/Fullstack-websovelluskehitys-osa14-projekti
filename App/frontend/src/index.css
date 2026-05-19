@@ -68,6 +68,24 @@ html {
   html {
     font-size: 14px; /* Scale down on mobile to fit perfectly */
   }
+  
+  .container {
+    padding: 0; /* Remove container padding so we can snap */
+  }
+  
+  .main-container {
+    padding: 0;
+  }
+  
+  .main-panel {
+    min-height: 100vh;
+    border-radius: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-xl) var(--space-sm);
+  }
 }
 
 @media (min-width: 1200px) {
@@ -275,13 +293,13 @@ p {
   }
 }
 
-/* Quiz Page Styles: Component-specific styles for the Quiz interface. */
-.quiz-container {
+/* Main Page Styles: Shared styles for Quiz and Home interfaces. */
+.main-container {
   min-height: 100vh;
   padding: var(--space-xl) 0;
 }
 
-.quiz-panel {
+.main-panel {
   padding: var(--space-xl);
   width: 100%;
   max-width: 45rem; /* ~720px default, scales with screen */

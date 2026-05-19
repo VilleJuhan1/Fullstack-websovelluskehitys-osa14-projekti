@@ -3,16 +3,8 @@ import { Link } from 'react-router-dom';
 // The app home page
 export default function Home() {
   return (
-    <div className="container flex-center" style={{ minHeight: '100vh' }}>
-      <div
-        className="glass-panel"
-        style={{
-          padding: '3rem',
-          width: '100%',
-          maxWidth: '600px',
-          textAlign: 'center',
-        }}
-      >
+    <div className="container flex-center main-container">
+      <div className="glass-panel main-panel">
         <h1 className="text-gradient">Quiz Platform</h1>
         <p>Choose your theme</p>
 

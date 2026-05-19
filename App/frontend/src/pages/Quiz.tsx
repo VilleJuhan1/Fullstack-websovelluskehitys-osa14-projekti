@@ -82,7 +82,7 @@ export default function Quiz() {
 
   if (loading) {
     return (
-      <div className="container flex-center quiz-container">
+      <div className="container flex-center main-container">
         <h2 className="text-gradient">Loading {category}...</h2>
       </div>
     );
@@ -90,15 +90,15 @@ export default function Quiz() {
 
   if (error) {
     return (
-      <div className="container flex-center quiz-container">
+      <div className="container flex-center main-container">
         <h2 className="quiz-error-text">Error loading data!</h2>
       </div>
     );
   }
 
   return (
-    <div className="container flex-center quiz-container">
-      <div className="glass-panel quiz-panel">
+    <div className="container flex-center main-container">
+      <div className="glass-panel main-panel">
         <h1 className="text-gradient">{category?.toUpperCase()} QUIZ</h1>
 
         {filteredItems.length < 4 ? (
