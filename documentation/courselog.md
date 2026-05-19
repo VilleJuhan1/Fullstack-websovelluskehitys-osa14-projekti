@@ -42,5 +42,5 @@
 | May 16th | Created a workflow and a process for semantic versioning and changelog. Also added a landing page for the main domain as the apps are in separate subdomains. | 6 |
 | May 17th | Reviewed all files and added more comments. Need proper docstrings later. | 2 | 
 | May 18th | Added categories to the Quiz | 3 | 
-|  |  |  | 
+| May 19th | Finally quite satisfied with the mobile layout. Vite config allows for local mobile testing also now. | 2 | 
 |  |  |  | 
