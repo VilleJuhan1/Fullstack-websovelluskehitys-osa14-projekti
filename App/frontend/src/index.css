@@ -68,15 +68,15 @@ html {
   html {
     font-size: 14px; /* Scale down on mobile to fit perfectly */
   }
-  
+
   .container {
     padding: 0; /* Remove container padding so we can snap */
   }
-  
+
   .main-container {
     padding: 0;
   }
-  
+
   .main-panel {
     min-height: 100vh;
     border-radius: 0;
