@@ -109,7 +109,7 @@ export default function Quiz() {
         ) : (
           <>
             {targetItem && (
-              <div style={{ margin: '1.5rem 0' }}>
+              <div style={{ margin: 'var(--space-lg) 0' }}>
                 <span className="quiz-subtitle">Which one is:</span>
                 <h2 className="quiz-target-name">{targetItem.name}</h2>
               </div>
@@ -138,7 +138,7 @@ export default function Quiz() {
           onSelectCategory={setSelectedCategory}
         />
 
-        <div style={{ marginTop: '2rem' }}>
+        <div style={{ marginTop: 'var(--space-xl)' }}>
           <Link to="/" className="btn btn-primary">
             Back to Menu
           </Link>

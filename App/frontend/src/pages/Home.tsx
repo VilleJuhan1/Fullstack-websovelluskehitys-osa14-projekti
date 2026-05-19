@@ -9,7 +9,7 @@ export default function Home() {
         <p>Choose your theme</p>
 
         {/* Quiz selection with buttons, maybe later will use a dropdown menu and iteratation over available quizzes. */}
-        <div className="grid-1-col" style={{ margin: '2rem 0' }}>
+        <div className="grid-1-col" style={{ margin: 'var(--space-xl) 0' }}>
           <Link
             to="/quiz/pokemon"
             className="quiz-option"
