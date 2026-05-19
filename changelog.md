@@ -11,3 +11,4 @@
 | 1.1.3 | 2026-05-18 | Testing categories for Quiz game | Added a dropdown menu and logic for using the object categories provided by the backend data to have only questions related to that category (ie. Europe or 1996 Red/Blue Pokemon).  | obvious-wolf-f17f49a | happy-wolf-77d7f62 |
 | 1.1.4 | 2026-05-18 | Just some documentation | Courselog update  | obvious-wolf-f17f49a| happy-wolf-77d7f62 |
 | 1.1.5 | 2026-05-18 | Changelog workflow fixes | Fixed the changelog workflow that was applying latest to backend dev image in the changelog.md. Also added a small scaling test for frontend to better accommodate different screens.  | obvious-wolf-f17f49a | happy-wolf-77d7f62 |
+| 1.1.6 | 2026-05-19 | Mobile layout tweaks | Made the homepage and quizpage components snap into corners and scale to the mobile screen, maybe.  | clever-lion-39c7526 | happy-wolf-77d7f62 |
