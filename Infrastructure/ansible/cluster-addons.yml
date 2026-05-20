@@ -35,6 +35,7 @@
         state: present
         kubeconfig: /etc/rancher/k3s/k3s.yaml
 
+    # Refactor later into a manifest
     - name: Patch Ingress Service to use existing NLB ports
       kubernetes.core.k8s:
         state: patched
@@ -45,6 +46,7 @@
         definition:
           spec:
             type: NodePort
+            externalTrafficPolicy: Local
             ports:
               - name: http
                 port: 80
@@ -54,6 +56,30 @@
                 port: 443
                 targetPort: https
                 nodePort: 30443 # Listener is configured via terraform
+
+    # Refactor later into a manifest
+    - name: Patch Ingress Deployment for Multi-Node Scaling
+      kubernetes.core.k8s:
+        state: patched
+        kind: Deployment
+        name: ingress-nginx-controller
+        namespace: ingress-nginx
+        kubeconfig: /etc/rancher/k3s/k3s.yaml
+        definition:
+          spec:
+            replicas: 2
+            template:
+              spec:
+                affinity:
+                  podAntiAffinity:
+                    requiredDuringSchedulingIgnoredDuringExecution:
+                      - labelSelector:
+                          matchExpressions:
+                            - key: app.kubernetes.io/name
+                              operator: In
+                              values:
+                                - ingress-nginx
+                        topologyKey: kubernetes.io/hostname
 
     - name: Apply Cert-Manager
       kubernetes.core.k8s:
