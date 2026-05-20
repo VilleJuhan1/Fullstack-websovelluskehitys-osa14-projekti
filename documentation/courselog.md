@@ -43,4 +43,7 @@
 | May 17th | Reviewed all files and added more comments. Need proper docstrings later. | 2 | 
 | May 18th | Added categories to the Quiz | 3 | 
 | May 19th | Finally quite satisfied with the mobile layout. Vite config allows for local mobile testing also now. | 2 | 
-| May 20th |  |  | 
+| May 20th | Now there's two ingresses, one on each node, to match backend sets. Also postgres is pinned on worker node for production DB PVC/PV. | 1 |
+| | | |
+| | | |
+| | | | 
