@@ -4,7 +4,7 @@ kind: Kustomization
 # Patches the postgres/backend/frontend deployment for production environment in prod workspace and configures ingress for it
 resources:
 - ../../base
-- hpa.yaml # Production version has a horizontal pod autoscaler also
+- hpa.yaml
 
 namespace: prod
 
@@ -112,7 +112,7 @@ images:
   newTag: front-playful-robot-7af0c19
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: happy-wolf-77d7f62
+  newTag: gentle-fox-2bb928b
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: happy-wolf-77d7f62
+  newTag: gentle-fox-2bb928b
