@@ -1,9 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+# Patches the postgres/backend/frontend deployment for production environment in prod workspace and configures ingress for it
 resources:
 - ../../base
-- hpa.yaml
+- hpa.yaml # Production version has a horizontal pod autoscaler also
 
 namespace: prod
 

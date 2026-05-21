@@ -1,3 +1,4 @@
+# Scales production deployment of backend and frontend based on CPU usage
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
