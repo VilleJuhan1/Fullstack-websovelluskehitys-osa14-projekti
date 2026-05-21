@@ -7,8 +7,6 @@ resources:
 
 namespace: dev
 
-commonLabels:
-  env: dev
 
 patches:
 - patch: |
@@ -98,3 +96,7 @@ images:
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
   newTag: latest
+labels:
+- includeSelectors: true
+  pairs:
+    env: dev
