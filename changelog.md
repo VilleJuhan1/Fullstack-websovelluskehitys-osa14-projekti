@@ -14,3 +14,4 @@
 | 1.1.6 | 2026-05-19 | Mobile layout tweaks | Made the homepage and quizpage components snap into corners and scale to the mobile screen, maybe.  | clever-lion-39c7526 | happy-wolf-77d7f62 |
 | 1.1.7 | 2026-05-19 | Mobile layout fixes | Made some more tweaks to the mobile layout.  | clever-owl-233b3cb | happy-wolf-77d7f62 |
 | 1.1.8 | 2026-05-20 | Two ingress controllers | Added another ingress controller so there's one for each node. Also pinned PostgreSQL pod on worker node.  | clever-owl-233b3cb | happy-wolf-77d7f62 |
+| 1.1.9 | 2026-05-21 | Limits and requests | Added limits and requests for the app deployment: frontend, backend, postgres. Also horizontal autoscaling for production.  | clever-fox-00e92f3 | happy-wolf-77d7f62 |
