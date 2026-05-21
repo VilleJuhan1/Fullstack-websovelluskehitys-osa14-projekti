@@ -1,6 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+# Patches the postgres/backend/frontend deployment for development environment in dev workspace and configures ingress for it
 resources:
 - ../../base
 
@@ -10,24 +11,63 @@ commonLabels:
   env: dev
 
 patches:
-- patch: |-
-    - op: add
-      path: /spec/template/spec/containers/0/env/-
-      value:
-        name: NODE_ENV
-        value: dev
-  target:
+- patch: |
+    apiVersion: apps/v1
     kind: Deployment
-    name: backend
-- patch: |-
-    - op: add
-      path: /spec/template/spec/containers/0/env/-
-      value:
-        name: VITE_APP_VERSION
-        value: clever-owl-233b3cb
-  target:
+    metadata:
+      name: backend
+    spec:
+      template:
+        spec:
+          containers:
+            - name: backend
+              env:
+                - name: NODE_ENV
+                  value: dev
+              resources:
+                limits:
+                  cpu: 200m
+                  memory: 256Mi
+                requests:
+                  cpu: 50m
+                  memory: 128Mi
+- patch: |
+    apiVersion: apps/v1
     kind: Deployment
-    name: frontend
+    metadata:
+      name: frontend
+    spec:
+      template:
+        spec:
+          containers:
+            - name: frontend
+              env:
+                - name: VITE_APP_VERSION
+                  value: clever-fox-00e92f3
+              resources:
+                limits:
+                  cpu: 100m
+                  memory: 128Mi
+                requests:
+                  cpu: 10m
+                  memory: 64Mi
+- patch: |
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: postgres
+    spec:
+      template:
+        spec:
+          containers:
+            - name: postgres
+              resources:
+                limits:
+                  cpu: 500m
+                  memory: 512Mi
+                requests:
+                  cpu: 100m
+                  memory: 256Mi
 - patch: |-
     - op: replace
       path: /spec/tls/0/hosts/0

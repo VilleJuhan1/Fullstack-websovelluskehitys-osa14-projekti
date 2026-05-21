@@ -1,8 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+# Patches the postgres/backend/frontend deployment for production environment in prod workspace and configures ingress for it
 resources:
 - ../../base
+- hpa.yaml # Production version has a horizontal pod autoscaler also
 
 namespace: prod
 
@@ -10,24 +12,80 @@ commonLabels:
   env: prod
 
 patches:
-- patch: |-
-    - op: add
-      path: /spec/template/spec/containers/0/env/-
-      value:
-        name: NODE_ENV
-        value: production
-  target:
+- patch: |
+    apiVersion: apps/v1
     kind: Deployment
-    name: backend
-- patch: |-
-    - op: add
-      path: /spec/template/spec/containers/0/env/-
-      value:
-        name: VITE_APP_VERSION
-        value: prod-latest
-  target:
+    metadata:
+      name: backend
+    spec:
+      template:
+        spec:
+          containers:
+            - name: backend
+              env:
+                - name: NODE_ENV
+                  value: production
+              resources:
+                limits:
+                  cpu: 500m
+                  memory: 512Mi
+                requests:
+                  cpu: 100m
+                  memory: 256Mi
+- patch: |
+    apiVersion: apps/v1
     kind: Deployment
-    name: frontend
+    metadata:
+      name: frontend
+    spec:
+      template:
+        spec:
+          containers:
+            - name: frontend
+              env:
+                - name: VITE_APP_VERSION
+                  value: prod-latest
+              resources:
+                limits:
+                  cpu: 200m
+                  memory: 256Mi
+                requests:
+                  cpu: 50m
+                  memory: 128Mi
+- patch: |
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: postgres
+    spec:
+      template:
+        spec:
+          containers:
+            - name: postgres
+              resources:
+                limits:
+                  cpu: 1000m
+                  memory: 1024Mi
+                requests:
+                  cpu: 250m
+                  memory: 512Mi
+- patch: |
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: frontpage
+    spec:
+      template:
+        spec:
+          containers:
+            - name: frontpage
+              resources:
+                limits:
+                  cpu: 200m
+                  memory: 256Mi
+                requests:
+                  cpu: 50m
+                  memory: 128Mi
 - patch: |-
     - op: replace
       path: /spec/tls/0/hosts/0
