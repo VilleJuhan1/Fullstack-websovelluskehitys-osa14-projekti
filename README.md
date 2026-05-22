@@ -2,6 +2,10 @@
 
 This repository is my showcase project for the University of Helsinki [Fullstack Web Development MOOC](https://fullstackopen.com). The goal of the project is to present the wide array of skills I've learned so far not only in web development, but also for example in container orchestration, ci/cd and systems infrastructure as a whole.
 
+- [Changelog](changelog.md)
+- [To-do Kanban Board](todo.md)
+- [Course journal](Documentation/courselog.md)
+
 ## The App
 
 The app itself is a fairly simple game, where the user tries to figure out the correct picture from four options. It will also include some gamification elements, such as high scores, streaks and levels, to make it more engaging. The app will contain a free version, which is limited in features and content, and a premium version, which unlocks all features and content. Users can upgrade their account to premium by making a payment through a mock payment provider. Both the backend and frontend will support multiple data types, ie. same code can be used for countries and flags as well as Pokemon, animals etc.

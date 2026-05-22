@@ -1,4 +1,4 @@
-# To-do Kanban Board using Markdown Kanban by holoooooo
+# To-do Kanban Board using [Markdown Kanban by holoooooo](https://marketplace.visualstudio.com/items?itemName=holoooooo.markdown-kanban) for Antigravity IDE
 
 ## Backlog
 
