@@ -1,17 +1,46 @@
 # To-do
 
-Simple reminders of things to do in no particular order. Not a kanban board, just a "tupakkiaskin kansi".
+## Planned
 
-## Kubernetes
+### Example task
 
-- [ ] PV & PVC for postgresql prod
+  - due: 2026-05-18
+  - tags: [documentation]
+  - priority: high
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Learn the syntax
+      - [ ] Convert tasks
+    ```md
+    Learn to use Kanban extension for Antigravity IDE
+    ```
 
-## Ansible
+### Kubernetes
 
-## Github workflows
 
-## Frontend
+### PV & PVC for postgresql prod
 
-- [ ] Streak score component and state
-- [ ] User login and signup pages
-- [ ] Menu page scaling on PC to match the Quiz page
+
+### Ansible
+
+
+### Github workflows
+
+
+### Frontend
+
+
+### Streak score component and state
+
+
+### User login and signup pages
+
+
+### Menu page scaling on PC to match the Quiz page
+
+
+## In progress
+
+## Done
+
