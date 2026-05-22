@@ -27,6 +27,8 @@ There are many parts in the project: Frontend (React/Vite), Backend (GraphQL), R
 
 In this project, I've used the following AI models for dialog and references mainly through VS Code's GitHub Copilot and Gemini extensions. Google Antigravity was also piloted in the context of this project. LLM models that have been used in the project are:
 
+- Gemini 3.5 Flash (High)
+- Gemini 3.5 Flash (Medium)
 - Gemini 3.1 Pro
 - Gemini 3.1 Flash
 - Claude Haiku 4.5
