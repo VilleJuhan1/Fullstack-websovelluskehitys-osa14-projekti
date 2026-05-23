@@ -531,6 +531,7 @@ p {
   outline: none;
   text-align: center;
 }
+
 .form-input:focus {
   border-color: var(--color-primary);
   box-shadow: 0 0 0 2px rgba(14, 165, 233, 0.2);
@@ -548,6 +549,7 @@ p {
   cursor: pointer;
   width: 100%;
 }
+
 .streak-score-btn:hover {
   border-color: var(--color-primary);
   box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);

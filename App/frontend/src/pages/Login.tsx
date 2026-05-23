@@ -21,10 +21,10 @@ export default function Login() {
         <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', textAlign: 'center' }}>
             <label htmlFor="username" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Username or Email</label>
-            <input 
-              id="username" 
-              type="text" 
-              value={username} 
+            <input
+              id="username"
+              type="text"
+              value={username}
               onChange={e => setUsername(e.target.value)}
               required
               className="form-input"
@@ -32,10 +32,10 @@ export default function Login() {
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', textAlign: 'center' }}>
             <label htmlFor="password" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Password</label>
-            <input 
-              id="password" 
-              type="password" 
-              value={password} 
+            <input
+              id="password"
+              type="password"
+              value={password}
               onChange={e => setPassword(e.target.value)}
               required
               className="form-input"
