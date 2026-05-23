@@ -18,18 +18,24 @@ export default function SettingsBar() {
     };
   }, []);
 
+  const showDevBar = import.meta.env.VITE_SHOW_DEV_BAR === 'true';
+
   return (
-    <div ref={menuRef} className="settings-bar-container">
-      <button 
+    <div
+      ref={menuRef}
+      className="settings-bar-container"
+      style={{ top: showDevBar ? 'calc(var(--space-lg) + 36px)' : undefined }}
+    >
+      <button
         className="settings-toggle-btn"
         onClick={() => setIsOpen(!isOpen)}
         style={{ transform: isOpen ? 'rotate(90deg)' : 'none' }}
         aria-label="Settings"
       >
-        <img 
-          src="/cogwheel.svg" 
-          alt="Settings" 
-          style={{ width: 20, height: 20, filter: 'invert(1)' }} 
+        <img
+          src="/cogwheel.svg"
+          alt="Settings"
+          style={{ width: 20, height: 20, filter: 'invert(1)' }}
         />
       </button>
 
