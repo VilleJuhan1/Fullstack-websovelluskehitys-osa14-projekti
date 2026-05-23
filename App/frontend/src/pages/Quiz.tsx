@@ -20,14 +20,13 @@ export default function Quiz() {
   const [options, setOptions] = useState<GameItem[]>([]);
   const [targetItem, setTargetItem] = useState<GameItem | null>(null);
   const [streak, setStreak] = useState<number>(0);
-  const [feedback, setFeedback] = useState<{
-    message: string;
-    color: string;
-  } | null>(null);
+  const [attempts, setAttempts] = useState<number>(0);
+  const [feedbackState, setFeedbackState] = useState<'idle' | 'correct' | 'wrong'>('idle');
 
   // Reset streak when a new game is started (category changes)
   useEffect(() => {
     setStreak(0);
+    setAttempts(0);
     console.log('Streak reset to 0 (new game started)');
   }, [category, selectedCategory]);
 
@@ -60,7 +59,7 @@ export default function Quiz() {
 
     setOptions(selected);
     setTargetItem(selected[Math.floor(Math.random() * 4)]);
-    setFeedback(null);
+    setFeedbackState('idle');
   }, [filteredItems]);
 
   // Generate initial question when items load or category changes
@@ -77,8 +76,9 @@ export default function Quiz() {
   }, [filteredItems, generateQuestion]);
 
   const handleSelect = (selectedItem: GameItem) => {
+    setAttempts((prev) => prev + 1);
     if (selectedItem.id === targetItem?.id) {
-      setFeedback({ message: 'Correct!', color: 'var(--color-primary)' });
+      setFeedbackState('correct');
       setStreak((prev) => {
         const newStreak = prev + 1;
         console.log(`Current streak: ${newStreak}`);
@@ -86,10 +86,7 @@ export default function Quiz() {
       });
       setTimeout(generateQuestion, 1000); // Generate new question after 1 second
     } else {
-      setFeedback({
-        message: 'Wrong! Try again.',
-        color: 'var(--color-danger)',
-      });
+      setFeedbackState('wrong');
       setStreak(0);
       console.log('Streak reset to 0 (wrong answer)');
     }
@@ -136,18 +133,7 @@ export default function Quiz() {
           </>
         )}
 
-        <StreakScore streak={streak} />
-
-        <div className="quiz-feedback-container">
-          {feedback && (
-            <div
-              className="quiz-feedback"
-              style={{ backgroundColor: feedback.color }}
-            >
-              {feedback.message}
-            </div>
-          )}
-        </div>
+        <StreakScore streak={streak} attempts={attempts} feedbackState={feedbackState} />
 
         <CategorySelector
           categories={availableCategories}
