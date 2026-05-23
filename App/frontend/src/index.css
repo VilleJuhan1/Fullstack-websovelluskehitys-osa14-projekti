@@ -457,8 +457,8 @@ p {
 /* Settings Bar Styles */
 .settings-bar-container {
   position: fixed;
-  top: var(--space-md);
-  right: var(--space-md);
+  top: var(--space-lg);
+  right: var(--space-lg);
   z-index: 1000;
 }
 
