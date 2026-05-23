@@ -41,7 +41,7 @@ patches:
             - name: frontend
               env:
                 - name: VITE_APP_VERSION
-                  value: clever-fox-00e92f3
+                  value: clever-fox-911dbb1
               resources:
                 limits:
                   cpu: 100m

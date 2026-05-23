@@ -266,9 +266,11 @@ p {
 
 /* Gradient Text Effect: A utility class that applies the primary-to-secondary brand gradient to text elements (like the main title). */
 .text-gradient {
-  background: linear-gradient(135deg,
-      var(--color-secondary),
-      var(--color-primary));
+  background: linear-gradient(
+    135deg,
+    var(--color-secondary),
+    var(--color-primary)
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

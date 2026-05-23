@@ -41,8 +41,8 @@
   - defaultExpanded: false
   - steps:
       - [ ] Refactor the score schema and make the change to migrations and other related files
-      - [ ] Implement streak score as a stateful component to frontend
-      - [ ] Implement the graphical representation of streak to QuizGame component
+      - [x] Implement streak score as a stateful component to frontend
+      - [x] Implement the graphical representation of streak to QuizGame component
       - [ ] Build and deploy to dev
       - [ ] Publish as a new minor release when implemented to production
     ```md

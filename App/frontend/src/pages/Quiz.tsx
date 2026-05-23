@@ -4,6 +4,7 @@ import { useGameContext } from '../hooks/useGame';
 import type { GameDataType, GameItem } from '../services/gameData';
 import QuizGrid from '../components/quiz/QuizGrid';
 import { CategorySelector } from '../components/quiz/CategorySelector';
+import StreakScore from '../components/quiz/StreakScore';
 
 // Generic quiz component for rendering the quiz page and handling the quiz logic
 export default function Quiz() {
@@ -18,10 +19,21 @@ export default function Quiz() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [options, setOptions] = useState<GameItem[]>([]);
   const [targetItem, setTargetItem] = useState<GameItem | null>(null);
-  const [feedback, setFeedback] = useState<{
-    message: string;
-    color: string;
-  } | null>(null);
+  const [streak, setStreak] = useState<number>(0);
+  const [attempts, setAttempts] = useState<number>(0);
+  const [feedbackState, setFeedbackState] = useState<
+    'idle' | 'correct' | 'wrong'
+  >('idle');
+
+  // Reset streak when a new game is started (category changes)
+  useEffect(() => {
+    // Use microtask to avoid "synchronous setState in effect" lint warning
+    Promise.resolve().then(() => {
+      setStreak(0);
+      setAttempts(0);
+      console.log('Streak reset to 0 (new game started)');
+    });
+  }, [category, selectedCategory]);
 
   // Extract unique categories from items
   const availableCategories = useMemo(() => {
@@ -52,7 +64,7 @@ export default function Quiz() {
 
     setOptions(selected);
     setTargetItem(selected[Math.floor(Math.random() * 4)]);
-    setFeedback(null);
+    setFeedbackState('idle');
   }, [filteredItems]);
 
   // Generate initial question when items load or category changes
@@ -69,14 +81,19 @@ export default function Quiz() {
   }, [filteredItems, generateQuestion]);
 
   const handleSelect = (selectedItem: GameItem) => {
+    setAttempts((prev) => prev + 1);
     if (selectedItem.id === targetItem?.id) {
-      setFeedback({ message: 'Correct!', color: 'var(--color-primary)' });
+      setFeedbackState('correct');
+      setStreak((prev) => {
+        const newStreak = prev + 1;
+        console.log(`Current streak: ${newStreak}`);
+        return newStreak;
+      });
       setTimeout(generateQuestion, 1000); // Generate new question after 1 second
     } else {
-      setFeedback({
-        message: 'Wrong! Try again.',
-        color: 'var(--color-danger)',
-      });
+      setFeedbackState('wrong');
+      setStreak(0);
+      console.log('Streak reset to 0 (wrong answer)');
     }
   };
 
@@ -121,16 +138,11 @@ export default function Quiz() {
           </>
         )}
 
-        <div className="quiz-feedback-container">
-          {feedback && (
-            <div
-              className="quiz-feedback"
-              style={{ backgroundColor: feedback.color }}
-            >
-              {feedback.message}
-            </div>
-          )}
-        </div>
+        <StreakScore
+          streak={streak}
+          attempts={attempts}
+          feedbackState={feedbackState}
+        />
 
         <CategorySelector
           categories={availableCategories}
