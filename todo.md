@@ -32,20 +32,7 @@
 
 ## Planned
 
-### Menu page scaling on PC
-
-  - due: 2026-05-31
-  - tags: [frontend, patch]
-  - priority: medium
-  - workload: Easy
-  - defaultExpanded: false
-  - steps:
-      - [ ] Review the current CSS file and refactor it so that this and future settings components use a similar outer border
-    ```md
-    The Quiz frontpage is quite small on wide PC screens. Implement a change that will match it with the GuizGame frame.
-    ```
-
-### Settings component
+### 03 - Settings component
 
   - due: 2026-05-31
   - tags: [frontend, minor]
@@ -60,7 +47,20 @@
     Add a floating settings element to the top right corner for future implements of login, signup, sign out, account information etc.
     ```
 
-### Login and session persistence
+### 04 - Menu page scaling on PC
+
+  - due: 2026-05-31
+  - tags: [frontend, patch]
+  - priority: medium
+  - workload: Easy
+  - defaultExpanded: false
+  - steps:
+      - [ ] Review the current CSS file and refactor it so that this and future settings components use a similar outer border
+    ```md
+    The Quiz frontpage is quite small on wide PC screens. Implement a change that will match it with the GuizGame frame.
+    ```
+
+### 05 - Login and session persistence
 
   - due: 2026-06-07
   - tags: [frontend, dev, patch]
@@ -74,7 +74,7 @@
     Add login and session persistence to dev environment using the test user credentials
     ```
 
-### User streak score
+### 06 - User streak score
 
   - due: 2026-06-07
   - tags: [frontend, backend, postgresql]
@@ -91,7 +91,7 @@
     Implement the backend integration for streak score when user is logged in
     ```
 
-### Persistent volume for postgresql
+### 07 - Persistent volume for postgresql
 
   - due: 2026-06-07
   - tags: [kubernetes, postgresql, production, minor]
@@ -107,9 +107,25 @@
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
 
+## Done
+
 ## In progress
 
-### Streak score component
+### 01 - Example task
+
+  - due: 2026-05-22
+  - tags: [documentation]
+  - priority: high
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Learn the syntax
+      - [x] Convert tasks
+    ```md
+    Learn to use Kanban extension for Antigravity IDE
+    ```
+
+### 02 - Streak score component
 
   - due: 2026-05-24
   - tags: [frontend, backend, minor]
@@ -123,21 +139,5 @@
       - [x] Publish as a new minor release when implemented to production
     ```md
     The game will track only streak score for each category and subcategory. Implement the stateful component.
-    ```
-
-## Done
-
-### Example task
-
-  - due: 2026-05-22
-  - tags: [documentation]
-  - priority: high
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [x] Learn the syntax
-      - [x] Convert tasks
-    ```md
-    Learn to use Kanban extension for Antigravity IDE
     ```
 

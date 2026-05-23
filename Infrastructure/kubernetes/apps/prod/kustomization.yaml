@@ -9,7 +9,9 @@ resources:
 namespace: prod
 
 labels:
-  env: prod
+- includeSelectors: true
+  pairs:
+    env: prod
 
 patches:
 - patch: |
