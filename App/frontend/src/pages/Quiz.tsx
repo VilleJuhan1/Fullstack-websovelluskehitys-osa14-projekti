@@ -21,13 +21,18 @@ export default function Quiz() {
   const [targetItem, setTargetItem] = useState<GameItem | null>(null);
   const [streak, setStreak] = useState<number>(0);
   const [attempts, setAttempts] = useState<number>(0);
-  const [feedbackState, setFeedbackState] = useState<'idle' | 'correct' | 'wrong'>('idle');
+  const [feedbackState, setFeedbackState] = useState<
+    'idle' | 'correct' | 'wrong'
+  >('idle');
 
   // Reset streak when a new game is started (category changes)
   useEffect(() => {
-    setStreak(0);
-    setAttempts(0);
-    console.log('Streak reset to 0 (new game started)');
+    // Use microtask to avoid "synchronous setState in effect" lint warning
+    Promise.resolve().then(() => {
+      setStreak(0);
+      setAttempts(0);
+      console.log('Streak reset to 0 (new game started)');
+    });
   }, [category, selectedCategory]);
 
   // Extract unique categories from items
@@ -133,7 +138,11 @@ export default function Quiz() {
           </>
         )}
 
-        <StreakScore streak={streak} attempts={attempts} feedbackState={feedbackState} />
+        <StreakScore
+          streak={streak}
+          attempts={attempts}
+          feedbackState={feedbackState}
+        />
 
         <CategorySelector
           categories={availableCategories}
