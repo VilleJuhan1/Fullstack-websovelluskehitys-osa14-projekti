@@ -17,3 +17,4 @@
 | 1.1.9 | 2026-05-21 | Limits and requests | Added limits and requests for the app deployment: frontend, backend, postgres. Also horizontal autoscaling for production.  | clever-fox-00e92f3 | happy-wolf-77d7f62 |
 | 1.1.10 | 2026-05-21 | Fixed deprecated syntax on kustomize files | Restarted app with newest images, did some kustomize rewrites with more modern syntax.  | clever-fox-00e92f3 | gentle-fox-2bb928b |
 | 1.1.11 | 2026-05-22 | Kanban board for planning | Added a Kanban board for planning and keeping track of tasks. It uses the Markdown Kanban extension by holoooo for a graphical representation.  | clever-fox-00e92f3 | gentle-fox-2bb928b |
+| 1.1.12 | 2026-05-23 | Streak score component |  | clever-fox-911dbb1 | gentle-fox-2bb928b |
