@@ -114,7 +114,7 @@ images:
   newTag: front-playful-robot-7af0c19
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: gentle-fox-2bb928b
+  newTag: brave-whale-834a168
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: gentle-fox-2bb928b
+  newTag: brave-whale-834a168
