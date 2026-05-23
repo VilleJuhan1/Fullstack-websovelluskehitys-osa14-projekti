@@ -19,3 +19,4 @@
 | 1.1.11 | 2026-05-22 | Kanban board for planning | Added a Kanban board for planning and keeping track of tasks. It uses the Markdown Kanban extension by holoooo for a graphical representation.  | clever-fox-00e92f3 | gentle-fox-2bb928b |
 | 1.1.12 | 2026-05-23 | Streak score component |  | clever-fox-911dbb1 | gentle-fox-2bb928b |
 | 1.2.0 | 2026-05-23 | Streak score to production | Added the streak score component also on production build.  | clever-fox-911dbb1 | brave-whale-834a168 |
+| 1.2.1 | 2026-05-23 | Settings component placeholder | Settings component placeholder with no actual functionality to be tested on dev.  | clever-lion-62088d5 | brave-whale-834a168 |
