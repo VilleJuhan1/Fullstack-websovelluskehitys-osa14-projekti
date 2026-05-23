@@ -47,3 +47,4 @@
 | May 21st | Added pod autoscaling for production plus limits and requests for both dev and frontend pods, deployed new versions etc. | 2 |
 | May 22nd | Added a kanban board to keep track of project tasks. | 2 |
 | May 23rd | Finished task '02 - Streak score component' by implementing it on the frontend. | 3 | 
+| May 23rd | Started task '03 - Settings component' and implemented an initial cogwheel dropdown menu | 2 |
