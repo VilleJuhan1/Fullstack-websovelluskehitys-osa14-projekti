@@ -4,6 +4,7 @@ import { useGameContext } from '../hooks/useGame';
 import type { GameDataType, GameItem } from '../services/gameData';
 import QuizGrid from '../components/quiz/QuizGrid';
 import { CategorySelector } from '../components/quiz/CategorySelector';
+import StreakScore from '../components/quiz/StreakScore';
 
 // Generic quiz component for rendering the quiz page and handling the quiz logic
 export default function Quiz() {
@@ -18,10 +19,17 @@ export default function Quiz() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [options, setOptions] = useState<GameItem[]>([]);
   const [targetItem, setTargetItem] = useState<GameItem | null>(null);
+  const [streak, setStreak] = useState<number>(0);
   const [feedback, setFeedback] = useState<{
     message: string;
     color: string;
   } | null>(null);
+
+  // Reset streak when a new game is started (category changes)
+  useEffect(() => {
+    setStreak(0);
+    console.log('Streak reset to 0 (new game started)');
+  }, [category, selectedCategory]);
 
   // Extract unique categories from items
   const availableCategories = useMemo(() => {
@@ -71,12 +79,19 @@ export default function Quiz() {
   const handleSelect = (selectedItem: GameItem) => {
     if (selectedItem.id === targetItem?.id) {
       setFeedback({ message: 'Correct!', color: 'var(--color-primary)' });
+      setStreak((prev) => {
+        const newStreak = prev + 1;
+        console.log(`Current streak: ${newStreak}`);
+        return newStreak;
+      });
       setTimeout(generateQuestion, 1000); // Generate new question after 1 second
     } else {
       setFeedback({
         message: 'Wrong! Try again.',
         color: 'var(--color-danger)',
       });
+      setStreak(0);
+      console.log('Streak reset to 0 (wrong answer)');
     }
   };
 
@@ -120,6 +135,8 @@ export default function Quiz() {
             )}
           </>
         )}
+
+        <StreakScore streak={streak} />
 
         <div className="quiz-feedback-container">
           {feedback && (
