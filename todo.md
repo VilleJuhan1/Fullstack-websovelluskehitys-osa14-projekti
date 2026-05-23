@@ -117,7 +117,7 @@
   - steps:
       - [x] Add the placeholder component to the corner and make it open a dropdown menu type list
       - [ ] Add the placeholder pages for login, signup etc.
-      - [ ] Route from the settings component to the pages implemented
+      - [x] Route from the settings component to the pages implemented
     ```md
     Add a floating settings element to the top right corner for future implements of login, signup, sign out, account information etc.
     ```
