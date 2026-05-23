@@ -32,23 +32,6 @@
 
 ## Planned
 
-### Streak score component
-
-  - due: 2026-05-24
-  - tags: [frontend, backend, minor]
-  - priority: high
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [ ] Refactor the score schema and make the change to migrations and other related files
-      - [x] Implement streak score as a stateful component to frontend
-      - [x] Implement the graphical representation of streak to QuizGame component
-      - [ ] Build and deploy to dev
-      - [ ] Publish as a new minor release when implemented to production
-    ```md
-    The game will track only streak score for each category and subcategory. Implement the stateful component.
-    ```
-
 ### Menu page scaling on PC
 
   - due: 2026-05-31
@@ -91,6 +74,23 @@
     Add login and session persistence to dev environment using the test user credentials
     ```
 
+### User streak score
+
+  - due: 2026-06-07
+  - tags: [frontend, backend, postgresql]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Review score schema and drop total tries etc. if still relevant
+      - [ ] Adjust migrations if needed
+      - [ ] Add a resolver that handles streak score queries and mutations. Ensure backend has the features also.
+      - [ ] Test and deploy on dev
+      - [ ] Publish as a minor release and deploy to prod
+    ```md
+    Implement the backend integration for streak score when user is logged in
+    ```
+
 ### Persistent volume for postgresql
 
   - due: 2026-06-07
@@ -108,6 +108,22 @@
     ```
 
 ## In progress
+
+### Streak score component
+
+  - due: 2026-05-24
+  - tags: [frontend, backend, minor]
+  - priority: high
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Implement streak score as a stateful component to frontend
+      - [x] Implement the graphical representation of streak to QuizGame component
+      - [x] Build and deploy to dev
+      - [x] Publish as a new minor release when implemented to production
+    ```md
+    The game will track only streak score for each category and subcategory. Implement the stateful component.
+    ```
 
 ## Done
 
