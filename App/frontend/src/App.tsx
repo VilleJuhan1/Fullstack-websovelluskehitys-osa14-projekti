@@ -5,6 +5,7 @@ import { ErrorBoundary } from './components/ErrorBoundary';
 import { GameProvider } from './context/GameContext';
 import BottomBar from './components/BottomBar';
 import DevBar from './components/DevBar';
+import SettingsBar from './components/SettingsBar';
 
 // Helper to reset Quiz state when category changes by using a unique key
 const QuizWrapper = () => {
@@ -19,6 +20,7 @@ function App() {
       <GameProvider>
         <DevBar />
         <BrowserRouter>
+          <SettingsBar />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/quiz/:category" element={<QuizWrapper />} />
