@@ -13,9 +13,9 @@ export default function SettingsBar() {
         setIsOpen(false);
       }
     }
-    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
 
@@ -42,10 +42,28 @@ export default function SettingsBar() {
 
       {isOpen && (
         <div className="glass-panel settings-dropdown">
-          <Link to="/login" onClick={() => setIsOpen(false)} className="settings-menu-link">Login</Link>
-          <Link to="/signup" onClick={() => setIsOpen(false)} className="settings-menu-link">Sign Up</Link>
+          <Link
+            to="/login"
+            onClick={() => setIsOpen(false)}
+            className="settings-menu-link"
+          >
+            Login
+          </Link>
+          <Link
+            to="/signup"
+            onClick={() => setIsOpen(false)}
+            className="settings-menu-link"
+          >
+            Sign Up
+          </Link>
           <div className="settings-divider" />
-          <Link to="/account" onClick={() => setIsOpen(false)} className="settings-menu-link">Account Information</Link>
+          <Link
+            to="/account"
+            onClick={() => setIsOpen(false)}
+            className="settings-menu-link"
+          >
+            Account Information
+          </Link>
         </div>
       )}
     </div>
