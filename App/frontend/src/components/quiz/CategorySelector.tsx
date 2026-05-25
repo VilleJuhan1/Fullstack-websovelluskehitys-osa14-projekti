@@ -1,4 +1,5 @@
 import React from 'react';
+import './CategorySelector.css';
 
 interface CategorySelectorProps {
   categories: string[];

@@ -1,0 +1,70 @@
+/* Main Page Styles: Shared styles for Quiz and Home interfaces. */
+.main-container {
+  min-height: 100dvh;
+  /* use dvh for dynamic viewport height */
+  padding: var(--space-xl) 0;
+}
+
+.main-panel {
+  padding: var(--space-xl);
+  width: 100%;
+  max-width: 45rem;
+  /* ~720px default, scales with screen */
+  text-align: center;
+}
+
+.quiz-subtitle {
+  opacity: 0.8;
+  margin-bottom: var(--space-sm);
+  display: block;
+}
+
+.quiz-target-name {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+.quiz-feedback-container {
+  height: 60px;
+  margin-top: var(--space-md);
+}
+
+.quiz-feedback {
+  padding: 0.8rem;
+  border-radius: var(--radius-sm);
+  color: white;
+  font-weight: 600;
+  animation: bounceIn 0.4s ease-out;
+}
+
+.quiz-warning {
+  padding: var(--space-xl) 0;
+  color: var(--color-warning);
+}
+
+.quiz-error-text {
+  color: var(--color-danger);
+}
+
+/* Quiz Option Card Micro-animations: Specific styles for the individual quiz answer cards, featuring hover lift effects and glowing borders to encourage interaction. */
+.quiz-option {
+  padding: var(--space-lg);
+  background-color: var(--bg-surface);
+  border: 2px solid var(--bg-surface-elevated);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-bouncy);
+}
+
+.quiz-option:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
+}
+
+.quiz-option:active {
+  transform: scale(0.95);
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './Auth.css';
 
 export default function Login() {
   const [username, setUsername] = useState('');

@@ -1,0 +1,42 @@
+.bottom-bar {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-pill);
+  z-index: 1000;
+  animation: fadeIn var(--transition-bouncy);
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+  color: var(--text-primary);
+  transform: scale(1.1);
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+  /* Since it's a black SVG and we have a dark theme */
+  opacity: 0.8;
+  transition: opacity var(--transition-fast);
+}
+
+.social-link:hover .social-icon {
+  opacity: 1;
+}

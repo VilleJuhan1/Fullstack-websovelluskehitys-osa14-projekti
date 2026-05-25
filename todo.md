@@ -92,19 +92,6 @@
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
 
-### 08 - Refactor index.css
-
-  - due: 2026-05-31
-  - tags: [frontend]
-  - priority: low
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [ ] Refactor index.css into individual files for different components for better readability
-    ```md
-    Refactor index.css into individual files for different components for better readability
-    ```
-
 ## In progress
 
 ## Done
@@ -136,6 +123,19 @@
       - [x] Route from the settings component to the pages implemented
     ```md
     Add a floating settings element to the top right corner for future implements of login, signup, sign out, account information etc.
+    ```
+
+### 08 - Refactor index.css
+
+  - due: 2026-05-31
+  - tags: [frontend]
+  - priority: low
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Refactor index.css into individual files for different components for better readability
+    ```md
+    Refactor index.css into individual files for different components for better readability
     ```
 
 ### 02 - Streak score component

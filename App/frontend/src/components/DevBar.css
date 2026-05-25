@@ -1,0 +1,33 @@
+.dev-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 36px;
+  background: var(--bg-surface-elevated);
+  border-bottom: 1px solid var(--color-warning);
+  color: var(--color-warning);
+  font-size: 0.65rem;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  z-index: 9999;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.dev-bar-prod {
+  background: var(--color-danger);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+}
+
+.dev-bar-badge {
+  font-size: 0.6rem;
+  opacity: 0.8;
+}

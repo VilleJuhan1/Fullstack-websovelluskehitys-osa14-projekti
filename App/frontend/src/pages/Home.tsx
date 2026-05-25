@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import './Quiz.css';
 
 // The app home page
 export default function Home() {

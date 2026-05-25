@@ -1,4 +1,5 @@
 import React from 'react';
+import './QuizGrid.css';
 import QuizButton from './QuizButton';
 import type { GameItem } from '../../services/gameData';
 
