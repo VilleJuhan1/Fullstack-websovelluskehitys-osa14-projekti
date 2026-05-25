@@ -320,6 +320,7 @@ p {
 .main-panel {
   padding: var(--space-xl);
   width: 100%;
+  /*min-height: 85dvh;*/
   max-width: 45rem;
   /* ~720px default, scales with screen */
   text-align: center;

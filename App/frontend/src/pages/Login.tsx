@@ -15,11 +15,11 @@ export default function Login() {
   };
 
   return (
-    <div className="container flex-center main-container">
+    <div className="container flex-center main-container" >
       <div className="glass-panel main-panel">
         <h1 className="text-gradient">Login</h1>
         <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', textAlign: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', marginTop: 'var(--space-lg)', textAlign: 'center' }}>
             <label htmlFor="username" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Username or Email</label>
             <input
               id="username"
@@ -30,7 +30,7 @@ export default function Login() {
               className="form-input"
             />
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', textAlign: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', marginTop: 'var(--space-lg)', textAlign: 'center' }}>
             <label htmlFor="password" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Password</label>
             <input
               id="password"
@@ -45,7 +45,7 @@ export default function Login() {
             <h3 className="text-gradient" style={{ margin: 0 }}>Sign In</h3>
           </button>
         </form>
-        <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+        <p style={{ textAlign: 'center', fontSize: '0.9rem', marginTop: 'var(--space-xl)', color: 'var(--text-secondary)' }}>
           Don't have an account? <Link to="/signup" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>Sign up</Link>
         </p>
         <div style={{ marginTop: 'var(--space-xl)', display: 'flex', justifyContent: 'center' }}>

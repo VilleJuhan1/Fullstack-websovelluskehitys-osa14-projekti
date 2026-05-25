@@ -19,15 +19,15 @@ export default function Signup() {
       <div className="glass-panel main-panel">
         <h1 className="text-gradient">Sign Up</h1>
         <form onSubmit={handleSignup} style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-md)' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', textAlign: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', marginTop: 'var(--space-lg)', textAlign: 'center' }}>
             <label htmlFor="username" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Username</label>
             <input id="username" type="text" value={username} onChange={e => setUsername(e.target.value)} required className="form-input" />
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', textAlign: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', marginTop: 'var(--space-lg)', textAlign: 'center' }}>
             <label htmlFor="email" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Email</label>
             <input id="email" type="email" value={email} onChange={e => setEmail(e.target.value)} required className="form-input" />
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', textAlign: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-xs)', marginTop: 'var(--space-lg)', textAlign: 'center' }}>
             <label htmlFor="password" style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Password</label>
             <input id="password" type="password" value={password} onChange={e => setPassword(e.target.value)} required className="form-input" />
           </div>
@@ -35,7 +35,7 @@ export default function Signup() {
             <h3 className="text-gradient" style={{ margin: 0 }}>Create Account</h3>
           </button>
         </form>
-        <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)' }}>
+        <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'var(--text-secondary)', marginTop: 'var(--space-xl)' }}>
           Already have an account? <Link to="/login" style={{ color: 'var(--color-primary)', textDecoration: 'none' }}>Login</Link>
         </p>
         <div style={{ marginTop: 'var(--space-xl)', display: 'flex', justifyContent: 'center' }}>

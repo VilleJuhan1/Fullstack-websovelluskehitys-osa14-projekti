@@ -107,21 +107,6 @@
 
 ## In progress
 
-### 03 - Settings component
-
-  - due: 2026-05-31
-  - tags: [frontend, minor]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [x] Add the placeholder component to the corner and make it open a dropdown menu type list
-      - [ ] Add the placeholder pages for login, signup etc.
-      - [x] Route from the settings component to the pages implemented
-    ```md
-    Add a floating settings element to the top right corner for future implements of login, signup, sign out, account information etc.
-    ```
-
 ## Done
 
 ### 01 - Example task
@@ -136,6 +121,21 @@
       - [x] Convert tasks
     ```md
     Learn to use Kanban extension for Antigravity IDE
+    ```
+
+### 03 - Settings component
+
+  - due: 2026-05-31
+  - tags: [frontend, minor]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Add the placeholder component to the corner and make it open a dropdown menu type list
+      - [x] Add the placeholder pages for login, signup etc.
+      - [x] Route from the settings component to the pages implemented
+    ```md
+    Add a floating settings element to the top right corner for future implements of login, signup, sign out, account information etc.
     ```
 
 ### 02 - Streak score component
