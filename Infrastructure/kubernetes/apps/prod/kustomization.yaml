@@ -114,7 +114,7 @@ images:
   newTag: front-playful-robot-7af0c19
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: brave-whale-834a168
+  newTag: brave-owl-173043c
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: brave-whale-834a168
+  newTag: brave-owl-173043c
