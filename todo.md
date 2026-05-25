@@ -32,19 +32,6 @@
 
 ## Planned
 
-### 04 - Menu page scaling on PC
-
-  - due: 2026-05-31
-  - tags: [frontend, patch]
-  - priority: medium
-  - workload: Easy
-  - defaultExpanded: false
-  - steps:
-      - [ ] Review the current CSS file and refactor it so that this and future settings components use a similar outer border
-    ```md
-    The Quiz frontpage is quite small on wide PC screens. Implement a change that will match it with the GuizGame frame.
-    ```
-
 ### 05 - Login and session persistence
 
   - due: 2026-06-07
@@ -110,6 +97,19 @@
     Learn to use Kanban extension for Antigravity IDE
     ```
 
+### 04 - Menu page scaling on PC
+
+  - due: 2026-05-31
+  - tags: [frontend, patch]
+  - priority: medium
+  - workload: Easy
+  - defaultExpanded: false
+  - steps:
+      - [x] Review the current CSS file and refactor it so that this and future settings components use a similar outer border
+    ```md
+    The Quiz frontpage is quite small on wide PC screens. Implement a change that will match it with the GuizGame frame.
+    ```
+
 ### 03 - Settings component
 
   - due: 2026-05-31
@@ -133,7 +133,7 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Refactor index.css into individual files for different components for better readability
+      - [x] Refactor index.css into individual files for different components for better readability
     ```md
     Refactor index.css into individual files for different components for better readability
     ```
