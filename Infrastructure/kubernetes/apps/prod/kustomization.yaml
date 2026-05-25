@@ -111,7 +111,7 @@ patches:
 images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
-  newTag: front-playful-robot-7af0c19
+  newTag: front-cosmic-cat-a38d1f0
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
   newTag: brave-owl-173043c
