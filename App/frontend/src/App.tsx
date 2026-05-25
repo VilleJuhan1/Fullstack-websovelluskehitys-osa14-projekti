@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 import Home from './pages/Home';
 import Quiz from './pages/Quiz';
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Account from './pages/Account';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { GameProvider } from './context/GameContext';
 import BottomBar from './components/BottomBar';
@@ -24,6 +27,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/quiz/:category" element={<QuizWrapper />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/account" element={<Account />} />
           </Routes>
           <BottomBar />
         </BrowserRouter>

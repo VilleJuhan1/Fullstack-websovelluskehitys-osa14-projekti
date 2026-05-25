@@ -1,4 +1,5 @@
 import React from 'react';
+import './DevBar.css';
 
 // Shows version and environment tag on top of the app
 const DevBar: React.FC = () => {

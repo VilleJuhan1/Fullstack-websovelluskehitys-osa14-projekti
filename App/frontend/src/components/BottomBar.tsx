@@ -1,4 +1,5 @@
 import React from 'react';
+import './BottomBar.css';
 
 const LINKEDIN_URL =
   import.meta.env.VITE_LINKEDIN_URL || 'https://linkedin.com';

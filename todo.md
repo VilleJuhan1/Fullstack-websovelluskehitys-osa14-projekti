@@ -92,35 +92,7 @@
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
 
-### 08 - Refactor index.css
-
-  - due: 2026-05-31
-  - tags: [frontend]
-  - priority: low
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [ ] Refactor index.css into individual files for different components for better readability
-    ```md
-    Refactor index.css into individual files for different components for better readability
-    ```
-
 ## In progress
-
-### 03 - Settings component
-
-  - due: 2026-05-31
-  - tags: [frontend, minor]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [x] Add the placeholder component to the corner and make it open a dropdown menu type list
-      - [ ] Add the placeholder pages for login, signup etc.
-      - [ ] Route from the settings component to the pages implemented
-    ```md
-    Add a floating settings element to the top right corner for future implements of login, signup, sign out, account information etc.
-    ```
 
 ## Done
 
@@ -136,6 +108,34 @@
       - [x] Convert tasks
     ```md
     Learn to use Kanban extension for Antigravity IDE
+    ```
+
+### 03 - Settings component
+
+  - due: 2026-05-31
+  - tags: [frontend, minor]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Add the placeholder component to the corner and make it open a dropdown menu type list
+      - [x] Add the placeholder pages for login, signup etc.
+      - [x] Route from the settings component to the pages implemented
+    ```md
+    Add a floating settings element to the top right corner for future implements of login, signup, sign out, account information etc.
+    ```
+
+### 08 - Refactor index.css
+
+  - due: 2026-05-31
+  - tags: [frontend]
+  - priority: low
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Refactor index.css into individual files for different components for better readability
+    ```md
+    Refactor index.css into individual files for different components for better readability
     ```
 
 ### 02 - Streak score component

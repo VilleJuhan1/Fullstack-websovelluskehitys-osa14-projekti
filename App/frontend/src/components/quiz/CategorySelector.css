@@ -1,0 +1,15 @@
+.category-selector-container {
+  margin-bottom: var(--space-lg);
+}
+
+.category-select {
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--color-primary);
+  outline: none;
+  cursor: pointer;
+  font-family: var(--font-base);
+  font-size: 1rem;
+}
