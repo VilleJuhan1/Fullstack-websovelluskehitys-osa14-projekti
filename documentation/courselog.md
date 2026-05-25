@@ -50,4 +50,4 @@
 | May 23rd | Started task '03 - Settings component' and implemented an initial cogwheel dropdown menu | 2 |
 | May 23rd | Tried to unify the pages look, but still work in progress | 1 |
 | May 24th | Rested | 0 |
-| May 25th | | |
+| May 25th | Widened gaps between components on the login and signup pages. Deployed new minor version from weekend to production. | 2 |
