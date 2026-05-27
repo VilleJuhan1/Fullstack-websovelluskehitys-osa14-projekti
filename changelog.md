@@ -22,3 +22,4 @@
 | 1.2.1 | 2026-05-23 | Settings component placeholder | Settings component placeholder with no actual functionality to be tested on dev.  | clever-lion-62088d5 | brave-whale-834a168 |
 | 1.3.0 | 2026-05-25 | Settings button and login framework | Added a settings button to top right corner and placeholders for login and signup pages. Also refactored the index.css for frontend into individual components.  | mighty-wolf-3dfd69a | brave-whale-834a168 |
 | 1.3.1 | 2026-05-25 | Frontpage title move | Changed the positioning on domain root / landing page components.  | mighty-wolf-3dfd69a | brave-owl-173043c |
+| 1.4.0 | 2026-05-27 | Login and signup | Users can be created although there's no validation yet. One can also login with a test user on dev. Sessions persist.  | clever-owl-65e4b5a | brave-owl-173043c |
