@@ -32,20 +32,6 @@
 
 ## Planned
 
-### 05 - Login and session persistence
-
-  - due: 2026-06-07
-  - tags: [frontend, dev, patch]
-  - priority: medium
-  - workload: Easy
-  - defaultExpanded: false
-  - steps:
-      - [ ] Implement the login page
-      - [ ] Implement the token based session persistence using a browser cookie
-    ```md
-    Add login and session persistence to dev environment using the test user credentials
-    ```
-
 ### 06 - User streak score
 
   - due: 2026-06-07
@@ -80,6 +66,20 @@
     ```
 
 ## In progress
+
+### 05 - Login and session persistence
+
+  - due: 2026-06-07
+  - tags: [frontend, dev, patch]
+  - priority: medium
+  - workload: Easy
+  - defaultExpanded: false
+  - steps:
+      - [ ] Implement the login page
+      - [ ] Implement the token based session persistence using a browser cookie
+    ```md
+    Add login and session persistence to dev environment using the test user credentials
+    ```
 
 ## Done
 
