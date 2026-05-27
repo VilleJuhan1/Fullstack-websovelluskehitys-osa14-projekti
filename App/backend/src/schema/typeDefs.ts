@@ -37,10 +37,12 @@ export const typeDefs = `#graphql
     allUsers: [User!]!
     user(username: String!): User
     topScores(category: String, limit: Int): [Score!]!
+    me: User
   }
 
   type Mutation {
     login(username: String!, password: String!): Token
+    createUser(username: String!, password: String!, email: String!): User
   }
 
   type Token {

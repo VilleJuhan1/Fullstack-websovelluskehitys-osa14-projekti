@@ -32,13 +32,13 @@ export const pokemonResolvers = {
       });
       return foundPokemon
         ? new ObjectType(
-          foundPokemon.id,
-          foundPokemon.name,
-          (foundPokemon.translations as unknown as Translations) ||
-          ({} as Translations),
-          foundPokemon.categories,
-          foundPokemon.imageUrl
-        )
+            foundPokemon.id,
+            foundPokemon.name,
+            (foundPokemon.translations as unknown as Translations) ||
+              ({} as Translations),
+            foundPokemon.categories,
+            foundPokemon.imageUrl
+          )
         : null;
     },
   },

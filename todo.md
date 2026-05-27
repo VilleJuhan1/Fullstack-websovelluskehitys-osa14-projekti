@@ -32,20 +32,6 @@
 
 ## Planned
 
-### 05 - Login and session persistence
-
-  - due: 2026-06-07
-  - tags: [frontend, dev, patch]
-  - priority: medium
-  - workload: Easy
-  - defaultExpanded: false
-  - steps:
-      - [ ] Implement the login page
-      - [ ] Implement the token based session persistence using a browser cookie
-    ```md
-    Add login and session persistence to dev environment using the test user credentials
-    ```
-
 ### 06 - User streak score
 
   - due: 2026-06-07
@@ -79,7 +65,35 @@
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
 
+### 08 - Validations
+
+  - due: 2026-06-07
+  - tags: [frontend, backend]
+  - priority: medium
+  - workload: Easy
+  - defaultExpanded: false
+  - steps:
+      - [ ] Validate user email address
+      - [ ] Validate user passwords
+    ```md
+    Add validators for email address and passwords
+    ```
+
 ## In progress
+
+### 05 - Login and session persistence
+
+  - due: 2026-06-07
+  - tags: [frontend, dev, patch]
+  - priority: medium
+  - workload: Easy
+  - defaultExpanded: false
+  - steps:
+      - [x] Implement the login page
+      - [x] Implement the token based session persistence using a browser cookie
+    ```md
+    Add login and session persistence to dev environment using the test user credentials
+    ```
 
 ## Done
 

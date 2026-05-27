@@ -15,6 +15,14 @@ export const userResolvers = {
     ): Promise<User | null> => {
       return User.findOne({ where: { username } });
     },
+
+    me: (
+      _root: unknown,
+      _args: unknown,
+      context: { currentUser?: User | null }
+    ): User | null => {
+      return context.currentUser || null;
+    },
   },
   User: {
     scores: async (user: User) => {

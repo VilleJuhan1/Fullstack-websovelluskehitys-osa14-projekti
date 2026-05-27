@@ -1,18 +1,34 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useMutation } from '@apollo/client/react';
+import { LOGIN } from '../services/auth';
+import type { LoginData } from '../services/auth';
 import './Auth.css';
 
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [errorText, setErrorText] = useState('');
   const navigate = useNavigate();
+
+  const [loginMutation, { loading }] = useMutation<LoginData>(LOGIN, {
+    onError: (err: Error) => {
+      setErrorText(err.message || 'An error occurred during login');
+    },
+    onCompleted: (data: LoginData) => {
+      if (data?.login?.value) {
+        localStorage.setItem('quiz-user-token', data.login.value);
+        // Dispatch custom event to notify SettingsBar and other components of auth status change
+        window.dispatchEvent(new Event('auth-change'));
+        navigate('/');
+      }
+    },
+  });
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Placeholder for actual login logic
-    console.log('Logging in with:', { username, password });
-    alert('Login framework placeholder triggered!');
-    navigate('/');
+    setErrorText('');
+    loginMutation({ variables: { username, password } });
   };
 
   return (
@@ -27,6 +43,14 @@ export default function Login() {
             gap: 'var(--space-md)',
           }}
         >
+          {errorText && (
+            <p
+              className="quiz-error-text"
+              style={{ textAlign: 'center', margin: 0, fontWeight: 600 }}
+            >
+              {errorText}
+            </p>
+          )}
           <div
             style={{
               display: 'flex',
@@ -40,7 +64,7 @@ export default function Login() {
               htmlFor="username"
               style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}
             >
-              Username or Email
+              Username
             </label>
             <input
               id="username"
@@ -49,6 +73,7 @@ export default function Login() {
               onChange={(e) => setUsername(e.target.value)}
               required
               className="form-input"
+              disabled={loading}
             />
           </div>
           <div
@@ -73,11 +98,12 @@ export default function Login() {
               onChange={(e) => setPassword(e.target.value)}
               required
               className="form-input"
+              disabled={loading}
             />
           </div>
-          <button type="submit" className="streak-score-btn">
+          <button type="submit" className="streak-score-btn" disabled={loading}>
             <h3 className="text-gradient" style={{ margin: 0 }}>
-              Sign In
+              {loading ? 'Signing In...' : 'Sign In'}
             </h3>
           </button>
         </form>
