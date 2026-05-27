@@ -9,7 +9,8 @@ import { GraphQLError } from 'graphql';
 const PORT = process.env.PORT ? Number(process.env.PORT) : 4000;
 const isDev = process.env.NODE_ENV !== 'production';
 
-import { runMigrations } from './db';
+import jwt from 'jsonwebtoken';
+import { runMigrations, User } from './db';
 
 // Function to start the server
 export async function startServer() {
@@ -44,6 +45,27 @@ export async function startServer() {
 
     const { url } = await startStandaloneServer(server, {
       listen: { port: PORT },
+      context: async ({ req }) => {
+        const auth = req ? req.headers.authorization : null;
+        if (auth && auth.startsWith('Bearer ')) {
+          const token = auth.substring(7);
+          try {
+            const jwtSecret = process.env.JWT_SECRET;
+            if (!jwtSecret) {
+              throw new Error('JWT_SECRET is missing from environment');
+            }
+            const decodedToken = jwt.verify(token, jwtSecret) as {
+              id: number;
+              username: string;
+            };
+            const currentUser = await User.findByPk(decodedToken.id);
+            return { currentUser };
+          } catch (err) {
+            logger.warn({ error: err }, 'Invalid token provided');
+          }
+        }
+        return { currentUser: null };
+      },
     });
 
     logger.info({ url, port: PORT }, 'Server started');

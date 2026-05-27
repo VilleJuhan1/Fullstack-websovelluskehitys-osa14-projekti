@@ -32,12 +32,12 @@ export const countryResolvers = {
       });
       return country
         ? new ObjectType(
-          country.id,
-          country.name,
-          country.translations as unknown as Translations,
-          country.categories,
-          country.imageUrl
-        )
+            country.id,
+            country.name,
+            country.translations as unknown as Translations,
+            country.categories,
+            country.imageUrl
+          )
         : null;
     },
   },

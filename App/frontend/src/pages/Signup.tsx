@@ -1,19 +1,83 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { gql } from '@apollo/client';
+import { useMutation } from '@apollo/client/react';
 import './Auth.css';
+
+const CREATE_USER = gql`
+  mutation CreateUser($username: String!, $password: String!, $email: String!) {
+    createUser(username: $username, password: $password, email: $email) {
+      id
+      username
+    }
+  }
+`;
+
+const LOGIN = gql`
+  mutation Login($username: String!, $password: String!) {
+    login(username: $username, password: $password) {
+      value
+    }
+  }
+`;
+
+interface CreateUserData {
+  createUser: {
+    id: number;
+    username: string;
+  };
+}
+
+interface LoginData {
+  login: {
+    value: string;
+  };
+}
 
 export default function Signup() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorText, setErrorText] = useState('');
   const navigate = useNavigate();
+
+  const [loginMutation, { loading: loginLoading }] = useMutation<LoginData>(
+    LOGIN,
+    {
+      onError: (err: Error) => {
+        setErrorText(
+          err.message ||
+            'Signup succeeded but auto-login failed. Please try logging in manually.'
+        );
+      },
+      onCompleted: (data: LoginData) => {
+        if (data?.login?.value) {
+          localStorage.setItem('quiz-user-token', data.login.value);
+          // Dispatch custom event to notify SettingsBar and other components of auth status change
+          window.dispatchEvent(new Event('auth-change'));
+          navigate('/');
+        }
+      },
+    }
+  );
+
+  const [createUserMutation, { loading: signupLoading }] =
+    useMutation<CreateUserData>(CREATE_USER, {
+      onError: (err: Error) => {
+        setErrorText(err.message || 'An error occurred during sign up');
+      },
+      onCompleted: () => {
+        loginMutation({ variables: { username, password } });
+      },
+    });
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Signing up with:', { username, email, password });
-    alert('Signup framework placeholder triggered!');
-    navigate('/');
+    setErrorText('');
+    createUserMutation({ variables: { username, password, email } });
   };
+
+  const loading = signupLoading || loginLoading;
 
   return (
     <div className="container flex-center main-container">
@@ -27,6 +91,14 @@ export default function Signup() {
             gap: 'var(--space-md)',
           }}
         >
+          {errorText && (
+            <p
+              className="quiz-error-text"
+              style={{ textAlign: 'center', margin: 0, fontWeight: 600 }}
+            >
+              {errorText}
+            </p>
+          )}
           <div
             style={{
               display: 'flex',
@@ -49,6 +121,7 @@ export default function Signup() {
               onChange={(e) => setUsername(e.target.value)}
               required
               className="form-input"
+              disabled={loading}
             />
           </div>
           <div
@@ -73,6 +146,7 @@ export default function Signup() {
               onChange={(e) => setEmail(e.target.value)}
               required
               className="form-input"
+              disabled={loading}
             />
           </div>
           <div
@@ -97,11 +171,12 @@ export default function Signup() {
               onChange={(e) => setPassword(e.target.value)}
               required
               className="form-input"
+              disabled={loading}
             />
           </div>
-          <button type="submit" className="streak-score-btn">
+          <button type="submit" className="streak-score-btn" disabled={loading}>
             <h3 className="text-gradient" style={{ margin: 0 }}>
-              Create Account
+              {loading ? 'Creating Account...' : 'Create Account'}
             </h3>
           </button>
         </form>
