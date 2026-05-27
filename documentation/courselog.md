@@ -20,7 +20,7 @@
 | April 29th | Some minor changes and fixing an issue with the OCI  | 1 |
 | April 29th | Did some network debugging by deploying the environment. Still issues. Destroyed it for the night. | 1,5 |
 | April 30th | Did research on OCI network infrastructure and came up with a new plan, but didn't have time to implement it | 1 |
-| |  | **29** | 
+| **Total** |  | **29** | 
 
 ## May 2026
 | Date          | Log entry                                             | Hours spent   |
@@ -52,4 +52,5 @@
 | May 24th | Rested | 0 |
 | May 25th | Widened gaps between components on the login and signup pages. Deployed new minor version from weekend to production. | 2 |
 | May 26th | Busy with chores | 0 |
-| May 27th | Added authentication service for login, signup and account pages with required mutations and interfaces. Also modified backend to accommodate the login fucntionalities. | 2 |
+| May 27th | Added authentication service for login, signup and account pages with required mutations and interfaces. Also modified backend to accommodate the login functionalities. | 2,5 |
+| **Total** |  | **73** |
