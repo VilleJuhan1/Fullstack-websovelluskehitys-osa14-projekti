@@ -114,7 +114,7 @@ images:
   newTag: front-cosmic-cat-a38d1f0
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: brave-owl-173043c
+  newTag: mighty-whale-3160171
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: brave-owl-173043c
+  newTag: mighty-whale-3160171
