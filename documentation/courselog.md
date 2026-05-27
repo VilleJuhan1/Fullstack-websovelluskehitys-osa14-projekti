@@ -51,3 +51,5 @@
 | May 23rd | Tried to unify the pages look, but still work in progress | 1 |
 | May 24th | Rested | 0 |
 | May 25th | Widened gaps between components on the login and signup pages. Deployed new minor version from weekend to production. | 2 |
+| May 26th | Busy with chores | 0 |
+| May 27th | Added authentication service for login, signup and account pages with required mutations and interfaces. Also modified backend to accommodate the login fucntionalities. | 2 |

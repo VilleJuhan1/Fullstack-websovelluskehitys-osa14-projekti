@@ -1,28 +1,7 @@
 import { Link } from 'react-router-dom';
-import { gql } from '@apollo/client';
 import { useQuery } from '@apollo/client/react';
-
-const ME = gql`
-  query GetMe {
-    me {
-      id
-      username
-      email
-      isAdmin
-      isPremiumUser
-    }
-  }
-`;
-
-interface GetMeData {
-  me?: {
-    id: number;
-    username: string;
-    email?: string;
-    isAdmin?: boolean;
-    isPremiumUser?: boolean;
-  } | null;
-}
+import { ME } from '../services/auth';
+import type { GetMeData } from '../services/auth';
 
 export default function Account() {
   const { data, loading } = useQuery<GetMeData>(ME, {

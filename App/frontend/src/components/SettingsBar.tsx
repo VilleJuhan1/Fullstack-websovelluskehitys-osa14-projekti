@@ -1,24 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { gql } from '@apollo/client';
 import { useQuery, useApolloClient } from '@apollo/client/react';
+import { ME } from '../services/auth';
+import type { GetMeData } from '../services/auth';
 import './SettingsBar.css';
-
-const ME = gql`
-  query GetMe {
-    me {
-      id
-      username
-    }
-  }
-`;
-
-interface GetMeData {
-  me?: {
-    id: number;
-    username: string;
-  } | null;
-}
 
 export default function SettingsBar() {
   const [isOpen, setIsOpen] = useState(false);

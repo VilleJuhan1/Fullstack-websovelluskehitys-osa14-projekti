@@ -1,22 +1,9 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { gql } from '@apollo/client';
 import { useMutation } from '@apollo/client/react';
+import { LOGIN } from '../services/auth';
+import type { LoginData } from '../services/auth';
 import './Auth.css';
-
-const LOGIN = gql`
-  mutation Login($username: String!, $password: String!) {
-    login(username: $username, password: $password) {
-      value
-    }
-  }
-`;
-
-interface LoginData {
-  login: {
-    value: string;
-  };
-}
 
 export default function Login() {
   const [username, setUsername] = useState('');
