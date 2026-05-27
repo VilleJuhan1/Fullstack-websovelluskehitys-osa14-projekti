@@ -81,6 +81,8 @@
 
 ## In progress
 
+## Done
+
 ### 05 - Login and session persistence
 
   - due: 2026-06-07
@@ -94,8 +96,6 @@
     ```md
     Add login and session persistence to dev environment using the test user credentials
     ```
-
-## Done
 
 ### 01 - Example task
 
