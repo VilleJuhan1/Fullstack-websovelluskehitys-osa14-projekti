@@ -59,11 +59,17 @@ export const authResolvers = {
 
       const usernameRegex = /^[a-zA-Z0-9_-]{3,30}$/;
       if (!usernameRegex.test(trimmedUsername)) {
-        throw new Error('Username must be 3-30 characters long and contain only letters, numbers, underscores, or hyphens');
+        throw new Error(
+          'Username must be 3-30 characters long and contain only letters, numbers, underscores, or hyphens'
+        );
       }
 
       const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      if (!trimmedEmail || trimmedEmail.length > 254 || !emailRegex.test(trimmedEmail)) {
+      if (
+        !trimmedEmail ||
+        trimmedEmail.length > 254 ||
+        !emailRegex.test(trimmedEmail)
+      ) {
         throw new Error('Please provide a valid email address');
       }
 
@@ -79,16 +85,20 @@ export const authResolvers = {
       if (!/[0-9]/.test(password)) {
         throw new Error('Password must contain at least one number');
       }
-      if (!/[!@#$%^&*()_+\-=\[\]{};':",./<>?\\|]/.test(password)) {
+      if (!/[!@#$%^&*()_+\-=[\]{};':",./<>?\\|]/.test(password)) {
         throw new Error('Password must contain at least one special character');
       }
 
-      const existingUser = await User.findOne({ where: { username: trimmedUsername } });
+      const existingUser = await User.findOne({
+        where: { username: trimmedUsername },
+      });
       if (existingUser) {
         throw new Error('Username already taken');
       }
 
-      const existingEmail = await User.findOne({ where: { email: trimmedEmail } });
+      const existingEmail = await User.findOne({
+        where: { email: trimmedEmail },
+      });
       if (existingEmail) {
         throw new Error('Email already registered');
       }

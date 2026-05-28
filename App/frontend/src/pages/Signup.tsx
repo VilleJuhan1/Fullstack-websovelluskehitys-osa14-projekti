@@ -51,12 +51,18 @@ export default function Signup() {
 
     const usernameRegex = /^[a-zA-Z0-9_-]{3,30}$/;
     if (!usernameRegex.test(trimmedUsername)) {
-      setErrorText('Username must be 3-30 characters long and contain only letters, numbers, underscores, or hyphens.');
+      setErrorText(
+        'Username must be 3-30 characters long and contain only letters, numbers, underscores, or hyphens.'
+      );
       return;
     }
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!trimmedEmail || trimmedEmail.length > 254 || !emailRegex.test(trimmedEmail)) {
+    if (
+      !trimmedEmail ||
+      trimmedEmail.length > 254 ||
+      !emailRegex.test(trimmedEmail)
+    ) {
       setErrorText('Please enter a valid email address.');
       return;
     }
@@ -77,12 +83,14 @@ export default function Signup() {
       setErrorText('Password must contain at least one number.');
       return;
     }
-    if (!/[!@#$%^&*()_+\-=\[\]{};':",./<>?\\|]/.test(password)) {
+    if (!/[!@#$%^&*()_+\-=[\]{};':",./<>?\\|]/.test(password)) {
       setErrorText('Password must contain at least one special character.');
       return;
     }
 
-    createUserMutation({ variables: { username: trimmedUsername, password, email: trimmedEmail } });
+    createUserMutation({
+      variables: { username: trimmedUsername, password, email: trimmedEmail },
+    });
   };
 
   const loading = signupLoading || loginLoading;
