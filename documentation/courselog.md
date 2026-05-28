@@ -53,4 +53,5 @@
 | May 25th | Widened gaps between components on the login and signup pages. Deployed new minor version from weekend to production. | 2 |
 | May 26th | Busy with chores | 0 |
 | May 27th | Added authentication service for login, signup and account pages with required mutations and interfaces. Also modified backend to accommodate the login functionalities. | 2,5 |
-| **Total** |  | **73** |
+| May 28th | Added some validation for login and signup forms | 1,5 |
+| **Total** |  | **74,5** |

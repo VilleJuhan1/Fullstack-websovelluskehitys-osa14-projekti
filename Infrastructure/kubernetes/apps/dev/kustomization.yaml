@@ -41,7 +41,7 @@ patches:
             - name: frontend
               env:
                 - name: VITE_APP_VERSION
-                  value: clever-owl-65e4b5a
+                  value: mighty-dolphin-1421707
               resources:
                 limits:
                   cpu: 100m
