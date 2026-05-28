@@ -28,7 +28,18 @@ export default function Login() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     setErrorText('');
-    loginMutation({ variables: { username, password } });
+
+    const trimmedUsername = username.trim();
+    if (!trimmedUsername) {
+      setErrorText('Please enter your username.');
+      return;
+    }
+    if (!password) {
+      setErrorText('Please enter your password.');
+      return;
+    }
+
+    loginMutation({ variables: { username: trimmedUsername, password } });
   };
 
   return (

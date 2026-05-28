@@ -85,6 +85,8 @@
 
 ## In progress
 
+## Done
+
 ### 08 - Validations
 
   - due: 2026-06-07
@@ -93,13 +95,11 @@
   - workload: Easy
   - defaultExpanded: false
   - steps:
-      - [ ] Validate user email address
-      - [ ] Validate user passwords
+      - [x] Validate user email address
+      - [x] Validate user passwords
     ```md
     Add validators for email address and passwords
     ```
-
-## Done
 
 ### 05 - Login and session persistence
 

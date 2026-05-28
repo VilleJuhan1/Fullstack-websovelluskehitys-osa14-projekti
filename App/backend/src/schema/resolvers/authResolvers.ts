@@ -9,7 +9,8 @@ export const authResolvers = {
       _: unknown,
       { username, password }: { username: string; password: string }
     ): Promise<{ value: string }> => {
-      const user = await User.findOne({ where: { username } });
+      const trimmedUsername = username ? username.trim() : '';
+      const user = await User.findOne({ where: { username: trimmedUsername } });
 
       if (!user) {
         throw new Error('Invalid username or password');
@@ -52,23 +53,42 @@ export const authResolvers = {
         email,
       }: { username: string; password: string; email: string }
     ): Promise<User> => {
-      // Basic validation
-      if (!username || username.trim().length < 3) {
-        throw new Error('Username must be at least 3 characters long');
-      }
-      if (!password || password.length < 5) {
-        throw new Error('Password must be at least 5 characters long');
-      }
-      if (!email || !email.includes('@')) {
-        throw new Error('Invalid email address');
+      // Strict input validations
+      const trimmedUsername = username ? username.trim() : '';
+      const trimmedEmail = email ? email.trim() : '';
+
+      const usernameRegex = /^[a-zA-Z0-9_-]{3,30}$/;
+      if (!usernameRegex.test(trimmedUsername)) {
+        throw new Error('Username must be 3-30 characters long and contain only letters, numbers, underscores, or hyphens');
       }
 
-      const existingUser = await User.findOne({ where: { username } });
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!trimmedEmail || trimmedEmail.length > 254 || !emailRegex.test(trimmedEmail)) {
+        throw new Error('Please provide a valid email address');
+      }
+
+      if (!password || password.length < 8) {
+        throw new Error('Password must be at least 8 characters long');
+      }
+      if (!/[a-z]/.test(password)) {
+        throw new Error('Password must contain at least one lowercase letter');
+      }
+      if (!/[A-Z]/.test(password)) {
+        throw new Error('Password must contain at least one uppercase letter');
+      }
+      if (!/[0-9]/.test(password)) {
+        throw new Error('Password must contain at least one number');
+      }
+      if (!/[!@#$%^&*()_+\-=\[\]{};':",./<>?\\|]/.test(password)) {
+        throw new Error('Password must contain at least one special character');
+      }
+
+      const existingUser = await User.findOne({ where: { username: trimmedUsername } });
       if (existingUser) {
         throw new Error('Username already taken');
       }
 
-      const existingEmail = await User.findOne({ where: { email } });
+      const existingEmail = await User.findOne({ where: { email: trimmedEmail } });
       if (existingEmail) {
         throw new Error('Email already registered');
       }
@@ -81,8 +101,8 @@ export const authResolvers = {
       const hashedPassword = await bcrypt.hash(password + secret, 10);
 
       const user = await User.create({
-        username,
-        email,
+        username: trimmedUsername,
+        email: trimmedEmail,
         hashedPassword,
         isAdmin: false,
         isPremiumUser: false,

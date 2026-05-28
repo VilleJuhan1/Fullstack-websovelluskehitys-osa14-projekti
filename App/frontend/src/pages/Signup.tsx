@@ -38,14 +38,51 @@ export default function Signup() {
         setErrorText(err.message || 'An error occurred during sign up');
       },
       onCompleted: () => {
-        loginMutation({ variables: { username, password } });
+        loginMutation({ variables: { username: username.trim(), password } });
       },
     });
 
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
     setErrorText('');
-    createUserMutation({ variables: { username, password, email } });
+
+    const trimmedUsername = username.trim();
+    const trimmedEmail = email.trim();
+
+    const usernameRegex = /^[a-zA-Z0-9_-]{3,30}$/;
+    if (!usernameRegex.test(trimmedUsername)) {
+      setErrorText('Username must be 3-30 characters long and contain only letters, numbers, underscores, or hyphens.');
+      return;
+    }
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!trimmedEmail || trimmedEmail.length > 254 || !emailRegex.test(trimmedEmail)) {
+      setErrorText('Please enter a valid email address.');
+      return;
+    }
+
+    if (password.length < 8) {
+      setErrorText('Password must be at least 8 characters long.');
+      return;
+    }
+    if (!/[a-z]/.test(password)) {
+      setErrorText('Password must contain at least one lowercase letter.');
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      setErrorText('Password must contain at least one uppercase letter.');
+      return;
+    }
+    if (!/[0-9]/.test(password)) {
+      setErrorText('Password must contain at least one number.');
+      return;
+    }
+    if (!/[!@#$%^&*()_+\-=\[\]{};':",./<>?\\|]/.test(password)) {
+      setErrorText('Password must contain at least one special character.');
+      return;
+    }
+
+    createUserMutation({ variables: { username: trimmedUsername, password, email: trimmedEmail } });
   };
 
   const loading = signupLoading || loginLoading;
