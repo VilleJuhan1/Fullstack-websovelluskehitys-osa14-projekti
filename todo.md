@@ -65,6 +65,26 @@
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
 
+### 09 - Lint workflow
+
+  - due: 2026-06-07
+  - tags: [github]
+  - priority: low
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Ansible lint
+      - [ ] Kubernetes lint (if exists)
+      - [ ] Frontend lint
+      - [ ] Backend lint
+      - [ ] Frontpage lint
+      - [ ] Python lint
+    ```md
+    Add a workflow that runs lint on all subdirectories when doing a pull request.
+    ```
+
+## In progress
+
 ### 08 - Validations
 
   - due: 2026-06-07
@@ -78,8 +98,6 @@
     ```md
     Add validators for email address and passwords
     ```
-
-## In progress
 
 ## Done
 
