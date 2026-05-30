@@ -89,7 +89,7 @@ patches:
 images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
-  newTag: stable
+  newTag: latest
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
   newTag: clever-wolf-3dc55a6
