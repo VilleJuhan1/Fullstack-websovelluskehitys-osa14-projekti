@@ -112,9 +112,9 @@ jobs:
             kustomize edit set image villejuhan1/quiz-backend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}
             kustomize edit set image villejuhan1/quiz-frontend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}
           else
-            # Dev points to latest
-            kustomize edit set image villejuhan1/quiz-backend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
-            kustomize edit set image villejuhan1/quiz-frontend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
+            # Dev points to specific tag to satisfy kube-linter constraints
+            kustomize edit set image villejuhan1/quiz-backend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}
+            kustomize edit set image villejuhan1/quiz-frontend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}
             
             # Update the version label in the UI to match the generated tag
             sed -i "/name: VITE_APP_VERSION/{n;s/value: .*/value: ${{ steps.generate-tag.outputs.tag }}/}" kustomization.yaml

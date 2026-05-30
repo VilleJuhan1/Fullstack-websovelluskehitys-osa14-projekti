@@ -11,8 +11,8 @@ resources:
 
 images:
   - name: villejuhan1/quiz-backend
-    newTag: latest
+    newTag: stable
   - name: villejuhan1/quiz-frontend
-    newTag: latest
+    newTag: stable
   - name: villejuhan1/frontpage
-    newTag: latest
+    newTag: stable
