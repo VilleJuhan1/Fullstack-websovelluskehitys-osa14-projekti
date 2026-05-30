@@ -28,3 +28,4 @@
 | 1.4.3 | 2026-05-30 | Lint workflow | Added a lint workflow that checks all components on a pull request to main.  | mighty-dolphin-1421707 | mighty-whale-3160171 |
 | 1.5.0 | 2026-05-30 | Prometheus monitoring stack | Added an ansible step and the required manifest files to install and configure an externally accessible Grafana. Tried Bastion tunneling, but eventually decided on this.  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
 | 1.5.1 | 2026-05-30 | Monitoring dashboard review | Added community monitoring dashboards to Grafana manually.  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
+| 1.5.2 | 2026-05-30 | Grafana Loki | Grafana can now be used to review logs via Loki datasource.  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
