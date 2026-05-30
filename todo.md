@@ -72,19 +72,7 @@
 
 ## In progress
 
-### 14 - Monitoring dashboards
-
-  - due: 2026-06-07
-  - tags: [grafana]
-  - priority: low
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [ ] Dabble with the dashboards until satisfied
-      - [ ] Create a readme file for configuring the dashboards and alerts
-    ```md
-    Create one glance dashboards for Grafana to monitor the cluster
-    ```
+## Done
 
 ### 15 - Grafana Loki
 
@@ -101,7 +89,19 @@
     Add another data source for Grafana to review system and kubernetes logs.
     ```
 
-## Done
+### 14 - Monitoring dashboards
+
+  - due: 2026-06-07
+  - tags: [grafana]
+  - priority: low
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Dabble with the dashboards until satisfied
+      - [x] Create a readme file for configuring the dashboards and alerts
+    ```md
+    Create one glance dashboards for Grafana to monitor the cluster
+    ```
 
 ### 11 - VM monitoring with Grafana
 
