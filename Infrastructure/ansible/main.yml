@@ -18,3 +18,12 @@
   roles:
     - storage
     - k3s_worker
+
+- name: Configure cluster addons and monitoring
+  hosts: k3s_master
+  become: true
+  vars_files:
+    - vars.yml
+  roles:
+    # - cluster-addons
+    - monitoring

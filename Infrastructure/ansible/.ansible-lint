@@ -1,6 +1,8 @@
 # .ansible-lint config file to mock external modules and skip pedantic rules
 mock_modules:
   - kubernetes.core.k8s
+  - kubernetes.core.helm_repository
+  - kubernetes.core.helm
   - ansible.posix.sysctl
   - community.general.filesystem
   - community.general.ufw

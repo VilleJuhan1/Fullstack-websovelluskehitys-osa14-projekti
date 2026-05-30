@@ -16,13 +16,6 @@
   - workload: Normal
   - defaultExpanded: false
 
-### Prometheus & Grafana
-
-  - tags: [kubernetes, minor]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-
 ### VM monitoring with Grafana
 
   - tags: [ansible, minor]
@@ -66,6 +59,16 @@
     ```
 
 ## In progress
+
+### 10 - Prometheus & Grafana
+
+  - tags: [kubernetes, minor]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+    ```md
+    Add a monitoring stack to the environment
+    ```
 
 ## Done
 
