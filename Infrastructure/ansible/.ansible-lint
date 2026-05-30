@@ -1,0 +1,5 @@
+# .ansible-lint config file to mock external modules not present in the lint environment
+mock_modules:
+  - kubernetes.core.k8s
+  - sysctl
+  - filesystem
