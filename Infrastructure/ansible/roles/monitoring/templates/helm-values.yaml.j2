@@ -37,10 +37,35 @@ prometheus:
 
 grafana:
   enabled: true
+  assertNoLeakedSecrets: false
   adminUser: "{{ grafana_admin_user | default(lookup('ansible.builtin.env', 'GRAFANA_ADMIN_USER'), true) | default('admin', true) }}"
   adminPassword: "{{ grafana_admin_password | default(lookup('ansible.builtin.env', 'GRAFANA_ADMIN_PASSWORD'), true) | default('admin', true) }}"
+  additionalDataSources:
+    - name: Loki
+      type: loki
+      access: proxy
+      url: http://loki.monitoring.svc.cluster.local:3100
+      jsonData:
+        maxLines: 1000
+  grafana.ini:
+    server:
+      root_url: https://grafana.hiekkalaatikko.tech
+    auth.github:
+      enabled: true
+      allow_sign_up: true
+      client_id: "{{ grafana_github_client_id | default(lookup('ansible.builtin.env', 'GRAFANA_GITHUB_CLIENT_ID'), true) }}"
+      client_secret: "{{ grafana_github_client_secret | default(lookup('ansible.builtin.env', 'GRAFANA_GITHUB_CLIENT_SECRET'), true) }}"
+      scopes: user:email,read:org
+      allowed_organizations: "{{ grafana_github_allowed_orgs | default('') }}"
+      allowed_users: "{{ grafana_github_allowed_users | default('') }}"
   persistence:
     enabled: false
+  sidecar:
+    dashboards:
+      enabled: true
+      label: grafana_dashboard
+      labelValue: "1"
+      searchNamespace: ALL
   ingress:
     enabled: true
     ingressClassName: nginx
