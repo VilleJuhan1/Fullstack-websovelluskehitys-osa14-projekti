@@ -58,3 +58,9 @@ promtail:
     requests:
       cpu: 10m
       memory: 64Mi
+
+# Disable automatic datasource provisioning to prevent conflict with Prometheus default
+grafana:
+  sidecar:
+    datasources:
+      enabled: false
