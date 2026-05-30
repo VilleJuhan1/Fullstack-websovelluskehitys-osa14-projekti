@@ -65,6 +65,8 @@
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
 
+## In progress
+
 ### 09 - Lint workflow
 
   - due: 2026-06-07
@@ -82,8 +84,6 @@
     ```md
     Add a workflow that runs lint on all subdirectories when doing a pull request.
     ```
-
-## In progress
 
 ## Done
 
