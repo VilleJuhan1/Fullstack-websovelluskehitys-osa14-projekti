@@ -45,7 +45,7 @@ try:
     ).strip()
     print(f"[*] Bastion ID: {bastion_id}")
 except Exception as e:
-    print("Error fetching Bastion ID from Terraform. Is it applied?")
+    print(f"Error fetching Bastion ID from Terraform:{e}")
     exit(1)
 
 # Fetch the target nodes from the ansible inventory file
@@ -82,9 +82,11 @@ if not os.path.exists(oci_cmd) and os.path.exists("../venv/oci-automation/bin/oc
     oci_cmd = "../venv/oci-automation/bin/oci"
 
 # Function to create a bastion tunnel
+
+
 def create_tunnel(target_ip, target_port, local_port, name, extra_opts=""):
     print(f"\n[*] Creating Bastion session for {name} ({target_ip}:{target_port})... this takes ~30 seconds.")
-    
+
     cmd = [
         oci_cmd, "bastion", "session", "create-port-forwarding",
         "--bastion-id", bastion_id,
@@ -92,9 +94,9 @@ def create_tunnel(target_ip, target_port, local_port, name, extra_opts=""):
         "--ssh-public-key-file", public_key_path,
         "--target-private-ip", target_ip,
         "--target-port", str(target_port),
-        "--session-ttl", "1800" # Session time to live in seconds, 1800 = 30 minutes
+        "--session-ttl", "1800"  # Session time to live in seconds, 1800 = 30 minutes
     ]
-    
+
     try:
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         # Parse JSON to safely get the ID
@@ -113,7 +115,7 @@ def create_tunnel(target_ip, target_port, local_port, name, extra_opts=""):
         print("\n[!] Error parsing OCI JSON response.")
         print(result.stdout)
         return False
-    
+
     # Wait for the bastion sessions to become active
     print("[*] Waiting for session to become ACTIVE...")
     try:
@@ -121,12 +123,12 @@ def create_tunnel(target_ip, target_port, local_port, name, extra_opts=""):
             oci_cmd, "bastion", "session", "get",
             "--session-id", session_id
         ]
-        
+
         while True:
             res_get = subprocess.run(cmd_get, capture_output=True, text=True, check=True)
             data_get = json.loads(res_get.stdout)
             state = data_get['data']['lifecycle-state']
-            
+
             if state == "ACTIVE":
                 ssh_cmd = data_get['data']['ssh-metadata']['command']
                 print("[*] Session is ACTIVE. Waiting 15 seconds for Bastion key propagation...")
@@ -135,29 +137,30 @@ def create_tunnel(target_ip, target_port, local_port, name, extra_opts=""):
             elif state in ["FAILED", "DELETED"]:
                 print(f"\n[!] Session entered failed state: {state}")
                 return False
-                
+
             time.sleep(3)
-            
+
     except subprocess.CalledProcessError as e:
         print(f"\n[!] Error fetching SSH command for session {session_id}!")
         print(e.stderr)
         return False
-        
+
     # Replace placeholders for SSH command
     ssh_cmd = ssh_cmd.replace("<privateKey>", private_key_path)
     ssh_cmd = ssh_cmd.replace("<localPort>", str(local_port))
     ssh_cmd = ssh_cmd.replace("ssh -i", "ssh -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -i")
-    
+
     # Add extra options (like secondary port forwards)
     if extra_opts:
         ssh_cmd = ssh_cmd.replace("ssh -o", f"ssh {extra_opts} -o")
 
     print(f"[*] Opening local tunnel on port {local_port}...")
-    
+
     # Run the SSH tunnel in the background
     process = subprocess.Popen(ssh_cmd, shell=True)
     pids.append(str(process.pid))
     return True
+
 
 # Clear old PIDs file if it exists
 if os.path.exists("bastion_pids.txt"):
@@ -174,24 +177,36 @@ success &= create_tunnel(worker_ip, 22, 2223, "Worker-SSH")
 if success:
     with open("bastion_pids.txt", "w") as f:
         f.write("\n".join(pids) + "\n")
-        
+
     print("\n[*] Tunnels are active in the background!")
-    
+
     # Generate local inventory
     local_inv_path = "../ansible/inventory.local.ini"
     print(f"[*] Generating {local_inv_path}...")
+
+    master_line = (
+        "master ansible_host=127.0.0.1 ansible_port=2222 "
+        "ansible_connection=ssh ansible_user=ubuntu "
+        f"ansible_ssh_private_key_file=ansible_key.pem private_ip={master_ip}"
+    )
+    worker_line = (
+        "worker ansible_host=127.0.0.1 ansible_port=2223 "
+        "ansible_connection=ssh ansible_user=ubuntu "
+        f"ansible_ssh_private_key_file=ansible_key.pem private_ip={worker_ip}"
+    )
+
     with open(local_inv_path, "w") as f:
         f.write(f"""[k3s_master]
-master ansible_host=127.0.0.1 ansible_port=2222 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem private_ip={master_ip}
+{master_line}
 
 [k3s_worker]
-worker ansible_host=127.0.0.1 ansible_port=2223 ansible_connection=ssh ansible_user=ubuntu ansible_ssh_private_key_file=ansible_key.pem private_ip={worker_ip}
+{worker_line}
 
 [k3s_cluster:children]
 k3s_master
 k3s_worker
 """)
-    
+
     print("\n==========================================")
     print("[*] Done! You can now run Ansible:")
     print("    cd ../ansible")
