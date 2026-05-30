@@ -67,6 +67,8 @@
 
 ## In progress
 
+## Done
+
 ### 09 - Lint workflow
 
   - due: 2026-06-07
@@ -75,17 +77,15 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Ansible lint
-      - [ ] Kubernetes lint (if exists)
-      - [ ] Frontend lint
-      - [ ] Backend lint
-      - [ ] Frontpage lint
-      - [ ] Python lint
+      - [x] Ansible lint
+      - [x] Kubernetes lint (if exists)
+      - [x] Frontend lint
+      - [x] Backend lint
+      - [x] Frontpage lint
+      - [x] Python lint
     ```md
     Add a workflow that runs lint on all subdirectories when doing a pull request.
     ```
-
-## Done
 
 ### 08 - Validations
 
