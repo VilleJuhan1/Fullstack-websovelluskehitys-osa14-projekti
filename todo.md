@@ -2,13 +2,6 @@
 
 ## Backlog
 
-### Frontend testing
-
-  - tags: [frontend, minor]
-  - priority: high
-  - workload: Hard
-  - defaultExpanded: false
-
 ### Argo CD for automated deployment
 
   - tags: [kubernetes, minor]
@@ -51,21 +44,46 @@
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
 
+### 12 - Frontend testing
+
+  - tags: [frontend, minor]
+  - priority: high
+  - workload: Hard
+  - defaultExpanded: false
+  - steps:
+      - [ ] Socials bar
+      - [ ] Settings bar
+      - [ ] Quiz selection screen
+    ```md
+    Create an automated testing framework for the frontend
+    ```
+
+### 13 - Automated backups
+
+  - tags: [terraform]
+  - priority: medium
+  - workload: Easy
+  - defaultExpanded: false
+  - steps:
+      - [ ] Create a volume group for backups and a backup policy for it
+    ```md
+    Create an automated backup policy for the kube-worker block volume
+    ```
+
 ## In progress
 
-### 10 - Prometheus & Grafana
+### 14 - Monitoring dashboards
 
-  - tags: [kubernetes, minor]
-  - priority: medium
+  - due: 2026-06-07
+  - tags: [grafana]
+  - priority: low
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [x] Create manifests
-      - [x] Create the Ansible installation steps
-      - [x] Test
-      - [ ] Run linters
+      - [ ] Dabble with the dashboards until satisfied
+      - [ ] Create a readme file for configuring the dashboards and alerts
     ```md
-    Add a monitoring stack to the environment
+    Create one glance dashboards for Grafana to monitor the cluster
     ```
 
 ## Done
@@ -78,6 +96,21 @@
   - defaultExpanded: false
     ```md
     Use node exporter to gather data from compute nodes
+    ```
+
+### 10 - Prometheus & Grafana
+
+  - tags: [kubernetes, minor]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Create manifests
+      - [x] Create the Ansible installation steps
+      - [x] Test
+      - [x] Run linters
+    ```md
+    Add a monitoring stack to the environment
     ```
 
 ### 09 - Lint workflow
