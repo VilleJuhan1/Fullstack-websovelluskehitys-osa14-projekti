@@ -86,6 +86,21 @@
     Create one glance dashboards for Grafana to monitor the cluster
     ```
 
+### 15 - Grafana Loki
+
+  - due: 2026-05-31
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Create the PV/PVC
+      - [ ] Add the NSG rule for internal cluster traffic
+      - [ ] Add the deployment
+      - [ ] Add Loki as a datasource
+    ```md
+    Add another data source for Grafana to review system and kubernetes logs.
+    ```
+
 ## Done
 
 ### 11 - VM monitoring with Grafana
