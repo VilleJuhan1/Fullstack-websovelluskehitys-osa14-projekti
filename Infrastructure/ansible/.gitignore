@@ -1,3 +1,4 @@
 inventory.*
 ansible_key.pem
 vars.yml
+.ansible/

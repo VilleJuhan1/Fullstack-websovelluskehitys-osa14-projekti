@@ -1,0 +1,121 @@
+name: Linter Workflow
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  backend-eslint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: App/backend
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
+  frontend-eslint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: App/frontend
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
+  frontpage-eslint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: App/frontpage
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
+  ansible-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install ansible and ansible-lint
+        run: |
+          python -m pip install --upgrade pip
+          pip install ansible-lint
+
+      - name: Run ansible-lint
+        run: ansible-lint
+        working-directory: Infrastructure/ansible
+
+  kubernetes-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Run kube-linter
+        uses: stackrox/kube-linter-action@v1.0.4
+        with:
+          directory: Infrastructure/kubernetes
+
+  python-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+
+      - name: Run flake8
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings.
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics

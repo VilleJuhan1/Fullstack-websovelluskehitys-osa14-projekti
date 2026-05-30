@@ -3,62 +3,62 @@
 # ansible-playbook -i inventory.local.ini main.yml --extra-vars "force_reinstall=true"
 
 - name: Uninstall K3s if force_reinstall is set
-  shell: /usr/local/bin/k3s-uninstall.sh
+  ansible.builtin.command: /usr/local/bin/k3s-uninstall.sh
   when: force_reinstall | default(false) | bool
-  ignore_errors: yes
+  ignore_errors: true
 
 - name: Wipe K3s data directory if force_reinstall is set
-  file:
+  ansible.builtin.file:
     path: /var/lib/rancher/k3s
     state: absent
   when: force_reinstall | default(false) | bool
 
 - name: Check if K3s is already installed
-  stat:
+  ansible.builtin.stat:
     path: /usr/local/bin/k3s
   register: k3s_binary
 
 - name: Download and install K3s Server (Master)
-  shell: |
+  ansible.builtin.shell: |
     curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --node-ip {{ private_ip }} --flannel-backend=vxlan --disable servicelb --disable traefik" sh -s -
   when: >
     (not k3s_binary.stat.exists) or
     (force_reinstall | default(false) | bool)
 
 - name: Wait for K3s node-token to be generated
-  wait_for:
+  ansible.builtin.wait_for:
     path: /var/lib/rancher/k3s/server/node-token
 
 - name: Read node-token securely
-  slurp:
+  ansible.builtin.slurp:
     path: /var/lib/rancher/k3s/server/node-token
   register: node_token_b64
 
 - name: Store node-token as fact for worker nodes to use
-  set_fact:
+  ansible.builtin.set_fact:
     k3s_token: "{{ node_token_b64['content'] | b64decode | trim }}"
 
 - name: Wait for kubeconfig to be generated
-  wait_for:
+  ansible.builtin.wait_for:
     path: /etc/rancher/k3s/k3s.yaml
 
 - name: Fetch kubeconfig to your local machine
-  fetch:
+  ansible.builtin.fetch:
     src: /etc/rancher/k3s/k3s.yaml
     dest: ../kubernetes/kubeconfig.yaml
-    flat: yes
+    flat: true
 
 - name: Ensure correct permissions for the local kubeconfig file
-  local_action:
-    module: file
+  ansible.builtin.file:
     path: ../kubernetes/kubeconfig.yaml
-    mode: '0600'
-  become: no
+    mode: "0600"
+  delegate_to: localhost
+  become: false
 
 # Note: We do NOT replace 127.0.0.1 in the kubeconfig here.
 # Since we use OCI Bastion Service, we connect via a tunnel (localhost:6443).
 # Keeping the server at 127.0.0.1 allows kubectl to work through that tunnel.
 
 # --- IMPORTANT ---
-# Ingress controllers (Traefik/Nginx) must be configured to listen on 
+# Ingress controllers (Traefik/Nginx) must be configured to listen on
 # host ports 8080-8085 to match the NSG and NLB health check rules.

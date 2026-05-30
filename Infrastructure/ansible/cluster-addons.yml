@@ -8,24 +8,24 @@
   # Installs kubernetes python library and setups ingress and cert-manager for k3s
   tasks:
     - name: Prompt for email if not defined in vars.yml
-      pause:
+      ansible.builtin.pause:
         prompt: "Enter email for Let's Encrypt certificates"
       register: email_input
       when: cert_manager_email is not defined
 
     - name: Set cert_manager_email fact from input
-      set_fact:
+      ansible.builtin.set_fact:
         cert_manager_email: "{{ email_input.user_input }}"
       when: cert_manager_email is not defined
 
     - name: Install Python kubernetes library via apt
-      apt:
+      ansible.builtin.apt:
         name: python3-kubernetes
         state: present
-        update_cache: yes
+        update_cache: true
 
     - name: Create manifests directory
-      file:
+      ansible.builtin.file:
         path: /tmp/k8s-manifests
         state: directory
 
@@ -88,11 +88,11 @@
         kubeconfig: /etc/rancher/k3s/k3s.yaml
 
     - name: Wait for Cert-Manager to be ready
-      pause:
+      ansible.builtin.pause:
         seconds: 30
 
     - name: Generate ClusterIssuer from template
-      template:
+      ansible.builtin.template:
         src: templates/cluster-issuer.yaml.j2
         dest: /tmp/k8s-manifests/cluster-issuer.yaml
 

@@ -1,0 +1,18 @@
+# .ansible-lint config file to mock external modules and skip pedantic rules
+mock_modules:
+  - kubernetes.core.k8s
+  - ansible.posix.sysctl
+  - community.general.filesystem
+  - community.general.ufw
+  - ansible.posix.mount
+
+skip_list:
+  - var-naming                 # Disable pedantic variable name prefixing
+  - ignore-errors              # Allow standard ignore_errors: true on cleanup steps
+  - no-changed-when            # Disable mandatory changed_when checks on shell tasks
+  - risky-file-permissions     # Disable strict file mode checks
+  - risky-shell-pipe           # Allow standard shell pipes
+  - command-instead-of-module   # Allow curl and native commands for special installers
+  - command-instead-of-shell    # Allow native command/shell usages
+  - deprecated-local-action    # Disable local_action warnings
+  - args                       # Ignore mock module argument validation warnings

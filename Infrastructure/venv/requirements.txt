@@ -4,3 +4,6 @@ oci-cli
 ansible
 oci
 kubernetes
+flake8
+autopep8
+ansible-lint

@@ -3,15 +3,15 @@
 
 # 1. SSH Hardening (via drop-in file to avoid modifying system defaults)
 - name: Ensure sshd_config.d directory exists
-  file:
+  ansible.builtin.file:
     path: /etc/ssh/sshd_config.d
     state: directory
-    mode: '0755'
+    mode: "0755"
 
 - name: Create SSH hardening override file
-  copy:
+  ansible.builtin.copy:
     dest: /etc/ssh/sshd_config.d/99-ansible-hardening.conf
-    mode: '0644'
+    mode: "0644"
     content: |
       # Managed by Ansible - Host Hardening
       PasswordAuthentication no
@@ -21,7 +21,7 @@
   notify: Restart SSH
 
 - name: Ensure main sshd_config includes the .d directory
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/ssh/sshd_config
     line: "Include /etc/ssh/sshd_config.d/*.conf"
     insertbefore: BOF
@@ -30,12 +30,12 @@
 
 # 2. Automatic security updates for the OS
 - name: Install unattended-upgrades
-  apt:
+  ansible.builtin.apt:
     name: unattended-upgrades
     state: present
 
 - name: Enable automatic security updates
-  copy:
+  ansible.builtin.copy:
     dest: /etc/apt/apt.conf.d/20auto-upgrades
     content: |
       APT::Periodic::Update-Package-Lists "1";
@@ -43,12 +43,12 @@
 
 # 2.1. Disable legacy iptables rules so that UFW can manage the firewall
 - name: Check if K3s is already installed (to avoid re-purging iptables)
-  stat:
+  ansible.builtin.stat:
     path: /usr/local/bin/k3s
   register: k3s_installed_check
 
 - name: Purge legacy OCI iptables rules (prevents 'admin prohibited' errors), only run if k3s is not installed or if force_reinstall is set
-  shell: |
+  ansible.builtin.shell: |
     iptables -F
     iptables -X
     iptables -t nat -F
@@ -56,78 +56,78 @@
     iptables -P INPUT ACCEPT
     iptables -P FORWARD ACCEPT
     iptables -P OUTPUT ACCEPT
-  become: yes
-  ignore_errors: yes
+  become: true
+  ignore_errors: true
   when: >
     (not k3s_installed_check.stat.exists) or
     (force_reinstall | default(false) | bool)
 
 # 3. Fail2Ban for another layer of security even though we're blocking ingress already
 - name: Install Fail2Ban
-  apt:
+  ansible.builtin.apt:
     name: fail2ban
     state: present
 
 - name: Ensure Fail2Ban is started and enabled
-  systemd:
+  ansible.builtin.systemd:
     name: fail2ban
     state: started
-    enabled: yes
+    enabled: true
 
 # 4. Kernel hardening, just in case
 - name: Disable ICMP redirects (prevents MITM)
-  sysctl:
+  ansible.posix.sysctl:
     name: net.ipv4.conf.all.accept_redirects
-    value: '0'
+    value: "0"
     state: present
-    reload: yes
+    reload: true
 
 # 5. Firewall management to account for K3s and Bastion SSH
 - name: Install UFW
-  apt:
+  ansible.builtin.apt:
     name: ufw
     state: present
 
 - name: Allow SSH in UFW
-  ufw:
+  community.general.ufw:
     rule: allow
-    port: '22'
+    port: "22"
     proto: tcp
 
 - name: Allow KubeAPI (6443) in UFW
-  ufw:
+  community.general.ufw:
     rule: allow
-    port: '6443'
+    port: "6443"
     proto: tcp
 
 - name: Allow Kubernetes NodePort range in UFW
-  ufw:
+  community.general.ufw:
     rule: allow
     port: 30000:32767
     proto: tcp
 
 - name: Allow all traffic from the VCN CIDR, a blanket rule for internal traffic which relies on the NSG-layer to handle the actual security
-  ufw:
+  community.general.ufw:
     rule: allow
-    src: '10.0.0.0/16'
+    src: "10.0.0.0/16"
 
 - name: Allow K3s Pod CIDR
-  ufw:
+  community.general.ufw:
     rule: allow
-    src: '10.42.0.0/16'
+    src: "10.42.0.0/16"
 
 - name: Allow K3s Service CIDR
-  ufw:
+  community.general.ufw:
     rule: allow
-    src: '10.43.0.0/16'
+    src: "10.43.0.0/16"
 
 - name: Set UFW default forward policy to ACCEPT (Required by K3s)
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/default/ufw
-    regexp: '^DEFAULT_FORWARD_POLICY='
+    regexp: "^DEFAULT_FORWARD_POLICY="
     line: 'DEFAULT_FORWARD_POLICY="ACCEPT"'
 
 - name: Enable UFW and set default deny policy
-  ufw:
+  community.general.ufw:
     state: enabled
     policy: deny

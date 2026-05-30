@@ -14,11 +14,28 @@ spec:
     spec:
       nodeSelector:
         kubernetes.io/hostname: kube-worker
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 999
+        fsGroup: 999
       containers:
         - name: postgres
           image: postgres:18-alpine
           ports:
             - containerPort: 5432
+          securityContext:
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 256Mi
           env:
             - name: POSTGRES_DB
               valueFrom:
@@ -38,9 +55,17 @@ spec:
           volumeMounts:
             - name: postgres-storage
               mountPath: /var/lib/postgresql
+            - name: pg-run
+              mountPath: /var/run/postgresql
+            - name: tmp
+              mountPath: /tmp
       volumes:
         - name: postgres-storage
           emptyDir: {} # For now, simple storage before moving to PVC/Block storage
+        - name: pg-run
+          emptyDir: {}
+        - name: tmp
+          emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
