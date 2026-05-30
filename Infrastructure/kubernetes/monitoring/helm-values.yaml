@@ -1,0 +1,95 @@
+# Helm values configuration for kube-prometheus-stack
+# Designed for lightweight K3s clusters
+
+prometheusOperator:
+  enabled: true
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 50m
+      memory: 128Mi
+
+prometheus:
+  enabled: true
+  prometheusSpec:
+    # Use emptyDir for temporary storage, or configure persistent volume claim below
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          storageClassName: "manual"
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 5Gi
+    resources:
+      limits:
+        cpu: 500m
+        memory: 512Mi
+      requests:
+        cpu: 100m
+        memory: 256Mi
+    serviceMonitorSelectorNilUsesHelmValues: false
+    podMonitorSelectorNilUsesHelmValues: false
+
+grafana:
+  enabled: true
+  adminPassword: "admin" # Change this in production or use Kubernetes secrets
+  persistence:
+    enabled: false
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    annotations:
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    hosts:
+      - grafana.hiekkalaatikko.tech
+    path: /
+    tls:
+      - secretName: grafana-tls
+        hosts:
+          - grafana.hiekkalaatikko.tech
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 100m
+      memory: 256Mi
+
+alertmanager:
+  enabled: false # Alertmanager can be disabled for basic monitoring to save resources
+
+kubeStateMetrics:
+  enabled: true
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi
+
+nodeExporter:
+  enabled: true
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi
+
+# K3s specific optimizations (disable upstream control plane component scraping)
+kubeControllerManager:
+  enabled: false
+kubeScheduler:
+  enabled: false
+kubeEtcd:
+  enabled: false
+kubeProxy:
+  enabled: false
+

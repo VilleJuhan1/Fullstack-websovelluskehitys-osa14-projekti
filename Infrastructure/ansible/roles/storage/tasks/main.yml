@@ -10,16 +10,28 @@
     dev: /dev/sdb
   when: sdb_disk.stat.exists
 
-- name: Create mount directory for Postgres Data
+- name: Create mount directory for Shared Data
   ansible.builtin.file:
-    path: /mnt/postgres-data
+    path: /mnt/data
     state: directory
     mode: "0755"
 
 - name: Mount the Block Volume securely
   ansible.posix.mount:
-    path: /mnt/postgres-data
+    path: /mnt/data
     src: /dev/sdb
     fstype: ext4
     state: mounted
+  when: sdb_disk.stat.exists
+
+- name: Create subdirectories for workloads
+  ansible.builtin.file:
+    path: "{{ item.path }}"
+    state: directory
+    owner: "{{ item.owner | default('root') }}"
+    group: "{{ item.group | default('root') }}"
+    mode: "0777" # Allow containerized processes with different UIDs to write
+  loop:
+    - { path: /mnt/data/prometheus }
+    - { path: /mnt/data/postgres }
   when: sdb_disk.stat.exists

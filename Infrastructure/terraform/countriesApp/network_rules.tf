@@ -121,6 +121,23 @@ resource "oci_core_network_security_group_security_rule" "k3s_nodeport_ingress" 
   }
 }
 
+# 6. Allow Node-Exporter traffic between cluster nodes (Grafana)
+resource "oci_core_network_security_group_security_rule" "k3s_node_exporter_ingress" {
+  network_security_group_id = oci_core_network_security_group.nsg_k3s_nodes.id
+  direction                 = "INGRESS"
+  protocol                  = "6" # TCP
+  source                    = oci_core_network_security_group.nsg_k3s_nodes.id
+  source_type               = "NETWORK_SECURITY_GROUP"
+  description               = "Allow Prometheus Node-Exporter metrics collection between K3s cluster nodes"
+
+  tcp_options {
+    destination_port_range {
+      max = 9100
+      min = 9100
+    }
+  }
+}
+
 
 # --- EGRESS RULES ---
 

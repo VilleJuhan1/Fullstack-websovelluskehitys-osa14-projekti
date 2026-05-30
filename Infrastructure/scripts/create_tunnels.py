@@ -171,7 +171,7 @@ success = True
 # List of tunnels to create
 # For the Master, we use a single SSH tunnel to forward both port 22 (SSH) and 6443 (KubeAPI)
 # This is more reliable than separate OCI Bastion port-forwarding sessions.
-success &= create_tunnel(master_ip, 22, 2222, "Master-SSH", extra_opts="-L 8443:localhost:6443")
+success &= create_tunnel(master_ip, 22, 2222, "Master-SSH")
 success &= create_tunnel(worker_ip, 22, 2223, "Worker-SSH")
 
 if success:

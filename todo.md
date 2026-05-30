@@ -16,20 +16,6 @@
   - workload: Normal
   - defaultExpanded: false
 
-### Prometheus & Grafana
-
-  - tags: [kubernetes, minor]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-
-### VM monitoring with Grafana
-
-  - tags: [ansible, minor]
-  - priority: low
-  - workload: Easy
-  - defaultExpanded: false
-
 ## Planned
 
 ### 06 - User streak score
@@ -67,7 +53,32 @@
 
 ## In progress
 
+### 10 - Prometheus & Grafana
+
+  - tags: [kubernetes, minor]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Create manifests
+      - [x] Create the Ansible installation steps
+      - [x] Test
+      - [ ] Run linters
+    ```md
+    Add a monitoring stack to the environment
+    ```
+
 ## Done
+
+### 11 - VM monitoring with Grafana
+
+  - tags: [patch]
+  - priority: low
+  - workload: Easy
+  - defaultExpanded: false
+    ```md
+    Use node exporter to gather data from compute nodes
+    ```
 
 ### 09 - Lint workflow
 

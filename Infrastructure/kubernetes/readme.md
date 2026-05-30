@@ -83,7 +83,7 @@ We use a **GitHub Action** for manual branch deployments.
 - `Infrastructure/kubernetes/apps/dev/`: Development environment with seeds and DevBar enabled.
 - `Infrastructure/kubernetes/apps/prod/`: Production environment (no seeds, strict settings).
 
-## Enabling HTTPS (Future Step)
+## Enabling HTTPS
 Once you have a domain name, follow these steps to enable encrypted traffic:
 
 1. **Install Infrastructure**: Run the Ansible playbook `Infrastructure/ansible/cluster-addons.yml`. This installs the Nginx Ingress Controller and Cert-Manager + configures the ClusterIssuer via a j2 template.
@@ -96,4 +96,52 @@ Once you have a domain name, follow these steps to enable encrypted traffic:
 4. **Update DNS**: Point your domain's A record to the Public IP of the new LoadBalancer created by the Nginx Ingress Controller.
 
 Cert-Manager will automatically handle the handshake with Let's Encrypt and provide a valid certificate!
+
+
+## Monitoring Stack (Prometheus & Grafana)
+
+The monitoring stack uses the `kube-prometheus-stack` Helm chart. It is configured to run inside the `monitoring` namespace with optimized resource limits for a lightweight K3s cluster.
+
+### Automated Installation via Ansible (Recommended)
+The deployment is managed by the `monitoring` Ansible role. It templates the helm values and applies the PersistentVolume manifest automatically.
+
+1. **Set up local credentials**: Define the Grafana administrator username and password in your local terminal environment:
+   ```bash
+   export GRAFANA_ADMIN_USER="your-admin-user"
+   export GRAFANA_ADMIN_PASSWORD="your-secure-password"
+   ```
+   *If these are not specified, they will default to `admin` / `admin`.*
+
+2. **Run the playbook**:
+   Run the main playbook to deploy the entire cluster configuration including monitoring:
+   ```bash
+   cd Infrastructure/ansible
+   ansible-playbook main.yml
+   ```
+
+### Manual Installation (Alternative)
+To deploy the stack manually on the master node:
+
+1. **Apply the PersistentVolume manifest:**
+   ```bash
+   kubectl apply -f monitoring/prometheus-storage.yaml
+   ```
+
+2. **Add the Helm repo and deploy:**
+   ```bash
+   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+   helm repo update
+   helm upgrade --install prometheus-stack prometheus-community/kube-prometheus-stack \
+     --namespace monitoring \
+     -f monitoring/helm-values.yaml
+   ```
+
+### Accessing the Grafana Dashboard
+1. **Access via Domain**: Navigate to your configured domain in your browser:
+   ```
+   https://grafana.hiekkalaatikko.tech
+   ```
+
+2. **Log in**: Sign in using your configured credentials (which you set in `vars.yml` or terminal environment variables).
+
 ```

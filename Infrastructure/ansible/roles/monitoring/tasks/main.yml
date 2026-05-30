@@ -1,0 +1,76 @@
+---
+- name: Check if Helm is installed
+  ansible.builtin.stat:
+    path: /usr/local/bin/helm
+  register: helm_binary
+
+- name: Download Helm installer script
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+    dest: /tmp/get_helm.sh
+    mode: "0755"
+  when: not helm_binary.stat.exists
+
+- name: Run Helm installer script
+  ansible.builtin.shell: /tmp/get_helm.sh
+  when: not helm_binary.stat.exists
+  register: helm_install_result
+  changed_when: helm_install_result.rc == 0
+
+- name: Ensure modern Python Kubernetes client is installed
+  block:
+    - name: Ensure python3-pip is present
+      ansible.builtin.apt:
+        name: python3-pip
+        state: present
+        update_cache: true
+
+    - name: Upgrade kubernetes python client using pip
+      ansible.builtin.pip:
+        name: kubernetes
+        state: present
+        extra_args: --break-system-packages --ignore-installed
+  rescue:
+    - name: Fallback warning if pip upgrade fails
+      ansible.builtin.debug:
+        msg: "Could not upgrade python-kubernetes client via pip. Continuing with system packages."
+
+- name: Ensure manifests directory exists
+  ansible.builtin.file:
+    path: /tmp/monitoring-manifests
+    state: directory
+    mode: "0755"
+
+- name: Copy Prometheus PersistentVolume manifest to master node
+  ansible.builtin.copy:
+    src: "{{ role_path }}/../../../kubernetes/monitoring/prometheus-storage.yaml"
+    dest: /tmp/monitoring-manifests/prometheus-storage.yaml
+    mode: "0644"
+
+- name: Apply Prometheus PersistentVolume manifest
+  kubernetes.core.k8s:
+    state: present
+    src: /tmp/monitoring-manifests/prometheus-storage.yaml
+    kubeconfig: /etc/rancher/k3s/k3s.yaml
+
+- name: Generate helm-values.yaml from template with env variables
+  ansible.builtin.template:
+    src: helm-values.yaml.j2
+    dest: /tmp/monitoring-manifests/helm-values.yaml
+    mode: "0600" # Protect sensitive password/credentials
+
+- name: Add Prometheus Community Helm Repository
+  kubernetes.core.helm_repository:
+    name: prometheus-community
+    repo_url: https://prometheus-community.github.io/helm-charts
+
+- name: Deploy kube-prometheus-stack via Helm
+  kubernetes.core.helm:
+    name: prometheus-stack
+    chart_ref: prometheus-community/kube-prometheus-stack
+    chart_version: 86.0.2
+    release_namespace: monitoring
+    create_namespace: true
+    values_files:
+      - /tmp/monitoring-manifests/helm-values.yaml
+    kubeconfig: /etc/rancher/k3s/k3s.yaml
