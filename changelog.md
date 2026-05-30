@@ -25,3 +25,4 @@
 | 1.4.0 | 2026-05-27 | Login and signup | Users can be created although there's no validation yet. One can also login with a test user on dev. Sessions persist.  | clever-owl-65e4b5a | brave-owl-173043c |
 | 1.4.1 | 2026-05-27 | Deployed to main | Deployed the latest features (login and signup) to main also.  | clever-owl-65e4b5a | mighty-whale-3160171 |
 | 1.4.2 | 2026-05-28 | Validations for login and signup | Added some extra checks for login and signup forms so that unsafe passwords are not allowed etc.  | mighty-dolphin-1421707 | mighty-whale-3160171 |
+| 1.4.3 | 2026-05-30 | Lint workflow | Added a lint workflow that checks all components on a pull request to main.  | stable | mighty-whale-3160171 |
