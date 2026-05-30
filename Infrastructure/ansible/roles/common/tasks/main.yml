@@ -1,9 +1,9 @@
 ---
-# Since we are using a single Primary VNIC in a public subnet (new plan), 
+# Since we are using a single Primary VNIC in a public subnet (new plan),
 # we no longer need to manually configure secondary interfaces.
 
 - name: Wait for internet connectivity (ping 8.8.8.8)
-  command: ping -c 1 8.8.8.8
+  ansible.builtin.command: ping -c 1 8.8.8.8
   register: ping_result
   until: ping_result.rc == 0
   retries: 20
@@ -11,22 +11,22 @@
   changed_when: false
 
 - name: Set hostname to match inventory name
-  hostname:
+  ansible.builtin.hostname:
     name: "kube-{{ inventory_hostname }}"
 
 - name: Update /etc/hosts with new hostname
-  lineinfile:
+  ansible.builtin.lineinfile:
     path: /etc/hosts
-    regexp: '^127.0.1.1'
+    regexp: "^127.0.1.1"
     line: "127.0.1.1 kube-{{ inventory_hostname }}"
 
 - name: Update apt cache
-  apt:
-    update_cache: yes
+  ansible.builtin.apt:
+    update_cache: true
     cache_valid_time: 3600
 
 - name: Install baseline packages
-  apt:
+  ansible.builtin.apt:
     name:
       - curl
       - unzip

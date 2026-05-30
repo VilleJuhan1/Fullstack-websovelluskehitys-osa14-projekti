@@ -1,23 +1,23 @@
 ---
 - name: Identify the attached Postgres Block Volume (usually /dev/sdb on OCI)
-  stat:
+  ansible.builtin.stat:
     path: /dev/sdb
   register: sdb_disk
 
 - name: Format the Block Volume
-  filesystem:
+  community.general.filesystem:
     fstype: ext4
     dev: /dev/sdb
   when: sdb_disk.stat.exists
 
 - name: Create mount directory for Postgres Data
-  file:
+  ansible.builtin.file:
     path: /mnt/postgres-data
     state: directory
-    mode: '0755'
+    mode: "0755"
 
 - name: Mount the Block Volume securely
-  mount:
+  ansible.posix.mount:
     path: /mnt/postgres-data
     src: /dev/sdb
     fstype: ext4
