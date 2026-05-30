@@ -60,6 +60,7 @@ grafana:
       scopes: user:email,read:org
       allowed_organizations: "{{ grafana_github_allowed_orgs | default('') }}"
       allowed_users: "{{ grafana_github_allowed_users | default('') }}"
+      role_attribute_path: "'Admin'"
   persistence:
     enabled: false
   sidecar:
