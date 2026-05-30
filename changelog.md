@@ -26,3 +26,4 @@
 | 1.4.1 | 2026-05-27 | Deployed to main | Deployed the latest features (login and signup) to main also.  | clever-owl-65e4b5a | mighty-whale-3160171 |
 | 1.4.2 | 2026-05-28 | Validations for login and signup | Added some extra checks for login and signup forms so that unsafe passwords are not allowed etc.  | mighty-dolphin-1421707 | mighty-whale-3160171 |
 | 1.4.3 | 2026-05-30 | Lint workflow | Added a lint workflow that checks all components on a pull request to main.  | mighty-dolphin-1421707 | mighty-whale-3160171 |
+| 1.5.0 | 2026-05-30 | Prometheus monitoring stack | Added an ansible step and the required manifest files to install and configure an externally accessible Grafana. Tried Bastion tunneling, but eventually decided on this.  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
