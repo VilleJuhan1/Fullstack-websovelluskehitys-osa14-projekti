@@ -34,4 +34,5 @@
   loop:
     - { path: /mnt/data/prometheus }
     - { path: /mnt/data/postgres }
+    - { path: /mnt/data/loki }
   when: sdb_disk.stat.exists

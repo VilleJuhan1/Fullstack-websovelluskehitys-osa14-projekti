@@ -1,0 +1,66 @@
+# Helm values configuration for loki-stack
+# Templated via Ansible monitoring role
+# Designed for lightweight K3s clusters
+
+loki:
+  enabled: true
+  persistence:
+    enabled: true
+    storageClassName: "manual"
+    size: 5Gi
+  resources:
+    limits:
+      cpu: 200m
+      memory: 256Mi
+    requests:
+      cpu: 50m
+      memory: 128Mi
+  config:
+    compactor:
+      retention_enabled: true
+      shared_store: filesystem
+    limits_config:
+      retention_period: 168h # 7 days
+
+promtail:
+  enabled: true
+  extraVolumes:
+    - name: journal
+      hostPath:
+        path: /var/log/journal
+    - name: journal-run
+      hostPath:
+        path: /run/log/journal
+  extraVolumeMounts:
+    - name: journal
+      mountPath: /var/log/journal
+      readOnly: true
+    - name: journal-run
+      mountPath: /run/log/journal
+      readOnly: true
+  config:
+    snippets:
+      extraScrapeConfigs: |
+        - job_name: journal
+          journal:
+            max_age: 12h
+            path: /var/log/journal
+            labels:
+              job: systemd-journal
+              host: ${HOSTNAME}
+          relabel_configs:
+            - source_labels: ['__journal__systemd_unit']
+              target_label: 'unit'
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 10m
+      memory: 64Mi
+
+# Disable automatic datasource provisioning to prevent conflict with Prometheus default
+grafana:
+  sidecar:
+    datasources:
+      enabled: false

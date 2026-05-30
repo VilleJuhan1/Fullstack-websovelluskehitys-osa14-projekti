@@ -74,3 +74,37 @@
     values_files:
       - /tmp/monitoring-manifests/helm-values.yaml
     kubeconfig: /etc/rancher/k3s/k3s.yaml
+
+- name: Copy Loki PersistentVolume manifest to master node
+  ansible.builtin.copy:
+    src: "{{ role_path }}/../../../kubernetes/monitoring/loki-storage.yaml"
+    dest: /tmp/monitoring-manifests/loki-storage.yaml
+    mode: "0644"
+
+- name: Apply Loki PersistentVolume manifest
+  kubernetes.core.k8s:
+    state: present
+    src: /tmp/monitoring-manifests/loki-storage.yaml
+    kubeconfig: /etc/rancher/k3s/k3s.yaml
+
+- name: Generate loki-values.yaml from template
+  ansible.builtin.template:
+    src: loki-values.yaml.j2
+    dest: /tmp/monitoring-manifests/loki-values.yaml
+    mode: "0644"
+
+- name: Add Grafana Helm Repository
+  kubernetes.core.helm_repository:
+    name: grafana
+    repo_url: https://grafana.github.io/helm-charts
+
+- name: Deploy loki-stack via Helm
+  kubernetes.core.helm:
+    name: loki
+    chart_ref: grafana/loki-stack
+    chart_version: 2.10.2
+    release_namespace: monitoring
+    create_namespace: true
+    values_files:
+      - /tmp/monitoring-manifests/loki-values.yaml
+    kubeconfig: /etc/rancher/k3s/k3s.yaml
