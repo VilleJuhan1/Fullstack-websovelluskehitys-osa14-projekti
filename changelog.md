@@ -32,3 +32,4 @@
 | 1.5.3 | 2026-05-30 | Grafana loki fixes | Issues with data sources hopefully now fixed. Also added configmaps for Grafana dashboards so they persist.  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
 | 1.5.4 | 2026-05-30 | No helm on configmaps | Reverted changes and using only kustomize for grafana dashboard configmaps.  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
 | 1.5.5 | 2026-05-30 | Admin for 2fa user | Fixed a bug where 2fa user wasn't given admin privileges on Grafana.  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
+| 1.6.0 | 2026-05-30 | Admin for OAuth users in Grafana | After thorough review and a million iterations, finally found the proper attribute to apply admin role to new users created via OAuth authentication.  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
