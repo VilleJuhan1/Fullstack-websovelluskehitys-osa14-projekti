@@ -1,8 +1,10 @@
 # .ansible-lint config file to mock external modules and skip pedantic rules
 mock_modules:
   - kubernetes.core.k8s
-  - sysctl
-  - filesystem
+  - ansible.posix.sysctl
+  - community.general.filesystem
+  - community.general.ufw
+  - ansible.posix.mount
 
 skip_list:
   - var-naming                 # Disable pedantic variable name prefixing
