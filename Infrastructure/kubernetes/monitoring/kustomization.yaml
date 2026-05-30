@@ -5,6 +5,7 @@ namespace: monitoring
 
 resources:
   - prometheus-storage.yaml
+  - dashboards.yaml
 
 helmCharts:
   - name: kube-prometheus-stack
@@ -13,12 +14,3 @@ helmCharts:
     releaseName: prometheus-stack
     namespace: monitoring
     valuesFile: helm-values.yaml
-
-configMapGenerator:
-  - name: custom-grafana-dashboards
-    files:
-      # Reads all dashboard JSON files from the dashboards folder
-      - ../../monitoring/dashboards/
-    options:
-      labels:
-        grafana_dashboard: "1"

@@ -55,5 +55,5 @@
 | May 27th | Added authentication service for login, signup and account pages with required mutations and interfaces. Also modified backend to accommodate the login functionalities. | 2,5 |
 | May 28th | Added some validation for login and signup forms | 1,5 |
 | May 29th | Rested | 0 |
-| May 30th | Monitoring features with Prometheus, Loki and Grafana. Lint workflow to validate all components on pull requests. | 8 |
+| May 30th | Monitoring features with Prometheus, Loki and Grafana. Lint workflow to validate all components on pull requests. | 9 |
 | **Total** |  | **78,5** |

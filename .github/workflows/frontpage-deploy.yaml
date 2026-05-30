@@ -87,14 +87,7 @@ jobs:
       - name: Update Kustomize Manifests
         run: |
           cd Infrastructure/kubernetes/apps/${{ github.event.inputs.target_env }}
-          
-          if [ "${{ github.event.inputs.target_env }}" == "prod" ]; then
-            # Prod points to specific version
-            kustomize edit set image villejuhan1/frontpage=${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }}
-          else
-            # Dev points to latest
-            kustomize edit set image villejuhan1/frontpage=${{ secrets.DOCKERHUB_USERNAME }}/frontpage:latest
-          fi
+          kustomize edit set image villejuhan1/frontpage=${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }}
 
       - name: Commit and Push Changes
         run: |
