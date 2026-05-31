@@ -53,4 +53,5 @@
 | May 27th | Added authentication service for login, signup and account pages with required mutations and interfaces. Also modified backend to accommodate the login functionalities. | 2,5 |
 | May 28th | Added some validation for login and signup forms | 1,5 |
 | May 30th | Monitoring features with Prometheus, Loki and Grafana. Lint workflow to validate all components on pull requests. | 10,5 |
-| **Total** |  | **80** |
+| May 31st | Hybrid backup strategy for the kube-worker block volume that contains pod persistent data | 1,5 |
+| **Total** |  | **81,5** |
