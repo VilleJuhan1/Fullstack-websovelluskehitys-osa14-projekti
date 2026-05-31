@@ -58,6 +58,8 @@
     Create an automated testing framework for the frontend
     ```
 
+## In progress
+
 ### 13 - Automated backups
 
   - tags: [terraform]
@@ -69,8 +71,6 @@
     ```md
     Create an automated backup policy for the kube-worker block volume
     ```
-
-## In progress
 
 ## Done
 
