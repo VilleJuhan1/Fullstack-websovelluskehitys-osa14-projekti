@@ -58,7 +58,19 @@
     Create an automated testing framework for the frontend
     ```
 
+### 16 - Plan new features for frontpage
+
+  - tags: [frontpage, plan]
+  - priority: low
+  - workload: Easy
+  - defaultExpanded: false
+    ```md
+    Cloud LZ (domain root) could use some additional functionalities: Grafana link, blogs, CV, links. Plan the features and actions required to implement them.
+    ```
+
 ## In progress
+
+## Done
 
 ### 13 - Automated backups
 
@@ -67,12 +79,10 @@
   - workload: Easy
   - defaultExpanded: false
   - steps:
-      - [ ] Create a volume group for backups and a backup policy for it
+      - [x] Create a custom volume backup policy and assignment for the block volume
     ```md
     Create an automated backup policy for the kube-worker block volume
     ```
-
-## Done
 
 ### 15 - Grafana Loki
 
