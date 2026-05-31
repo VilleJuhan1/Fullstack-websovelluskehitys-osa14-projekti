@@ -1,11 +1,9 @@
-# Generated with Gemini 3.1 Pro
+# Generated partially with Gemini 3.1 Pro and Gemini 3.5 Flash
 
 # -----------------------------------------------------------------------------
 # Database Storage (Block Volume)
 # -----------------------------------------------------------------------------
-# We provision a 50GB Block Volume out of the remaining 100GB Free Tier allocation.
-# This will be attached to the k3s worker node and formatted by Ansible to store
-# the PostgreSQL database data, ensuring persistence across pod restarts.
+# A 50GB block volume for storing persistent container data like postgresql, loki, prometheus etc.
 resource "oci_core_volume" "postgres_data" {
   compartment_id      = data.oci_identity_compartments.compute.compartments[0].id
   
@@ -31,10 +29,7 @@ resource "oci_core_volume_attachment" "postgres_data_attachment" {
 # -----------------------------------------------------------------------------
 # Backup Storage (Object Storage Bucket)
 # -----------------------------------------------------------------------------
-# We create an Object Storage bucket (using the Free Tier 10GB allocation).
-# A Kubernetes CronJob will run pg_dump and upload the compressed backup here nightly.
-
-# Fetch the globally unique namespace for your tenancy (required for buckets)
+# An object storage bucket for storing database backups
 data "oci_objectstorage_namespace" "tenancy_namespace" {
   compartment_id = var.tenancy_ocid
 }
@@ -53,3 +48,40 @@ resource "oci_objectstorage_bucket" "postgres_backups" {
   
   versioning     = "Disabled"
 }
+
+# -----------------------------------------------------------------------------
+# Automated Block Volume Backups (OCI Always Free Compliant)
+# -----------------------------------------------------------------------------
+# Hybrid backup policy that retains both short and longterm backups from the kube-worker block volume (limit is 5 total in OCI free tier)
+resource "oci_core_volume_backup_policy" "postgres_backup_policy" {
+  compartment_id = data.oci_identity_compartments.compute.compartments[0].id
+  display_name   = "${var.project_name}-postgres-hybrid-backup-policy"
+
+  # Daily backups retained for 2 days (maximum 2 active backups)
+  schedules {
+    backup_type       = "INCREMENTAL"
+    period            = "ONE_DAY"
+    retention_seconds = 172800 # 2 days
+  }
+
+  # Weekly backups retained for 7 days (maximum 1 active backup)
+  schedules {
+    backup_type       = "INCREMENTAL"
+    period            = "ONE_WEEK"
+    retention_seconds = 604800 # 7 days
+  }
+
+  # Monthly backups retained for 30 days (maximum 1 active backup)
+  schedules {
+    backup_type       = "INCREMENTAL"
+    period            = "ONE_MONTH"
+    retention_seconds = 2592000 # 30 days
+  }
+}
+
+# Attach the backup policy to the Postgres block volume
+resource "oci_core_volume_backup_policy_assignment" "postgres_backup_policy_assignment" {
+  asset_id  = oci_core_volume.postgres_data.id
+  policy_id = oci_core_volume_backup_policy.postgres_backup_policy.id
+}
+
