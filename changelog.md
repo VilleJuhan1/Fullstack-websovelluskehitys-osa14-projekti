@@ -35,3 +35,4 @@
 | 1.6.0 | 2026-05-30 | Admin for OAuth users in Grafana | After thorough review and a million iterations, finally found the proper attribute to apply admin role to new users created via OAuth authentication.  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
 | 1.7.0 | 2026-05-31 | Automated backups | Added a backup policy that takes backup every day, week and month with equal retaining length (2 for daily).  | clever-wolf-3dc55a6 | mighty-whale-3160171 |
 | 1.7.1 | 2026-06-01 | User streak score | If a user is logged in, the streak score data for main categories will be preserved and a special banner is shown when doing a new record (dev).  | swift-owl-2db417b | mighty-whale-3160171 |
+| 1.7.2 | 2026-06-01 | A bug fix | User streak score was reset whenever a new highest score was made  | swift-eagle-6eb25bd | mighty-whale-3160171 |
