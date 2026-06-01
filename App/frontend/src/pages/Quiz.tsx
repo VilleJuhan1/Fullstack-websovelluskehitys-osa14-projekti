@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client/react';
 import './Quiz.css';
@@ -54,6 +54,11 @@ export default function Quiz() {
 
   const [initialHighestStreak, setInitialHighestStreak] = useState<number>(0);
 
+  const highestStreakRef = useRef(highestStreak);
+  useEffect(() => {
+    highestStreakRef.current = highestStreak;
+  }, [highestStreak]);
+
   const isNewRecord = useMemo(() => {
     return (
       isLoggedIn && selectedCategory === 'all' && streak > initialHighestStreak
@@ -66,10 +71,10 @@ export default function Quiz() {
     Promise.resolve().then(() => {
       setStreak(0);
       setAttempts(0);
-      setInitialHighestStreak(highestStreak);
+      setInitialHighestStreak(highestStreakRef.current);
       console.log('Streak reset to 0 (new game started)');
     });
-  }, [category, selectedCategory, highestStreak]);
+  }, [category, selectedCategory]);
 
   // Extract unique categories from items
   const availableCategories = useMemo(() => {
