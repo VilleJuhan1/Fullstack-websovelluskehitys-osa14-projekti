@@ -55,3 +55,9 @@
 | May 30th | Monitoring features with Prometheus, Loki and Grafana. Lint workflow to validate all components on pull requests. | 10,5 |
 | May 31st | Hybrid backup strategy for the kube-worker block volume that contains pod persistent data | 1,5 |
 | **Total** |  | **81,5** |
+
+## June 2026
+| Date          | Log entry                                             | Hours spent   |
+| ------------- | ----------------------------------------------------- | ------------- |
+| June 1st | Implemented the first version of the user streak score handling | 2 |
+| **Total** | | **2** |

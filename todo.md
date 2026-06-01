@@ -11,23 +11,6 @@
 
 ## Planned
 
-### 06 - User streak score
-
-  - due: 2026-06-07
-  - tags: [frontend, backend, postgresql]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [ ] Review score schema and drop total tries etc. if still relevant
-      - [ ] Adjust migrations if needed
-      - [ ] Add a resolver that handles streak score queries and mutations. Ensure backend has the features also.
-      - [ ] Test and deploy on dev
-      - [ ] Publish as a minor release and deploy to prod
-    ```md
-    Implement the backend integration for streak score when user is logged in
-    ```
-
 ### 07 - Persistent volume for postgresql
 
   - due: 2026-06-07
@@ -46,6 +29,7 @@
 
 ### 12 - Frontend testing
 
+  - due: 2026-06-07
   - tags: [frontend, minor]
   - priority: high
   - workload: Hard
@@ -60,6 +44,7 @@
 
 ### 16 - Plan new features for frontpage
 
+  - due: 2026-06-07
   - tags: [frontpage, plan]
   - priority: low
   - workload: Easy
@@ -69,6 +54,23 @@
     ```
 
 ## In progress
+
+### 06 - User streak score
+
+  - due: 2026-06-07
+  - tags: [frontend, backend, postgresql]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Review score schema and drop total tries etc. if still relevant
+      - [ ] Adjust migrations if needed
+      - [ ] Add a resolver that handles streak score queries and mutations. Ensure backend has the features also.
+      - [ ] Test and deploy on dev
+      - [ ] Publish as a minor release and deploy to prod
+    ```md
+    Implement the backend integration for streak score when user is logged in
+    ```
 
 ## Done
 

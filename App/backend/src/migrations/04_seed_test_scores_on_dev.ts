@@ -5,9 +5,6 @@ import testScoresData from '../data/testScores.json';
 interface TestScore {
   userId: number;
   category: string;
-  totalRounds: number;
-  totalRight: number;
-  totalWrong: number;
   highestStreak: number;
 }
 

@@ -2,41 +2,26 @@
   {
     "userId": 1,
     "category": "countries",
-    "totalRounds": 50,
-    "totalRight": 45,
-    "totalWrong": 5,
     "highestStreak": 20
   },
   {
     "userId": 1,
     "category": "pokemon",
-    "totalRounds": 30,
-    "totalRight": 25,
-    "totalWrong": 5,
     "highestStreak": 15
   },
   {
     "userId": 2,
     "category": "countries",
-    "totalRounds": 10,
-    "totalRight": 5,
-    "totalWrong": 5,
     "highestStreak": 2
   },
   {
     "userId": 3,
     "category": "pokemon",
-    "totalRounds": 100,
-    "totalRight": 98,
-    "totalWrong": 2,
     "highestStreak": 50
   },
   {
     "userId": 4,
     "category": "countries",
-    "totalRounds": 0,
-    "totalRight": 0,
-    "totalWrong": 0,
     "highestStreak": 0
   }
 ]

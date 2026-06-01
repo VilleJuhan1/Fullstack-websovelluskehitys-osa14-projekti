@@ -1,59 +1,67 @@
+import './StreakScore.css';
+
 interface StreakScoreProps {
   streak: number;
   attempts?: number;
   feedbackState?: 'idle' | 'correct' | 'wrong';
+  highestStreak?: number;
+  isLoggedIn?: boolean;
+  isNewRecord?: boolean;
 }
 
 export default function StreakScore({
   streak,
   attempts = 0,
   feedbackState = 'idle',
+  highestStreak,
+  isLoggedIn = false,
+  isNewRecord = false,
 }: StreakScoreProps) {
-  let borderColor = 'rgba(255, 255, 255, 0.1)';
-  let boxShadow = 'none';
-  let transform = 'translateY(0)';
+  // Build container classes dynamically
+  const containerClasses = [
+    'streak-score-container',
+    isNewRecord ? 'streak-new-record' : '',
+    !isNewRecord && feedbackState === 'correct' ? 'feedback-correct' : '',
+    !isNewRecord && feedbackState === 'wrong' ? 'feedback-wrong' : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
 
-  if (feedbackState === 'correct') {
-    borderColor = 'var(--color-primary)';
-    boxShadow = '0 10px 25px -5px rgba(14, 165, 233, 0.4)';
-    transform = 'translateY(-4px)';
-  } else if (feedbackState === 'wrong') {
-    borderColor = 'var(--color-danger)';
-    boxShadow = '0 10px 25px -5px rgba(244, 63, 94, 0.4)';
-    transform = 'translateY(-4px)';
+  // Build title classes dynamically
+  const titleClasses = [
+    'streak-score-title',
+    isNewRecord ? 'streak-new-record' : '',
+    !isNewRecord && streak === 0 && attempts > 0 ? 'streak-wrong' : '',
+    !isNewRecord && !(streak === 0 && attempts > 0) ? 'text-gradient' : '',
+  ]
+    .filter(Boolean)
+    .join(' ');
+
+  // Determine main text depending on the situation
+  let mainText: string;
+  if (isNewRecord) {
+    mainText = `New longest streak! ${streak} 👑`;
+  } else if (streak === 0) {
+    mainText = attempts === 0 ? 'Make a guess!' : 'Try again!';
+  } else if (streak === 1) {
+    mainText = 'Two in a row starts a streak!';
+  } else {
+    mainText = `Streak: ${streak} 🔥`;
   }
 
   return (
-    <div
-      className="streak-score-container"
-      style={{
-        margin: 'var(--space-sm) 0 var(--space-md) 0',
-        textAlign: 'center',
-        padding: 'var(--space-sm)',
-        background: 'rgba(255, 255, 255, 0.05)',
-        borderRadius: 'var(--radius-md)',
-        border: `2px solid ${borderColor}`,
-        boxShadow,
-        transform,
-        transition: 'all var(--transition-bouncy)',
-      }}
-    >
-      <h3
-        className={streak === 0 && attempts > 0 ? '' : 'text-gradient'}
-        style={{
-          margin: 0,
-          color:
-            streak === 0 && attempts > 0 ? 'var(--color-danger)' : undefined,
-        }}
-      >
-        {streak === 0
-          ? attempts === 0
-            ? 'Make a guess!'
-            : 'Try again!'
-          : streak === 1
-            ? 'Two in a row starts a streak!'
-            : `Streak: ${streak} 🔥`}
-      </h3>
+    <div className={containerClasses}>
+      <h3 className={titleClasses}>{mainText}</h3>
+
+      {isLoggedIn && highestStreak !== undefined && (
+        <div
+          className={`streak-score-pb ${isNewRecord ? 'streak-new-record' : ''}`}
+        >
+          {isNewRecord
+            ? `Personal Best Smashed! (Previous: ${highestStreak})`
+            : `Personal Best: ${highestStreak} 🔥`}
+        </div>
+      )}
     </div>
   );
 }

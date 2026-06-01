@@ -23,21 +23,6 @@ export const up = async ({
       type: DataTypes.STRING,
       allowNull: false,
     },
-    totalRounds: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },
-    totalRight: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },
-    totalWrong: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      defaultValue: 0,
-    },
     highestStreak: {
       type: DataTypes.INTEGER,
       allowNull: false,
