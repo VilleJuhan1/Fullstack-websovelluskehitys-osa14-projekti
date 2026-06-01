@@ -17,7 +17,6 @@ export default function StreakScore({
   isLoggedIn = false,
   isNewRecord = false,
 }: StreakScoreProps) {
-
   // Build container classes dynamically
   const containerClasses = [
     'streak-score-container',
@@ -38,8 +37,8 @@ export default function StreakScore({
     .filter(Boolean)
     .join(' ');
 
-  // Determine main text
-  let mainText = '';
+  // Determine main text depending on the situation
+  let mainText: string;
   if (isNewRecord) {
     mainText = `New longest streak! ${streak} 👑`;
   } else if (streak === 0) {

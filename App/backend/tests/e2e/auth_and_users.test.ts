@@ -59,7 +59,7 @@ describe('Auth and User API E2E', () => {
     expect(json.data.allUsers.length).toBeGreaterThan(0);
     expect(
       json.data.allUsers.find(
-         (u: GraphQLUser) => u.username === 'test_admin_user'
+        (u: GraphQLUser) => u.username === 'test_admin_user'
       )
     ).toBeDefined();
   });
