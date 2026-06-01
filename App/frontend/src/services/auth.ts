@@ -25,6 +25,11 @@ export const ME = gql`
       email
       isAdmin
       isPremiumUser
+      scores {
+        id
+        category
+        highestStreak
+      }
     }
   }
 `;
@@ -42,6 +47,12 @@ export interface CreateUserData {
   };
 }
 
+export interface ScoreItem {
+  id: number;
+  category: string;
+  highestStreak: number;
+}
+
 export interface GetMeData {
   me?: {
     id: number;
@@ -49,5 +60,6 @@ export interface GetMeData {
     email?: string;
     isAdmin?: boolean;
     isPremiumUser?: boolean;
+    scores?: ScoreItem[];
   } | null;
 }

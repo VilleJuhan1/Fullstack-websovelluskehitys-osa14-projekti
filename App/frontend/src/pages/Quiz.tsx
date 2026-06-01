@@ -1,11 +1,15 @@
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useQuery, useMutation } from '@apollo/client/react';
 import './Quiz.css';
 import { useGameContext } from '../hooks/useGame';
 import type { GameDataType, GameItem } from '../services/gameData';
 import QuizGrid from '../components/quiz/QuizGrid';
 import { CategorySelector } from '../components/quiz/CategorySelector';
 import StreakScore from '../components/quiz/StreakScore';
+import { ME } from '../services/auth';
+import type { GetMeData, ScoreItem } from '../services/auth';
+import { UPDATE_STREAK_SCORE } from '../services/score';
 
 // Generic quiz component for rendering the quiz page and handling the quiz logic
 export default function Quiz() {
@@ -17,6 +21,21 @@ export default function Quiz() {
   const { getItems, loading, error } = useGameContext();
   const items = getItems(type);
 
+  const { data: meData } = useQuery<GetMeData>(ME, {
+    fetchPolicy: 'cache-and-network',
+  });
+  const [updateStreakScore] = useMutation(UPDATE_STREAK_SCORE);
+
+  const isLoggedIn = !!meData?.me;
+  const userScores = meData?.me?.scores || [];
+
+  // Find the highest streak in the DB for the current category
+  const highestStreak = useMemo(() => {
+    if (!isLoggedIn || !category) return 0;
+    const match = userScores.find((s: ScoreItem) => s.category === category.toLowerCase());
+    return match ? match.highestStreak : 0;
+  }, [isLoggedIn, userScores, category]);
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [options, setOptions] = useState<GameItem[]>([]);
   const [targetItem, setTargetItem] = useState<GameItem | null>(null);
@@ -25,6 +44,23 @@ export default function Quiz() {
   const [feedbackState, setFeedbackState] = useState<
     'idle' | 'correct' | 'wrong'
   >('idle');
+
+  const [initialHighestStreak, setInitialHighestStreak] = useState<number>(0);
+
+  // Synchronize initial highest streak at the start of a session or after resetting streak
+  useEffect(() => {
+    if (streak === 0) {
+      setInitialHighestStreak(highestStreak);
+    }
+  }, [highestStreak, streak, category, selectedCategory]);
+
+  const isNewRecord = useMemo(() => {
+    return (
+      isLoggedIn &&
+      selectedCategory === 'all' &&
+      streak > initialHighestStreak
+    );
+  }, [isLoggedIn, selectedCategory, streak, initialHighestStreak]);
 
   // Reset streak when a new game is started (category changes)
   useEffect(() => {
@@ -88,6 +124,53 @@ export default function Quiz() {
       setStreak((prev) => {
         const newStreak = prev + 1;
         console.log(`Current streak: ${newStreak}`);
+
+        // Update DB if user is logged in, selectedCategory is 'all', and newStreak > highestStreak
+        if (
+          isLoggedIn &&
+          selectedCategory === 'all' &&
+          newStreak > highestStreak
+        ) {
+          updateStreakScore({
+            variables: {
+              category: category?.toLowerCase() || '',
+              streak: newStreak,
+            },
+            // Optimistically update Apollo cache
+            update: (cache: any, { data }: any) => {
+              if (data?.updateStreakScore) {
+                const updatedScore = data.updateStreakScore;
+                const meQueryResult = cache.readQuery({
+                  query: ME,
+                }) as any;
+                if (meQueryResult?.me) {
+                  const currentScores = meQueryResult.me.scores || [];
+                  const hasCategory = currentScores.some(
+                    (s: any) => s.category === updatedScore.category
+                  );
+                  const updatedScores = hasCategory
+                    ? currentScores.map((s: any) =>
+                        s.category === updatedScore.category ? updatedScore : s
+                      )
+                    : [...currentScores, updatedScore];
+
+                  cache.writeQuery({
+                    query: ME,
+                    data: {
+                      me: {
+                        ...meQueryResult.me,
+                        scores: updatedScores,
+                      },
+                    },
+                  });
+                }
+              }
+            },
+          }).catch((err: any) =>
+            console.error('Failed to update streak score:', err)
+          );
+        }
+
         return newStreak;
       });
       setTimeout(generateQuestion, 1000); // Generate new question after 1 second
@@ -143,6 +226,9 @@ export default function Quiz() {
           streak={streak}
           attempts={attempts}
           feedbackState={feedbackState}
+          highestStreak={selectedCategory === 'all' ? highestStreak : undefined}
+          isLoggedIn={isLoggedIn}
+          isNewRecord={isNewRecord}
         />
 
         <CategorySelector
