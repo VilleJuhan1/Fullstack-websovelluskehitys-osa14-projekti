@@ -23,9 +23,6 @@ export const typeDefs = `#graphql
   type Score {
     id: Int!
     category: String!
-    totalRounds: Int!
-    totalRight: Int!
-    totalWrong: Int!
     highestStreak: Int!
   }
 
@@ -43,6 +40,7 @@ export const typeDefs = `#graphql
   type Mutation {
     login(username: String!, password: String!): Token
     createUser(username: String!, password: String!, email: String!): User
+    updateStreakScore(category: String!, streak: Int!): Score!
   }
 
   type Token {

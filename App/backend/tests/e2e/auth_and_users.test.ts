@@ -9,7 +9,6 @@ interface GraphQLUser {
 
 interface GraphQLScore {
   category: string;
-  totalRight: number;
   highestStreak: number;
 }
 
@@ -60,7 +59,7 @@ describe('Auth and User API E2E', () => {
     expect(json.data.allUsers.length).toBeGreaterThan(0);
     expect(
       json.data.allUsers.find(
-        (u: GraphQLUser) => u.username === 'test_admin_user'
+         (u: GraphQLUser) => u.username === 'test_admin_user'
       )
     ).toBeDefined();
   });
@@ -77,7 +76,6 @@ describe('Auth and User API E2E', () => {
               email
               scores {
                 category
-                totalRight
                 highestStreak
               }
             }
@@ -104,7 +102,6 @@ describe('Auth and User API E2E', () => {
           query GetTopScores($category: String) {
             topScores(category: $category, limit: 5) {
               category
-              totalRight
               highestStreak
             }
           }
