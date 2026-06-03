@@ -69,13 +69,19 @@ jobs:
             TAGS="$TAGS -t ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:latest"
           fi
 
-          # Build and push production image for ARM64 (OCI Ampere)
+          # Build the static files natively on the runner (extremely fast and avoids build-stage layers)
+          VITE_APP_VERSION="${{ steps.generate-tag.outputs.tag }}" \
+          VITE_APP_ENV="${{ github.event.inputs.target_env }}" \
+          VITE_GITHUB_URL="${{ secrets.VITE_GITHUB_URL }}" \
+          VITE_LINKEDIN_URL="${{ secrets.VITE_LINKEDIN_URL }}" \
+          npm run build
+
+          # Build and push production image for ARM64 (OCI Ampere) with full security attestations
           docker buildx build \
+            -f Dockerfile.prod \
             --platform linux/arm64 \
-            --build-arg VITE_APP_VERSION=${{ steps.generate-tag.outputs.tag }} \
-            --build-arg VITE_APP_ENV="${{ github.event.inputs.target_env }}" \
-            --build-arg VITE_GITHUB_URL="${{ secrets.VITE_GITHUB_URL }}" \
-            --build-arg VITE_LINKEDIN_URL="${{ secrets.VITE_LINKEDIN_URL }}" \
+            --provenance=true \
+            --sbom=true \
             --push $TAGS .
 
       - name: Update Kustomize Manifests

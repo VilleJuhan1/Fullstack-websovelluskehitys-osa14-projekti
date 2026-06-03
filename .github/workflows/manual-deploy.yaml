@@ -72,8 +72,12 @@ jobs:
             TAGS="$TAGS -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest"
           fi
           
-          # Build and push image for ARM64 (OCI Ampere)
-          docker buildx build --platform linux/arm64 --push $TAGS .
+          # Build and push image for ARM64 (OCI Ampere) with full security attestations
+          docker buildx build \
+            --platform linux/arm64 \
+            --provenance=true \
+            --sbom=true \
+            --push $TAGS .
 
       - name: Build and Push Frontend
         run: |
@@ -91,13 +95,19 @@ jobs:
             TAGS="$TAGS -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest"
           fi
 
-          # Build and push production image for ARM64 (OCI Ampere)
+          # Build the static files natively on the runner (extremely fast and avoids build-stage layers)
+          VITE_APP_VERSION="${{ steps.generate-tag.outputs.tag }}" \
+          VITE_API_URL="$API_URL" \
+          VITE_SHOW_DEV_BAR="$SHOW_DEV_BAR" \
+          VITE_APP_ENV="$APP_ENV" \
+          npm run build
+
+          # Build and push production image for ARM64 (OCI Ampere) with full security attestations
           docker buildx build \
+            -f Dockerfile.prod \
             --platform linux/arm64 \
-            --build-arg VITE_APP_VERSION=${{ steps.generate-tag.outputs.tag }} \
-            --build-arg VITE_API_URL="$API_URL" \
-            --build-arg VITE_SHOW_DEV_BAR="$SHOW_DEV_BAR" \
-            --build-arg VITE_APP_ENV="$APP_ENV" \
+            --provenance=true \
+            --sbom=true \
             --push $TAGS .
 
       - name: Update Kustomize Manifests
