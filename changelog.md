@@ -37,3 +37,4 @@
 | 1.7.1 | 2026-06-01 | User streak score | If a user is logged in, the streak score data for main categories will be preserved and a special banner is shown when doing a new record (dev).  | swift-owl-2db417b | mighty-whale-3160171 |
 | 1.7.2 | 2026-06-01 | A bug fix | User streak score was reset whenever a new highest score was made  | swift-eagle-6eb25bd | mighty-whale-3160171 |
 | 1.8.0 | 2026-06-03 | User streak score | After review, deploy user streak score also to production  | swift-eagle-6eb25bd | happy-wolf-afc5688 |
+| 1.9.0 | 2026-06-03 | Frontend testing toolkit | Some initial tests for frontend testing  | swift-eagle-6eb25bd | happy-wolf-afc5688 |
