@@ -1,3 +1,4 @@
+// Generated with Google Gemini 3.5 Flash
 import { test, expect } from '@playwright/test';
 
 test.describe('Quiz Platform E2E Tests', () => {

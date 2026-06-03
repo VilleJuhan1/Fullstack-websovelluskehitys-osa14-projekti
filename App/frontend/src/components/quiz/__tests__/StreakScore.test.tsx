@@ -1,3 +1,4 @@
+// Generated with Google Gemini 3.5 Flash
 import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import StreakScore from '../StreakScore';
