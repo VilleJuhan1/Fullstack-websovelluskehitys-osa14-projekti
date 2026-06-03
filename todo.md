@@ -27,21 +27,6 @@
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
 
-### 12 - Frontend testing
-
-  - due: 2026-06-07
-  - tags: [frontend, minor]
-  - priority: high
-  - workload: Hard
-  - defaultExpanded: false
-  - steps:
-      - [ ] Socials bar
-      - [ ] Settings bar
-      - [ ] Quiz selection screen
-    ```md
-    Create an automated testing framework for the frontend
-    ```
-
 ### 16 - Plan new features for frontpage
 
   - due: 2026-06-07
@@ -56,6 +41,22 @@
 ## In progress
 
 ## Done
+
+### 12 - Frontend testing
+
+  - due: 2026-06-07
+  - tags: [frontend, minor]
+  - priority: high
+  - workload: Hard
+  - defaultExpanded: false
+  - steps:
+      - [x] Socials bar
+      - [x] Settings bar
+      - [x] Quiz selection screen
+    ```md
+    Create an automated testing framework for the frontend
+    ```
+
 
 ### 06 - User streak score
 
