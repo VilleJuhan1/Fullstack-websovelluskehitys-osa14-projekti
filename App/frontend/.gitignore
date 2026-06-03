@@ -24,3 +24,8 @@ dist-ssr
 *.sw?
 
 src/index_original.css
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/

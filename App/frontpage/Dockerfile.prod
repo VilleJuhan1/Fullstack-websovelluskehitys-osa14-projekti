@@ -1,3 +1,4 @@
+# This Dockerfile is used with the CI/CD where the build is done on the github runner so no additional builder is required
 # Serve the static files with Nginx
 FROM nginx:alpine
 
