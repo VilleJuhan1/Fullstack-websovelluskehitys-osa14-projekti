@@ -59,5 +59,5 @@
 ## June 2026
 | Date          | Log entry                                             | Hours spent   |
 | ------------- | ----------------------------------------------------- | ------------- |
-| June 1st | Implemented the first version of the user streak score handling | 2 |
-| **Total** | | **2** |
+| June 1st | Implemented the first version of the user streak score handling | 2,5 |
+| **Total** | | **2,5** |

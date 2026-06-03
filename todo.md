@@ -55,6 +55,8 @@
 
 ## In progress
 
+## Done
+
 ### 06 - User streak score
 
   - due: 2026-06-07
@@ -63,16 +65,14 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Review score schema and drop total tries etc. if still relevant
-      - [ ] Adjust migrations if needed
-      - [ ] Add a resolver that handles streak score queries and mutations. Ensure backend has the features also.
-      - [ ] Test and deploy on dev
-      - [ ] Publish as a minor release and deploy to prod
+      - [x] Review score schema and drop total tries etc. if still relevant
+      - [x] Adjust migrations if needed
+      - [x] Add a resolver that handles streak score queries and mutations. Ensure backend has the features also.
+      - [x] Test and deploy on dev
+      - [x] Publish as a minor release and deploy to prod
     ```md
     Implement the backend integration for streak score when user is logged in
     ```
-
-## Done
 
 ### 13 - Automated backups
 
