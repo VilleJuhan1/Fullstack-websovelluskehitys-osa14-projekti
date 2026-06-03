@@ -58,31 +58,25 @@ jobs:
           cache: 'npm'
           cache-dependency-path: App/frontpage/package-lock.json
 
-      - name: Build and Lint Frontpage
+      - name: Build and Push Frontpage
         run: |
           cd App/frontpage
           npm ci
           npm run lint
           
-          # Build production image for ARM64 (OCI Ampere)
-          docker build \
+          TAGS="-t ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }}"
+          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
+            TAGS="$TAGS -t ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:latest"
+          fi
+
+          # Build and push production image for ARM64 (OCI Ampere)
+          docker buildx build \
             --platform linux/arm64 \
             --build-arg VITE_APP_VERSION=${{ steps.generate-tag.outputs.tag }} \
             --build-arg VITE_APP_ENV="${{ github.event.inputs.target_env }}" \
             --build-arg VITE_GITHUB_URL="${{ secrets.VITE_GITHUB_URL }}" \
             --build-arg VITE_LINKEDIN_URL="${{ secrets.VITE_LINKEDIN_URL }}" \
-            -t ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }} .
-
-      - name: Push Image
-        run: |
-          # Push specific version tag
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }}
-          
-          # Update 'latest' if dev
-          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
-            docker tag ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:latest
-            docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:latest
-          fi
+            --push $TAGS .
 
       - name: Update Kustomize Manifests
         run: |

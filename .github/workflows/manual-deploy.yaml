@@ -61,15 +61,21 @@ jobs:
             App/backend/package-lock.json
             App/frontend/package-lock.json
 
-      - name: Build and Test Backend
+      - name: Build and Push Backend
         run: |
           cd App/backend
           npm ci
           npm run lint
-          # Build image for ARM64 (OCI Ampere)
-          docker build --platform linux/arm64 -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }} .
+          
+          TAGS="-t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}"
+          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
+            TAGS="$TAGS -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest"
+          fi
+          
+          # Build and push image for ARM64 (OCI Ampere)
+          docker buildx build --platform linux/arm64 --push $TAGS .
 
-      - name: Build and Test Frontend
+      - name: Build and Push Frontend
         run: |
           cd App/frontend
           npm ci
@@ -80,28 +86,19 @@ jobs:
           SHOW_DEV_BAR="true"
           APP_ENV="${{ github.event.inputs.target_env }}"
 
-          # Build production image for ARM64 (OCI Ampere)
-          docker build \
+          TAGS="-t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}"
+          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
+            TAGS="$TAGS -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest"
+          fi
+
+          # Build and push production image for ARM64 (OCI Ampere)
+          docker buildx build \
             --platform linux/arm64 \
             --build-arg VITE_APP_VERSION=${{ steps.generate-tag.outputs.tag }} \
             --build-arg VITE_API_URL="$API_URL" \
             --build-arg VITE_SHOW_DEV_BAR="$SHOW_DEV_BAR" \
             --build-arg VITE_APP_ENV="$APP_ENV" \
-            -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }} .
-
-      - name: Push Images
-        run: |
-          # Push specific version tags
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}
-          
-          # ONLY update 'latest' if we are building for dev
-          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
-            docker tag ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
-            docker tag ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }} ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
-            docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:latest
-            docker push ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest
-          fi
+            --push $TAGS .
 
       - name: Update Kustomize Manifests
         run: |
