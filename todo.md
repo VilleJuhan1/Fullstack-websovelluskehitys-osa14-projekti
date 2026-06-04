@@ -9,6 +9,17 @@
   - workload: Normal
   - defaultExpanded: false
 
+### More tests for frontend testing
+
+  - due: 2026-06-14
+  - tags: [frontend, patch]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+    ```md
+    Need more coverage for frontend tests
+    ```
+
 ## Planned
 
 ### 07 - Persistent volume for postgresql
@@ -56,7 +67,6 @@
     ```md
     Create an automated testing framework for the frontend
     ```
-
 
 ### 06 - User streak score
 

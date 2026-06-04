@@ -60,5 +60,6 @@
 | Date          | Log entry                                             | Hours spent   |
 | ------------- | ----------------------------------------------------- | ------------- |
 | June 1st | Implemented the first version of the user streak score handling | 2,5 |
-| June 2nd | Deployed version with user streak scores to prod and added an initial frontend testing toolkit | 2|
-| **Total** | | **4,5** |
+| June 3rd | Deployed version with user streak scores to prod and added an initial frontend testing toolkit | 2 |
+| June 4th | Log review, system administration etc.              | 2 |
+| **Total** | | **6,5** |
