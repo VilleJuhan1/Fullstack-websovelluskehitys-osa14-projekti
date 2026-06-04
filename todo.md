@@ -9,6 +9,8 @@
   - workload: Normal
   - defaultExpanded: false
 
+## Planned
+
 ### More tests for frontend testing
 
   - due: 2026-06-14
@@ -16,11 +18,13 @@
   - priority: medium
   - workload: Normal
   - defaultExpanded: false
+  - steps:
+      - [ ] Review vitest coverage
+      - [ ] Review Playwright e2e test coverage
+      - [ ] Add tests that cover majority of the frontend functionalities
     ```md
     Need more coverage for frontend tests
     ```
-
-## Planned
 
 ### 07 - Persistent volume for postgresql
 
