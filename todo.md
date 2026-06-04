@@ -11,6 +11,21 @@
 
 ## Planned
 
+### More tests for frontend testing
+
+  - due: 2026-06-14
+  - tags: [frontend, patch]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Review vitest coverage
+      - [ ] Review Playwright e2e test coverage
+      - [ ] Add tests that cover majority of the frontend functionalities
+    ```md
+    Need more coverage for frontend tests
+    ```
+
 ### 07 - Persistent volume for postgresql
 
   - due: 2026-06-07
@@ -56,7 +71,6 @@
     ```md
     Create an automated testing framework for the frontend
     ```
-
 
 ### 06 - User streak score
 
