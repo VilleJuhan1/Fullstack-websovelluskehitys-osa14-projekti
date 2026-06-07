@@ -39,3 +39,4 @@
 | 1.8.0 | 2026-06-03 | User streak score | After review, deploy user streak score also to production  | swift-eagle-6eb25bd | happy-wolf-afc5688 |
 | 1.9.0 | 2026-06-03 | Frontend testing toolkit | Some initial tests for frontend testing  | swift-eagle-6eb25bd | happy-wolf-afc5688 |
 | 1.9.1 | 2026-06-04 | Planning | Just some planning and log reviews via nodes and Grafana  | swift-eagle-6eb25bd | happy-wolf-afc5688 |
+| 1.9.2 | 2026-06-07 | More tests | Added more frontend tests using vitest and vitest coverage. Removed DevBar from production builds.  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
