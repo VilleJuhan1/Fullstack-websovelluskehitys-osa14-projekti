@@ -27,17 +27,6 @@
 
 ## Planned
 
-### 16 - Plan new features for frontpage
-
-  - due: 2026-06-07
-  - tags: [frontpage, plan]
-  - priority: low
-  - workload: Easy
-  - defaultExpanded: false
-    ```md
-    Cloud LZ (domain root) could use some additional functionalities: Grafana link, blogs, CV, links. Plan the features and actions required to implement them.
-    ```
-
 ### 18 - Backend test coverage
 
   - due: 2026-06-14
@@ -55,6 +44,19 @@
 
 ## In progress
 
+### 16 - Plan new features for frontpage
+
+  - due: 2026-06-07
+  - tags: [frontpage, plan]
+  - priority: low
+  - workload: Easy
+  - defaultExpanded: false
+    ```md
+    Cloud LZ (domain root) could use some additional functionalities: Grafana link, blogs, CV, links. Plan the features and actions required to implement them.
+    ```
+
+## Done
+
 ### 07 - Persistent volume for postgresql
 
   - due: 2026-06-07
@@ -70,8 +72,6 @@
     ```md
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
-
-## Done
 
 ### 17 - More tests for frontend testing
 
