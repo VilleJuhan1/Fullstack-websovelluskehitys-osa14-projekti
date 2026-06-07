@@ -40,6 +40,7 @@ export default function SettingsBar() {
 
   const handleLogout = async () => {
     localStorage.removeItem('quiz-user-token');
+    localStorage.removeItem('quiz-user-token-expires');
     await apolloClient.clearStore();
     refetch();
     setIsOpen(false);

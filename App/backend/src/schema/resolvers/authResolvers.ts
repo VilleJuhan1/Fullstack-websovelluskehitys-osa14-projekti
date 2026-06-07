@@ -8,7 +8,7 @@ export const authResolvers = {
     login: async (
       _: unknown,
       { username, password }: { username: string; password: string }
-    ): Promise<{ value: string }> => {
+    ): Promise<{ value: string; expiresAt: number }> => {
       const trimmedUsername = username ? username.trim() : '';
       const user = await User.findOne({ where: { username: trimmedUsername } });
 
@@ -40,8 +40,10 @@ export const authResolvers = {
         throw new Error('JWT_SECRET is missing from environment');
       }
 
+      const expiresInSec = 24 * 60 * 60; // 24 hours
       return {
-        value: jwt.sign(userForToken, jwtSecret),
+        value: jwt.sign(userForToken, jwtSecret, { expiresIn: expiresInSec }),
+        expiresAt: Date.now() + expiresInSec * 1000,
       };
     },
 

@@ -18,6 +18,10 @@ export default function Login() {
     onCompleted: (data: LoginData) => {
       if (data?.login?.value) {
         localStorage.setItem('quiz-user-token', data.login.value);
+        localStorage.setItem(
+          'quiz-user-token-expires',
+          data.login.expiresAt.toString()
+        );
         // Dispatch custom event to notify SettingsBar and other components of auth status change
         window.dispatchEvent(new Event('auth-change'));
         navigate('/');

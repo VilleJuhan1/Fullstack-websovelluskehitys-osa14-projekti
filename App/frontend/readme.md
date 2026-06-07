@@ -16,16 +16,16 @@ A simple showcase of a stateful web app.
 
 ## Tech stack
 
-| Category | Technologies |
-| --- | --- |
-| Build tool | Vite |
-| Framework | React |
-| Language | TypeScript |
-| Router | React Router |
-| State management | React hooks, Context API |
-| GraphQL client | Apollo Client |
-| Testing | Vitest, @testing-library, Playwright |
-| Styling | CSS, Glassmorphism |
+| Category         | Technologies                         |
+| ---------------- | ------------------------------------ |
+| Build tool       | Vite                                 |
+| Framework        | React                                |
+| Language         | TypeScript                           |
+| Router           | React Router                         |
+| State management | React hooks, Context API             |
+| GraphQL client   | Apollo Client                        |
+| Testing          | Vitest, @testing-library, Playwright |
+| Styling          | CSS, Glassmorphism                   |
 
 ## Installation
 
@@ -37,16 +37,16 @@ npm install
 
 ## Commands
 
-| Command | Description |
-| --- | --- |
-| npm run dev | Start development server |
-| npm run build | Build for production |
-| npm run preview | Preview production build |
-| npm run lint | Lint the code using eslint |
-| npm run format | Format the code using prettier |
-| npm run test | Run unit tests using vitest and @testing-library |
+| Command               | Description                                                    |
+| --------------------- | -------------------------------------------------------------- |
+| npm run dev           | Start development server                                       |
+| npm run build         | Build for production                                           |
+| npm run preview       | Preview production build                                       |
+| npm run lint          | Lint the code using eslint                                     |
+| npm run format        | Format the code using prettier                                 |
+| npm run test          | Run unit tests using vitest and @testing-library               |
 | npm run test:coverage | Run unit tests with coverage using vitest and @testing-library |
-| npm run test:e2e | Run end-to-end tests using playwright |
+| npm run test:e2e      | Run end-to-end tests using playwright                          |
 
 ## Environment variables
 

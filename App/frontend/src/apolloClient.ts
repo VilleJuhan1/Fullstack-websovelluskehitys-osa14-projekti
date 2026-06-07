@@ -7,9 +7,18 @@ const graphqlUri = import.meta.env.VITE_API_URL || '/graphql';
 
 const httpLink = new HttpLink({ uri: graphqlUri });
 
-// Add token to headers
+// Add token to headers and enforce expiration
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('quiz-user-token');
+  let token = localStorage.getItem('quiz-user-token');
+  const expiresAt = localStorage.getItem('quiz-user-token-expires');
+
+  if (token && expiresAt && Date.now() > Number(expiresAt)) {
+    localStorage.removeItem('quiz-user-token');
+    localStorage.removeItem('quiz-user-token-expires');
+    window.dispatchEvent(new Event('auth-change'));
+    token = null;
+  }
+
   return {
     headers: {
       ...headers,

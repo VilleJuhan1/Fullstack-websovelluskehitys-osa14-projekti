@@ -4,6 +4,7 @@ export const LOGIN = gql`
   mutation Login($username: String!, $password: String!) {
     login(username: $username, password: $password) {
       value
+      expiresAt
     }
   }
 `;
@@ -37,6 +38,7 @@ export const ME = gql`
 export interface LoginData {
   login: {
     value: string;
+    expiresAt: number;
   };
 }
 

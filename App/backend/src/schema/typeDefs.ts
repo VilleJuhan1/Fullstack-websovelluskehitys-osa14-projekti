@@ -45,6 +45,7 @@ export const typeDefs = `#graphql
 
   type Token {
     value: String!
+    expiresAt: Float!
   }
 
   type PokemonType {

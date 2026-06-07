@@ -190,6 +190,10 @@ describe('SettingsBar Component', () => {
     const logoutBtn = screen.getByText('Sign Out');
     await user.click(logoutBtn);
 
+    expect(localStorage.removeItem).toHaveBeenCalledWith('quiz-user-token');
+    expect(localStorage.removeItem).toHaveBeenCalledWith(
+      'quiz-user-token-expires'
+    );
     expect(mockClearStore).toHaveBeenCalled();
     expect(mockRefetch).toHaveBeenCalled();
     expect(screen.queryByText('Sign Out')).not.toBeInTheDocument();
