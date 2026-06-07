@@ -63,9 +63,9 @@
   - workload: Hard
   - defaultExpanded: false
   - steps:
-      - [ ] Create the manifest for Persistent Volume
-      - [ ] Create the manifest for Persisten Volume Claim
-      - [ ] Add the mount point to the production Kustomize file
+      - [x] Create the manifest for Persistent Volume
+      - [x] Create the manifest for Persisten Volume Claim
+      - [x] Add the mount point to the production Kustomize file
       - [x] Add a backup policy for the Volume Group
     ```md
     Implement persistent volume for production database using the block volume attached to the worker node.
