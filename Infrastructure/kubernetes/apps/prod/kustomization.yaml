@@ -5,6 +5,8 @@ kind: Kustomization
 resources:
 - ../../base
 - hpa.yaml
+- postgres-pv.yaml
+- postgres-pvc.yaml
 
 namespace: prod
 
@@ -71,6 +73,11 @@ patches:
                 requests:
                   cpu: 250m
                   memory: 512Mi
+          volumes:
+            - name: postgres-storage
+              persistentVolumeClaim:
+                claimName: postgres-pvc
+              emptyDir: null
 - patch: |
     apiVersion: apps/v1
     kind: Deployment
