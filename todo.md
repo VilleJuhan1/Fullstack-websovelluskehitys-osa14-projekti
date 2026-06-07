@@ -17,6 +17,14 @@
     Add language support for finnish / swedish
     ```
 
+### More categories
+
+  - tags: [backend, postgresql]
+  - defaultExpanded: false
+    ```md
+    Find 1-2 more APIs for new categories for quizzes
+    ```
+
 ## Planned
 
 ### 07 - Persistent volume for postgresql
@@ -63,6 +71,8 @@
 
 ## In progress
 
+## Done
+
 ### 17 - More tests for frontend testing
 
   - due: 2026-06-14
@@ -71,14 +81,12 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Review vitest coverage
-      - [ ] Review Playwright e2e test coverage
-      - [ ] Add tests that cover majority of the frontend functionalities
+      - [x] Review vitest coverage
+      - [x] Review Playwright e2e test coverage
+      - [x] Add tests that cover majority of the frontend functionalities
     ```md
     Need more coverage for frontend tests
     ```
-
-## Done
 
 ### 12 - Frontend testing
 
