@@ -1,12 +1,12 @@
 import React from 'react';
 import './BottomBar.css';
 
-const LINKEDIN_URL =
-  import.meta.env.VITE_LINKEDIN_URL || 'https://linkedin.com';
-const GITHUB_URL = import.meta.env.VITE_GITHUB_URL || 'https://github.com';
-
 // Social media links that are rendered in the bottom right corner as a floating bar
 const BottomBar: React.FC = () => {
+  const LINKEDIN_URL =
+    import.meta.env.VITE_LINKEDIN_URL || 'https://linkedin.com';
+  const GITHUB_URL = import.meta.env.VITE_GITHUB_URL || 'https://github.com';
+
   return (
     <footer className="bottom-bar glass-panel">
       <a

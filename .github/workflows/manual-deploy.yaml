@@ -87,8 +87,12 @@ jobs:
           
           # Use production/dev secrets for API URL
           API_URL="/graphql" # Proxied via Frontend Nginx
-          SHOW_DEV_BAR="true"
           APP_ENV="${{ github.event.inputs.target_env }}"
+          if [ "$APP_ENV" == "prod" ]; then
+            SHOW_DEV_BAR="false"
+          else
+            SHOW_DEV_BAR="true"
+          fi
 
           TAGS="-t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}"
           if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
