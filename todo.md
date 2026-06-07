@@ -2,13 +2,6 @@
 
 ## Backlog
 
-### Argo CD for automated deployment
-
-  - tags: [kubernetes, minor]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-
 ### Language support
 
   - tags: [frontend]
@@ -27,17 +20,6 @@
 
 ## Planned
 
-### 16 - Plan new features for frontpage
-
-  - due: 2026-06-07
-  - tags: [frontpage, plan]
-  - priority: low
-  - workload: Easy
-  - defaultExpanded: false
-    ```md
-    Cloud LZ (domain root) could use some additional functionalities: Grafana link, blogs, CV, links. Plan the features and actions required to implement them.
-    ```
-
 ### 18 - Backend test coverage
 
   - due: 2026-06-14
@@ -53,7 +35,43 @@
     Ensure that backend tests cover main functionalities
     ```
 
+### 19 - Argo CD for automated deployment
+
+  - due: 2026-06-14
+  - tags: [kubernetes, minor]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+
+### 20 - Frontpage Hub Features
+
+  - due: 2026-06-14
+  - tags: [frontpage]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Argo CD and Grafana links
+      - [ ] About
+      - [ ] Link to Quiz game
+    ```md
+    The cloud hub should include links to Argo and Grafana (both using 2fa secure authentication), production version of the quiz game and a short introductory ingress.
+    ```
+
 ## In progress
+
+## Done
+
+### 16 - Plan new features for frontpage
+
+  - due: 2026-06-07
+  - tags: [frontpage, plan]
+  - priority: low
+  - workload: Easy
+  - defaultExpanded: false
+    ```md
+    Cloud LZ (domain root) could use some additional functionalities: Grafana link, blogs, CV, links. Plan the features and actions required to implement them.
+    ```
 
 ### 07 - Persistent volume for postgresql
 
@@ -70,8 +88,6 @@
     ```md
     Implement persistent volume for production database using the block volume attached to the worker node.
     ```
-
-## Done
 
 ### 17 - More tests for frontend testing
 
