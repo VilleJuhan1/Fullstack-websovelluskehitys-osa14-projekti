@@ -11,21 +11,6 @@
 
 ## Planned
 
-### 17 - More tests for frontend testing
-
-  - due: 2026-06-14
-  - tags: [frontend, patch]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [x] Review vitest coverage
-      - [ ] Review Playwright e2e test coverage
-      - [ ] Add tests that cover majority of the frontend functionalities
-    ```md
-    Need more coverage for frontend tests
-    ```
-
 ### 07 - Persistent volume for postgresql
 
   - due: 2026-06-07
@@ -53,7 +38,37 @@
     Cloud LZ (domain root) could use some additional functionalities: Grafana link, blogs, CV, links. Plan the features and actions required to implement them.
     ```
 
+### 18 - Backend test coverage
+
+  - due: 2026-06-14
+  - tags: [backend, tests]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Figure out the test coverage toolkit
+      - [ ] Add more tests while checking coverage
+      - [ ] 80 % backend test coverage
+    ```md
+    Ensure that backend tests cover main functionalities
+    ```
+
 ## In progress
+
+### 17 - More tests for frontend testing
+
+  - due: 2026-06-14
+  - tags: [frontend, patch]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Review vitest coverage
+      - [ ] Review Playwright e2e test coverage
+      - [ ] Add tests that cover majority of the frontend functionalities
+    ```md
+    Need more coverage for frontend tests
+    ```
 
 ## Done
 
