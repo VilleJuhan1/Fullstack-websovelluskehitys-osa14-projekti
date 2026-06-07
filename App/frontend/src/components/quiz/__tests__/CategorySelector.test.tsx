@@ -16,7 +16,7 @@ describe('CategorySelector Component', () => {
     );
 
     expect(screen.getByText('Category')).toBeInTheDocument();
-    
+
     // Check if options exist and are capitalized
     expect(screen.getByRole('option', { name: 'All' })).toBeInTheDocument();
     expect(screen.getByRole('option', { name: 'Europe' })).toBeInTheDocument();
