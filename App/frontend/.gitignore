@@ -29,3 +29,6 @@ src/index_original.css
 playwright-report/
 test-results/
 blob-report/
+
+# Vitest
+coverage/

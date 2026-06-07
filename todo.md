@@ -11,7 +11,7 @@
 
 ## Planned
 
-### More tests for frontend testing
+### 17 - More tests for frontend testing
 
   - due: 2026-06-14
   - tags: [frontend, patch]
@@ -19,7 +19,7 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Review vitest coverage
+      - [x] Review vitest coverage
       - [ ] Review Playwright e2e test coverage
       - [ ] Add tests that cover majority of the frontend functionalities
     ```md
