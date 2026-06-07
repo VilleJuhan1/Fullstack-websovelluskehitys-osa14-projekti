@@ -111,6 +111,27 @@ describe('SettingsBar Component', () => {
     });
   });
 
+  it('does not adjust position when VITE_SHOW_DEV_BAR is false', () => {
+    vi.stubEnv('VITE_SHOW_DEV_BAR', 'false');
+    vi.mocked(useQuery).mockReturnValue({
+      data: { me: null },
+      refetch: vi.fn(),
+    } as any);
+
+    const { container } = render(
+      <MemoryRouter>
+        <SettingsBar />
+      </MemoryRouter>
+    );
+
+    const settingsContainer = container.querySelector(
+      '.settings-bar-container'
+    );
+    expect(settingsContainer).not.toHaveStyle({
+      top: 'calc(var(--space-lg) + 36px)',
+    });
+  });
+
   it('refetches data on auth-change event', () => {
     const mockRefetch = vi.fn();
     vi.mocked(useQuery).mockReturnValue({
