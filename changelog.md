@@ -42,3 +42,4 @@
 | 1.9.2 | 2026-06-07 | More tests | Added more frontend tests using vitest and vitest coverage. Removed DevBar from production builds.  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
 | 1.9.3 | 2026-06-07 | Token expiration | User tokens will now expire after 24 hours  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
 | 2.0.0 | 2026-06-07 | Persistent volume for Postgres | Production build will from now on use persistent volume for postgresql which means that all changes to backend need to be migrated to the db.  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
+| 2.0.1 | 2026-06-07 | Planning | Planned the required upcoming features: Argo CD, frontpage (landing page)   | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
