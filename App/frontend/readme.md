@@ -1,17 +1,59 @@
-# Project frontend
+# Quiz game frontend
 
-The app is a game that uses GraphQL to fetch basically any data that consists of name, imageUrl and categories properties. Translations can also be fetched, but it is optional as not all data has translations. For the time being, the backend has two types of data: countries and Pokemon. The frontend serves both via React Router. However only countries is available for free tier users to demonstrate some user management capabilities.
+A simple showcase of a stateful web app.
 
-The game itself consists of the score component and the 'choose the correct one from four options' component. Think Kahoot and similar quiz games.
+## Features
 
-Other components are top bar navigation and bottom bar for info and links.
+- Game: Multiple choice quiz with different categories and subcategories.
+- User management: Login, logout, signup and authenticated user specific queries and mutations are implemented, ie. streak score. Persistent user data via backend and postgresql DB.
+- Dynamic styling: Hovering over elements triggers a background blur effect, score streak adds a golden effect to the score text, wrong answer has a red outline and text color while correct answer is shown as green.
 
-The app will be developed for both mobile and web platforms.
+## Planned features:
 
-## Starting the server
+- Premium user functionalities: Access to more categories
+- Mock payment service: Elevate standard users to premium via mock payment provider
+- Language support: UI translations to Finnish and Swedish
+
+## Tech stack
+
+| Category | Technologies |
+| --- | --- |
+| Build tool | Vite |
+| Framework | React |
+| Language | TypeScript |
+| Router | React Router |
+| State management | React hooks, Context API |
+| GraphQL client | Apollo Client |
+| Testing | Vitest, @testing-library, Playwright |
+| Styling | CSS, Glassmorphism |
+
+## Installation
 
 ```shell
-npm run dev
+npm ci
+# or
+npm install
 ```
 
-#
+## Commands
+
+| Command | Description |
+| --- | --- |
+| npm run dev | Start development server |
+| npm run build | Build for production |
+| npm run preview | Preview production build |
+| npm run lint | Lint the code using eslint |
+| npm run format | Format the code using prettier |
+| npm run test | Run unit tests using vitest and @testing-library |
+| npm run test:coverage | Run unit tests with coverage using vitest and @testing-library |
+| npm run test:e2e | Run end-to-end tests using playwright |
+
+## Environment variables
+
+```shell
+VITE_LINKEDIN_URL=https://linkedin.com # Used in the socials bar
+VITE_GITHUB_URL=https://github.com # Used in the socials bar
+VITE_APP_VERSION=v0.0.1-local-dev # Used in the DevBar to indicate the app version, automatically updated during build process
+VITE_API_URL=/graphql # Used for GraphQL API endpoint via nginx reverse proxy
+VITE_SHOW_DEV_BAR=true # Used to show the dev bar
+```

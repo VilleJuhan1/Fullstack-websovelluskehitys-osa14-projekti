@@ -9,6 +9,14 @@
   - workload: Normal
   - defaultExpanded: false
 
+### Language support
+
+  - tags: [frontend]
+  - defaultExpanded: false
+    ```md
+    Add language support for finnish / swedish
+    ```
+
 ## Planned
 
 ### 07 - Persistent volume for postgresql
