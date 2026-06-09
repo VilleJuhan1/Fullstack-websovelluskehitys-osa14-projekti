@@ -68,9 +68,9 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Github workflows
+      - [x] Github workflows
       - [ ] App
-      - [ ] App/backend
+      - [x] App/backend
       - [ ] App/frontend
       - [ ] App/frontpage
       - [ ] Infrastructure
