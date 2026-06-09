@@ -60,6 +60,31 @@
 
 ## In progress
 
+### 21 - Ensure every component has a dedicated readme
+
+  - due: 2026-06-25
+  - tags: [documentation]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Github workflows
+      - [ ] App
+      - [ ] App/backend
+      - [ ] App/frontend
+      - [ ] App/frontpage
+      - [ ] Infrastructure
+      - [ ] Infrastructure/ansible
+      - [ ] Infrastructure/docker
+      - [ ] Infrastructure/kubernetes
+      - [ ] Infrastructure/scripts
+      - [ ] Infrastructure/terraform
+      - [ ] Infrastructure/venv
+      - [ ] Project root
+    ```md
+    Review the existing documentation and add where missing to transfer from planning phase to live phase
+    ```
+
 ## Done
 
 ### 16 - Plan new features for frontpage
