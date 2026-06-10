@@ -2,7 +2,7 @@
 
 The project is deployed to a two-node k3s cluster in Oracle Cloud Infrastructure (OCI) using only always free tier resources. Below is the overall layout of the environment.
 
-Installation steps can be found from the ansible subdirectory [readme.md](ansible/readme.md).
+Installation steps can be found from the ansible subdirectory in [readme.md](ansible/readme.md).
 
 ## Layout
 
@@ -49,9 +49,10 @@ graph TD
     
     %% Management & Deployment
     Admin -- "Terraform" --> OCI-API
-    Admin -- "SSH (MFA)" --> Bastion
-    CI -- "Terraform" --> OCI-API
-    CI -- "Ansible" --> Bastion
+    Admin -- "SSH (Bastion tunnel)" --> Bastion
+    Admin -- "SSH (Key)" --> CI
+    Admin -- "Python SDK" --> OCI-API
+    CI -- "Token Auth" --> Dockerhub
     
     %% Bastion Tunnels
     Bastion -- "SSH / Ansible" --> MasterVM
