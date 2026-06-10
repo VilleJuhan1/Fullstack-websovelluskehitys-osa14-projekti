@@ -1,6 +1,84 @@
 # Infrastructure
 
-The project will, hopefully, be deployed to OCI using free tier tenancy. Below are some initial plans on how to organize the assets there.
+The project is deployed to a two-node k3s cluster in Oracle Cloud Infrastructure (OCI) using only always free tier resources. Below is the overall layout of the environment.
+
+Installation steps can be found from the ansible subdirectory [readme.md](ansible/readme.md).
+
+## Layout
+
+```mermaid
+%%{init: {
+  "flowchart": {
+    "ranksep": 80,
+    "nodesep": 100,
+    "curve": "basis"
+  }
+}}%%
+graph TD
+    %% 1. External Environment (Top)
+    subgraph "External Environment"
+        Users[("App Users")]
+        CI[("GitHub CI/CD")]
+        Admin[("Administrator")]
+        Dockerhub[("Dockerhub")]
+    end
+
+    %% 2. OCI Tenancy Hierarchy
+    subgraph "OCI"
+        OCI-API[("OCI API<br/>(Identity, Compute, Network)")]
+        
+        subgraph "VCN (10.0.0.0/16)"
+            IGW[("Internet Gateway")]
+
+            subgraph "Load Balancer Subnet (10.0.2.0/24)"
+                LB[("Public NLB<br/>Free Tier")]
+            end
+
+            subgraph "K3s Subnet (10.0.3.0/24)"
+                Bastion[("OCI Bastion Service<br/>(Anchored here)")]
+                MasterVM[("VM 1: k3s Server/Master<br/>(ArgoCD Installed)")]
+                AgentVM1[("VM 2: k3s Agent/Worker")]
+            end        
+        end
+    end
+
+    %% 3. Force Vertical Stacking (Invisible Link)
+    OCI-API
+
+    %% 4. Connections (Flowing Downward)
+    
+    %% Management & Deployment
+    Admin -- "Terraform" --> OCI-API
+    Admin -- "SSH (MFA)" --> Bastion
+    CI -- "Terraform" --> OCI-API
+    CI -- "Ansible" --> Bastion
+    
+    %% Bastion Tunnels
+    Bastion -- "SSH / Ansible" --> MasterVM
+    Bastion -- "SSH / Ansible" --> AgentVM1
+    
+    %% Application Traffic
+    Users -- "HTTPS (443)" --> IGW
+    IGW <--> LB
+    LB -- "App Traffic" --> MasterVM
+    LB -- "App Traffic" --> AgentVM1
+
+    %% Egress & Images
+    MasterVM -- "Egress Only" --> IGW
+    AgentVM1 -- "Egress Only" --> IGW
+    IGW -. "Image Pulls" .-> Dockerhub
+
+    %% Styling
+    classDef public fill:#e1f5fe,stroke:#333,stroke-width:2px,color:#000000;
+    classDef private fill:#e8f5e9,stroke:#333,stroke-width:2px,color:#000000;
+    classDef vm fill:#58DDFC,stroke:#333,stroke-width:2px,color:#000000;
+    
+    class LB,Bastion,OCI-API,IGW public;
+    class MasterVM,AgentVM1 vm;
+    
+    %% Hide the layout-enforcement link
+    linkStyle 4 stroke-width:0px;
+```
 
 ## Compartments
 ```text
@@ -36,7 +114,6 @@ These are the foundational resources created by the tenancy administrator during
   - IAM Policies (e.g., Compartment Admin Policy for the service account)
 - **Security & Observability:**
   - Object storage bucket for backend.tf
-  - OCI Cloud Guard
   - Events & Notifications
   - Flow Logs
   - Budget
@@ -73,7 +150,3 @@ As this is a solo project, there's not much need to fine-tune IAM policies on te
          └── Compartment Admin Policy
               └── Scoped access to 'Project compartment'
 ```
-
-## Layout
-
-The architectural layout is shown in a separate file [here](new_layout.md).

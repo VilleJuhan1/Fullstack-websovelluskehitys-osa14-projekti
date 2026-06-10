@@ -21,7 +21,7 @@
 
 Review [readme.md](../venv/readme.md) for instructions on creating and activating the `oci-automation` Python3 virtual environment.
 
-### Activate the python environment (path is oci-automation if you're using the instructions in the venv readme.md file)
+### Activate the python environment
 ```bash
 source ../venv/oci-automation/bin/activate
 ```

@@ -1,3 +1,5 @@
 venv/oci-automation/
 __pycache__/
 *.pyc
+new_layout.md
+old_layout.md
