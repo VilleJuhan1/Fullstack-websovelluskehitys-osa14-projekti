@@ -4,36 +4,12 @@ Node server backend with GraphQL API using Apollo written in TypeScript. Databas
 
 Includes a Python script for building data sets for the quiz game, see [scripts/readme.md](scripts/readme.md).
 
-## Installation
-
-### Recommended
-```shell
-npm ci                  # Installs the project using the existing package-lock.json file
-```
-
-### Alternative
-```shell
-rm package-lock.json    # Removes the package-lock.json file
-npm install             # Installs dependencies without using package-lock.json file
-```
-
-## Commands
-
-```shell
-npm run dev             # starts development server with hot-reload
-npm run test            # runs unit tests using Jest and Supertest
-npm run lint            # runs linter using ESLint
-npm run format          # runs Prettier code formatter
-npm run build           # builds the project
-npm start               # starts production server
-```
-
 ## Tech stack
 
 | Component | Used for | Status |
 |---|---|---|
 | Node.js | Runtime environment | Implemented |
-| Axios | HTTP client for communicating with the mock payment provider | Implemented |
+| Axios | HTTP client for communicating with the mock payment provider | Planned |
 | Express | Web framework | Implemented |
 | Apollo Server | GraphQL framework | Implemented |
 | Sequelize | ORM for database | Implemented |
@@ -51,6 +27,42 @@ npm start               # starts production server
 | ESLint | Linting utility | Implemented |
 | Typescript | TypeScript compiler | Implemented |
 | Redis | | Planned |
+
+## Installation
+
+### Recommended
+```shell
+npm ci                  # Installs the project using the existing package-lock.json file
+```
+
+### Alternative
+```shell
+rm package-lock.json    # Removes the package-lock.json file
+npm install             # Installs dependencies without using package-lock.json file
+```
+
+## Environment variables
+
+```shell
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=postgres
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+PASSWORD_SECRET=test-environment-super-secret-key
+JWT_SECRET=super-secure-test-jwt-secret
+```
+
+## Commands
+
+```shell
+npm run dev             # starts development server with hot-reload
+npm run test            # runs unit tests using Jest and Supertest
+npm run lint            # runs linter using ESLint
+npm run format          # runs Prettier code formatter
+npm run build           # builds the project
+npm start               # starts production server
+```
 
 ## Flow
 

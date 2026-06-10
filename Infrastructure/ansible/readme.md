@@ -1,16 +1,29 @@
 # Ansible K3s Deployment via OCI Bastion
 
-Because our primary compute interfaces are entirely isolated in a private subnet (with no public internet ingress), Ansible cannot connect to them directly. We use **OCI Bastion Port Forwarding** to securely deploy the cluster without exposing Port 22 to the public internet.
+## Roles
+
+- `common`: Common configuration for all nodes
+- `k3s-master`: Installs K3s master and configures it
+- `k3s-worker`: Installs K3s worker and joins the master node
+- `security`: Hardening configurations, firewall rules, unattended upgrades
+- `storage`: Configures block volume mount and creates directories for PVC claims on kube-worker node
+- `monitoring`: Installs helm, configures the persistent volume and deploys Prometheus, Loki and Grafana
+
+## Playbooks
+
+- `main.yml`: K3s cluster installation and configuration, runs all aforementioned roles
+- `update_and_reboot.yaml`: Updates and reboots the k3s nodes
+- `cluster-addons.yml`: Installs cert-manager and configures Nginx ingress with Let's Encrypt for https certs
 
 ## Step-by-Step Deployment Guide
 
 ### Create the Python virtual environment
 
-Review `readme.md` in the `oci-automation` directory for instructions on creating and activating the python virtual environment
+Review [readme.md](../venv/readme.md) for instructions on creating and activating the `oci-automation` Python3 virtual environment.
 
 ### Activate the python environment (path is oci-automation if you're using the instructions in the venv readme.md file)
 ```bash
-source oci-automation/bin/activate
+source ../venv/oci-automation/bin/activate
 ```
 
 ### Provision the Infrastructure

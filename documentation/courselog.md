@@ -65,4 +65,5 @@
 | June 7th | More frontend tests, DevBar no longer visible on production builds and use meta tags instead | 2 |
 | June 7th | Token expiration support for front and backend. Persistent volume for production postgresql -> New major release | 3 |
 | June 9th | Reviewed and wrote documentation for Github Actions and Backend | 1 |
-| **Total** | | **11,5** |
+| June 10th | More documentation: App/frontend, Infrastructure/terraform | 1 |
+| **Total** | | **13,5** |
