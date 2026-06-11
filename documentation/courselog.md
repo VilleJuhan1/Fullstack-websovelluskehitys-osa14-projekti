@@ -66,4 +66,5 @@
 | June 7th | Token expiration support for front and backend. Persistent volume for production postgresql -> New major release | 3 |
 | June 9th | Reviewed and wrote documentation for Github Actions and Backend | 1 |
 | June 10th | More documentation: App/frontend, Infrastructure/terraform | 1 |
-| **Total** | | **13,5** |
+| June 11th | Continued with documentation | 1 |
+| **Total** | | **14,5** |

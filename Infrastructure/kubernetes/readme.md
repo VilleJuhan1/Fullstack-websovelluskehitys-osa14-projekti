@@ -1,4 +1,4 @@
-# K3s cluster README
+# K3s cluster
 
 For now, kubectl can not be used from the developer's local machine due to our strict network security rules. Instead, we'll use bastion to ssh into the master node and run kubectl commands there. Another option would be to use Cloud shell. Later, we'll automate the deployment so that the master node pulls the manifests from github using ArgoCD. 
 
@@ -24,6 +24,7 @@ graph TD
             subgraph "Namespace: monitoring"
                 Prometheus["Prometheus"]
                 Grafana["Grafana"]
+                Loki["Loki"]
             end
 
             subgraph "Namespace: prod / dev"
@@ -49,6 +50,12 @@ graph TD
 
     %% Flow: Observability
     Prometheus -- "Scrape" --> Backend
+    Loki -- "Scrape" --> Backend
+    Loki -- "Scrape" --> Frontend
+    Grafana -- "Query" --> Prometheus
+    Grafana -- "Query" --> Loki
+```
+
 ## Deployment Setup
 
 ### 1. Configure Secrets

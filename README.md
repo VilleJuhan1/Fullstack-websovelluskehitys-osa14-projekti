@@ -6,11 +6,20 @@ This repository is my showcase project for the University of Helsinki [Fullstack
 - [To-do Kanban Board](todo.md)
 - [Course journal](Documentation/courselog.md)
 
+## Infrastructure Documentation
+
+- [Infrastructure Overview](Infrastructure/README.md)
+- [Installation](Infrastructure/ansible/readme.md)
+
 ## The App
 
 The app itself is a fairly simple game, where the user tries to figure out the correct picture from four options. It will also include some gamification elements, such as high scores, streaks and levels, to make it more engaging. The app will contain a free version, which is limited in features and content, and a premium version, which unlocks all features and content. Users can upgrade their account to premium by making a payment through a mock payment provider. Both the backend and frontend will support multiple data types, ie. same code can be used for countries and flags as well as Pokemon, animals etc.
 
 There are many parts in the project: Frontend (React/Vite), Backend (GraphQL), Relational Database (self-managed PostgreSQL), Container Orchestration (Kubernetes with k3s), CI/CD (Github actions, ArgoCD), and Infrastructure as Code (Terraform, Ansible). The application is deployed in a kubernetes cluster hosted on Oracle Cloud Infrastructure (OCI). Some cloud services are also used, such as a network loadbalancer, but most components are built from scratch. Ie. OKE will not be used, but instead k3s is installed on top of compute instances that are provisioned using Terraform and and configured using Ansible. Instead of native DBaaS, a self-managed PostgreSQL running in the cluster is used.
+
+- [Frontend](App/frontend/readme.md)
+- [Backend](App/backend/readme.md)
+- [Cloud Sandbox Landing Page](App/frontpage/readme.md)
 
 ## Initial requirements
 
