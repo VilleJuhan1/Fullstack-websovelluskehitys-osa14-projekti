@@ -142,14 +142,13 @@ The deployment is managed by the `monitoring` Ansible role. It templates the hel
 
 ## Argo CD (GitOps)
 
-Argo CD is deployed via the Ansible `argocd` role alongside the monitoring stack. It uses a local admin user (`argo_admin_user`) whose credentials are configured in `vars.yml`.
+Argo CD is deployed via the Ansible `argocd` role alongside the monitoring stack. It uses a local admin user whose credentials are configured in `vars.yml`.
 
 ### Accessing Argo CD
 
 Argo CD is exposed securely via the public Ingress. 
 
-1. Navigate to `https://argo.hiekkalaatikko.tech` on your local machine.
-2. Log in with the `argo_admin_user` and `argo_admin_password` you defined in your `vars.yml` file.
+1. Navigate to `https://argo.hiekkalaatikko.tech` on the local machine.
 
 > **Note**: The login page is hardened. It limits login requests to 10 per second and will lock you out for 10 minutes if you fail to login 3 times.
 
