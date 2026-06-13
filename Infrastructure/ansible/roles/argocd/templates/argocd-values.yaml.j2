@@ -5,6 +5,9 @@ configs:
   secret:
     extra:
       "accounts.{{ argo_admin_user }}.password": "{{ argocd_admin_password_hash }}"
+  rbac:
+    policy.csv: |
+      g, {{ argo_admin_user }}, role:admin
 global:
   domain: argo.hiekkalaatikko.tech
 server:
