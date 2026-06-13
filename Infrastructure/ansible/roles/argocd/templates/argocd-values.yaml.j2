@@ -4,9 +4,9 @@ configs:
     accounts.{{ argo_admin_user }}: login
   secret:
     extra:
-      {{ argo_admin_user }}:
-        password: "{{ argocd_admin_password_hash }}"
+      "accounts.{{ argo_admin_user }}.password": "{{ argocd_admin_password_hash }}"
 server:
   service:
     type: NodePort
+    nodePortHttp: 30809
     nodePortHttps: 30808

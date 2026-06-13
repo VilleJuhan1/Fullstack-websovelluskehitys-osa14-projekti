@@ -7,9 +7,15 @@
     state: present
     extra_args: --break-system-packages --ignore-installed
 
-- name: Generate bcrypt hash for Argo CD admin password
+- name: Generate bcrypt hash for Argo CD admin password on target node
+  ansible.builtin.command: >
+    python3 -c 'import bcrypt; print(bcrypt.hashpw("{{ argo_admin_password }}".encode("utf-8"), bcrypt.gensalt()).decode("utf-8"))'
+  register: argocd_password_hash_result
+  changed_when: false
+
+- name: Set argocd_admin_password_hash fact
   ansible.builtin.set_fact:
-    argocd_admin_password_hash: "{{ argo_admin_password | password_hash('bcrypt', rounds=10) }}"
+    argocd_admin_password_hash: "{{ argocd_password_hash_result.stdout }}"
 
 - name: Ensure manifests directory exists
   ansible.builtin.file:
