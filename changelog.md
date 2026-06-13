@@ -45,3 +45,4 @@
 | 2.0.1 | 2026-06-07 | Planning | Planned the required upcoming features: Argo CD, frontpage (landing page)   | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
 | 2.0.2 | 2026-06-13 | Documentation | Reviewed all current readme files and brought them up to date  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
 | 2.1.0 | 2026-06-13 | ArgoCD | ArgoCD deployed with separate app deployments for dev and production stacks  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
+| 2.1.1 | 2026-06-13 | Admin privileges | Fixed a bug where the custom Argocd user didn't have enough privileges to monitor the deployments  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
