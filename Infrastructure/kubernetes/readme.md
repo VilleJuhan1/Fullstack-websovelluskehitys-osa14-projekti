@@ -140,4 +140,24 @@ The deployment is managed by the `monitoring` Ansible role. It templates the hel
 
 2. **Log in**: Sign in using the github credentials (which you set in `vars.yml` or terminal environment variables).
 
+## Argo CD (GitOps)
+
+Argo CD is deployed via the Ansible `argocd` role alongside the monitoring stack. It uses a local admin user whose credentials are configured in `vars.yml`.
+
+### Accessing Argo CD
+
+Argo CD is exposed securely via the public Ingress. 
+
+1. Navigate to `https://argo.hiekkalaatikko.tech` on the local machine.
+
+> **Note**: The login page is hardened. It limits login requests to 10 per second and will lock you out for 10 minutes if you fail to login 3 times.
+
+### Applying Applications manually
+
+The `dev` and `prod` application manifests are located in `Infrastructure/kubernetes/argocd/`. To start the GitOps synchronization, apply them manually to the cluster.
+
+```bash
+kubectl apply -f Infrastructure/kubernetes/argocd/dev-app.yaml
+kubectl apply -f Infrastructure/kubernetes/argocd/prod-app.yaml
 ```
+Once applied, Argo CD will take over and automatically sync the configured branches from the repository to the `dev` and `prod` namespaces.

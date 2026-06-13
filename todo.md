@@ -27,14 +27,6 @@
     Ensure that backend tests cover main functionalities
     ```
 
-### 19 - Argo CD for automated deployment
-
-  - due: 2026-06-21
-  - tags: [kubernetes, minor]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-
 ### 20 - Frontpage Hub Features
 
   - due: 2026-07-12
@@ -83,6 +75,14 @@
 ## In progress
 
 ## Done
+
+### 19 - Argo CD for automated deployment
+
+  - due: 2026-06-21
+  - tags: [kubernetes, minor]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
 
 ### 21 - Ensure every component has a dedicated readme
 

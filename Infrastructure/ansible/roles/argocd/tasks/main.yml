@@ -1,0 +1,45 @@
+---
+- name: Ensure passlib and bcrypt are installed for password hashing
+  ansible.builtin.pip:
+    name:
+      - passlib
+      - bcrypt
+    state: present
+    extra_args: --break-system-packages --ignore-installed
+
+- name: Generate bcrypt hash for Argo CD admin password on target node
+  ansible.builtin.command: >
+    python3 -c 'import bcrypt; print(bcrypt.hashpw("{{ argo_admin_password }}".encode("utf-8"), bcrypt.gensalt()).decode("utf-8"))'
+  register: argocd_password_hash_result
+  changed_when: false
+
+- name: Set argocd_admin_password_hash fact
+  ansible.builtin.set_fact:
+    argocd_admin_password_hash: "{{ argocd_password_hash_result.stdout }}"
+
+- name: Ensure manifests directory exists
+  ansible.builtin.file:
+    path: /tmp/argocd-manifests
+    state: directory
+    mode: "0755"
+
+- name: Generate argocd-values.yaml from template
+  ansible.builtin.template:
+    src: argocd-values.yaml.j2
+    dest: /tmp/argocd-manifests/argocd-values.yaml
+    mode: "0600"
+
+- name: Add Argo CD Helm Repository
+  kubernetes.core.helm_repository:
+    name: argo
+    repo_url: https://argoproj.github.io/argo-helm
+
+- name: Deploy argo-cd via Helm
+  kubernetes.core.helm:
+    name: argocd
+    chart_ref: argo/argo-cd
+    release_namespace: argocd
+    create_namespace: true
+    values_files:
+      - /tmp/argocd-manifests/argocd-values.yaml
+    kubeconfig: /etc/rancher/k3s/k3s.yaml
