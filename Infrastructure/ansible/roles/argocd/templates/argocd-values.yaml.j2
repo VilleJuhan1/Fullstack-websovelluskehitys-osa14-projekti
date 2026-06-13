@@ -6,7 +6,26 @@ configs:
     extra:
       "accounts.{{ argo_admin_user }}.password": "{{ argocd_admin_password_hash }}"
 server:
+  extraArgs:
+    - --insecure
+  env:
+    - name: ARGOCD_SESSION_FAILURE_MAX_FAIL_COUNT
+      value: "3"
+    - name: ARGOCD_SESSION_FAILURE_WINDOW_SECONDS
+      value: "600"
   service:
-    type: NodePort
-    nodePortHttp: 30809
-    nodePortHttps: 30808
+    type: ClusterIP
+  ingress:
+    enabled: true
+    ingressClassName: "nginx"
+    annotations:
+      cert-manager.io/cluster-issuer: "letsencrypt-prod"
+      nginx.ingress.kubernetes.io/ssl-redirect: "true"
+      nginx.ingress.kubernetes.io/limit-rps: "10"
+      nginx.ingress.kubernetes.io/limit-connections: "10"
+    hosts:
+      - argo.hiekkalaatikko.tech
+    tls:
+      - secretName: argocd-server-tls
+        hosts:
+          - argo.hiekkalaatikko.tech

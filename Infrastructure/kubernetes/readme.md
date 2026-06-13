@@ -144,15 +144,14 @@ The deployment is managed by the `monitoring` Ansible role. It templates the hel
 
 Argo CD is deployed via the Ansible `argocd` role alongside the monitoring stack. It uses a local admin user (`argo_admin_user`) whose credentials are configured in `vars.yml`.
 
-### Accessing the Argo CD UI
-Since there is no public ingress configured for Argo CD, access the UI via Bastion port-forwarding.
+### Accessing Argo CD
 
-1. Create the Bastion tunnels using the provided python script. This will automatically open a direct tunnel to the Argo CD service on port 8080.
-   ```bash
-   cd Infrastructure/scripts
-   python3 create_tunnels.py
-   ```
-2. Navigate to `https://localhost:8080` on your local machine and log in with the `argo_admin_user` and `argo_admin_password`.
+Argo CD is exposed securely via the public Ingress. 
+
+1. Navigate to `https://argo.hiekkalaatikko.tech` on your local machine.
+2. Log in with the `argo_admin_user` and `argo_admin_password` you defined in your `vars.yml` file.
+
+> **Note**: The login page is hardened. It limits login requests to 10 per second and will lock you out for 10 minutes if you fail to login 3 times.
 
 ### Applying Applications manually
 

@@ -173,7 +173,6 @@ success = True
 # This is more reliable than separate OCI Bastion port-forwarding sessions.
 success &= create_tunnel(master_ip, 22, 2222, "Master-SSH")
 success &= create_tunnel(worker_ip, 22, 2223, "Worker-SSH")
-success &= create_tunnel(master_ip, 30808, 8080, "ArgoCD-UI")
 
 if success:
     with open("bastion_pids.txt", "w") as f:
