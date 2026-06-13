@@ -10,6 +10,7 @@
 - `security`: Hardening configurations, firewall rules, unattended upgrades
 - `storage`: Configures block volume mount and creates directories for PVC claims on kube-worker node
 - `monitoring`: Installs helm, configures the persistent volume and deploys Prometheus, Loki and Grafana
+- `argocd`: Installs ArgoCD, but doesn't configure the automated deployments yet
 
 ## Playbooks
 
@@ -62,11 +63,18 @@ python3 create_tunnels.py
 
 This script will interact with the OCI CLI, create the required Bastion sessions, open local SSH tunnels in the background, and generate an `inventory.local.ini` file for Ansible. The tunnels are up for 30 minutes at a time.
 
-### Optional: Create a variables file
-If you want to use a custom email for Let's Encrypt (https), create a `vars.yml` file in the `ansible` directory:
+### Create a variables file
+Create a `vars.yml` file in the `ansible` directory with the following contents:
 ```yaml
-cert_manager_email: "bob@example.com"
+grafana_admin_user: "<grafana admin username>"
+grafana_admin_password: "<grafana admin password>"
+grafana_github_client_id: "<grafana github client id>"
+grafana_github_client_secret: "<grafana github client secret>"
+argo_admin_user: "<argo admin username>"
+argo_admin_password: "<argo admin password>"
+cert_manager_email: "[EMAIL_ADDRESS]"   # optional, used for lets encrypt https certs
 ```
+
 
 ### Run the Playbooks
 Now that the secure tunnels are open, simply activate your python environment and run the playbook from the project ansible directory.
