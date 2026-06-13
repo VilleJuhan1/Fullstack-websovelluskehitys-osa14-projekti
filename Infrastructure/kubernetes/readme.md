@@ -140,4 +140,26 @@ The deployment is managed by the `monitoring` Ansible role. It templates the hel
 
 2. **Log in**: Sign in using the github credentials (which you set in `vars.yml` or terminal environment variables).
 
+## Argo CD (GitOps)
+
+Argo CD is deployed via the Ansible `argocd` role alongside the monitoring stack. It uses a local admin user (`argo_admin_user`) whose credentials are configured in `vars.yml`.
+
+### Accessing the Argo CD UI
+Since there is no public ingress configured for Argo CD, access the UI via Bastion port-forwarding.
+
+1. Create the Bastion tunnels using the provided python script. This will automatically open a direct tunnel to the Argo CD service on port 8080.
+   ```bash
+   cd Infrastructure/scripts
+   python3 create_tunnels.py
+   ```
+2. Navigate to `https://localhost:8080` on your local machine and log in with the `argo_admin_user` and `argo_admin_password`.
+
+### Applying Applications manually
+
+The `dev` and `prod` application manifests are located in `Infrastructure/kubernetes/argocd/`. To start the GitOps synchronization, apply them manually to the cluster.
+
+```bash
+kubectl apply -f Infrastructure/kubernetes/argocd/dev-app.yaml
+kubectl apply -f Infrastructure/kubernetes/argocd/prod-app.yaml
 ```
+Once applied, Argo CD will take over and automatically sync the configured branches from the repository to the `dev` and `prod` namespaces.

@@ -1,0 +1,12 @@
+configs:
+  cm:
+    admin.enabled: "false"
+    accounts.{{ argo_admin_user }}: login
+  secret:
+    extra:
+      {{ argo_admin_user }}:
+        password: "{{ argocd_admin_password_hash }}"
+server:
+  service:
+    type: NodePort
+    nodePortHttps: 30808
