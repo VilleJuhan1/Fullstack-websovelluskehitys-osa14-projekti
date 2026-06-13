@@ -1,6 +1,6 @@
 # Terraform for the tenancy LZ (Landing Zone)
 
-This module creates the basic infrastructure for creating project compartments and IAM policies in OCI. It assumes that the tenancy is already created and that you have the necessary permissions to create compartments and IAM policies.
+This module creates the basic infrastructure for creating project compartments and IAM policies in OCI. It assumes that the tenancy is already created and that the necessary permissions to create compartments and IAM policies are in place.
 
 The Terraform codebase was generated using Gemini 3.1 Pro and Antigravity IDE and evaluated against OCI best practices and the official Oracle's Landing Zone (LZ) references found in the [OCI Landing Zones repository](https://github.com/oci-landing-zones).
 
@@ -12,7 +12,7 @@ The Terraform codebase was generated using Gemini 3.1 Pro and Antigravity IDE an
 
 ### Templates for Terraform configuration and variables files for local dev
 
-You need to create two files that you should also put immediately to your .gitignore file. Below are examples on the contents of these files.
+Two files need to be created and immediately added to the `.gitignore` file. Below are examples of the contents of these files.
 
 backend.conf:
 ```conf
@@ -46,21 +46,21 @@ projects = {
 
 ## Bootstrapping State (The "Chicken & Egg" Problem)
 
-Because this module creates the Object Storage bucket intended to hold its own state, you cannot initialize the HTTP backend immediately on the very first run. You must bootstrap the state locally first, create the resources (including the bucket), and then migrate the state to the newly created remote bucket.
+Because this module creates the Object Storage bucket intended to hold its own state, the HTTP backend cannot be initialized immediately on the very first run. The state must be bootstrapped locally first, the resources (including the bucket) created, and then the state migrated to the newly created remote bucket.
 
 **Steps to bootstrap:**
 1. Comment out the `backend "http" {}` block in `providers.tf`.
 2. Run `terraform init` to initialize the project with local state.
-3. Run `terraform apply -var-file=terraform.tfvars` to create the tenancy resources, which will also provision your new state bucket.
+3. Run `terraform apply -var-file=terraform.tfvars` to create the tenancy resources, which will also provision the new state bucket.
 4. Run `terraform output landing_zone_state_backend_url` to get the PAR URL for the landing zone state bucket.
-5. Add the PAR URL to your local `backend.conf` file as per the template.
+5. Add the PAR URL to the local `backend.conf` file as per the template.
 6. Re-enable the `backend "http" {}` block in `providers.tf`.
-7. Run `terraform init -backend-config=backend.conf -migrate-state` and say `yes` to push your local state into the remote bucket!
+7. Run `terraform init -backend-config=backend.conf -migrate-state` and confirm with `yes` to push the local state into the remote bucket!
 8. Save the PAR URL as a Github secret named `TF_VAR_landing_zone_state_backend_url`.
 
 ## Regular Usage
 
-Once the state is bootstrapped, your normal workflow will be:
+Once the state is bootstrapped, the normal workflow will be:
 
 ```bash
 terraform init -backend-config=backend.conf
@@ -68,13 +68,9 @@ terraform plan -var-file=terraform.tfvars
 terraform apply -var-file=terraform.tfvars
 ```
 
-## Using an automated or manually triggered CI/CD pipeline via Github actions
-
-When creating the service account via Terraform, we didn't set the API key in the same action. This means that the GitHub action will not be able to authenticate with OCI. To fix this, you will need to manually create an API key for the service account in the OCI Console and add it to the GitHub secrets. This is just a safety measure and gives some more granular control over the API key expiration etc. You can find the service account user in the OCI Console under "Identity & Security" -> "Identity" -> "Users" -> "github-actions-sa-`project name`" -> "API Keys".
-
 ## Removing the Tenancy Infrastructure
 
-As we store the terraform state to OCI, we need to ensure that we have the correct backend configuration before we can destroy the resources. We can't destroy the object storage bucket until we have migrated the state away from it. Also, if there are resources in the project compartment, they need to be deleted first.
+As the terraform state is stored to OCI, ensure that the correct backend configuration is set before destroying the resources. The object storage bucket can't be deleted until the state has been migrated away from it. Also, if there are resources in the project compartment, they need to be deleted first.
 
 ```bash
 # Ensure the terraform state is stored in the OCI Object Storage bucket. 
@@ -88,7 +84,7 @@ rm terraform.tfstate.backup
 terraform init -backend-config=backend.conf
 
 # Migrate state from the remote backend to a local backend.
-# Terraform will prompt you to confirm the migration.
+# Terraform will prompt for confirmation of the migration.
 terraform init -migrate-state
 
 # Then run the destroy command
