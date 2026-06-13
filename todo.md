@@ -10,19 +10,11 @@
     Add language support for finnish / swedish
     ```
 
-### More categories
-
-  - tags: [backend, postgresql]
-  - defaultExpanded: false
-    ```md
-    Find 1-2 more APIs for new categories for quizzes
-    ```
-
 ## Planned
 
 ### 18 - Backend test coverage
 
-  - due: 2026-06-14
+  - due: 2026-06-21
   - tags: [backend, tests]
   - priority: medium
   - workload: Normal
@@ -37,7 +29,7 @@
 
 ### 19 - Argo CD for automated deployment
 
-  - due: 2026-06-14
+  - due: 2026-06-21
   - tags: [kubernetes, minor]
   - priority: medium
   - workload: Normal
@@ -45,7 +37,7 @@
 
 ### 20 - Frontpage Hub Features
 
-  - due: 2026-06-14
+  - due: 2026-07-12
   - tags: [frontpage]
   - priority: medium
   - workload: Normal
@@ -58,7 +50,39 @@
     The cloud hub should include links to Argo and Grafana (both using 2fa secure authentication), production version of the quiz game and a short introductory ingress.
     ```
 
+### 22 - Mock payment provider implementation
+
+  - due: 2026-06-21
+  - tags: [backend, frontend, kubernetes]
+  - priority: high
+  - workload: Hard
+  - defaultExpanded: false
+  - steps:
+      - [ ] Research a mock payment provider and add a deployment to k3s
+      - [ ] Add a mock endpoint for payments
+      - [ ] Configure backend mutation that uses the mock provider
+      - [ ] Configure frontend resolver to use the backend mutation
+    ```md
+    Add some mock provider for payment simulation to the k3s cluster. Refactor backend and frontend to use that.
+    ```
+
+### 23 - Paid category
+
+  - due: 2026-06-21
+  - tags: [backend, postgresql]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Build the data set
+      - [ ] Add the migration
+    ```md
+    Find 1-2 more APIs for new categories for quizzes and add them as paid account only
+    ```
+
 ## In progress
+
+## Done
 
 ### 21 - Ensure every component has a dedicated readme
 
@@ -69,23 +93,21 @@
   - defaultExpanded: false
   - steps:
       - [x] Github workflows
-      - [ ] App
+      - [x] App
       - [x] App/backend
-      - [ ] App/frontend
-      - [ ] App/frontpage
-      - [ ] Infrastructure
-      - [ ] Infrastructure/ansible
-      - [ ] Infrastructure/docker
-      - [ ] Infrastructure/kubernetes
-      - [ ] Infrastructure/scripts
-      - [ ] Infrastructure/terraform
-      - [ ] Infrastructure/venv
-      - [ ] Project root
+      - [x] App/frontend
+      - [x] App/frontpage
+      - [x] Infrastructure
+      - [x] Infrastructure/ansible
+      - [x] Infrastructure/docker
+      - [x] Infrastructure/kubernetes
+      - [x] Infrastructure/scripts
+      - [x] Infrastructure/terraform
+      - [x] Infrastructure/venv
+      - [x] Project root
     ```md
     Review the existing documentation and add where missing to transfer from planning phase to live phase
     ```
-
-## Done
 
 ### 16 - Plan new features for frontpage
 
