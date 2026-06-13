@@ -1,4 +1,4 @@
-# K3s cluster README
+# K3s cluster
 
 For now, kubectl can not be used from the developer's local machine due to our strict network security rules. Instead, we'll use bastion to ssh into the master node and run kubectl commands there. Another option would be to use Cloud shell. Later, we'll automate the deployment so that the master node pulls the manifests from github using ArgoCD. 
 
@@ -24,6 +24,7 @@ graph TD
             subgraph "Namespace: monitoring"
                 Prometheus["Prometheus"]
                 Grafana["Grafana"]
+                Loki["Loki"]
             end
 
             subgraph "Namespace: prod / dev"
@@ -49,6 +50,12 @@ graph TD
 
     %% Flow: Observability
     Prometheus -- "Scrape" --> Backend
+    Loki -- "Scrape" --> Backend
+    Loki -- "Scrape" --> Frontend
+    Grafana -- "Query" --> Prometheus
+    Grafana -- "Query" --> Loki
+```
+
 ## Deployment Setup
 
 ### 1. Configure Secrets
@@ -112,36 +119,25 @@ The deployment is managed by the `monitoring` Ansible role. It templates the hel
    ```
    *If these are not specified, they will default to `admin` / `admin`.*
 
-2. **Run the playbook**:
+2. **Set up 2fa**: As is, login form is disabled for Grafana and only 2fa authentication is enabled. Login uses github token instead:
+    ```bash
+    export grafana_github_client_secret="<your-github-client-secret>"
+    export grafana_github_client_id="<your-github-client-id>"
+    ```
+
+3. **Run the playbook**:
    Run the main playbook to deploy the entire cluster configuration including monitoring:
    ```bash
    cd Infrastructure/ansible
    ansible-playbook main.yml
    ```
 
-### Manual Installation (Alternative)
-To deploy the stack manually on the master node:
-
-1. **Apply the PersistentVolume manifest:**
-   ```bash
-   kubectl apply -f monitoring/prometheus-storage.yaml
-   ```
-
-2. **Add the Helm repo and deploy:**
-   ```bash
-   helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-   helm repo update
-   helm upgrade --install prometheus-stack prometheus-community/kube-prometheus-stack \
-     --namespace monitoring \
-     -f monitoring/helm-values.yaml
-   ```
-
 ### Accessing the Grafana Dashboard
-1. **Access via Domain**: Navigate to your configured domain in your browser:
+1. **Access via Domain**: Navigate to the configured domain in your browser:
    ```
    https://grafana.hiekkalaatikko.tech
    ```
 
-2. **Log in**: Sign in using your configured credentials (which you set in `vars.yml` or terminal environment variables).
+2. **Log in**: Sign in using the github credentials (which you set in `vars.yml` or terminal environment variables).
 
 ```

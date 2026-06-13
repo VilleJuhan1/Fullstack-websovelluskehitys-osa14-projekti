@@ -1,6 +1,6 @@
 # Quiz game frontend
 
-A simple showcase of a stateful web app.
+A React/vite frontend written in Typescript. Serves the quiz game UI and interacts with backend GraphQL API.
 
 ## Features
 
@@ -35,6 +35,16 @@ npm ci
 npm install
 ```
 
+## Environment variables
+
+```shell
+VITE_LINKEDIN_URL=https://linkedin.com # Used in the socials bar
+VITE_GITHUB_URL=https://github.com # Used in the socials bar
+VITE_APP_VERSION=v0.0.1-local-dev # Used in the DevBar to indicate the app version, automatically updated during build process
+VITE_API_URL=/graphql # Used for GraphQL API endpoint via nginx reverse proxy
+VITE_SHOW_DEV_BAR=true # Used to show the dev bar
+```
+
 ## Commands
 
 | Command               | Description                                                    |
@@ -48,12 +58,81 @@ npm install
 | npm run test:coverage | Run unit tests with coverage using vitest and @testing-library |
 | npm run test:e2e      | Run end-to-end tests using playwright                          |
 
-## Environment variables
+## Files
 
 ```shell
-VITE_LINKEDIN_URL=https://linkedin.com # Used in the socials bar
-VITE_GITHUB_URL=https://github.com # Used in the socials bar
-VITE_APP_VERSION=v0.0.1-local-dev # Used in the DevBar to indicate the app version, automatically updated during build process
-VITE_API_URL=/graphql # Used for GraphQL API endpoint via nginx reverse proxy
-VITE_SHOW_DEV_BAR=true # Used to show the dev bar
+├── Dockerfile
+├── Dockerfile.prod
+├── Dockerfile.prod.dockerignore
+├── eslint.config.js
+├── index.html
+├── nginx.conf
+├── package-lock.json
+├── package.json
+├── playwright-tests
+│   └── quiz.spec.ts
+├── playwright.config.ts
+├── public
+│   ├── cogwheel.svg
+│   ├── favicon.svg
+│   ├── github.svg
+│   ├── letter-q.svg
+│   └── linkedin-big-logo.svg
+├── readme.md
+├── src
+│   ├── App.tsx
+│   ├── apolloClient.ts
+│   ├── components
+│   │   ├── BottomBar.css
+│   │   ├── BottomBar.tsx
+│   │   ├── DevBar.css
+│   │   ├── DevBar.tsx
+│   │   ├── ErrorBoundary.tsx
+│   │   ├── SettingsBar.css
+│   │   ├── SettingsBar.tsx
+│   │   ├── __tests__
+│   │   │   ├── BottomBar.test.tsx
+│   │   │   ├── DevBar.test.tsx
+│   │   │   └── SettingsBar.test.tsx
+│   │   └── quiz
+│   │       ├── CategorySelector.css
+│   │       ├── CategorySelector.tsx
+│   │       ├── QuizButton.tsx
+│   │       ├── QuizGrid.css
+│   │       ├── QuizGrid.tsx
+│   │       ├── StreakScore.css
+│   │       ├── StreakScore.tsx
+│   │       └── __tests__
+│   │           ├── CategorySelector.test.tsx
+│   │           ├── QuizButton.test.tsx
+│   │           ├── QuizGrid.test.tsx
+│   │           └── StreakScore.test.tsx
+│   ├── context
+│   │   ├── GameContext.tsx
+│   │   └── __tests__
+│   │       └── GameContext.test.tsx
+│   ├── hooks
+│   │   ├── __tests__
+│   │   │   └── useGame.test.tsx
+│   │   └── useGame.ts
+│   ├── index.css
+│   ├── index_original.css
+│   ├── main.tsx
+│   ├── pages
+│   │   ├── Account.tsx
+│   │   ├── Auth.css
+│   │   ├── Home.tsx
+│   │   ├── Login.tsx
+│   │   ├── Quiz.css
+│   │   ├── Quiz.tsx
+│   │   └── Signup.tsx
+│   ├── services
+│   │   ├── auth.ts
+│   │   ├── gameData.ts
+│   │   └── score.ts
+│   └── setupTests.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
 ```
