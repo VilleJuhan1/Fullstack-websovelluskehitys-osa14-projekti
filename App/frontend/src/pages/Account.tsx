@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client/react';
 import { ME } from '../services/auth';
@@ -52,7 +51,9 @@ export default function Account() {
                       : 'var(--text-secondary)',
                   }}
                 >
-                  {user.isPremiumUser ? 'Premium Account 💎' : 'Standard Account'}
+                  {user.isPremiumUser
+                    ? 'Premium Account 💎'
+                    : 'Standard Account'}
                 </span>
               </p>
               {user.isAdmin && (

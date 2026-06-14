@@ -5,7 +5,8 @@ import type { UpgradeData } from '../services/auth';
 import './PaymentForm.css';
 
 export default function PaymentForm({ username }: { username: string }) {
-  const [upgradeToPremium, { loading, error }] = useMutation<UpgradeData>(UPGRADE_TO_PREMIUM);
+  const [upgradeToPremium, { loading, error }] =
+    useMutation<UpgradeData>(UPGRADE_TO_PREMIUM);
 
   const handleUpgrade = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,7 +24,8 @@ export default function PaymentForm({ username }: { username: string }) {
       <h2 className="payment-form-title">Upgrade to Premium 💎</h2>
 
       <div className="payment-form-notice">
-        <strong>Notice:</strong> This is a demonstration environment. No real payments are processed and your card will not be charged.
+        <strong>Notice:</strong> This is a demonstration environment. No real
+        payments are processed and your card will not be charged.
       </div>
 
       <form onSubmit={handleUpgrade} className="payment-form">

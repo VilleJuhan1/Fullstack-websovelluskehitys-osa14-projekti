@@ -54,8 +54,8 @@ export const userResolvers = {
           confirm: true,
           automatic_payment_methods: {
             enabled: true,
-            allow_redirects: 'never'
-          }
+            allow_redirects: 'never',
+          },
         });
 
         // Upgrade the user in the database

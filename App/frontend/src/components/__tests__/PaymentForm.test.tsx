@@ -43,11 +43,15 @@ describe('PaymentForm Component', () => {
     const cvcInput = screen.getByDisplayValue('123');
     expect(cvcInput).toBeInTheDocument();
 
-    expect(screen.getByRole('button', { name: /Pay 9.99€/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('button', { name: /Pay 9.99€/i })
+    ).toBeInTheDocument();
   });
 
   it('calls upgrade mutation when form is submitted', async () => {
-    const mockUpgrade = vi.fn().mockResolvedValue({ data: { upgradeToPremium: { id: 1 } } });
+    const mockUpgrade = vi
+      .fn()
+      .mockResolvedValue({ data: { upgradeToPremium: { id: 1 } } });
     vi.mocked(useMutation).mockReturnValue([
       mockUpgrade,
       { loading: false, error: undefined },
