@@ -48,3 +48,4 @@
 | 2.1.1 | 2026-06-13 | Admin privileges | Fixed a bug where the custom Argocd user didn't have enough privileges to monitor the deployments  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
 | 2.1.2 | 2026-06-14 | Compute downgrade | Due to recent changes to OCI free tier limits, had to downgrade k3s master and worker nodes to 1 ocpu and 6 GB ram each. Down from 2/12.  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
 | 2.2.0 | 2026-06-14 | Stripe | Added stripe-mock as a simulated payment provider for upgrading an user to premium status  | swift-whale-d6aecd8 | obvious-lion-9c88a72 |
+| 2.2.1 | 2026-06-14 | Bug fix | Fixed an argocd bug that prevented updating the deployment  | swift-whale-d6aecd8 | obvious-lion-9c88a72 |
