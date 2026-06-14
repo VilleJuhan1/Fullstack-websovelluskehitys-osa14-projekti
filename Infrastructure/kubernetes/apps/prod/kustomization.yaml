@@ -121,7 +121,7 @@ images:
   newTag: front-cosmic-cat-a38d1f0
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: obvious-lion-9c88a72
+  newTag: happy-whale-6ca82c3
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: obvious-lion-9c88a72
+  newTag: happy-whale-6ca82c3
