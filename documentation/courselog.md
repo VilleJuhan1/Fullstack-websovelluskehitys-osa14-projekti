@@ -70,4 +70,4 @@
 | June 13th | Finalized the documentation review for now | 1 |
 | June 13th | ArgoCD deployment via ansible | 3 |
 | June 14th | Unit tests for payment processing and a mock payment provider integration, debugging... | 5 | 
-| **Total** | | **22,5** |
+| **Total** | | **23,5** |
