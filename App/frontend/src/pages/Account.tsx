@@ -1,7 +1,9 @@
+
 import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client/react';
 import { ME } from '../services/auth';
 import type { GetMeData } from '../services/auth';
+import PaymentForm from '../components/PaymentForm';
 
 export default function Account() {
   const { data, loading } = useQuery<GetMeData>(ME, {
@@ -25,41 +27,45 @@ export default function Account() {
       <div className="glass-panel main-panel">
         <h1 className="text-gradient">Account Information</h1>
         {user ? (
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'column',
-              gap: 'var(--space-sm)',
-              color: 'var(--text-primary)',
-              marginTop: 'var(--space-lg)',
-            }}
-          >
-            <p>
-              <strong>Username:</strong> {user.username}
-            </p>
-            <p>
-              <strong>Email:</strong> {user.email || 'N/A'}
-            </p>
-            <p>
-              <strong>Status:</strong>{' '}
-              <span
-                style={{
-                  color: user.isPremiumUser
-                    ? 'var(--color-success)'
-                    : 'var(--text-secondary)',
-                }}
-              >
-                {user.isPremiumUser ? 'Premium Account 💎' : 'Standard Account'}
-              </span>
-            </p>
-            {user.isAdmin && (
+          <>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 'var(--space-sm)',
+                color: 'var(--text-primary)',
+                marginTop: 'var(--space-lg)',
+              }}
+            >
               <p>
-                <strong style={{ color: 'var(--color-warning)' }}>
-                  Admin Account ⚙️
-                </strong>
+                <strong>Username:</strong> {user.username}
               </p>
-            )}
-          </div>
+              <p>
+                <strong>Email:</strong> {user.email || 'N/A'}
+              </p>
+              <p>
+                <strong>Status:</strong>{' '}
+                <span
+                  style={{
+                    color: user.isPremiumUser
+                      ? 'var(--color-success)'
+                      : 'var(--text-secondary)',
+                  }}
+                >
+                  {user.isPremiumUser ? 'Premium Account 💎' : 'Standard Account'}
+                </span>
+              </p>
+              {user.isAdmin && (
+                <p>
+                  <strong style={{ color: 'var(--color-warning)' }}>
+                    Admin Account ⚙️
+                  </strong>
+                </p>
+              )}
+            </div>
+
+            {!user.isPremiumUser && <PaymentForm username={user.username} />}
+          </>
         ) : (
           <div style={{ marginTop: 'var(--space-lg)', textAlign: 'center' }}>
             <p style={{ color: 'var(--color-danger)', fontWeight: 600 }}>
@@ -97,7 +103,7 @@ export default function Account() {
             justifyContent: 'center',
           }}
         >
-          <Link to="/" className="btn btn-primary">
+          <Link to="/" className="btn btn-primary" style={{ width: '100%' }}>
             Back to Menu
           </Link>
         </div>
