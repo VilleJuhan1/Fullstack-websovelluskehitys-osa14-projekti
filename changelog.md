@@ -46,3 +46,4 @@
 | 2.0.2 | 2026-06-13 | Documentation | Reviewed all current readme files and brought them up to date  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
 | 2.1.0 | 2026-06-13 | ArgoCD | ArgoCD deployed with separate app deployments for dev and production stacks  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
 | 2.1.1 | 2026-06-13 | Admin privileges | Fixed a bug where the custom Argocd user didn't have enough privileges to monitor the deployments  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
+| 2.1.2 | 2026-06-14 | Compute downgrade | Due to recent changes to OCI free tier limits, had to downgrade k3s master and worker nodes to 1 ocpu and 6 GB ram each. Down from 2/12.  | swift-eagle-6eb25bd | obvious-lion-9c88a72 |
