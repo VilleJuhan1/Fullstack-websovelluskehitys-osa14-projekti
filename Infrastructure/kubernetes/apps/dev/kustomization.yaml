@@ -4,7 +4,6 @@ kind: Kustomization
 # Patches the postgres/backend/frontend deployment for development environment in dev workspace and configures ingress for it
 resources:
 - ../../base
-- ../../base/secrets-template.yaml
 
 namespace: dev
 
