@@ -50,3 +50,4 @@
 | 2.2.0 | 2026-06-14 | Stripe | Added stripe-mock as a simulated payment provider for upgrading an user to premium status  | swift-whale-d6aecd8 | obvious-lion-9c88a72 |
 | 2.2.1 | 2026-06-14 | Bug fix | Fixed an argocd bug that prevented updating the deployment  | swift-whale-d6aecd8 | obvious-lion-9c88a72 |
 | 2.2.2 | 2026-06-14 | Mock to prod | Deploying mock payment feature to production build also  | swift-whale-d6aecd8 | happy-whale-6ca82c3 |
+| 2.2.3 | 2026-06-14 | Mock debugged | Fixed an issue with stripe mock where the payment failed due to a misformatted key  | swift-whale-d6aecd8 | happy-whale-6ca82c3 |
