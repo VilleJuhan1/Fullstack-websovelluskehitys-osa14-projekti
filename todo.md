@@ -42,22 +42,6 @@
     The cloud hub should include links to Argo and Grafana (both using 2fa secure authentication), production version of the quiz game and a short introductory ingress.
     ```
 
-### 22 - Mock payment provider implementation
-
-  - due: 2026-06-21
-  - tags: [backend, frontend, kubernetes]
-  - priority: high
-  - workload: Hard
-  - defaultExpanded: false
-  - steps:
-      - [ ] Research a mock payment provider and add a deployment to k3s
-      - [ ] Add a mock endpoint for payments
-      - [ ] Configure backend mutation that uses the mock provider
-      - [ ] Configure frontend resolver to use the backend mutation
-    ```md
-    Add some mock provider for payment simulation to the k3s cluster. Refactor backend and frontend to use that.
-    ```
-
 ### 23 - Paid category
 
   - due: 2026-06-21
@@ -73,6 +57,22 @@
     ```
 
 ## In progress
+
+### 22 - Mock payment provider implementation
+
+  - due: 2026-06-21
+  - tags: [backend, frontend, kubernetes]
+  - priority: high
+  - workload: Hard
+  - defaultExpanded: false
+  - steps:
+      - [x] Research a mock payment provider and add a deployment to k3s
+      - [x] Add a mock endpoint for payments
+      - [ ] Configure backend mutation that uses the mock provider
+      - [ ] Configure frontend resolver to use the backend mutation
+    ```md
+    Add some mock provider for payment simulation to the k3s cluster. Refactor backend and frontend to use that.
+    ```
 
 ## Done
 

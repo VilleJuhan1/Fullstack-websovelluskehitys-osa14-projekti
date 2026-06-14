@@ -15,6 +15,7 @@ export const resolvers = {
   Mutation: {
     ...authResolvers.Mutation,
     ...scoreResolvers.Mutation,
+    ...userResolvers.Mutation,
   },
   User: {
     ...userResolvers.User,

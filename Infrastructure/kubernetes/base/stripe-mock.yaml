@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stripe-mock
+  labels:
+    app: stripe-mock
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stripe-mock
+  template:
+    metadata:
+      labels:
+        app: stripe-mock
+    spec:
+      containers:
+      - name: stripe-mock
+        image: stripe/stripe-mock:v0.183.0
+        securityContext:
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 1000
+        ports:
+        - containerPort: 12111
+        - containerPort: 12112
+        resources:
+          requests:
+            cpu: 10m
+            memory: 32Mi
+          limits:
+            cpu: 100m
+            memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stripe-mock
+spec:
+  selector:
+    app: stripe-mock
+  ports:
+  - port: 12111
+    targetPort: 12111
+    name: http
+  - port: 12112
+    targetPort: 12112
+    name: https
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: stripe-mock-policy
+spec:
+  podSelector:
+    matchLabels:
+      app: stripe-mock
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - podSelector:
+            matchLabels:
+              app: backend
+      ports:
+        - protocol: TCP
+          port: 12111
+        - protocol: TCP
+          port: 12112

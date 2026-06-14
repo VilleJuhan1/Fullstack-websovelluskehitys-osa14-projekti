@@ -18,6 +18,16 @@ export const CREATE_USER = gql`
   }
 `;
 
+export const UPGRADE_TO_PREMIUM = gql`
+  mutation UpgradeToPremium($paymentMethodId: String!) {
+    upgradeToPremium(paymentMethodId: $paymentMethodId) {
+      id
+      username
+      isPremiumUser
+    }
+  }
+`;
+
 export const ME = gql`
   query GetMe {
     me {
@@ -46,6 +56,14 @@ export interface CreateUserData {
   createUser: {
     id: number;
     username: string;
+  };
+}
+
+export interface UpgradeData {
+  upgradeToPremium: {
+    id: number;
+    username: string;
+    isPremiumUser: boolean;
   };
 }
 

@@ -37,5 +37,13 @@ services:
       - PASSWORD_SECRET=test-environment-super-secret-key
       - JWT_SECRET=super-secure-test-jwt-secret
       - NODE_ENV=test # so that the migration 02 is run on automated tests in CI/CD, but no dev dependencies are installed
+      - STRIPE_SECRET_KEY=sk_test_12345
+      - STRIPE_API_BASE=http://stripe-mock:12111
     ports:
       - '4000:4000'
+  stripe-mock:
+    image: stripe/stripe-mock:latest
+    container_name: stripe-mock
+    restart: always
+    ports:
+      - '12111:12111'

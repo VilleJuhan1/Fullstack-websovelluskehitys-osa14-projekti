@@ -56,6 +56,13 @@ spec:
                 secretKeyRef:
                   name: app-secret
                   key: PASSWORD_SECRET
+            - name: STRIPE_API_BASE
+              value: "http://stripe-mock:12111"
+            - name: STRIPE_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: app-secret
+                  key: STRIPE_SECRET_KEY
       volumes:
         - name: tmp
           emptyDir: {}

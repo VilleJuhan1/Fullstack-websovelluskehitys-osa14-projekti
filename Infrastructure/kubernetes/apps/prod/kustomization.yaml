@@ -4,6 +4,7 @@ kind: Kustomization
 # Patches the postgres/backend/frontend deployment for production environment in prod workspace and configures ingress for it
 resources:
 - ../../base
+- ../../base/secrets-local.yaml
 - hpa.yaml
 - postgres-pv.yaml
 - postgres-pvc.yaml

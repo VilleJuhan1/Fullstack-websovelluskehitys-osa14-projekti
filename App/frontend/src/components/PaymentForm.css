@@ -1,0 +1,85 @@
+.payment-form-container {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.payment-form-title {
+  font-size: 1.2rem;
+  margin-bottom: var(--space-md);
+  color: var(--text-primary);
+  font-weight: 800;
+}
+
+.payment-form-notice {
+  padding: var(--space-sm);
+  margin-bottom: var(--space-md);
+  background: rgba(255, 193, 7, 0.1);
+  border-left: 4px solid var(--color-warning);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  border-radius: 4px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.payment-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.payment-input-group.flex-1 {
+  flex: 1;
+  min-width: 120px;
+}
+
+.payment-input-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.payment-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.payment-input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.payment-input.card-number {
+  letter-spacing: 2px;
+}
+
+.payment-error {
+  color: var(--color-danger);
+  font-size: 0.9rem;
+}
+
+.payment-submit-btn {
+  margin-top: var(--space-sm);
+  width: 100%;
+  padding: 12px;
+  background-color: var(--color-success);
+  border-color: var(--color-success);
+  box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
+}
+
+.payment-submit-btn:hover {
+  background-color: #059669; /* Darker emerald */
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.5);
+}

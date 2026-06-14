@@ -6,36 +6,38 @@ Includes a Python script for building data sets for the quiz game, see [scripts/
 
 ## Tech stack
 
-| Component | Used for | Status |
-|---|---|---|
-| Node.js | Runtime environment | Implemented |
-| Axios | HTTP client for communicating with the mock payment provider | Planned |
-| Express | Web framework | Implemented |
-| Apollo Server | GraphQL framework | Implemented |
-| Sequelize | ORM for database | Implemented |
-| Umzug | Database migration tool | Implemented |
-| GraphQL | API query language | Implemented |
-| Jsonwebtoken | JSON web token utility for authentication and authorization | Implemented |
-| Pg | PostgreSQL driver | Implemented |
-| Nodemon | Development server hot-reloader | Implemented |
-| Bcrypt | Password hashing utility | Implemented |
-| Pino | Logging utility | Implemented |
-| Dotenv | Environment variable management utility | Implemented |
-| Jest | Unit testing framework | Implemented |
-| Supertest | API testing utility | Implemented |
-| Prettier | Code formatter | Implemented |
-| ESLint | Linting utility | Implemented |
-| Typescript | TypeScript compiler | Implemented |
-| Redis | | Planned |
+| Component     | Used for                                                     | Status      |
+| ------------- | ------------------------------------------------------------ | ----------- |
+| Node.js       | Runtime environment                                          | Implemented |
+| Axios         | HTTP client for communicating with the mock payment provider | Planned     |
+| Express       | Web framework                                                | Implemented |
+| Apollo Server | GraphQL framework                                            | Implemented |
+| Sequelize     | ORM for database                                             | Implemented |
+| Umzug         | Database migration tool                                      | Implemented |
+| GraphQL       | API query language                                           | Implemented |
+| Jsonwebtoken  | JSON web token utility for authentication and authorization  | Implemented |
+| Pg            | PostgreSQL driver                                            | Implemented |
+| Nodemon       | Development server hot-reloader                              | Implemented |
+| Bcrypt        | Password hashing utility                                     | Implemented |
+| Pino          | Logging utility                                              | Implemented |
+| Dotenv        | Environment variable management utility                      | Implemented |
+| Jest          | Unit testing framework                                       | Implemented |
+| Supertest     | API testing utility                                          | Implemented |
+| Prettier      | Code formatter                                               | Implemented |
+| ESLint        | Linting utility                                              | Implemented |
+| Typescript    | TypeScript compiler                                          | Implemented |
+| Redis         |                                                              | Planned     |
 
 ## Installation
 
 ### Recommended
+
 ```shell
 npm ci                  # Installs the project using the existing package-lock.json file
 ```
 
 ### Alternative
+
 ```shell
 rm package-lock.json    # Removes the package-lock.json file
 npm install             # Installs dependencies without using package-lock.json file
