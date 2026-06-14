@@ -58,6 +58,8 @@
 
 ## In progress
 
+## Done
+
 ### 22 - Mock payment provider implementation
 
   - due: 2026-06-21
@@ -68,13 +70,11 @@
   - steps:
       - [x] Research a mock payment provider and add a deployment to k3s
       - [x] Add a mock endpoint for payments
-      - [ ] Configure backend mutation that uses the mock provider
-      - [ ] Configure frontend resolver to use the backend mutation
+      - [x] Configure backend mutation that uses the mock provider
+      - [x] Configure frontend resolver to use the backend mutation
     ```md
     Add some mock provider for payment simulation to the k3s cluster. Refactor backend and frontend to use that.
     ```
-
-## Done
 
 ### 19 - Argo CD for automated deployment
 
