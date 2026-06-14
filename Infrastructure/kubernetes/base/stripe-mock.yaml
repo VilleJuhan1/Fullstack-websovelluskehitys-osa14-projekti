@@ -16,7 +16,11 @@ spec:
     spec:
       containers:
       - name: stripe-mock
-        image: stripe/stripe-mock:latest
+        image: stripe/stripe-mock:v0.183.0
+        securityContext:
+          readOnlyRootFilesystem: true
+          runAsNonRoot: true
+          runAsUser: 1000
         ports:
         - containerPort: 12111
         - containerPort: 12112

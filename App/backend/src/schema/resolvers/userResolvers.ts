@@ -65,7 +65,7 @@ export const userResolvers = {
         return context.currentUser;
       } catch (error) {
         console.error('Payment failed:', error);
-        throw new Error('Payment processing failed');
+        throw new Error('Payment processing failed', { cause: error });
       }
     },
   },
