@@ -66,8 +66,8 @@
   - workload: Hard
   - defaultExpanded: false
   - steps:
-      - [ ] Research a mock payment provider and add a deployment to k3s
-      - [ ] Add a mock endpoint for payments
+      - [x] Research a mock payment provider and add a deployment to k3s
+      - [x] Add a mock endpoint for payments
       - [ ] Configure backend mutation that uses the mock provider
       - [ ] Configure frontend resolver to use the backend mutation
     ```md
