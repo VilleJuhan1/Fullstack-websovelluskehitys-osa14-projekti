@@ -41,6 +41,7 @@ export const typeDefs = `#graphql
     login(username: String!, password: String!): Token
     createUser(username: String!, password: String!, email: String!): User
     updateStreakScore(category: String!, streak: Int!): Score!
+    upgradeToPremium(paymentMethodId: String!): User!
   }
 
   type Token {

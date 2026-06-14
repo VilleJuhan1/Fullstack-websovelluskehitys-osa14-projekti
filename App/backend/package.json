@@ -27,6 +27,7 @@
     "pg-hstore": "^2.3.4",
     "pino": "^10.3.1",
     "sequelize": "^6.37.8",
+    "stripe": "^22.2.1",
     "umzug": "^3.8.3"
   },
   "devDependencies": {
