@@ -43,6 +43,9 @@ export const userResolvers = {
       const { stripe } = await import('../../utils/stripe.js');
 
       try {
+        // Simulate real-world network/processing delay (2 seconds)
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+
         // Create a mock charge/payment intent with Stripe
         await stripe.paymentIntents.create({
           amount: 999, // $9.99
