@@ -48,8 +48,8 @@ export const userResolvers = {
 
         // Create a mock charge/payment intent with Stripe
         await stripe.paymentIntents.create({
-          amount: 999, // $9.99
-          currency: 'usd',
+          amount: 999, // 9.99€
+          currency: 'eur',
           payment_method: paymentMethodId,
           confirm: true,
           automatic_payment_methods: {

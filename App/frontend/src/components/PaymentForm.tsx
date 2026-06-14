@@ -77,7 +77,7 @@ export default function PaymentForm({ username }: { username: string }) {
           disabled={loading}
           className="btn btn-primary payment-submit-btn"
         >
-          {loading ? 'Processing...' : 'Pay 9.99€'}
+          {loading ? 'Processing...' : 'Pay 9,99€'}
         </button>
       </form>
     </div>
