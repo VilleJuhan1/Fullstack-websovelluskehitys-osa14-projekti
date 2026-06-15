@@ -51,3 +51,4 @@
 | 2.2.1 | 2026-06-14 | Bug fix | Fixed an argocd bug that prevented updating the deployment  | swift-whale-d6aecd8 | obvious-lion-9c88a72 |
 | 2.2.2 | 2026-06-14 | Mock to prod | Deploying mock payment feature to production build also  | swift-whale-d6aecd8 | happy-whale-6ca82c3 |
 | 2.2.3 | 2026-06-14 | Mock debugged | Fixed an issue with stripe mock where the payment failed due to a misformatted key  | swift-whale-d6aecd8 | happy-whale-6ca82c3 |
+| 2.3.0 | 2026-06-15 | Dota heroes category | Added a new category for quiz game: Dota heroes. Implemented schemas, resolvers, queries, migrations etc. for both front- and backend.  | swift-wolf-4313bd4 | happy-whale-6ca82c3 |
