@@ -5,6 +5,7 @@ import type { GameItem, GameDataType } from '../services/gameData';
 export interface GameContextType {
   pokemon: GameItem[];
   countries: GameItem[];
+  dota: GameItem[];
   loading: boolean;
   error: unknown;
   getItems: (type: GameDataType) => GameItem[];

@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client/react';
 import './Quiz.css';
 import { useGameContext } from '../hooks/useGame';
@@ -15,8 +15,9 @@ import type { UpdateStreakScoreData } from '../services/score';
 // Generic quiz component for rendering the quiz page and handling the quiz logic
 export default function Quiz() {
   const { category } = useParams<{ category: string }>();
+  const navigate = useNavigate();
   const type = (
-    category === 'countries' ? 'countries' : 'pokemon'
+    category === 'countries' ? 'countries' : category === 'dota' ? 'dota' : 'pokemon'
   ) as GameDataType;
 
   const { getItems, loading, error } = useGameContext();
@@ -31,6 +32,18 @@ export default function Quiz() {
   >(UPDATE_STREAK_SCORE);
 
   const isLoggedIn = !!meData?.me;
+  const isPremiumUser = !!meData?.me?.isPremiumUser;
+
+  // Protect the dota quiz route
+  useEffect(() => {
+    if (category === 'dota' && meData && !loading) { // Wait for meData to load
+      if (!isLoggedIn) {
+        navigate('/login', { replace: true });
+      } else if (!isPremiumUser) {
+        navigate('/account', { replace: true });
+      }
+    }
+  }, [category, meData, isLoggedIn, isPremiumUser, navigate, loading]);
 
   // Find the highest streak in the DB for the current category
   const highestStreak = useMemo(() => {

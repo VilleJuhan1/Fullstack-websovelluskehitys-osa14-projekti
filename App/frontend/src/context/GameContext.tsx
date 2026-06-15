@@ -11,17 +11,26 @@ export function GameProvider({ children }: { children: ReactNode }) {
 
   const pokemon = useMemo(() => data?.allPokemon ?? [], [data]);
   const countries = useMemo(() => data?.allCountries ?? [], [data]);
+  const dota = useMemo(() => {
+    const heroes = data?.allDotaHeroes ?? [];
+    return heroes.map(hero => ({
+      ...hero,
+      categories: hero.categories.map(c => c === 'all' ? 'universal' : c)
+    }));
+  }, [data]);
 
   const getItems = useCallback(
     (type: GameDataType): GameItem[] => {
-      return type === 'pokemon' ? pokemon : countries;
+      if (type === 'pokemon') return pokemon;
+      if (type === 'dota') return dota;
+      return countries;
     },
-    [pokemon, countries]
+    [pokemon, countries, dota]
   );
 
   return (
     <GameContext.Provider
-      value={{ pokemon, countries, loading, error, getItems }}
+      value={{ pokemon, countries, dota, loading, error, getItems }}
     >
       {children}
     </GameContext.Provider>

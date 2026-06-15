@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export type GameDataType = 'pokemon' | 'countries';
+export type GameDataType = 'pokemon' | 'countries' | 'dota';
 
 export interface Translations {
   fin?: string;
@@ -39,6 +39,16 @@ export const GET_ALL_DATA = gql`
       categories
       imageUrl
     }
+    allDotaHeroes {
+      id
+      name
+      translations {
+        fin
+        swe
+      }
+      categories
+      imageUrl
+    }
   }
 `;
 
@@ -46,4 +56,5 @@ export const GET_ALL_DATA = gql`
 export interface AllGameData {
   allPokemon: GameItem[];
   allCountries: GameItem[];
+  allDotaHeroes: GameItem[];
 }
