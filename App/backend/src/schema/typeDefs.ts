@@ -29,6 +29,7 @@ export const typeDefs = `#graphql
   type Query {
     allCountries: [CountryType!]!
     allPokemon: [PokemonType!]!
+    allDotaHeroes: [DotaHeroType!]!
     country(name: String!): CountryType
     pokemon(name: String!): PokemonType
     allUsers: [User!]!
@@ -64,7 +65,15 @@ export const typeDefs = `#graphql
     categories: [String!]
     imageUrl: String!
   }
-  
+
+  type DotaHeroType {
+    id: Int!
+    name: String!
+    translations: TranslationsType
+    categories: [String!]
+    imageUrl: String!
+  }
+
   type TranslationsType {
     fin: String
     swe: String
