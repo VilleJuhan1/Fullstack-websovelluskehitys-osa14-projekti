@@ -42,6 +42,8 @@
     The cloud hub should include links to Argo and Grafana (both using 2fa secure authentication), production version of the quiz game and a short introductory ingress.
     ```
 
+## In progress
+
 ### 23 - Paid category
 
   - due: 2026-06-21
@@ -55,8 +57,6 @@
     ```md
     Find 1-2 more APIs for new categories for quizzes and add them as paid account only
     ```
-
-## In progress
 
 ## Done
 
