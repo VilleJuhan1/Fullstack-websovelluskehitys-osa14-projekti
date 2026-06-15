@@ -18,6 +18,7 @@ describe('useGame Hook', () => {
     const mockValue = {
       pokemon: [],
       countries: [],
+      dota: [],
       loading: false,
       error: null,
       getItems: () => [],

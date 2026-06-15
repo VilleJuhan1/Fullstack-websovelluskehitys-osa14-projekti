@@ -21,6 +21,9 @@ describe('GameContext and GameProvider', () => {
   const mockCountries = [
     { id: 2, name: 'Finland', categories: [], imageUrl: '' },
   ];
+  const mockDota = [
+    { id: 3, name: 'Anti-Mage', categories: [], imageUrl: '' },
+  ];
 
   it('provides loading state and default empty arrays when data is missing', () => {
     vi.mocked(useQuery).mockReturnValue({
@@ -38,6 +41,7 @@ describe('GameContext and GameProvider', () => {
     expect(result.current.loading).toBe(true);
     expect(result.current.pokemon).toEqual([]);
     expect(result.current.countries).toEqual([]);
+    expect(result.current.dota).toEqual([]);
   });
 
   it('provides pokemon and countries when query is successful', () => {
@@ -45,6 +49,7 @@ describe('GameContext and GameProvider', () => {
       data: {
         allPokemon: mockPokemon,
         allCountries: mockCountries,
+        allDotaHeroes: mockDota,
       },
       loading: false,
       error: undefined,
@@ -59,9 +64,11 @@ describe('GameContext and GameProvider', () => {
     expect(result.current.loading).toBe(false);
     expect(result.current.pokemon).toEqual(mockPokemon);
     expect(result.current.countries).toEqual(mockCountries);
+    expect(result.current.dota).toEqual(mockDota);
 
     // Test getItems callback
     expect(result.current.getItems('pokemon')).toEqual(mockPokemon);
     expect(result.current.getItems('countries')).toEqual(mockCountries);
+    expect(result.current.getItems('dota')).toEqual(mockDota);
   });
 });

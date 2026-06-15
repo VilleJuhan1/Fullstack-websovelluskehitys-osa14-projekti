@@ -41,7 +41,7 @@ patches:
             - name: frontend
               env:
                 - name: VITE_APP_VERSION
-                  value: swift-whale-d6aecd8
+                  value: swift-wolf-4313bd4
               resources:
                 limits:
                   cpu: 100m
@@ -92,10 +92,10 @@ images:
   newTag: front-digital-robot-3f9d606
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: swift-whale-d6aecd8
+  newTag: swift-wolf-4313bd4
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: swift-whale-d6aecd8
+  newTag: swift-wolf-4313bd4
 labels:
 - includeSelectors: true
   pairs:
