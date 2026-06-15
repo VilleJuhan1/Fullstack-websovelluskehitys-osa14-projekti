@@ -44,6 +44,8 @@
 
 ## In progress
 
+## Done
+
 ### 23 - Paid category
 
   - due: 2026-06-21
@@ -52,13 +54,11 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Build the data set
-      - [ ] Add the migration
+      - [x] Build the data set
+      - [x] Add the migration
     ```md
     Find 1-2 more APIs for new categories for quizzes and add them as paid account only
     ```
-
-## Done
 
 ### 22 - Mock payment provider implementation
 
