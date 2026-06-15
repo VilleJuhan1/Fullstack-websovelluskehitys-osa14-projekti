@@ -32,6 +32,7 @@ export const typeDefs = `#graphql
     allDotaHeroes: [DotaHeroType!]!
     country(name: String!): CountryType
     pokemon(name: String!): PokemonType
+    dotaHero(name: String!): DotaHeroType
     allUsers: [User!]!
     user(username: String!): User
     topScores(category: String, limit: Int): [Score!]!

@@ -39,6 +39,6 @@ DotaHero.init(
     underscored: false,
     timestamps: true,
     modelName: 'dotaHero',
-    tableName: 'dotaHero', // ensure pluralization doesn't mess it up
+    tableName: 'dotaHeroes', // matches the table name in the migration
   }
 );
