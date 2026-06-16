@@ -2,14 +2,6 @@
 
 ## Backlog
 
-### Language support
-
-  - tags: [frontend]
-  - defaultExpanded: false
-    ```md
-    Add language support for finnish / swedish
-    ```
-
 ## Planned
 
 ### 18 - Backend test coverage
