@@ -6,6 +6,11 @@ This repository is my showcase project for the University of Helsinki [Fullstack
 - [To-do Kanban Board](todo.md)
 - [Course journal](Documentation/courselog.md)
 
+## Live app
+
+- [Sandbox Hub](https://hiekkalaatikko.tech)
+- [Quiz Game](https://quizgame.hiekkalaatikko.tech)
+
 ## Infrastructure Documentation
 
 - [Infrastructure Overview](Infrastructure/README.md)
