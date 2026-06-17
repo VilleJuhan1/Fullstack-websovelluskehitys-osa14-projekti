@@ -8,7 +8,7 @@ describe('Stripe API E2E', () => {
     const randomUsername = `stripe_test_${Date.now()}`;
     const randomEmail = `${randomUsername}@example.com`;
     const password = 'TestPassword1!';
-    
+
     let res = await fetch(API_test_url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -23,7 +23,7 @@ describe('Stripe API E2E', () => {
         variables: { username: randomUsername, password, email: randomEmail },
       }),
     });
-    let json = await res.json();
+    await res.json();
     expect(res.status).toBe(200);
 
     // 2. Login to get the JWT token
@@ -41,7 +41,7 @@ describe('Stripe API E2E', () => {
         variables: { username: randomUsername, password },
       }),
     });
-    json = await res.json();
+    let json = await res.json();
     expect(res.status).toBe(200);
     const token = json.data.login.value;
     expect(token).toBeDefined();
@@ -49,9 +49,9 @@ describe('Stripe API E2E', () => {
     // 3. Upgrade to premium
     res = await fetch(API_test_url, {
       method: 'POST',
-      headers: { 
+      headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`
+        Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify({
         query: `
@@ -71,7 +71,7 @@ describe('Stripe API E2E', () => {
     expect(json.data.upgradeToPremium.isPremiumUser).toBe(true);
     expect(json.data.upgradeToPremium.username).toBe(randomUsername);
   });
-  
+
   it('fails to upgrade if not authenticated', async () => {
     const res = await fetch(API_test_url, {
       method: 'POST',
@@ -92,4 +92,3 @@ describe('Stripe API E2E', () => {
     expect(json.errors[0].message).toBe('Not authenticated');
   });
 });
-

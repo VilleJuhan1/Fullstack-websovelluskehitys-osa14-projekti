@@ -32,13 +32,13 @@ export const dotaHeroResolvers = {
       });
       return foundDotaHero
         ? new ObjectType(
-          foundDotaHero.id,
-          foundDotaHero.name,
-          (foundDotaHero.translations as unknown as Translations) ||
-          ({} as Translations),
-          foundDotaHero.categories,
-          foundDotaHero.imageUrl
-        )
+            foundDotaHero.id,
+            foundDotaHero.name,
+            (foundDotaHero.translations as unknown as Translations) ||
+              ({} as Translations),
+            foundDotaHero.categories,
+            foundDotaHero.imageUrl
+          )
         : null;
     },
   },

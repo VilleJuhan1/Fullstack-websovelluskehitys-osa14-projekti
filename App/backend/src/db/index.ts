@@ -30,7 +30,7 @@ export const migrator = new Umzug({
 /**
  * Authenticates the database connection and runs all pending migrations.
  * This is executed when the backend server starts.
- * 
+ *
  * @returns {Promise<void>} Resolves when migrations are complete.
  */
 export const runMigrations = async () => {

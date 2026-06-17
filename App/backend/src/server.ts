@@ -15,7 +15,7 @@ import { runMigrations, User } from './db';
 /**
  * Initializes and starts the Apollo Server and the standalone server.
  * Handles database migrations, server configuration, and JWT authentication context.
- * 
+ *
  * @returns {Promise<{ server: ApolloServer, url: string }>} A promise that resolves to an object containing the server instance and the URL it is listening on.
  * @throws {Error} If the server fails to start or database migrations fail.
  */
