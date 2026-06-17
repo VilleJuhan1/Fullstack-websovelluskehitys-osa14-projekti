@@ -55,3 +55,4 @@
 | 2.3.1 | 2026-06-16 | Dota heroes production live | Deployed the new category to production build  | swift-wolf-4313bd4 | brave-dolphin-425f804 |
 | 2.4.0 | 2026-06-17 | Frontpage hub features | Added a links bar to project landing page, wrote documentation, played with some UI features but defaulted to existing ones  | swift-wolf-4313bd4 | brave-dolphin-425f804 |
 | 2.4.1 | 2026-06-17 | More backend tests | Dota heroes and stripe tests for backend. A fix (hopefully) for frontpage deployment.  | swift-wolf-4313bd4 | brave-dolphin-425f804 |
+| 2.4.2 | 2026-06-17 | Frontpage deployment fix | Fixing something which wasn't broken but actually caused by VR Wifi.  | swift-wolf-4313bd4 | brave-dolphin-425f804 |
