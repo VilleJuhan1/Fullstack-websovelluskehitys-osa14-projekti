@@ -37,7 +37,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Glassmorphism */
@@ -167,4 +167,102 @@ body {
   width: 20px;
   height: 20px;
   filter: invert(1);
+}
+
+/* Services Bar Dropdown */
+.services-bar-container {
+  position: absolute;
+  top: var(--space-xl);
+  right: var(--space-xl);
+  z-index: 1000;
+}
+
+.services-toggle-btn {
+  background: rgba(19, 47, 56, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.services-toggle-btn:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 16px rgba(14, 165, 233, 0.4);
+}
+
+.services-dropdown {
+  position: absolute;
+  top: 54px;
+  right: 0;
+  width: 220px;
+  padding: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: fadeIn 0.2s ease;
+  border-radius: var(--radius-lg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-menu-link {
+  padding: var(--space-sm) var(--space-md);
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  display: block;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.services-menu-link:hover {
+  background: rgba(14, 165, 233, 0.15);
+  color: var(--color-primary);
+}
+
+.about-text {
+  margin-top: var(--space-xl);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .landing-container {
+    height: auto;
+    padding: 100px 0 var(--space-2xl);
+  }
+
+  .sandbox {
+    width: 260px;
+    height: 260px;
+  }
+
+  .services-bar-container {
+    top: var(--space-md);
+    right: var(--space-md);
+  }
+
+  .bottom-bar {
+    position: fixed;
+    bottom: var(--space-md);
+    right: var(--space-md);
+  }
 }

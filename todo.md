@@ -19,6 +19,8 @@
     Ensure that backend tests cover main functionalities
     ```
 
+## In progress
+
 ### 20 - Frontpage Hub Features
 
   - due: 2026-07-12
@@ -33,8 +35,6 @@
     ```md
     The cloud hub should include links to Argo and Grafana (both using 2fa secure authentication), production version of the quiz game and a short introductory ingress.
     ```
-
-## In progress
 
 ## Done
 

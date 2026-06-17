@@ -1,10 +1,17 @@
 import React from 'react';
 import robotImg from './assets/sandbox.png';
 import BottomBar from './components/BottomBar';
+import ServicesBar from './components/ServicesBar';
 
+/**
+ * Main application component representing the cloud sandbox landing page.
+ * It serves as the visual entry point and structural container for the site,
+ * rendering the hero section, the services navigation, and the social links.
+ */
 const App: React.FC = () => {
   return (
     <div className="landing-container">
+      <ServicesBar />
       <main className="hero-section">
         <div className="hero-text">
           <h1 className="text-gradient">Hiekkalaatikko</h1>
@@ -16,19 +23,18 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        <div className="hero-text">
-          <p>
-            Welcome to my cloud sandbox landing page! While you're here, please
-            check out this{' '}
-            <a
-              href="https://quizgame.hiekkalaatikko.tech"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-link"
-            >
-              quiz-game!
-            </a>
-          </p>
+        <div className="about-text">
+          <p>Welcome to my cloud sandbox showcase!</p> Feel free to browse the
+          links at side or visit the project repository at{' '}
+          <a
+            href="https://github.com/VilleJuhan1/Fullstack-websovelluskehitys-osa14-projekti"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-link"
+          >
+            Github
+          </a>
+          .
         </div>
       </main>
 
