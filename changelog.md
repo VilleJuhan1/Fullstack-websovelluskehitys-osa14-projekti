@@ -53,3 +53,4 @@
 | 2.2.3 | 2026-06-14 | Mock debugged | Fixed an issue with stripe mock where the payment failed due to a misformatted key  | swift-whale-d6aecd8 | happy-whale-6ca82c3 |
 | 2.3.0 | 2026-06-15 | Dota heroes category | Added a new category for quiz game: Dota heroes. Implemented schemas, resolvers, queries, migrations etc. for both front- and backend.  | swift-wolf-4313bd4 | happy-whale-6ca82c3 |
 | 2.3.1 | 2026-06-16 | Dota heroes production live | Deployed the new category to production build  | swift-wolf-4313bd4 | brave-dolphin-425f804 |
+| 2.4.0 | 2026-06-17 | Frontpage hub features | Added a links bar to project landing page, wrote documentation, played with some UI features but defaulted to existing ones  | swift-wolf-4313bd4 | brave-dolphin-425f804 |
