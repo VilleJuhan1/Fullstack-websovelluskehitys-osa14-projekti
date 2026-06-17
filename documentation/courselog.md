@@ -74,4 +74,5 @@
 | June 16th | Dota heroes production deployment | 1 |
 | June 17th | Frontpage development and deployment, added SettingsBar component and other tweaks | 3 |
 | June 17th | More backend tests, also spent ages debugging and trying to fix an issue that was caused by VR wifi blocking my site | 3 |
-| **Total** | | **28,5** |
+| June 17th | Planned upcoming tasks to hit the required 175 hours of course work on the project | 0,5 |
+| **Total** | | **35** |

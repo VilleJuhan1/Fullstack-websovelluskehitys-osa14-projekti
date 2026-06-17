@@ -4,7 +4,72 @@
 
 ## Planned
 
+### More staging branches
+
+  - due: 2026-07-12
+  - tags: [kubernetes, git]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Make changes to Argo deployment files so that they track dev and prod branches instead of main
+      - [ ] Test dev branch deployment
+      - [ ] Test prod branch deployment
+    ```md
+    Change deployment workflow so that there are two more permanent branches: dev and prod. Change CI/CD accordingly.
+    ```
+
+### Doc blocks for everything under App
+
+  - due: 2026-07-12
+  - tags: [frontend, backend, frontpage]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Frontpage docs
+      - [ ] Frontend docs
+      - [ ] Backend docs
+    ```md
+    Add doc blocks to all applications
+    ```
+
+### Docker review
+
+  - due: 2026-07-12
+  - tags: [docker]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+    ```md
+    Review all Dockerfiles and docker-compose files. Add fullstack docker-compose deployments for both dev and prod. Review github deployment workflows
+    ```
+
+### OCI Vault
+
+  - due: 2026-07-12
+  - tags: [kubernetes, github]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+    ```md
+    Review using the OCI Vault for secrets management both in Kubernetes and Github workflows
+    ```
+
+### Update everything
+
+  - due: 2026-07-12
+  - tags: [frontend, frontpage, backend, docker]
+  - priority: medium
+  - workload: Easy
+  - defaultExpanded: false
+    ```md
+    Ensure that apps/dockerfiles use the latest versions on all components.
+    ```
+
 ## In progress
+
+## Done
 
 ### 18 - Backend test coverage
 
@@ -14,14 +79,12 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Figure out the test coverage toolkit
-      - [ ] Add more tests while checking coverage
-      - [ ] 80 % backend test coverage
+      - [x] Figure out the test coverage toolkit
+      - [x] Add more tests while checking coverage
+      - [x] 80 % backend test coverage
     ```md
     Ensure that backend tests cover main functionalities
     ```
-
-## Done
 
 ### 20 - Frontpage Hub Features
 
