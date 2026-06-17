@@ -73,4 +73,5 @@
 | June 15th | Dota heroes quiz category implementation | 4 |
 | June 16th | Dota heroes production deployment | 1 |
 | June 17th | Frontpage development and deployment, added SettingsBar component and other tweaks | 3 |
+| June 17th | More backend tests, also spent ages debugging and trying to fix an issue that was caused by VR wifi blocking my site | 3 |
 | **Total** | | **28,5** |
