@@ -12,7 +12,13 @@ const isDev = process.env.NODE_ENV !== 'production';
 import jwt from 'jsonwebtoken';
 import { runMigrations, User } from './db';
 
-// Function to start the server
+/**
+ * Initializes and starts the Apollo Server and the standalone server.
+ * Handles database migrations, server configuration, and JWT authentication context.
+ *
+ * @returns {Promise<{ server: ApolloServer, url: string }>} A promise that resolves to an object containing the server instance and the URL it is listening on.
+ * @throws {Error} If the server fails to start or database migrations fail.
+ */
 export async function startServer() {
   try {
     await runMigrations(); // Run the migrations first

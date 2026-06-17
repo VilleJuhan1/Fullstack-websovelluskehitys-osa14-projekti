@@ -22,6 +22,10 @@ if (!DATABASE_URL) {
   );
 }
 
+/**
+ * The initialized Sequelize database connection instance.
+ * Connects to PostgreSQL using the connection string from environment variables.
+ */
 export const sequelize = new Sequelize(DATABASE_URL, {
   dialect: 'postgres',
   logging: false,

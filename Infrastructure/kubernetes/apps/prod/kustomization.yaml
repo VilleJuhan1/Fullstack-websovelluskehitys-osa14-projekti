@@ -118,7 +118,7 @@ patches:
 images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
-  newTag: front-stable-sandbox-a2083b4
+  newTag: front-playful-sandbox-a4c6228
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
   newTag: brave-dolphin-425f804

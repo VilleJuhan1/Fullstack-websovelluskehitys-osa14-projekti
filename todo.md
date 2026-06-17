@@ -4,6 +4,8 @@
 
 ## Planned
 
+## In progress
+
 ### 18 - Backend test coverage
 
   - due: 2026-06-21
@@ -19,7 +21,7 @@
     Ensure that backend tests cover main functionalities
     ```
 
-## In progress
+## Done
 
 ### 20 - Frontpage Hub Features
 
@@ -29,14 +31,12 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Argo CD and Grafana links
-      - [ ] About
-      - [ ] Link to Quiz game
+      - [x] Argo CD and Grafana links
+      - [x] About
+      - [x] Link to Quiz game
     ```md
     The cloud hub should include links to Argo and Grafana (both using 2fa secure authentication), production version of the quiz game and a short introductory ingress.
     ```
-
-## Done
 
 ### 23 - Paid category
 
