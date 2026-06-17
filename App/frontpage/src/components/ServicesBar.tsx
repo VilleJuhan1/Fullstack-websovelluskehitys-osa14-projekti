@@ -56,13 +56,22 @@ const ServicesBar: React.FC = () => {
             Projects & Services
           </div>
           <a
+            href="https://dev.quizgame.hiekkalaatikko.tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="services-menu-link"
+          >
+            Quiz Game: Dev
+          </a>
+          <a
             href="https://quizgame.hiekkalaatikko.tech"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsOpen(false)}
             className="services-menu-link"
           >
-            Quiz Game Demo App
+            Quiz Game: Prod
           </a>
           <a
             href="https://grafana.hiekkalaatikko.tech"
