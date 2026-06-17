@@ -48,7 +48,7 @@ describe('Dota Heroes API E2E', () => {
     expect(res.status).toBe(200);
     expect(json.data.dotaHero).toBeDefined();
     if (json.data.dotaHero) {
-      expect(json.data.dotaHero.name).toBe('anti-mage');
+      expect(json.data.dotaHero.name).toBe('Anti-Mage');
     }
   });
 });
