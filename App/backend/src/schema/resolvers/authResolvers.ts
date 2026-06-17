@@ -2,7 +2,9 @@ import { User } from '../../db/models/User';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 
-// Resolvers for authentication mutations
+/**
+ * Resolvers for authentication-related mutations, such as user login and registration.
+ */
 export const authResolvers = {
   Mutation: {
     login: async (

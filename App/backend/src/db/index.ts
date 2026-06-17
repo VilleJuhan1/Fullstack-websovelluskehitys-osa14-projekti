@@ -27,7 +27,12 @@ export const migrator = new Umzug({
   logger: console,
 });
 
-// Runs the migrations when the backend is started
+/**
+ * Authenticates the database connection and runs all pending migrations.
+ * This is executed when the backend server starts.
+ * 
+ * @returns {Promise<void>} Resolves when migrations are complete.
+ */
 export const runMigrations = async () => {
   try {
     await sequelize.authenticate();

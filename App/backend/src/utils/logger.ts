@@ -2,7 +2,11 @@ import pino from 'pino';
 
 const isDev = process.env.NODE_ENV === 'development';
 
-// Create a Pino logger instance and adjust the logging level and formatting based on the environment
+/**
+ * A Pino logger instance configured for the application.
+ * In development, it uses 'debug' level and 'pino-pretty' for formatted output.
+ * In production, it uses 'info' level and standard JSON output.
+ */
 export const logger = pino({
   level: isDev ? 'debug' : 'info',
   transport: isDev
