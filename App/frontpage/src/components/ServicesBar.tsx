@@ -1,11 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react';
 
+/**
+ * Renders the top navigation bar containing links to various cloud projects and services.
+ * Implements a dropdown menu that handles its own open/close state.
+ */
 const ServicesBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  
+  // Ref used to detect clicks outside of the component boundaries
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Close menu when clicking outside
   useEffect(() => {
+    // Closes the menu if a user clicks anywhere else on the document
     function handleClickOutside(event: MouseEvent) {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);

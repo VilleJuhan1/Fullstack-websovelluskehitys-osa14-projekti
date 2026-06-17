@@ -3,6 +3,11 @@ import robotImg from './assets/sandbox.png';
 import BottomBar from './components/BottomBar';
 import ServicesBar from './components/ServicesBar';
 
+/**
+ * Main application component representing the cloud sandbox landing page.
+ * It serves as the visual entry point and structural container for the site,
+ * rendering the hero section, the services navigation, and the social links.
+ */
 const App: React.FC = () => {
   return (
     <div className="landing-container">
