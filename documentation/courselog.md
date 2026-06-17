@@ -72,4 +72,5 @@
 | June 14th | Unit tests for payment processing and a mock payment provider integration, debugging... | 5 | 
 | June 15th | Dota heroes quiz category implementation | 4 |
 | June 16th | Dota heroes production deployment | 1 |
+| June 17th | Frontpage development and deployment, added SettingsBar component and other tweaks | 3 |
 | **Total** | | **28,5** |

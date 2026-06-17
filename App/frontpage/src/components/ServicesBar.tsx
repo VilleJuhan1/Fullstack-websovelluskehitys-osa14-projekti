@@ -91,6 +91,15 @@ const ServicesBar: React.FC = () => {
           >
             Argo CD (restricted)
           </a>
+          <a
+            href="https://www.oracle.com/europe/cloud/sign-in.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
+            className="services-menu-link"
+          >
+            OCI Console
+          </a>
         </div>
       )}
     </div>
