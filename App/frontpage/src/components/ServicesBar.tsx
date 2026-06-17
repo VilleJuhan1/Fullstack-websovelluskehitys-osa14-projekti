@@ -62,7 +62,7 @@ const ServicesBar: React.FC = () => {
             onClick={() => setIsOpen(false)}
             className="services-menu-link"
           >
-            Quiz Game
+            Quiz Game Demo App
           </a>
           <a
             href="https://grafana.hiekkalaatikko.tech"
@@ -71,7 +71,7 @@ const ServicesBar: React.FC = () => {
             onClick={() => setIsOpen(false)}
             className="services-menu-link"
           >
-            Grafana
+            Grafana (restricted)
           </a>
           <a
             href="https://argo.hiekkalaatikko.tech"
@@ -80,7 +80,7 @@ const ServicesBar: React.FC = () => {
             onClick={() => setIsOpen(false)}
             className="services-menu-link"
           >
-            Argo CD
+            Argo CD (restricted)
           </a>
         </div>
       )}

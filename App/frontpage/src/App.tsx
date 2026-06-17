@@ -18,10 +18,12 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        <div className="hero-text about-text">
+        <div className="about-text">
           <p>
-            Welcome to my cloud showcase! This sandbox environment is a dedicated space where I experiment with cloud-native technologies, automated deployments, and full-stack development.
-          </p>
+            Welcome to my cloud sandbox showcase!</p> Feel free to browse the links at side or visit the project repository at{' '}
+          <a href="https://github.com/VilleJuhan1/Fullstack-websovelluskehitys-osa14-projekti" target="_blank" rel="noopener noreferrer" className="inline-link">
+            Github
+          </a>.
         </div>
       </main>
 
