@@ -6,7 +6,7 @@ import React, { useState, useRef, useEffect } from 'react';
  */
 const ServicesBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   // Ref used to detect clicks outside of the component boundaries
   const menuRef = useRef<HTMLDivElement>(null);
 
