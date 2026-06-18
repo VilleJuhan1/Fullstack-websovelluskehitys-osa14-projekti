@@ -17,7 +17,11 @@ export default function Quiz() {
   const { category } = useParams<{ category: string }>();
   const navigate = useNavigate();
   const type = (
-    category === 'countries' ? 'countries' : category === 'dota' ? 'dota' : 'pokemon'
+    category === 'countries'
+      ? 'countries'
+      : category === 'dota'
+        ? 'dota'
+        : 'pokemon'
   ) as GameDataType;
 
   const { getItems, loading, error } = useGameContext();
@@ -36,7 +40,8 @@ export default function Quiz() {
 
   // Protect the dota quiz route
   useEffect(() => {
-    if (category === 'dota' && meData && !loading) { // Wait for meData to load
+    if (category === 'dota' && meData && !loading) {
+      // Wait for meData to load
       if (!isLoggedIn) {
         navigate('/login', { replace: true });
       } else if (!isPremiumUser) {
@@ -130,9 +135,10 @@ export default function Quiz() {
     );
 
     // Pick randomly from potential targets, or fall back if filteredItems constraint isn't met
-    const newTarget = potentialTargets.length > 0
-      ? potentialTargets[Math.floor(Math.random() * potentialTargets.length)]
-      : selected[Math.floor(Math.random() * 4)];
+    const newTarget =
+      potentialTargets.length > 0
+        ? potentialTargets[Math.floor(Math.random() * potentialTargets.length)]
+        : selected[Math.floor(Math.random() * 4)];
 
     prevTargetRef.current = newTarget;
 
@@ -142,7 +148,10 @@ export default function Quiz() {
 
     // Blur active element to prevent focus highlight from carrying over to the next round
     // to prevent an option being pre-highlighted at the start of a round
-    if (typeof document !== 'undefined' && document.activeElement instanceof HTMLElement) {
+    if (
+      typeof document !== 'undefined' &&
+      document.activeElement instanceof HTMLElement
+    ) {
       document.activeElement.blur();
     }
   }, [filteredItems]);
@@ -194,8 +203,8 @@ export default function Quiz() {
                   );
                   const updatedScores = hasCategory
                     ? currentScores.map((s: ScoreItem) =>
-                      s.category === updatedScore.category ? updatedScore : s
-                    )
+                        s.category === updatedScore.category ? updatedScore : s
+                      )
                     : [...currentScores, updatedScore];
 
                   cache.writeQuery<GetMeData>({
@@ -270,7 +279,9 @@ export default function Quiz() {
           streak={streak}
           attempts={attempts}
           feedbackState={feedbackState}
-          highestStreak={selectedCategory === 'all' ? initialHighestStreak : undefined}
+          highestStreak={
+            selectedCategory === 'all' ? initialHighestStreak : undefined
+          }
           isLoggedIn={isLoggedIn}
           isNewRecord={isNewRecord}
         />

@@ -13,9 +13,9 @@ export function GameProvider({ children }: { children: ReactNode }) {
   const countries = useMemo(() => data?.allCountries ?? [], [data]);
   const dota = useMemo(() => {
     const heroes = data?.allDotaHeroes ?? [];
-    return heroes.map(hero => ({
+    return heroes.map((hero) => ({
       ...hero,
-      categories: hero.categories.map(c => c === 'all' ? 'universal' : c)
+      categories: hero.categories.map((c) => (c === 'all' ? 'universal' : c)),
     }));
   }, [data]);
 

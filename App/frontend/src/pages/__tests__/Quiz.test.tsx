@@ -27,10 +27,30 @@ vi.mock('react-router-dom', async (importOriginal) => {
 
 describe('Quiz Component - Streak Logic & Target Item Duplication', () => {
   const mockItems = [
-    { id: '1', name: 'Finland', imageUrl: '/flags/fi.svg', categories: ['europe'] },
-    { id: '2', name: 'Sweden', imageUrl: '/flags/se.svg', categories: ['europe'] },
-    { id: '3', name: 'Norway', imageUrl: '/flags/no.svg', categories: ['europe'] },
-    { id: '4', name: 'Denmark', imageUrl: '/flags/dk.svg', categories: ['europe'] },
+    {
+      id: '1',
+      name: 'Finland',
+      imageUrl: '/flags/fi.svg',
+      categories: ['europe'],
+    },
+    {
+      id: '2',
+      name: 'Sweden',
+      imageUrl: '/flags/se.svg',
+      categories: ['europe'],
+    },
+    {
+      id: '3',
+      name: 'Norway',
+      imageUrl: '/flags/no.svg',
+      categories: ['europe'],
+    },
+    {
+      id: '4',
+      name: 'Denmark',
+      imageUrl: '/flags/dk.svg',
+      categories: ['europe'],
+    },
   ];
 
   const mockUpdateStreakScore = vi.fn().mockResolvedValue({
@@ -88,7 +108,8 @@ describe('Quiz Component - Streak Logic & Target Item Duplication', () => {
     expect(await screen.findByText('Which one is:')).toBeInTheDocument();
 
     // --- ROUND 1 ---
-    const targetName1 = container.querySelector('.quiz-target-name')?.textContent;
+    const targetName1 =
+      container.querySelector('.quiz-target-name')?.textContent;
     expect(targetName1).toBeTruthy();
 
     const targetItem1 = mockItems.find((item) => item.name === targetName1);
@@ -125,7 +146,8 @@ describe('Quiz Component - Streak Logic & Target Item Duplication', () => {
 
     // --- ROUND 2 ---
     // Wait for next target name to appear and verify it is different
-    const targetName2 = await screen.findByText(/Which one is:/)
+    const targetName2 = await screen
+      .findByText(/Which one is:/)
       .then(() => container.querySelector('.quiz-target-name')?.textContent);
     expect(targetName2).toBeTruthy();
 
