@@ -66,13 +66,16 @@ export default function Quiz() {
   >('idle');
 
   const [initialHighestStreak, setInitialHighestStreak] = useState<number>(0);
-
-  const highestStreakRef = useRef(highestStreak);
   const prevTargetRef = useRef<GameItem | null>(null);
 
+  // Keep track of the initial highest streak when the user is not on an active streak
   useEffect(() => {
-    highestStreakRef.current = highestStreak;
-  }, [highestStreak]);
+    if (streak === 0) {
+      Promise.resolve().then(() => {
+        setInitialHighestStreak(highestStreak);
+      });
+    }
+  }, [highestStreak, streak]);
 
   const isNewRecord = useMemo(() => {
     return (
@@ -89,7 +92,6 @@ export default function Quiz() {
     Promise.resolve().then(() => {
       setStreak(0);
       setAttempts(0);
-      setInitialHighestStreak(highestStreakRef.current);
       prevTargetRef.current = null;
       console.log('Streak reset to 0 (new game started)');
     });
@@ -219,7 +221,6 @@ export default function Quiz() {
     } else {
       setFeedbackState('wrong');
       setStreak(0);
-      setInitialHighestStreak(highestStreak);
       console.log('Streak reset to 0 (wrong answer)');
     }
   };
@@ -269,7 +270,7 @@ export default function Quiz() {
           streak={streak}
           attempts={attempts}
           feedbackState={feedbackState}
-          highestStreak={selectedCategory === 'all' ? highestStreak : undefined}
+          highestStreak={selectedCategory === 'all' ? initialHighestStreak : undefined}
           isLoggedIn={isLoggedIn}
           isNewRecord={isNewRecord}
         />
