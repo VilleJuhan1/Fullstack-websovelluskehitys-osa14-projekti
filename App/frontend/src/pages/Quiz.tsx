@@ -68,6 +68,8 @@ export default function Quiz() {
   const [initialHighestStreak, setInitialHighestStreak] = useState<number>(0);
 
   const highestStreakRef = useRef(highestStreak);
+  const prevTargetRef = useRef<GameItem | null>(null);
+
   useEffect(() => {
     highestStreakRef.current = highestStreak;
   }, [highestStreak]);
@@ -85,6 +87,7 @@ export default function Quiz() {
       setStreak(0);
       setAttempts(0);
       setInitialHighestStreak(highestStreakRef.current);
+      prevTargetRef.current = null;
       console.log('Streak reset to 0 (new game started)');
     });
   }, [category, selectedCategory]);
@@ -116,9 +119,27 @@ export default function Quiz() {
     const shuffled = [...filteredItems].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 4);
 
+    // Filter out the previous correct target item so it never appears twice in a row
+    const potentialTargets = selected.filter(
+      (item) => item.id !== prevTargetRef.current?.id
+    );
+
+    // Pick randomly from potential targets, or fall back if filteredItems constraint isn't met
+    const newTarget = potentialTargets.length > 0
+      ? potentialTargets[Math.floor(Math.random() * potentialTargets.length)]
+      : selected[Math.floor(Math.random() * 4)];
+
+    prevTargetRef.current = newTarget;
+
     setOptions(selected);
-    setTargetItem(selected[Math.floor(Math.random() * 4)]);
+    setTargetItem(newTarget);
     setFeedbackState('idle');
+
+    // Blur active element to prevent focus highlight from carrying over to the next round
+    // to prevent an option being pre-highlighted at the start of a round
+    if (typeof document !== 'undefined' && document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
   }, [filteredItems]);
 
   // Generate initial question when items load or category changes
@@ -167,8 +188,8 @@ export default function Quiz() {
                   );
                   const updatedScores = hasCategory
                     ? currentScores.map((s: ScoreItem) =>
-                        s.category === updatedScore.category ? updatedScore : s
-                      )
+                      s.category === updatedScore.category ? updatedScore : s
+                    )
                     : [...currentScores, updatedScore];
 
                   cache.writeQuery<GetMeData>({
