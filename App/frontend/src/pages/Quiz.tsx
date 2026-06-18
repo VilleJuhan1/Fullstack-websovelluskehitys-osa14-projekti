@@ -17,7 +17,11 @@ export default function Quiz() {
   const { category } = useParams<{ category: string }>();
   const navigate = useNavigate();
   const type = (
-    category === 'countries' ? 'countries' : category === 'dota' ? 'dota' : 'pokemon'
+    category === 'countries'
+      ? 'countries'
+      : category === 'dota'
+        ? 'dota'
+        : 'pokemon'
   ) as GameDataType;
 
   const { getItems, loading, error } = useGameContext();
@@ -36,7 +40,8 @@ export default function Quiz() {
 
   // Protect the dota quiz route
   useEffect(() => {
-    if (category === 'dota' && meData && !loading) { // Wait for meData to load
+    if (category === 'dota' && meData && !loading) {
+      // Wait for meData to load
       if (!isLoggedIn) {
         navigate('/login', { replace: true });
       } else if (!isPremiumUser) {
@@ -66,15 +71,23 @@ export default function Quiz() {
   >('idle');
 
   const [initialHighestStreak, setInitialHighestStreak] = useState<number>(0);
+  const prevTargetRef = useRef<GameItem | null>(null);
 
-  const highestStreakRef = useRef(highestStreak);
+  // Keep track of the initial highest streak when the user is not on an active streak
   useEffect(() => {
-    highestStreakRef.current = highestStreak;
-  }, [highestStreak]);
+    if (streak === 0) {
+      Promise.resolve().then(() => {
+        setInitialHighestStreak(highestStreak);
+      });
+    }
+  }, [highestStreak, streak]);
 
   const isNewRecord = useMemo(() => {
     return (
-      isLoggedIn && selectedCategory === 'all' && streak > initialHighestStreak
+      isLoggedIn &&
+      selectedCategory === 'all' &&
+      streak >= 2 &&
+      streak > initialHighestStreak
     );
   }, [isLoggedIn, selectedCategory, streak, initialHighestStreak]);
 
@@ -84,7 +97,7 @@ export default function Quiz() {
     Promise.resolve().then(() => {
       setStreak(0);
       setAttempts(0);
-      setInitialHighestStreak(highestStreakRef.current);
+      prevTargetRef.current = null;
       console.log('Streak reset to 0 (new game started)');
     });
   }, [category, selectedCategory]);
@@ -116,9 +129,31 @@ export default function Quiz() {
     const shuffled = [...filteredItems].sort(() => 0.5 - Math.random());
     const selected = shuffled.slice(0, 4);
 
+    // Filter out the previous correct target item so it never appears twice in a row
+    const potentialTargets = selected.filter(
+      (item) => item.id !== prevTargetRef.current?.id
+    );
+
+    // Pick randomly from potential targets, or fall back if filteredItems constraint isn't met
+    const newTarget =
+      potentialTargets.length > 0
+        ? potentialTargets[Math.floor(Math.random() * potentialTargets.length)]
+        : selected[Math.floor(Math.random() * 4)];
+
+    prevTargetRef.current = newTarget;
+
     setOptions(selected);
-    setTargetItem(selected[Math.floor(Math.random() * 4)]);
+    setTargetItem(newTarget);
     setFeedbackState('idle');
+
+    // Blur active element to prevent focus highlight from carrying over to the next round
+    // to prevent an option being pre-highlighted at the start of a round
+    if (
+      typeof document !== 'undefined' &&
+      document.activeElement instanceof HTMLElement
+    ) {
+      document.activeElement.blur();
+    }
   }, [filteredItems]);
 
   // Generate initial question when items load or category changes
@@ -142,10 +177,11 @@ export default function Quiz() {
         const newStreak = prev + 1;
         console.log(`Current streak: ${newStreak}`);
 
-        // Update DB if user is logged in, selectedCategory is 'all', and newStreak > highestStreak
+        // Update DB if user is logged in, selectedCategory is 'all', and newStreak >= 2 and newStreak > highestStreak
         if (
           isLoggedIn &&
           selectedCategory === 'all' &&
+          newStreak >= 2 &&
           newStreak > highestStreak
         ) {
           updateStreakScore({
@@ -194,7 +230,6 @@ export default function Quiz() {
     } else {
       setFeedbackState('wrong');
       setStreak(0);
-      setInitialHighestStreak(highestStreak);
       console.log('Streak reset to 0 (wrong answer)');
     }
   };
@@ -244,7 +279,9 @@ export default function Quiz() {
           streak={streak}
           attempts={attempts}
           feedbackState={feedbackState}
-          highestStreak={selectedCategory === 'all' ? highestStreak : undefined}
+          highestStreak={
+            selectedCategory === 'all' ? initialHighestStreak : undefined
+          }
           isLoggedIn={isLoggedIn}
           isNewRecord={isNewRecord}
         />

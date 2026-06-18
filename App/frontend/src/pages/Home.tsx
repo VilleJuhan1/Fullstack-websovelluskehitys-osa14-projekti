@@ -51,18 +51,26 @@ export default function Home() {
             href="/quiz/dota"
             onClick={handleDotaClick}
             className="quiz-option"
-            style={{ 
-              textDecoration: 'none', 
+            style={{
+              textDecoration: 'none',
               color: 'inherit',
-              ...(isPremiumUser ? {} : {
-                boxShadow: '0 0 15px rgba(150, 150, 150, 0.4)',
-                border: '1px solid rgba(150, 150, 150, 0.6)'
-              })
+              ...(isPremiumUser
+                ? {}
+                : {
+                    boxShadow: '0 0 15px rgba(150, 150, 150, 0.4)',
+                    border: '1px solid rgba(150, 150, 150, 0.6)',
+                  }),
             }}
           >
             Dota Heroes
             {!isPremiumUser && (
-              <div style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginTop: '0.2rem' }}>
+              <div
+                style={{
+                  fontSize: '0.8rem',
+                  color: 'var(--text-secondary)',
+                  marginTop: '0.2rem',
+                }}
+              >
                 ⭐ Upgrade to premium to access this quiz
               </div>
             )}

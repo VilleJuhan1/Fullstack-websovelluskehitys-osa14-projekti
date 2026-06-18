@@ -21,9 +21,7 @@ describe('GameContext and GameProvider', () => {
   const mockCountries = [
     { id: 2, name: 'Finland', categories: [], imageUrl: '' },
   ];
-  const mockDota = [
-    { id: 3, name: 'Anti-Mage', categories: [], imageUrl: '' },
-  ];
+  const mockDota = [{ id: 3, name: 'Anti-Mage', categories: [], imageUrl: '' }];
 
   it('provides loading state and default empty arrays when data is missing', () => {
     vi.mocked(useQuery).mockReturnValue({
