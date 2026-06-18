@@ -76,7 +76,10 @@ export default function Quiz() {
 
   const isNewRecord = useMemo(() => {
     return (
-      isLoggedIn && selectedCategory === 'all' && streak > initialHighestStreak
+      isLoggedIn &&
+      selectedCategory === 'all' &&
+      streak >= 2 &&
+      streak > initialHighestStreak
     );
   }, [isLoggedIn, selectedCategory, streak, initialHighestStreak]);
 
@@ -163,10 +166,11 @@ export default function Quiz() {
         const newStreak = prev + 1;
         console.log(`Current streak: ${newStreak}`);
 
-        // Update DB if user is logged in, selectedCategory is 'all', and newStreak > highestStreak
+        // Update DB if user is logged in, selectedCategory is 'all', and newStreak >= 2 and newStreak > highestStreak
         if (
           isLoggedIn &&
           selectedCategory === 'all' &&
+          newStreak >= 2 &&
           newStreak > highestStreak
         ) {
           updateStreakScore({
