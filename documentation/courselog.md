@@ -81,5 +81,5 @@
 ## July 2026
 | Date          | Log entry                                             | Hours spent   |
 | ------------- | ----------------------------------------------------- | ------------- |
-| July 3rd | Back in business after a vacation. Started working on implementing OCI Vault for secrets management | 3 |
-| **Total** | | **2** |
+| July 3rd | Back in business after a vacation. Started working on implementing OCI Vault for secrets management | 4 |
+| **Total** | | **4** |
