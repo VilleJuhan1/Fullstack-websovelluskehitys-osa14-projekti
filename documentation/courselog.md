@@ -1,5 +1,16 @@
 # Course log
 
+## Monthly hour total
+| Month | Total hours |
+| --- | --- |
+| April | 29 |
+| May | 81,5 |
+| June | 37 |
+| July | 5 |
+| **Total** | **152,5** |
+
+For more complete log, see below.
+
 ## April 2026
 | Date          | Log entry                                             | Hours spent   |
 | ------------- | ----------------------------------------------------- | ------------- |
@@ -81,5 +92,5 @@
 ## July 2026
 | Date          | Log entry                                             | Hours spent   |
 | ------------- | ----------------------------------------------------- | ------------- |
-| July 3rd | Back in business after a vacation. Started working on implementing OCI Vault for secrets management | 4 |
-| **Total** | | **4** |
+| July 3rd | Back in business after a vacation. Started working on implementing OCI Vault for secrets management. Works now on both dev and production | 5 |
+| **Total** | | **5** |
