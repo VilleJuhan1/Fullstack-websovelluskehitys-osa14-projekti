@@ -79,7 +79,12 @@
                               operator: In
                               values:
                                 - ingress-nginx
+                            - key: app.kubernetes.io/component
+                              operator: In
+                              values:
+                                - controller
                         topologyKey: kubernetes.io/hostname
+
 
     - name: Apply Cert-Manager
       kubernetes.core.k8s:
