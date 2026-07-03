@@ -119,7 +119,6 @@ resource "oci_network_load_balancer_backend" "worker_https_backend" {
   port                     = 30443
   target_id                = oci_core_instance.k3s_worker.id
 }
-
 # Output the public IP of the Network Load Balancer
 output "nlb_public_ip" {
   description = "The public IP address of the Network Load Balancer"

@@ -56,6 +56,17 @@
     Ensure that apps/dockerfiles use the latest versions on all components.
     ```
 
+### Review deployments
+
+  - due: 2026-07-19
+  - tags: [cicd]
+  - priority: low
+  - workload: Normal
+  - defaultExpanded: false
+    ```md
+    There are ansible, kubernetes and argocd deployments in the project. Review them and check if using only one or two would be a preferable way.
+    ```
+
 ## In progress
 
 ### 24 - OCI Vault
