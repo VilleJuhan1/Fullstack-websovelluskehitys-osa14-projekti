@@ -4,21 +4,6 @@
 
 ## Planned
 
-### More staging branches
-
-  - due: 2026-07-12
-  - tags: [kubernetes, git]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [ ] Make changes to Argo deployment files so that they track dev and prod branches instead of main
-      - [ ] Test dev branch deployment
-      - [ ] Test prod branch deployment
-    ```md
-    Change deployment workflow so that there are two more permanent branches: dev and prod. Change CI/CD accordingly.
-    ```
-
 ### Doc blocks for everything under App
 
   - due: 2026-07-12
@@ -45,17 +30,6 @@
     Review all Dockerfiles and docker-compose files. Add fullstack docker-compose deployments for both dev and prod. Review github deployment workflows
     ```
 
-### OCI Vault
-
-  - due: 2026-07-12
-  - tags: [kubernetes, github]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-    ```md
-    Review using the OCI Vault for secrets management both in Kubernetes and Github workflows
-    ```
-
 ### Update everything
 
   - due: 2026-07-12
@@ -67,9 +41,50 @@
     Ensure that apps/dockerfiles use the latest versions on all components.
     ```
 
+### Review deployments
+
+  - due: 2026-07-19
+  - tags: [cicd]
+  - priority: low
+  - workload: Normal
+  - defaultExpanded: false
+    ```md
+    There are ansible, kubernetes and argocd deployments in the project. Review them and check if using only one or two would be a preferable way.
+    ```
+
 ## In progress
 
+### More staging branches
+
+  - due: 2026-07-12
+  - tags: [kubernetes, git]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Make changes to Argo deployment files so that they track dev and prod branches instead of main
+      - [ ] Test dev branch deployment
+      - [ ] Test prod branch deployment
+    ```md
+    Change deployment workflow so that there are two more permanent branches: dev and prod. Change CI/CD accordingly.
+    ```
+
 ## Done
+
+### 24 - OCI Vault
+
+  - due: 2026-07-12
+  - tags: [kubernetes, github]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Dynamic group and permissions for instances to use Vault
+      - [x] ESO installation via Ansible
+      - [x] Kubernetes and Kustomize changes to apply new secrets management feature
+    ```md
+    Review using the OCI Vault for secrets management both in Kubernetes and Github workflows
+    ```
 
 ### 18 - Backend test coverage
 

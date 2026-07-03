@@ -1,5 +1,16 @@
 # Course log
 
+## Monthly hour total
+| Month | Total hours |
+| --- | --- |
+| April | 29 |
+| May | 81,5 |
+| June | 37 |
+| July | 5 |
+| **Total** | **152,5** |
+
+For more complete log, see below.
+
 ## April 2026
 | Date          | Log entry                                             | Hours spent   |
 | ------------- | ----------------------------------------------------- | ------------- |
@@ -77,3 +88,9 @@
 | June 17th | Planned upcoming tasks to hit the required 175 hours of course work on the project | 0,5 |
 | June 18th | Fixed some bugs in the quiz and added unit tests for it | 2 |
 | **Total** | | **37** |
+
+## July 2026
+| Date          | Log entry                                             | Hours spent   |
+| ------------- | ----------------------------------------------------- | ------------- |
+| July 3rd | Back in business after a vacation. Started working on implementing OCI Vault for secrets management. Works now on both dev and production | 5 |
+| **Total** | | **5** |

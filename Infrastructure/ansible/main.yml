@@ -19,7 +19,7 @@
     - storage
     - k3s_worker
 
-- name: Configure cluster addons and monitoring
+- name: Configure Monitoring and ArgoCD
   hosts: k3s_master
   become: true
   vars_files:

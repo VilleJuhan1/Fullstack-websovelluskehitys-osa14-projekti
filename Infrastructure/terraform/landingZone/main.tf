@@ -81,3 +81,32 @@ resource "oci_identity_user_group_membership" "github_actions_sa_membership" {
   group_id = oci_identity_group.project_admins[each.key].id
   user_id  = oci_identity_user.github_actions_sa[each.key].id
 }
+
+# -----------------------------------------------------------------------------
+# OCI IAM Dynamic Group for Instance Principals
+# -----------------------------------------------------------------------------
+# Note: Dynamic groups must be defined at the Tenancy level (root compartment).
+resource "oci_identity_dynamic_group" "k3s_nodes_group" {
+  for_each       = var.projects
+  compartment_id = var.tenancy_ocid
+  name           = "${each.value.name}-K3s-Nodes-Group"
+  description    = "Dynamic group for K3s instances in the compute compartment of ${each.value.name}"
+  matching_rule  = "instance.compartment.id = '${oci_identity_compartment.compute[each.key].id}'"
+}
+
+# -----------------------------------------------------------------------------
+# OCI IAM Policies for Secret Access
+# -----------------------------------------------------------------------------
+# Grants K3s nodes permission to read secrets from the Security compartment.
+resource "oci_identity_policy" "k3s_secrets_policy" {
+  for_each       = var.projects
+  compartment_id = oci_identity_compartment.security_access[each.key].id
+  name           = "${each.value.name}-K3s-Secrets-Policy"
+  description    = "Allows K3s instances in dynamic group to read secrets and use vaults in Security-and-Access compartment"
+
+  statements = [
+    "Allow dynamic-group ${oci_identity_dynamic_group.k3s_nodes_group[each.key].name} to read secret-family in compartment id ${oci_identity_compartment.security_access[each.key].id}",
+    "Allow dynamic-group ${oci_identity_dynamic_group.k3s_nodes_group[each.key].name} to use vaults in compartment id ${oci_identity_compartment.security_access[each.key].id}"
+  ]
+}
+

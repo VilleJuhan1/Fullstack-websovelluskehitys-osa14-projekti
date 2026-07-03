@@ -9,6 +9,9 @@ resources:
   - ingress.yaml # Disabled until Nginx Ingress is properly deployed 
   - frontpage.yaml
   - stripe-mock.yaml
+  - app-secrets-sync.yaml
+  - db-secrets-sync.yaml
+
 
 images:
   - name: villejuhan1/quiz-backend

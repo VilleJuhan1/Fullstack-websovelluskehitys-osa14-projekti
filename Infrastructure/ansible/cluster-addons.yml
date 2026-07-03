@@ -79,7 +79,12 @@
                               operator: In
                               values:
                                 - ingress-nginx
+                            - key: app.kubernetes.io/component
+                              operator: In
+                              values:
+                                - controller
                         topologyKey: kubernetes.io/hostname
+
 
     - name: Apply Cert-Manager
       kubernetes.core.k8s:
@@ -101,3 +106,61 @@
         state: present
         src: /tmp/k8s-manifests/cluster-issuer.yaml
         kubeconfig: /etc/rancher/k3s/k3s.yaml
+
+    - name: Add External Secrets Operator Helm Repository
+      kubernetes.core.helm_repository:
+        name: external-secrets
+        repo_url: https://charts.external-secrets.io
+
+    - name: Deploy External Secrets Operator
+      kubernetes.core.helm:
+        name: external-secrets
+        chart_ref: external-secrets/external-secrets
+        release_namespace: external-secrets
+        create_namespace: true
+        kubeconfig: /etc/rancher/k3s/k3s.yaml
+        state: present
+        values:
+          installCRDs: true
+
+    - name: Wait for External Secrets Operator deployment to be ready
+      ansible.builtin.shell: |
+        kubectl rollout status deployment/external-secrets -n external-secrets --kubeconfig /etc/rancher/k3s/k3s.yaml
+
+    - name: Ensure target namespaces exist
+      kubernetes.core.k8s:
+        api_version: v1
+        kind: Namespace
+        name: "{{ item }}"
+        state: present
+        kubeconfig: /etc/rancher/k3s/k3s.yaml
+      with_items:
+        - dev
+        - prod
+      when: vault_ocid is defined and vault_ocid != ''
+
+    - name: Generate SecretStore manifests from template
+      ansible.builtin.template:
+        src: templates/secret-store.yaml.j2
+        dest: "/tmp/k8s-manifests/secret-store-{{ item }}.yaml"
+      with_items:
+        - dev
+        - prod
+      when: vault_ocid is defined and vault_ocid != ''
+
+    - name: Wait for SecretStore CRD to be established
+      ansible.builtin.shell: |
+        kubectl wait --for=condition=established --timeout=60s crd/secretstores.external-secrets.io --kubeconfig /etc/rancher/k3s/k3s.yaml
+      when: vault_ocid is defined and vault_ocid != ''
+
+    - name: Apply SecretStore manifests
+      ansible.builtin.shell: |
+        kubectl apply -f /tmp/k8s-manifests/secret-store-{{ item }}.yaml --kubeconfig /etc/rancher/k3s/k3s.yaml
+      with_items:
+        - dev
+        - prod
+      when: vault_ocid is defined and vault_ocid != ''
+      register: apply_result
+      until: apply_result.rc == 0
+      retries: 5
+      delay: 5
