@@ -130,3 +130,10 @@ output "bastion_id" {
   description = "The OCID of the Bastion Service"
   value       = oci_bastion_bastion.project_bastion.id
 }
+
+# Output the Vault OCID for Kubernetes secrets configuration
+output "vault_ocid" {
+  description = "The OCID of the OCI KMS Vault"
+  value       = oci_kms_vault.project_vault.id
+}
+

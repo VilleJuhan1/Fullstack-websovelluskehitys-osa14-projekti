@@ -87,6 +87,7 @@ patches:
     kind: Ingress
     name: frontpage-ingress
 images:
+
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
   newTag: front-digital-robot-3f9d606
