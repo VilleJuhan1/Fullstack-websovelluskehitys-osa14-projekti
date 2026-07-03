@@ -81,7 +81,7 @@ vault_ocid: "<your-oci-kms-vault-ocid>" # Required for Kubernetes SecretStore co
 The Kubernetes External Secrets Operator automatically syncs secrets dynamically from OCI Vault. Before applying the Kustomize manifests or running the `cluster-addons.yml` playbook, populate the corresponding secrets inside your Security compartment:
 
 #### 1. Define JSON Secrets in OCI Vault
-Create the following JSON structure inside the OCI Vault secrets:
+Create the following JSON structure inside the OCI Vault secrets. Example is using dev environment so replace with prod for production.
 
 * **dev-db-secret**:
   ```json
