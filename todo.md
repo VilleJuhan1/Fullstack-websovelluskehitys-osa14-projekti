@@ -45,17 +45,6 @@
     Review all Dockerfiles and docker-compose files. Add fullstack docker-compose deployments for both dev and prod. Review github deployment workflows
     ```
 
-### OCI Vault
-
-  - due: 2026-07-12
-  - tags: [kubernetes, github]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-    ```md
-    Review using the OCI Vault for secrets management both in Kubernetes and Github workflows
-    ```
-
 ### Update everything
 
   - due: 2026-07-12
@@ -68,6 +57,17 @@
     ```
 
 ## In progress
+
+### 24 - OCI Vault
+
+  - due: 2026-07-12
+  - tags: [kubernetes, github]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+    ```md
+    Review using the OCI Vault for secrets management both in Kubernetes and Github workflows
+    ```
 
 ## Done
 
