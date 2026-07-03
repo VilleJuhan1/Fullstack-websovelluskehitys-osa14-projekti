@@ -73,7 +73,52 @@ grafana_github_client_secret: "<grafana github client secret>"
 argo_admin_user: "<argo admin username>"
 argo_admin_password: "<argo admin password>"
 cert_manager_email: "[EMAIL_ADDRESS]"   # optional, used for lets encrypt https certs
+vault_ocid: "<your-oci-kms-vault-ocid>" # Required for Kubernetes SecretStore configurations
 ```
+
+### OCI Vault Secrets Population
+
+The Kubernetes External Secrets Operator automatically syncs secrets dynamically from OCI Vault. Before applying the Kustomize manifests or running the `cluster-addons.yml` playbook, populate the corresponding secrets inside your Security compartment:
+
+#### 1. Define JSON Secrets in OCI Vault
+Create the following JSON structure inside the OCI Vault secrets:
+
+* **dev-db-secret**:
+  ```json
+  {
+    "DATABASE_URL": "postgres://postgres:yourpassword@postgres:5432/quiz_db",
+    "POSTGRES_PASSWORD": "yourpassword"
+  }
+  ```
+
+* **dev-app-secret**:
+  ```json
+  {
+    "JWT_SECRET": "your-dev-jwt-secret",
+    "PASSWORD_SECRET": "your-dev-password-pepper-secret",
+    "STRIPE_SECRET_KEY": "sk_test_12345"
+  }
+  ```
+
+#### 2. Population via OCI CLI
+Alternatively, run the following commands to create the secrets directly via the CLI:
+```bash
+# Set OCI resources variables (from countriesApp terraform outputs)
+COMPARTMENT_OCID="<security-compartment-ocid>"
+VAULT_OCID="<vault-ocid>"
+KEY_OCID="<master-key-ocid>"
+
+# Create dev-db-secret
+DB_CONTENT='{"DATABASE_URL":"postgres://postgres:yourpassword@postgres:5432/quiz_db","POSTGRES_PASSWORD":"yourpassword"}'
+DB_BASE64=$(echo -n "$DB_CONTENT" | base64)
+oci vault secret create-base64 --compartment-id "$COMPARTMENT_OCID" --secret-name "dev-db-secret" --vault-id "$VAULT_OCID" --key-id "$KEY_OCID" --secret-content-content "$DB_BASE64"
+
+# Create dev-app-secret
+APP_CONTENT='{"JWT_SECRET":"your-dev-jwt-secret","PASSWORD_SECRET":"your-dev-password-pepper-secret","STRIPE_SECRET_KEY":"sk_test_12345"}'
+APP_BASE64=$(echo -n "$APP_CONTENT" | base64)
+oci vault secret create-base64 --compartment-id "$COMPARTMENT_OCID" --secret-name "dev-app-secret" --vault-id "$VAULT_OCID" --key-id "$KEY_OCID" --secret-content-content "$APP_BASE64"
+```
+
 
 
 ### Run the Playbooks

@@ -86,6 +86,29 @@ patches:
   target:
     kind: Ingress
     name: frontpage-ingress
+- patch: |-
+    - op: replace
+      path: /spec/data/0/remoteRef/key
+      value: dev-db-secret
+    - op: replace
+      path: /spec/data/1/remoteRef/key
+      value: dev-db-secret
+  target:
+    kind: ExternalSecret
+    name: db-secret-sync
+- patch: |-
+    - op: replace
+      path: /spec/data/0/remoteRef/key
+      value: dev-app-secret
+    - op: replace
+      path: /spec/data/1/remoteRef/key
+      value: dev-app-secret
+    - op: replace
+      path: /spec/data/2/remoteRef/key
+      value: dev-app-secret
+  target:
+    kind: ExternalSecret
+    name: app-secret-sync
 images:
 
 - name: villejuhan1/frontpage
