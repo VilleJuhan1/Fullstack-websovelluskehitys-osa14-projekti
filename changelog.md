@@ -60,3 +60,4 @@
 | 2.4.4 | 2026-06-18 | Quiz bug fixes | Fixed several bugs on the quiz game and generated tests for them:<br>- Two same options in a row when another was previous correct answer retained the hover highlight effect.<br>- Previous streak score didn't retain the original value but was updated to newest streak.<br>- Personal highest streak for new users started at 1 instead of 2 which is the required minimum | obvious-eagle-029ce7b | brave-dolphin-425f804 |
 | 2.4.5 | 2026-06-18 | Deploy prod: happy-lion-66ce1a2 | Tested the bug fixes and seem to work so deploying them to production  | obvious-eagle-029ce7b | happy-lion-66ce1a2 |
 | 2.4.6 | 2026-06-18 | Bug fix for changelog | Added html tags for bullet list to prevent changelog table from breaking  | obvious-eagle-029ce7b | happy-lion-66ce1a2 |
+| 2.5.0 | 2026-07-03 | OCI Vault | Switched to handling Kubernetes secrets via ESO and OCI Vault  | obvious-eagle-029ce7b | happy-lion-66ce1a2 |
