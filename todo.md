@@ -54,7 +54,23 @@
 
 ## In progress
 
-### More staging branches
+### 26 - Bug fix: Multiple points from a single round
+
+  - due: 2026-07-19
+  - tags: [frontend, backend]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Find the cause
+      - [ ] Fix the issue
+    ```md
+    For some reason clicking multiple times the correct answer, it applies more than 1 score. Review why, and fix.
+    ```
+
+## Done
+
+### 25 - More staging branches
 
   - due: 2026-07-12
   - tags: [kubernetes, git]
@@ -62,14 +78,12 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Make changes to Argo deployment files so that they track dev and prod branches instead of main
-      - [ ] Test dev branch deployment
-      - [ ] Test prod branch deployment
+      - [x] Make changes to Argo deployment files so that they track dev and prod branches instead of main
+      - [x] Test dev branch deployment
+      - [x] Test prod branch deployment
     ```md
     Change deployment workflow so that there are two more permanent branches: dev and prod. Change CI/CD accordingly.
     ```
-
-## Done
 
 ### 24 - OCI Vault
 
