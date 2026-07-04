@@ -87,7 +87,9 @@ Create the following JSON structure inside the OCI Vault secrets. Example is usi
   ```json
   {
     "DATABASE_URL": "postgres://postgres:yourpassword@postgres:5432/quiz_db",
-    "POSTGRES_PASSWORD": "yourpassword"
+    "POSTGRES_PASSWORD": "yourpassword",
+    "POSTGRES_USER": "postgres",
+    "POSTGRES_DB": "quiz_db"
   }
   ```
 
@@ -109,7 +111,7 @@ VAULT_OCID="<vault-ocid>"
 KEY_OCID="<master-key-ocid>"
 
 # Create dev-db-secret
-DB_CONTENT='{"DATABASE_URL":"postgres://postgres:yourpassword@postgres:5432/quiz_db","POSTGRES_PASSWORD":"yourpassword"}'
+DB_CONTENT='{"DATABASE_URL":"postgres://postgres:yourpassword@postgres:5432/quiz_db","POSTGRES_PASSWORD":"yourpassword","POSTGRES_USER":"postgres","POSTGRES_DB":"quiz_db"}'
 DB_BASE64=$(echo -n "$DB_CONTENT" | base64)
 oci vault secret create-base64 --compartment-id "$COMPARTMENT_OCID" --secret-name "dev-db-secret" --vault-id "$VAULT_OCID" --key-id "$KEY_OCID" --secret-content-content "$DB_BASE64"
 

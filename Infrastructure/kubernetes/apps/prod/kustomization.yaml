@@ -122,6 +122,12 @@ patches:
     - op: replace
       path: /spec/data/1/remoteRef/key
       value: prod-db-secret
+    - op: replace
+      path: /spec/data/2/remoteRef/key
+      value: prod-db-secret
+    - op: replace
+      path: /spec/data/3/remoteRef/key
+      value: prod-db-secret
   target:
     kind: ExternalSecret
     name: db-secret-sync
@@ -144,7 +150,7 @@ images:
   newTag: front-playful-sandbox-a4c6228
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: happy-lion-66ce1a2
+  newTag: clever-owl-ca93f19
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: happy-lion-66ce1a2
+  newTag: clever-owl-ca93f19

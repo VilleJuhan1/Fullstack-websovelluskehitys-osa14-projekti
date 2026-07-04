@@ -6,8 +6,8 @@
 | April | 29 |
 | May | 81,5 |
 | June | 37 |
-| July | 5 |
-| **Total** | **152,5** |
+| July | 9 |
+| **Total** | **156,5** |
 
 For more complete log, see below.
 
@@ -93,4 +93,6 @@ For more complete log, see below.
 | Date          | Log entry                                             | Hours spent   |
 | ------------- | ----------------------------------------------------- | ------------- |
 | July 3rd | Back in business after a vacation. Started working on implementing OCI Vault for secrets management. Works now on both dev and production | 5 |
-| **Total** | | **5** |
+| July 4th | Fixed a bug on frontend streak score component that allowed multiple clicks and equivalent additions of points to streak score  | 2 |
+| July 4th | Faced some issues with the new secrets management when deploying a new version and fixed them | 2 |
+| **Total** | | **9** |

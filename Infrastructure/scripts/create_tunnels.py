@@ -94,7 +94,7 @@ def create_tunnel(target_ip, target_port, local_port, name, extra_opts=""):
         "--ssh-public-key-file", public_key_path,
         "--target-private-ip", target_ip,
         "--target-port", str(target_port),
-        "--session-ttl", "1800"  # Session time to live in seconds, 1800 = 30 minutes
+        "--session-ttl", "3600"  # Session time to live in seconds, 1800 = 30 minutes
     ]
 
     try:
