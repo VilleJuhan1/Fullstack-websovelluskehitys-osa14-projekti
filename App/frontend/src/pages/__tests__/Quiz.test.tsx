@@ -185,4 +185,46 @@ describe('Quiz Component - Streak Logic & Target Item Duplication', () => {
     // Verify that isNewRecord is true (StreakScore should show new record title)
     expect(screen.getByText(/New longest streak! 2/)).toBeInTheDocument();
   });
+
+  it('ignores duplicate clicks on the correct option during the feedback period', async () => {
+    const { container } = render(
+      <MemoryRouter>
+        <Quiz />
+      </MemoryRouter>
+    );
+
+    expect(await screen.findByText('Which one is:')).toBeInTheDocument();
+
+    const targetName = container.querySelector('.quiz-target-name')?.textContent;
+    expect(targetName).toBeTruthy();
+
+    const targetItem = mockItems.find((item) => item.name === targetName);
+    expect(targetItem).toBeTruthy();
+
+    const images = screen.getAllByRole('img');
+    const correctImage = images.find(
+      (img) => img.getAttribute('src') === targetItem!.imageUrl
+    );
+    expect(correctImage).toBeTruthy();
+    const correctButton = correctImage!.closest('button');
+    expect(correctButton).toBeTruthy();
+
+    // Click the correct button multiple times in succession, letting React flush updates in between
+    await act(async () => {
+      fireEvent.click(correctButton!);
+    });
+    await act(async () => {
+      fireEvent.click(correctButton!);
+    });
+    await act(async () => {
+      fireEvent.click(correctButton!);
+    });
+
+    // Since the first click changes state to 'correct', the subsequent 2 clicks should be ignored.
+    // The streak should remain at 1, rendering the "Two in a row starts a streak!" text.
+    expect(screen.getByText('Two in a row starts a streak!')).toBeInTheDocument();
+
+    // The update mutation should not be called since streak < 2
+    expect(mockUpdateStreakScore).not.toHaveBeenCalled();
+  });
 });
