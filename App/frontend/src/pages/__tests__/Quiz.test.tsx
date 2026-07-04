@@ -195,7 +195,8 @@ describe('Quiz Component - Streak Logic & Target Item Duplication', () => {
 
     expect(await screen.findByText('Which one is:')).toBeInTheDocument();
 
-    const targetName = container.querySelector('.quiz-target-name')?.textContent;
+    const targetName =
+      container.querySelector('.quiz-target-name')?.textContent;
     expect(targetName).toBeTruthy();
 
     const targetItem = mockItems.find((item) => item.name === targetName);
@@ -222,7 +223,9 @@ describe('Quiz Component - Streak Logic & Target Item Duplication', () => {
 
     // Since the first click changes state to 'correct', the subsequent 2 clicks should be ignored.
     // The streak should remain at 1, rendering the "Two in a row starts a streak!" text.
-    expect(screen.getByText('Two in a row starts a streak!')).toBeInTheDocument();
+    expect(
+      screen.getByText('Two in a row starts a streak!')
+    ).toBeInTheDocument();
 
     // The update mutation should not be called since streak < 2
     expect(mockUpdateStreakScore).not.toHaveBeenCalled();
