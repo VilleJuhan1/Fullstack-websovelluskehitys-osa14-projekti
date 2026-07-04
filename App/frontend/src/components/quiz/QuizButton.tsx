@@ -4,14 +4,20 @@ import type { GameItem } from '../../services/gameData';
 interface QuizButtonProps {
   item: GameItem;
   onClick: (item: GameItem) => void;
+  disabled?: boolean;
 }
 
 // A component that renders the quiz options as a button with the image of the item
-const QuizButton: React.FC<QuizButtonProps> = ({ item, onClick }) => {
+const QuizButton: React.FC<QuizButtonProps> = ({
+  item,
+  onClick,
+  disabled = false,
+}) => {
   return (
     <button
       className="quiz-option"
       onClick={() => onClick(item)}
+      disabled={disabled}
       style={{
         padding: '0.5rem',
         overflow: 'hidden',
@@ -20,6 +26,9 @@ const QuizButton: React.FC<QuizButtonProps> = ({ item, onClick }) => {
         alignItems: 'center',
         justifyContent: 'center',
         background: 'var(--bg-surface-elevated)',
+        cursor: disabled ? 'default' : 'pointer',
+        opacity: disabled ? 0.8 : 1,
+        pointerEvents: disabled ? 'none' : 'auto',
       }}
     >
       <img

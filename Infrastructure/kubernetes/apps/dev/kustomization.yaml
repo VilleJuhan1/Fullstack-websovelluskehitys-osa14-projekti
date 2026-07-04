@@ -41,7 +41,7 @@ patches:
             - name: frontend
               env:
                 - name: VITE_APP_VERSION
-                  value: obvious-eagle-029ce7b
+                  value: mighty-owl-4f45f69
               resources:
                 limits:
                   cpu: 100m
@@ -109,17 +109,17 @@ patches:
   target:
     kind: ExternalSecret
     name: app-secret-sync
-images:
 
+images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
   newTag: front-digital-robot-3f9d606
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: obvious-eagle-029ce7b
+  newTag: mighty-owl-4f45f69
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: obvious-eagle-029ce7b
+  newTag: mighty-owl-4f45f69
 labels:
 - includeSelectors: true
   pairs:
