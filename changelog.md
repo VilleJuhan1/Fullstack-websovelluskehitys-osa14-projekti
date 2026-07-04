@@ -61,3 +61,4 @@
 | 2.4.5 | 2026-06-18 | Deploy prod: happy-lion-66ce1a2 | Tested the bug fixes and seem to work so deploying them to production  | obvious-eagle-029ce7b | happy-lion-66ce1a2 |
 | 2.4.6 | 2026-06-18 | Bug fix for changelog | Added html tags for bullet list to prevent changelog table from breaking  | obvious-eagle-029ce7b | happy-lion-66ce1a2 |
 | 2.5.0 | 2026-07-03 | OCI Vault | Switched to handling Kubernetes secrets via ESO and OCI Vault  | obvious-eagle-029ce7b | happy-lion-66ce1a2 |
+| 2.5.1 | 2026-07-04 | Streak score bug fix | Deploy the streak score bug fix to production also.  | mighty-owl-4f45f69 | clever-owl-ca93f19 |
