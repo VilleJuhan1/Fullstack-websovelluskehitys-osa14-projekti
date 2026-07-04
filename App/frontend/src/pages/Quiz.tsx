@@ -170,6 +170,8 @@ export default function Quiz() {
   }, [filteredItems, generateQuestion]);
 
   const handleSelect = (selectedItem: GameItem) => {
+    if (feedbackState === 'correct') return;
+
     setAttempts((prev) => prev + 1);
     if (selectedItem.id === targetItem?.id) {
       setFeedbackState('correct');
@@ -270,7 +272,11 @@ export default function Quiz() {
             )}
 
             {options.length > 0 && (
-              <QuizGrid options={options} onSelect={handleSelect} />
+              <QuizGrid
+                options={options}
+                onSelect={handleSelect}
+                disabled={feedbackState === 'correct'}
+              />
             )}
           </>
         )}
