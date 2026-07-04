@@ -6,8 +6,8 @@
 | April | 29 |
 | May | 81,5 |
 | June | 37 |
-| July | 5 |
-| **Total** | **152,5** |
+| July | 9 |
+| **Total** | **156,5** |
 
 For more complete log, see below.
 
