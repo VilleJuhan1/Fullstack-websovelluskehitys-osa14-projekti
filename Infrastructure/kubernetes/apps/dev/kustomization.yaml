@@ -41,7 +41,7 @@ patches:
             - name: frontend
               env:
                 - name: VITE_APP_VERSION
-                  value: clever-dolphin-cca2f24
+                  value: swift-lion-72d6d34
               resources:
                 limits:
                   cpu: 100m
@@ -122,10 +122,10 @@ images:
   newTag: front-digital-robot-3f9d606
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: clever-dolphin-cca2f24
+  newTag: swift-lion-72d6d34
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: clever-dolphin-cca2f24
+  newTag: swift-lion-72d6d34
 labels:
 - includeSelectors: true
   pairs:
