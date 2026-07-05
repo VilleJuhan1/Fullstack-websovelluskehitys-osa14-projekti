@@ -54,34 +54,50 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '26'
           cache: 'npm'
           cache-dependency-path: App/frontpage/package-lock.json
 
       - name: Build and Push Frontpage
+        env:
+          TARGET_ENV: ${{ github.event.inputs.target_env }}
+          IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          VITE_GITHUB_URL: ${{ secrets.VITE_GITHUB_URL }}
+          VITE_LINKEDIN_URL: ${{ secrets.VITE_LINKEDIN_URL }}
         run: |
           cd App/frontpage
           npm ci
           npm run lint
-          
-          TAGS="-t ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }}"
-          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
-            TAGS="$TAGS -t ${{ secrets.DOCKERHUB_USERNAME }}/frontpage:latest"
+
+          TAGS="-t $DOCKERHUB_USERNAME/frontpage:$IMAGE_TAG"
+          if [ "$TARGET_ENV" == "dev" ]; then
+            TAGS="$TAGS -t $DOCKERHUB_USERNAME/frontpage:latest"
           fi
 
-          # Build and push production image for ARM64 (OCI Ampere)
+          # Build static files natively on the runner (Dockerfile.prod just COPYs dist)
+          VITE_APP_VERSION="$IMAGE_TAG" \
+          VITE_APP_ENV="$TARGET_ENV" \
+          VITE_GITHUB_URL="$VITE_GITHUB_URL" \
+          VITE_LINKEDIN_URL="$VITE_LINKEDIN_URL" \
+          npm run build
+
+          # Build and push production image for ARM64 (OCI Ampere) with full security attestations
           docker buildx build \
+            -f Dockerfile.prod \
             --platform linux/arm64 \
-            --build-arg VITE_APP_VERSION=${{ steps.generate-tag.outputs.tag }} \
-            --build-arg VITE_APP_ENV="${{ github.event.inputs.target_env }}" \
-            --build-arg VITE_GITHUB_URL="${{ secrets.VITE_GITHUB_URL }}" \
-            --build-arg VITE_LINKEDIN_URL="${{ secrets.VITE_LINKEDIN_URL }}" \
+            --provenance=true \
+            --sbom=true \
             --push $TAGS .
 
       - name: Update Kustomize Manifests
+        env:
+          TARGET_ENV: ${{ github.event.inputs.target_env }}
+          IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
-          cd Infrastructure/kubernetes/apps/${{ github.event.inputs.target_env }}
-          kustomize edit set image villejuhan1/frontpage=${{ secrets.DOCKERHUB_USERNAME }}/frontpage:${{ steps.generate-tag.outputs.tag }}
+          cd Infrastructure/kubernetes/apps/$TARGET_ENV
+          kustomize edit set image villejuhan1/frontpage=$DOCKERHUB_USERNAME/frontpage:$IMAGE_TAG
 
       - name: Commit and Push Changes
         run: |
