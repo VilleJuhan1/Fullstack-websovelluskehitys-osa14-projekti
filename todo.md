@@ -55,9 +55,9 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] App Dockerfiles reviewed
+      - [x] App Dockerfiles reviewed
       - [ ] Docker compose files revievew
-      - [ ] Github build workflows reviewed
+      - [x] Github build workflows reviewed
     ```md
     Review all Dockerfiles and docker-compose files. Add fullstack docker-compose deployments for both dev and prod. Review github deployment workflows
     ```
