@@ -147,7 +147,7 @@ patches:
 images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
-  newTag: front-playful-sandbox-a4c6228
+  newTag: front-future-crab-e459137
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
   newTag: brave-wolf-565ccc3
