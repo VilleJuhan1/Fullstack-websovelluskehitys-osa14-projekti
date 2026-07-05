@@ -1,4 +1,4 @@
-# Stage 1: Build the application
+# Build stage
 FROM node:24 AS builder
 WORKDIR /usr/src/app
 COPY package*.json ./
@@ -6,7 +6,7 @@ RUN npm install
 COPY . .
 RUN npm run build
 
-# Stage 2: Run the application in a minimal alpine container
+# After build, run in an alpine container for minimal overhead
 FROM node:24-alpine
 WORKDIR /usr/src/app
 ENV NODE_ENV=production

@@ -19,17 +19,6 @@
     Add doc blocks to all applications
     ```
 
-### Docker review
-
-  - due: 2026-07-12
-  - tags: [docker]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-    ```md
-    Review all Dockerfiles and docker-compose files. Add fullstack docker-compose deployments for both dev and prod. Review github deployment workflows
-    ```
-
 ### Update everything
 
   - due: 2026-07-12
@@ -54,6 +43,23 @@
 
 ## In progress
 
+### 27 - Docker review
+
+  - due: 2026-07-12
+  - tags: [docker]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] App Dockerfiles reviewed
+      - [ ] Docker compose files revievew
+      - [ ] Github build workflows reviewed
+    ```md
+    Review all Dockerfiles and docker-compose files. Add fullstack docker-compose deployments for both dev and prod. Review github deployment workflows
+    ```
+
+## Done
+
 ### 26 - Bug fix: Multiple points from a single round
 
   - due: 2026-07-19
@@ -67,8 +73,6 @@
     ```md
     For some reason clicking multiple times the correct answer, it applies more than 1 score. Review why, and fix.
     ```
-
-## Done
 
 ### 25 - More staging branches
 
