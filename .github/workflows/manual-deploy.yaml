@@ -55,7 +55,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '26'
           cache: 'npm'
           cache-dependency-path: |
             App/backend/package-lock.json
@@ -80,27 +80,31 @@ jobs:
             --push $TAGS .
 
       - name: Build and Push Frontend
+        env:
+          TARGET_ENV: ${{ github.event.inputs.target_env }}
+          IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
           cd App/frontend
           npm ci
           npm run lint
-          
+
           # Use production/dev secrets for API URL
           API_URL="/graphql" # Proxied via Frontend Nginx
-          APP_ENV="${{ github.event.inputs.target_env }}"
+          APP_ENV="$TARGET_ENV"
           if [ "$APP_ENV" == "prod" ]; then
             SHOW_DEV_BAR="false"
           else
             SHOW_DEV_BAR="true"
           fi
 
-          TAGS="-t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}"
-          if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
-            TAGS="$TAGS -t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:latest"
+          TAGS="-t $DOCKERHUB_USERNAME/quiz-frontend:$IMAGE_TAG"
+          if [ "$APP_ENV" == "dev" ]; then
+            TAGS="$TAGS -t $DOCKERHUB_USERNAME/quiz-frontend:latest"
           fi
 
           # Build the static files natively on the runner (extremely fast and avoids build-stage layers)
-          VITE_APP_VERSION="${{ steps.generate-tag.outputs.tag }}" \
+          VITE_APP_VERSION="$IMAGE_TAG" \
           VITE_API_URL="$API_URL" \
           VITE_SHOW_DEV_BAR="$SHOW_DEV_BAR" \
           VITE_APP_ENV="$APP_ENV" \
@@ -115,20 +119,17 @@ jobs:
             --push $TAGS .
 
       - name: Update Kustomize Manifests
+        env:
+          TARGET_ENV: ${{ github.event.inputs.target_env }}
+          IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
         run: |
-          cd Infrastructure/kubernetes/apps/${{ github.event.inputs.target_env }}
-          
-          if [ "${{ github.event.inputs.target_env }}" == "prod" ]; then
-            # Prod points to specific version
-            kustomize edit set image villejuhan1/quiz-backend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}
-            kustomize edit set image villejuhan1/quiz-frontend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}
-          else
-            # Dev points to specific tag to satisfy kube-linter constraints
-            kustomize edit set image villejuhan1/quiz-backend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}
-            kustomize edit set image villejuhan1/quiz-frontend=${{ secrets.DOCKERHUB_USERNAME }}/quiz-frontend:${{ steps.generate-tag.outputs.tag }}
-            
+          cd Infrastructure/kubernetes/apps/$TARGET_ENV
+          kustomize edit set image villejuhan1/quiz-backend=$DOCKERHUB_USERNAME/quiz-backend:$IMAGE_TAG
+          kustomize edit set image villejuhan1/quiz-frontend=$DOCKERHUB_USERNAME/quiz-frontend:$IMAGE_TAG
+          if [ "$TARGET_ENV" != "prod" ]; then
             # Update the version label in the UI to match the generated tag
-            sed -i "/name: VITE_APP_VERSION/{n;s/value: .*/value: ${{ steps.generate-tag.outputs.tag }}/}" kustomization.yaml
+            sed -i "/name: VITE_APP_VERSION/{n;s/value: .*/value: $IMAGE_TAG/}" kustomization.yaml
           fi
 
       - name: Commit and Push Changes

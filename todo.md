@@ -41,6 +41,10 @@
     There are ansible, kubernetes and argocd deployments in the project. Review them and check if using only one or two would be a preferable way.
     ```
 
+### Signed images
+
+  - defaultExpanded: false
+
 ## In progress
 
 ### 27 - Docker review
