@@ -41,7 +41,7 @@ patches:
             - name: frontend
               env:
                 - name: VITE_APP_VERSION
-                  value: mighty-owl-4f45f69
+                  value: clever-dolphin-cca2f24
               resources:
                 limits:
                   cpu: 100m
@@ -122,10 +122,10 @@ images:
   newTag: front-digital-robot-3f9d606
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: mighty-owl-4f45f69
+  newTag: clever-dolphin-cca2f24
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: mighty-owl-4f45f69
+  newTag: clever-dolphin-cca2f24
 labels:
 - includeSelectors: true
   pairs:
