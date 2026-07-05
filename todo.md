@@ -45,7 +45,19 @@
 
   - defaultExpanded: false
 
+### Devbar to frontpage
+
+  - due: 2026-07-19
+  - priority: low
+  - workload: Easy
+  - defaultExpanded: false
+    ```md
+    Add a devbar to frontpage
+    ```
+
 ## In progress
+
+## Done
 
 ### 27 - Docker review
 
@@ -56,13 +68,11 @@
   - defaultExpanded: false
   - steps:
       - [x] App Dockerfiles reviewed
-      - [ ] Docker compose files revievew
+      - [x] Docker compose files revieved
       - [x] Github build workflows reviewed
     ```md
     Review all Dockerfiles and docker-compose files. Add fullstack docker-compose deployments for both dev and prod. Review github deployment workflows
     ```
-
-## Done
 
 ### 26 - Bug fix: Multiple points from a single round
 
