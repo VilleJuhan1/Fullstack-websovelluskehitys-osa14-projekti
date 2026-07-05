@@ -150,7 +150,7 @@ images:
   newTag: front-playful-sandbox-a4c6228
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: clever-owl-ca93f19
+  newTag: brave-wolf-565ccc3
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: clever-owl-ca93f19
+  newTag: brave-wolf-565ccc3
