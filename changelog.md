@@ -63,3 +63,4 @@
 | 2.5.0 | 2026-07-03 | OCI Vault | Switched to handling Kubernetes secrets via ESO and OCI Vault  | obvious-eagle-029ce7b | happy-lion-66ce1a2 |
 | 2.5.1 | 2026-07-04 | Streak score bug fix | Deploy the streak score bug fix to production also.  | mighty-owl-4f45f69 | clever-owl-ca93f19 |
 | 2.6.0 | 2026-07-05 | Updated Dockerfiles | Updated the way images are built and switched to newer node version as base image and in workflows.  | swift-lion-72d6d34 | brave-wolf-565ccc3 |
+| 2.6.1 | 2026-07-05 | Logs and todo | Just a minor late addition that wasn't pushed timely and missed the merge  | swift-lion-72d6d34 | brave-wolf-565ccc3 |
