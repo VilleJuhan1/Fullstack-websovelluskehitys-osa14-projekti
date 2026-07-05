@@ -41,7 +41,7 @@ patches:
             - name: frontend
               env:
                 - name: VITE_APP_VERSION
-                  value: mighty-owl-4f45f69
+                  value: swift-lion-72d6d34
               resources:
                 limits:
                   cpu: 100m
@@ -119,13 +119,13 @@ patches:
 images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
-  newTag: front-digital-robot-3f9d606
+  newTag: front-stable-sandbox-2a1303d
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: mighty-owl-4f45f69
+  newTag: swift-lion-72d6d34
 - name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: mighty-owl-4f45f69
+  newTag: swift-lion-72d6d34
 labels:
 - includeSelectors: true
   pairs:
