@@ -119,7 +119,7 @@ patches:
 images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
-  newTag: front-digital-robot-3f9d606
+  newTag: front-future-bot-eac8219
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
   newTag: swift-lion-72d6d34
