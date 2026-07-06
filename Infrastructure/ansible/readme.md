@@ -1,6 +1,6 @@
 # Ansible K3s Deployment via OCI Bastion
 
-
+Ansible is responsible for configuring the k3s cluster nodes (master and worker) after infrastructure has been provisioned with terraform. The division of responsibilities regarding the kubernetes deployments is that ansible is used to install the base k3s, and then applications are deployed using ArgoCD. This separation is intentional: Ansible handles the static cluster configuration, while ArgoCD manages the dynamic application deployments for both dev and prod environments.
 
 ## Roles
 
@@ -16,7 +16,8 @@
 
 - `main.yml`: K3s cluster installation and configuration, runs all aforementioned roles
 - `update_and_reboot.yaml`: Updates and reboots the k3s nodes
-- `cluster-addons.yml`: Installs cert-manager and configures Nginx ingress with Let's Encrypt for https certs
+- `cluster-addons.yml`: Installs cert-manager and configures Nginx ingress with Let's Encrypt for https certs. Configures External Secrets Operator to enable OCI Vault secrets management.
+- `only_monitoring.yml`: Runs only the monitoring role if reconfiguration is needed
 
 ## Step-by-Step Deployment Guide
 
@@ -104,6 +105,7 @@ Create the following JSON structure inside the OCI Vault secrets. Example is usi
 
 #### 2. Population via OCI CLI
 Alternatively, run the following commands to create the secrets directly via the CLI:
+
 ```bash
 # Set OCI resources variables (from countriesApp terraform outputs)
 COMPARTMENT_OCID="<security-compartment-ocid>"
@@ -120,8 +122,6 @@ APP_CONTENT='{"JWT_SECRET":"your-dev-jwt-secret","PASSWORD_SECRET":"your-dev-pas
 APP_BASE64=$(echo -n "$APP_CONTENT" | base64)
 oci vault secret create-base64 --compartment-id "$COMPARTMENT_OCID" --secret-name "dev-app-secret" --vault-id "$VAULT_OCID" --key-id "$KEY_OCID" --secret-content-content "$APP_BASE64"
 ```
-
-
 
 ### Run the Playbooks
 Now that the secure tunnels are open, simply activate your python environment and run the playbook from the project ansible directory.
@@ -158,7 +158,7 @@ ps -fp $(cat bastion_pids.txt)  # See which processes are running and if the tun
 kill $(cat bastion_pids.txt)    # Kill the processes
 ```
 
-However, this is not strictly necessary as the pids file is overwritten every time the tunnel script is run. Also the sessions drop automatically after 30 minutes or a 10 minute idle timeout.
+However, this is not strictly necessary as the pids file is overwritten every time the tunnel script is run. Also the sessions drop automatically after 60 minutes or a 10 minute idle timeout.
 
 ### Further steps
 
