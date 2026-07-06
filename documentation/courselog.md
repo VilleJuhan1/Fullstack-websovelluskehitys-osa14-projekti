@@ -6,8 +6,8 @@
 | April | 29 |
 | May | 81,5 |
 | June | 37 |
-| July | 9 |
-| **Total** | **156,5** |
+| July | 12 |
+| **Total** | **159,5** |
 
 For more complete log, see below.
 
@@ -96,4 +96,4 @@ For more complete log, see below.
 | July 4th | Fixed a bug on frontend streak score component that allowed multiple clicks and equivalent additions of points to streak score  | 2 |
 | July 4th | Faced some issues with the new secrets management when deploying a new version and fixed them | 2 |
 | July 5th | Reviewed app Dockerfiles and deployment workflows | 3 |
-| **Total** | | **9** |
+| **Total** | | **12** |
