@@ -14,6 +14,8 @@ update_method = "PUT"
 
 ## Project resources created
 
+Due to recent changes to OCI always free tier, the compute resources had to be downsized from 2 OCPU and 12GB of memory per instance to 1 OCPU and 6GB of memory per instance.
+
 1. `VCN` with 2 subnets:
     - `Public subnet` for bastion service and public load balancer
     - `Public subnet` for k3s cluster (master and worker nodes)
@@ -21,8 +23,8 @@ update_method = "PUT"
 3. `Security and Route Rules` for both subnets:
     - All NSG rules: [network_rules.tf](./network_rules.tf)
 4. Two `compute` instances (one `k3s master`, one `k3s worker`)
-    - **Master node**: 2 OCPUs, 12GB memory
-    - **Worker node**: 2 OCPUs, 12GB memory
+    - **Master node**: 1 OCPU, 6GB memory
+    - **Worker node**: 1 OCPU, 6GB memory
 5. One 50GB `block volume` for the `worker` node
 6. `Bastion Service`
 7. `Public Load Balancer`
