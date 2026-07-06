@@ -1,8 +1,8 @@
 # K3s cluster
 
-For now, kubectl can not be used from the developer's local machine due to our strict network security rules. Instead, we'll use bastion to ssh into the master node and run kubectl commands there. Another option would be to use Cloud shell. Later, we'll automate the deployment so that the master node pulls the manifests from github using ArgoCD. 
+For now, kubectl can not be used from the developer's local machine due to our strict network security rules and Bastion limitations. Instead, we'll use bastion to ssh into the master node and run kubectl commands there if needed. Normally all changes to app deployments are handled by ArgoCD.
 
-## Future Architecture
+## Container Service Architecture
 
 ```mermaid
 graph TD
@@ -15,43 +15,85 @@ graph TD
 
     subgraph "OCI - Cloud Infrastructure"
         NLB[("Public Network Load Balancer")]
-        
-        subgraph Cluster ["K3s Cluster (Nodes)"]
+        OCIVault[("OCI Vault")]
+
+        subgraph Cluster ["K3s Cluster (2 Nodes)"]
             subgraph "Namespace: argocd"
                 ArgoCD["ArgoCD Controller"]
+            end
+
+            subgraph "Namespace: cert-manager"
+                CertManager["cert-manager"]
+            end
+
+            subgraph "Namespace: external-secrets"
+                ESO["External Secrets Operator"]
+            end
+
+            subgraph "Namespace: ingress-nginx"
+                Ingress["Nginx Ingress Controller"]
             end
 
             subgraph "Namespace: monitoring"
                 Prometheus["Prometheus"]
                 Grafana["Grafana"]
-                Loki["Loki"]
+                Loki["Loki + Promtail"]
             end
 
-            subgraph "Namespace: prod / dev"
-                Frontend["Frontend (Web App)<br/>(Service: NodePort 30080)"]
-                Backend["Backend (GraphQL)"]
-                DB[("PostgreSQL")]
+            subgraph "Namespace: dev"
+                FrontpageDev["Frontpage"]
+                FrontendDev["Frontend (Quiz App)"]
+                BackendDev["Backend (GraphQL)"]
+                DBDev[("PostgreSQL")]
+                StripeDev["Stripe Mock"]
+            end
+
+            subgraph "Namespace: prod"
+                FrontpageProd["Frontpage"]
+                FrontendProd["Frontend (Quiz App)"]
+                BackendProd["Backend (GraphQL)"]
+                DBProd[("PostgreSQL")]
+                StripeProd["Stripe Mock"]
             end
         end
     end
 
     %% Flow: GitOps
-    Dev -- "Push Code/Manifests" --> GitHub
+    Dev -- "Push Code" --> GitHub
+    Dev -- "Push Image" --> DockerHub
     GitHub -- "Webhook / Polling" --> ArgoCD
-    GitHub -- "Image push" --> DockerHub
-    DockerHub -- "Image pull" --> ArgoCD
-    ArgoCD -- "Sync State" --> Cluster
+    ArgoCD -- "Sync Manifests" --> Cluster
+    DockerHub -- "Image pull" --> Cluster
+
+    %% Flow: Secrets
+    OCIVault -- "Secret sync" --> ESO
+    ESO -- "Inject Secrets" --> BackendDev
+    ESO -- "Inject Secrets" --> BackendProd
+
+    %% Flow: TLS
+    CertManager -- "Issue TLS Certs" --> Ingress
 
     %% Flow: Traffic
     User -- "HTTPS (443)" --> NLB
-    NLB -- "NodePort 30080" --> Frontend
-    Frontend -- "Internal API Call" --> Backend
-    Backend -- "SQL" --> DB
+    NLB -- "Route" --> Ingress
+    Ingress -- "hiekkalaatikko.tech" --> FrontpageProd
+    Ingress -- "dev.hiekkalaatikko.tech" --> FrontpageDev
+    Ingress -- "quizgame.hiekkalaatikko.tech" --> FrontendProd
+    Ingress -- "dev.quizgame.hiekkalaatikko.tech" --> FrontendDev
+    Ingress -- "argo.hiekkalaatikko.tech" --> ArgoCD
+    Ingress -- "grafana.hiekkalaatikko.tech" --> Grafana
+    FrontendDev -- "GraphQL proxy" --> BackendDev
+    FrontendProd -- "GraphQL proxy" --> BackendProd
+    BackendDev -- "SQL" --> DBDev
+    BackendProd -- "SQL" --> DBProd
+    BackendDev -- "Payments" --> StripeDev
+    BackendProd -- "Payments" --> StripeProd
 
     %% Flow: Observability
-    Prometheus -- "Scrape" --> Backend
-    Loki -- "Scrape" --> Backend
-    Loki -- "Scrape" --> Frontend
+    Prometheus -- "Scrape metrics" --> BackendDev
+    Prometheus -- "Scrape metrics" --> BackendProd
+    Loki -- "Collect logs" --> BackendDev
+    Loki -- "Collect logs" --> FrontendDev
     Grafana -- "Query" --> Prometheus
     Grafana -- "Query" --> Loki
 ```
