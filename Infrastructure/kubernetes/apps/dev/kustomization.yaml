@@ -119,7 +119,7 @@ patches:
 images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
-  newTag: front-stable-sandbox-2a1303d
+  newTag: front-playful-sandbox-15b3fe7
 - name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
   newTag: swift-lion-72d6d34

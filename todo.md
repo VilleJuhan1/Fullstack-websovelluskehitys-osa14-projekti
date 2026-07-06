@@ -45,17 +45,17 @@
 
   - defaultExpanded: false
 
-### Devbar to frontpage
+## In progress
+
+### 28 - Devbar to frontpage
 
   - due: 2026-07-19
   - priority: low
   - workload: Easy
   - defaultExpanded: false
     ```md
-    Add a devbar to frontpage
+    Add a devbar to frontpage when environment is dev
     ```
-
-## In progress
 
 ## Done
 
