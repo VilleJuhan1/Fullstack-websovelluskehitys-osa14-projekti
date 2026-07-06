@@ -6,6 +6,7 @@ import React, { useState, useRef, useEffect } from 'react';
  */
 const ServicesBar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const devBarVisible = import.meta.env.VITE_SHOW_DEV_BAR === 'true';
 
   // Ref used to detect clicks outside of the component boundaries
   const menuRef = useRef<HTMLDivElement>(null);
@@ -24,7 +25,10 @@ const ServicesBar: React.FC = () => {
   }, []);
 
   return (
-    <div ref={menuRef} className="services-bar-container">
+    <div
+      ref={menuRef}
+      className={`services-bar-container${devBarVisible ? ' services-bar-devbar-offset' : ''}`}
+    >
       <button
         className="services-toggle-btn glass-panel"
         onClick={() => setIsOpen(!isOpen)}

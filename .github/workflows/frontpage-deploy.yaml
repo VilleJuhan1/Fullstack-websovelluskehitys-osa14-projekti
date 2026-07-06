@@ -71,13 +71,16 @@ jobs:
           npm run lint
 
           TAGS="-t $DOCKERHUB_USERNAME/frontpage:$IMAGE_TAG"
+          SHOW_DEV_BAR="false"
           if [ "$TARGET_ENV" == "dev" ]; then
             TAGS="$TAGS -t $DOCKERHUB_USERNAME/frontpage:latest"
+            SHOW_DEV_BAR="true"
           fi
 
           # Build static files natively on the runner (Dockerfile.prod just COPYs dist)
           VITE_APP_VERSION="$IMAGE_TAG" \
           VITE_APP_ENV="$TARGET_ENV" \
+          VITE_SHOW_DEV_BAR="$SHOW_DEV_BAR" \
           VITE_GITHUB_URL="$VITE_GITHUB_URL" \
           VITE_LINKEDIN_URL="$VITE_LINKEDIN_URL" \
           npm run build
