@@ -30,34 +30,38 @@
     Ensure that apps/dockerfiles use the latest versions on all components.
     ```
 
-### Review deployments
-
-  - due: 2026-07-19
-  - tags: [cicd]
-  - priority: low
-  - workload: Normal
-  - defaultExpanded: false
-    ```md
-    There are ansible, kubernetes and argocd deployments in the project. Review them and check if using only one or two would be a preferable way.
-    ```
-
 ### Signed images
 
   - defaultExpanded: false
 
 ## In progress
 
+### 29 - Review deployments
+
+  - due: 2026-07-19
+  - tags: [cicd]
+  - priority: low
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Explain the architecture choices in a related readme file
+      - [ ] Review the deployments as described
+    ```md
+    There are ansible, kubernetes and argocd deployments in the project. Review them and check if using only one or two would be a preferable way.
+    ```
+
+## Done
+
 ### 28 - Devbar to frontpage
 
   - due: 2026-07-19
+  - tags: [frontpage, github]
   - priority: low
   - workload: Easy
   - defaultExpanded: false
     ```md
     Add a devbar to frontpage when environment is dev
     ```
-
-## Done
 
 ### 27 - Docker review
 
