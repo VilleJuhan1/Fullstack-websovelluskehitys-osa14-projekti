@@ -22,6 +22,8 @@ The app itself is a Quiz game, where the user tries to figure out the correct pi
 
 The project utilizes a Fullstack+ (tm) tech stack: Frontend (React/Vite), Backend (GraphQL), Relational Database (self-managed PostgreSQL), Container Orchestration (Kubernetes with k3s), CI/CD (Github actions, ArgoCD), and Infrastructure as Code (Terraform, Ansible). The application is deployed on a k3s cluster hosted on Oracle Cloud Infrastructure (OCI). Some cloud services are also used, such as a network loadbalancer and OCI Vault, but most components are built from scratch. Ie. Oracle Kubernetes Engine (OKE) is not used, but instead k3s is installed on top of compute instances that are provisioned using Terraform and and configured using Ansible. Instead of native DBaaS, a self-managed PostgreSQL running in the cluster is used.
 
+A simple cloud landing page was created as a late addition to work as a project hub.
+
 - [Frontend](App/frontend/readme.md)
 - [Backend](App/backend/readme.md)
 - [Cloud Sandbox Landing Page](App/frontpage/readme.md)
