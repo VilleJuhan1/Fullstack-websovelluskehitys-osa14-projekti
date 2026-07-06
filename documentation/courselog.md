@@ -96,4 +96,5 @@ For more complete log, see below.
 | July 4th | Fixed a bug on frontend streak score component that allowed multiple clicks and equivalent additions of points to streak score  | 2 |
 | July 4th | Faced some issues with the new secrets management when deploying a new version and fixed them | 2 |
 | July 5th | Reviewed app Dockerfiles and deployment workflows | 3 |
-| **Total** | | **12** |
+| July 6th | Added devbar to landing page in dev environment | 2 |
+| **Total** | | **14** |
