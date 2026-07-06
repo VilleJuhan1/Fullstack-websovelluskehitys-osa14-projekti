@@ -44,8 +44,8 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Explain the architecture choices in a related readme file
-      - [ ] Review the deployments as described
+      - [x] Explain the architecture choices in a related readme file
+      - [x] Review the deployments as described
     ```md
     There are ansible, kubernetes and argocd deployments in the project. Review them and check if using only one or two would be a preferable way.
     ```
