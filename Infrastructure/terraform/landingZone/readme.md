@@ -44,7 +44,7 @@ projects = {
 }
 ```
 
-## Bootstrapping State (The "Chicken & Egg" Problem)
+## Bootstrapping Terraform State
 
 Because this module creates the Object Storage bucket intended to hold its own state, the HTTP backend cannot be initialized immediately on the very first run. The state must be bootstrapped locally first, the resources (including the bucket) created, and then the state migrated to the newly created remote bucket.
 
