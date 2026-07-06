@@ -1,6 +1,6 @@
 # Ansible K3s Deployment via OCI Bastion
 
-Ansible is responsible for configuring the k3s cluster nodes (master and worker) after infrastructure has been provisioned with terraform. The division of responsibilities regarding the kubernetes deployments is that ansible is used to install the base k3s, and then applications are deployed using ArgoCD. This separation is intentional: Ansible handles the static cluster configuration, while ArgoCD manages the dynamic application deployments for both dev and prod environments.
+Ansible is responsible for configuring the k3s cluster nodes (master and worker) after infrastructure has been provisioned with terraform. The division of responsibilities regarding the kubernetes deployments is that ansible is used to install the base k3s and the services that use helm installer. The applications are deployed using ArgoCD (prior to this, manually). This separation is intentional: Ansible handles the static cluster configuration, while ArgoCD manages the dynamic application deployments for both dev and prod environments.
 
 ## Roles
 
