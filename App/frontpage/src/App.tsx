@@ -2,6 +2,7 @@ import React from 'react';
 import robotImg from './assets/sandbox.png';
 import BottomBar from './components/BottomBar';
 import ServicesBar from './components/ServicesBar';
+import DevBar from './components/DevBar';
 
 /**
  * Main application component representing the cloud sandbox landing page.
@@ -11,6 +12,7 @@ import ServicesBar from './components/ServicesBar';
 const App: React.FC = () => {
   return (
     <div className="landing-container">
+      <DevBar />
       <ServicesBar />
       <main className="hero-section">
         <div className="hero-text">

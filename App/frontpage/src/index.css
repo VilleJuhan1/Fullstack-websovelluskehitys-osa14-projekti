@@ -243,6 +243,11 @@ body {
   margin-top: var(--space-xl);
 }
 
+/* Offset for ServicesBar when the DevBar is visible */
+.services-bar-devbar-offset {
+  top: calc(var(--space-xl) + 36px);
+}
+
 /* Mobile responsive adjustments */
 @media (max-width: 768px) {
   .landing-container {
@@ -258,6 +263,10 @@ body {
   .services-bar-container {
     top: var(--space-md);
     right: var(--space-md);
+  }
+
+  .services-bar-devbar-offset {
+    top: calc(var(--space-md) + 36px);
   }
 
   .bottom-bar {
