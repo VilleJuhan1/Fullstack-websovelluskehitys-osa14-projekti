@@ -5,6 +5,15 @@ import { ME } from '../services/auth';
 import type { GetMeData } from '../services/auth';
 import './SettingsBar.css';
 
+/**
+ * SettingsBar component opens when the cogwheel is clicked.
+ * 
+ *  - Shows the user's username
+ *  - Shows account information link
+ *  - Shows sign out link
+ * 
+ * @returns SettingsBar component
+ */
 export default function SettingsBar() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);

@@ -3,6 +3,9 @@ import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
 import QuizGrid from '../QuizGrid';
 
+/**
+ * Vitest tests for the QuizGrid component to ensure the quiz grid is rendered correctly and responds to user input.
+ */
 describe('QuizGrid Component', () => {
   const mockOptions = [
     { id: 1, name: 'Item 1', imageUrl: '/item1.png', categories: ['test'] },

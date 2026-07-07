@@ -2,10 +2,13 @@ import { renderHook } from '@testing-library/react';
 import { describe, it, expect, vi } from 'vitest';
 import { useGameContext, GameContext } from '../useGame';
 
+/**
+ * Vitest tests for custom useGame hook, which is used to share game data between components.
+ */
 describe('useGame Hook', () => {
   it('throws an error when used outside of GameProvider', () => {
     // Suppress React's error boundary console logs for expected errors
-    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => { });
 
     expect(() => renderHook(() => useGameContext())).toThrow(
       'useGameContext must be used within a GameProvider'

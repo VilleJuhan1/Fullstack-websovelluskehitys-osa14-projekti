@@ -3,6 +3,9 @@ import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
 import QuizButton from '../QuizButton';
 
+/**
+ * Vitest tests for the QuizButton component to ensure the quiz button is rendered correctly and responds to user input.
+ */
 describe('QuizButton Component', () => {
   const mockItem = {
     id: 1,

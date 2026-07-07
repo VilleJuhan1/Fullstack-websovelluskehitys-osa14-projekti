@@ -5,6 +5,17 @@ import { LOGIN } from '../services/auth';
 import type { LoginData } from '../services/auth';
 import './Auth.css';
 
+/**
+ * Login page component.
+ * 
+ * Provides a form for existing users to sign in with their credentials.
+ * Upon successful authentication:
+ * - Stores the user's token and token expiration timestamp in `localStorage`.
+ * - Dispatches a custom 'auth-change' window event to notify other components of the login status change.
+ * - Navigates the user back to the home route.
+ * 
+ * @returns The rendered Login page component.
+ */
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

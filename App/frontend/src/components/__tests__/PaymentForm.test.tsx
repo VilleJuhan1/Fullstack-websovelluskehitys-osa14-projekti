@@ -5,6 +5,10 @@ import { describe, it, expect, vi, afterEach } from 'vitest';
 import PaymentForm from '../PaymentForm';
 import { useMutation } from '@apollo/client/react';
 
+/**
+ * Vitest tests for the PaymentForm component to ensure the payment form is rendered correctly.
+ * As the mock payment form is not interactive, also that is tested to ensure you can't submit the form with your own data.
+ */
 vi.mock('@apollo/client/react', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@apollo/client/react')>();
   return {

@@ -1,5 +1,15 @@
 import './StreakScore.css';
 
+/**
+ * Component that shows the user's current streak, highest streak and feedback from the guess.
+ * 
+ * @param streak - The user's current streak
+ * @param attempts - The number of attempts the user has made
+ * @param feedbackState - The feedback state of the user's last guess
+ * @param highestStreak - The user's highest streak
+ * @param isLoggedIn - Whether the user is logged in
+ * @param isNewRecord - Whether the user has achieved a new record
+ */
 interface StreakScoreProps {
   streak: number;
   attempts?: number;

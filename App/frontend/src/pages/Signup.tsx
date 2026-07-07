@@ -5,6 +5,14 @@ import { LOGIN, CREATE_USER } from '../services/auth';
 import type { LoginData, CreateUserData } from '../services/auth';
 import './Auth.css';
 
+/**
+ * Signup page component.
+ * 
+ * Provides a form for new users to register an account. Validates username, email, and password before submission.
+ * Automatically logs the user in upon successful registration.
+ * 
+ * @returns The rendered Signup page component.
+ */
 export default function Signup() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -18,7 +26,7 @@ export default function Signup() {
       onError: (err: Error) => {
         setErrorText(
           err.message ||
-            'Signup succeeded but auto-login failed. Please try logging in manually.'
+          'Signup succeeded but auto-login failed. Please try logging in manually.'
         );
       },
       onCompleted: (data: LoginData) => {

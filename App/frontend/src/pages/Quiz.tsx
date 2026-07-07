@@ -12,7 +12,18 @@ import type { GetMeData, ScoreItem } from '../services/auth';
 import { UPDATE_STREAK_SCORE } from '../services/score';
 import type { UpdateStreakScoreData } from '../services/score';
 
-// Generic quiz component for rendering the quiz page and handling the quiz logic
+/**
+ * Quiz page component that handles gameplay logic, state, and score persistence.
+ * 
+ * Key responsibilities:
+ * - Determines the active quiz type/category from URL parameters.
+ * - Protects premium routes (e.g. 'dota') by redirecting anonymous/non-premium users.
+ * - Retrieves and filters game items using `useGameContext`.
+ * - Manages the gameplay loop: generating unique questions, verifying selections, tracking current streaks, and providing immediate feedback.
+ * - Persists and synchronizes new high score streaks to the database via `UPDATE_STREAK_SCORE`.
+ * 
+ * @returns The rendered Quiz page component.
+ */
 export default function Quiz() {
   const { category } = useParams<{ category: string }>();
   const navigate = useNavigate();
@@ -205,8 +216,8 @@ export default function Quiz() {
                   );
                   const updatedScores = hasCategory
                     ? currentScores.map((s: ScoreItem) =>
-                        s.category === updatedScore.category ? updatedScore : s
-                      )
+                      s.category === updatedScore.category ? updatedScore : s
+                    )
                     : [...currentScores, updatedScore];
 
                   cache.writeQuery<GetMeData>({
