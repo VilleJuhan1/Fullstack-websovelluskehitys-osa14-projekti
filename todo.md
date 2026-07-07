@@ -32,6 +32,8 @@
 
 ## In progress
 
+## Done
+
 ### 30 - Doc blocks for everything under App
 
   - due: 2026-07-12
@@ -40,14 +42,12 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Frontpage docs
-      - [ ] Frontend docs
-      - [ ] Backend docs
+      - [x] Frontpage docs
+      - [x] Frontend docs
+      - [x] Backend docs
     ```md
     Add doc blocks to all applications
     ```
-
-## Done
 
 ### 29 - Review deployments
 
