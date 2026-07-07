@@ -7,7 +7,10 @@ export interface Translations {
   swe: string;
 }
 
-// A type of object, ie. Pokemon, monument, landmark or a country.
+/**
+ * Generic type object class that can be used in the quiz game.
+ * Used by Pokemon, Countries and Dota heroes types.
+ */
 export class ObjectType {
   id: number;
   name: string; // Identifier, like Pikachu or Finland

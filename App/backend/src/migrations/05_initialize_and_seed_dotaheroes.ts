@@ -1,13 +1,15 @@
 import { DataTypes, QueryInterface } from 'sequelize';
 import dotaHeroesData from '../data/dotaHeroes.json';
 
-// Migration file that initializes the database tables and seeds them with initial data for dotaHeroes
+/**
+ * Migration file that initializes the database tables and seeds them with initial data for dotaHeroes
+ * @param queryInterface
+ */
 export const up = async ({
   context: queryInterface,
 }: {
   context: QueryInterface;
 }) => {
-  // Create Dota Heroes Table
   await queryInterface.createTable('dotaHeroes', {
     id: {
       type: DataTypes.INTEGER,

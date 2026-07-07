@@ -2,6 +2,9 @@ import { test, expect } from '@jest/globals';
 
 const API_test_url = process.env.API_URL || 'http://localhost:4000/graphql';
 
+/**
+ * Smoke test for the API.
+ */
 test('basic query returns 200 and json data', async () => {
   const res = await fetch(API_test_url, {
     method: 'POST',

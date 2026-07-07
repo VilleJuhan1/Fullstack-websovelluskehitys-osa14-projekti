@@ -3,6 +3,9 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import StreakScore from '../StreakScore';
 
+/**
+ * Vitest tests for the StreakScore component to test core functionalities.
+ */
 describe('StreakScore Component', () => {
   it('renders "Make a guess!" in default state (streak = 0, attempts = 0)', () => {
     render(<StreakScore streak={0} attempts={0} />);

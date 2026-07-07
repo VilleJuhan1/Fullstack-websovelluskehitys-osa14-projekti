@@ -13,12 +13,12 @@ export const stripe = new Stripe(stripeSecretKey, {
     : 'api.stripe.com',
   protocol:
     process.env.STRIPE_API_BASE &&
-      process.env.STRIPE_API_BASE.startsWith('http://')
+    process.env.STRIPE_API_BASE.startsWith('http://')
       ? 'http'
       : 'https',
   port:
     process.env.STRIPE_API_BASE &&
-      process.env.STRIPE_API_BASE.split(':').length === 3
+    process.env.STRIPE_API_BASE.split(':').length === 3
       ? parseInt(process.env.STRIPE_API_BASE.split(':')[2])
       : undefined,
 });

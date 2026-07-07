@@ -5,6 +5,14 @@ import { LOGIN, CREATE_USER } from '../services/auth';
 import type { LoginData, CreateUserData } from '../services/auth';
 import './Auth.css';
 
+/**
+ * Signup page component.
+ *
+ * Provides a form for new users to register an account. Validates username, email, and password before submission.
+ * Automatically logs the user in upon successful registration.
+ *
+ * @returns The rendered Signup page component.
+ */
 export default function Signup() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');

@@ -3,10 +3,13 @@ import testUsersData from '../data/testUsers.json';
 import bcrypt from 'bcryptjs';
 import { TestUser } from '../models/User';
 
-// The iterations for hashing the passwords
+// The number of iterations for hashing the passwords
 const SALT_ROUNDS = 10;
 
-// Migration file that seeds the database with test users on dev environment
+/**
+ * Migration file that seeds the database with test users on dev environment
+ * @param queryInterface
+ */
 export const up = async ({
   context: queryInterface,
 }: {
@@ -61,7 +64,7 @@ export const down = async ({
 }) => {
   if (process.env.NODE_ENV === 'production') return;
 
-  // Cleanup test users by username
+  // Cleanup test users by username when reverting migration
   const usernames = (testUsersData as TestUser[]).map((u) => u.username);
   await queryInterface.bulkDelete('users', {
     username: usernames,

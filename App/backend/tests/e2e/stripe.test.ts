@@ -2,6 +2,9 @@ import { describe, it, expect } from '@jest/globals';
 
 const API_test_url = process.env.API_URL || 'http://localhost:4000/';
 
+/**
+ * API tests for Stripe payment integration.
+ */
 describe('Stripe API E2E', () => {
   it('upgrades user to premium', async () => {
     // 1. Create a new user for this test

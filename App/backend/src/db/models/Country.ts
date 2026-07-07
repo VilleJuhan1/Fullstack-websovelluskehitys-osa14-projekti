@@ -1,6 +1,10 @@
 import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../sequelize';
 
+/**
+ * The Countries category table in the database.
+ * Used as a quiz category.
+ */
 export class Country extends Model {
   declare id: number;
   declare name: string;
@@ -9,7 +13,6 @@ export class Country extends Model {
   declare imageUrl: string;
 }
 
-// Countries table that can be used as a quiz category
 Country.init(
   {
     id: {

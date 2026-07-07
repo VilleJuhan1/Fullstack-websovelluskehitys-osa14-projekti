@@ -1,6 +1,10 @@
 import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../sequelize';
 
+/**
+ * The Dota hero category table in the database.
+ * Used as a quiz category.
+ */
 export class DotaHero extends Model {
   declare id: number;
   declare name: string;

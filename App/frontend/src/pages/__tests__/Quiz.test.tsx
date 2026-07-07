@@ -7,6 +7,9 @@ import Quiz from '../Quiz';
 import { useQuery, useMutation } from '@apollo/client/react';
 import { useGameContext } from '../../hooks/useGame';
 
+/**
+ * Main Vitest tests for Quiz component
+ */
 vi.mock('@apollo/client/react', () => ({
   useQuery: vi.fn(),
   useMutation: vi.fn(),

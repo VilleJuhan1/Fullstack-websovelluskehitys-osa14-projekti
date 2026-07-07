@@ -8,7 +8,10 @@ interface TestScore {
   highestStreak: number;
 }
 
-// Seeds test data to the scores table for easy testing if NODE_ENV is not production
+/**
+ * Seeds test data to the scores table for easy testing if NODE_ENV is not production
+ * @param queryInterface
+ */
 export const up = async ({
   context: queryInterface,
 }: {

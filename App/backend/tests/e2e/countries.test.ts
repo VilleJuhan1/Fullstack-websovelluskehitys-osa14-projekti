@@ -2,6 +2,9 @@ import { describe, it, expect } from '@jest/globals';
 
 const API_test_url = process.env.API_URL || 'http://localhost:4000/';
 
+/**
+ * API tests for countries quiz category.
+ */
 describe('Countries API E2E', () => {
   it('returns a list of countries', async () => {
     const res = await fetch(API_test_url, {

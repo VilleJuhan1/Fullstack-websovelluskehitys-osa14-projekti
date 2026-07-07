@@ -2,6 +2,9 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import BottomBar from '../BottomBar';
 
+/**
+ * Vitest tests for the BottomBar component to ensure the social media links are rendered correctly.
+ */
 describe('BottomBar Component', () => {
   beforeEach(() => {
     vi.stubEnv('VITE_LINKEDIN_URL', 'https://mock-linkedin.com');

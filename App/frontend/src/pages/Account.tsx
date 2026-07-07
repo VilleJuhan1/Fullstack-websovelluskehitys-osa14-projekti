@@ -4,6 +4,11 @@ import { ME } from '../services/auth';
 import type { GetMeData } from '../services/auth';
 import PaymentForm from '../components/PaymentForm';
 
+/**
+ * Account page
+ *
+ * @returns Account page component
+ */
 export default function Account() {
   const { data, loading } = useQuery<GetMeData>(ME, {
     fetchPolicy: 'cache-and-network',

@@ -45,4 +45,36 @@ A central hub and landing page for the cloud sandbox project. It provides quick 
    npm start
    ```
 
-### Containerization
+### Files
+
+```bash
+.
+├── Dockerfile
+├── Dockerfile.prod
+├── Dockerfile.prod.dockerignore
+├── README.md
+├── eslint.config.js
+├── index.html
+├── nginx.conf
+├── package-lock.json
+├── package.json
+├── public
+│   └── favicon.svg
+├── src
+│   ├── App.tsx
+│   ├── assets
+│   │   ├── github.svg
+│   │   ├── linkedin-big-logo.svg
+│   │   └── sandbox.png
+│   ├── components
+│   │   ├── BottomBar.tsx
+│   │   ├── DevBar.css
+│   │   ├── DevBar.tsx
+│   │   └── ServicesBar.tsx
+│   ├── index.css
+│   └── main.tsx
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+```

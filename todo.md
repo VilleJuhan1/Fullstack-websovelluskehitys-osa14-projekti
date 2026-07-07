@@ -4,21 +4,6 @@
 
 ## Planned
 
-### Doc blocks for everything under App
-
-  - due: 2026-07-12
-  - tags: [frontend, backend, frontpage]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [ ] Frontpage docs
-      - [ ] Frontend docs
-      - [ ] Backend docs
-    ```md
-    Add doc blocks to all applications
-    ```
-
 ### Update everything
 
   - due: 2026-07-12
@@ -34,7 +19,51 @@
 
   - defaultExpanded: false
 
+### More playwright tests for frontend
+
+  - due: 2026-07-19
+  - tags: [frontend]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+    ```md
+    Review the playwright coverage and add the missing components
+    ```
+
+### If time, add a fourth category
+
+  - due: 2026-07-19
+  - tags: [backend, frontend, postgresql]
+  - priority: low
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Find an API
+      - [ ] Extract the data with Python script
+      - [ ] Create the changes to backend
+      - [ ] Make the required changed to frontend
+    ```md
+    As the project moves toward an end, if there is time, add atleast one extra quiz category
+    ```
+
 ## In progress
+
+## Done
+
+### 30 - Doc blocks for everything under App
+
+  - due: 2026-07-12
+  - tags: [frontend, backend, frontpage]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Frontpage docs
+      - [x] Frontend docs
+      - [x] Backend docs
+    ```md
+    Add doc blocks to all applications
+    ```
 
 ### 29 - Review deployments
 
@@ -49,8 +78,6 @@
     ```md
     There are ansible, kubernetes and argocd deployments in the project. Review them and check if using only one or two would be a preferable way.
     ```
-
-## Done
 
 ### 28 - Devbar to frontpage
 

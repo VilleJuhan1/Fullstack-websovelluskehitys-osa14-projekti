@@ -6,6 +6,9 @@ import { MemoryRouter } from 'react-router-dom';
 import SettingsBar from '../SettingsBar';
 import { useQuery, useApolloClient } from '@apollo/client/react';
 
+/**
+ * Vitest tests for the SettingsBar component (Drop down menu in the top right corner)
+ */
 vi.mock('@apollo/client/react', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@apollo/client/react')>();
   return {
