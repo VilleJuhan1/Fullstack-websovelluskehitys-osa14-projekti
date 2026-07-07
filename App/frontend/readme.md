@@ -61,6 +61,7 @@ VITE_SHOW_DEV_BAR=true # Used to show the dev bar
 ## Files
 
 ```shell
+.
 ├── Dockerfile
 ├── Dockerfile.prod
 ├── Dockerfile.prod.dockerignore
@@ -76,7 +77,6 @@ VITE_SHOW_DEV_BAR=true # Used to show the dev bar
 │   ├── cogwheel.svg
 │   ├── favicon.svg
 │   ├── github.svg
-│   ├── letter-q.svg
 │   └── linkedin-big-logo.svg
 ├── readme.md
 ├── src
@@ -88,11 +88,14 @@ VITE_SHOW_DEV_BAR=true # Used to show the dev bar
 │   │   ├── DevBar.css
 │   │   ├── DevBar.tsx
 │   │   ├── ErrorBoundary.tsx
+│   │   ├── PaymentForm.css
+│   │   ├── PaymentForm.tsx
 │   │   ├── SettingsBar.css
 │   │   ├── SettingsBar.tsx
 │   │   ├── __tests__
 │   │   │   ├── BottomBar.test.tsx
 │   │   │   ├── DevBar.test.tsx
+│   │   │   ├── PaymentForm.test.tsx
 │   │   │   └── SettingsBar.test.tsx
 │   │   └── quiz
 │   │       ├── CategorySelector.css
@@ -125,7 +128,9 @@ VITE_SHOW_DEV_BAR=true # Used to show the dev bar
 │   │   ├── Login.tsx
 │   │   ├── Quiz.css
 │   │   ├── Quiz.tsx
-│   │   └── Signup.tsx
+│   │   ├── Signup.tsx
+│   │   └── __tests__
+│   │       └── Quiz.test.tsx
 │   ├── services
 │   │   ├── auth.ts
 │   │   ├── gameData.ts

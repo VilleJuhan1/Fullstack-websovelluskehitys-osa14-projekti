@@ -1,7 +1,9 @@
 import { createContext, useContext } from 'react';
 import type { GameItem, GameDataType } from '../services/gameData';
 
-//
+/**
+ * Interface for the GameContextType, which is used to share game data between components.
+ */
 export interface GameContextType {
   pokemon: GameItem[];
   countries: GameItem[];

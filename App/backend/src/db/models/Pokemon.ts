@@ -1,6 +1,10 @@
 import { Model, DataTypes } from 'sequelize';
 import { sequelize } from '../sequelize';
 
+/**
+ * The Pokemon category table in the database.
+ * Used as a quiz category.
+ */
 export class Pokemon extends Model {
   declare id: number;
   declare name: string;
@@ -9,7 +13,6 @@ export class Pokemon extends Model {
   declare imageUrl: string;
 }
 
-// Pokemon table that can be used as a quiz category
 Pokemon.init(
   {
     id: {

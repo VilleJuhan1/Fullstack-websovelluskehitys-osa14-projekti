@@ -6,8 +6,8 @@
 | April | 29 |
 | May | 81,5 |
 | June | 37 |
-| July | 16 |
-| **Total** | **163,5** |
+| July | 18 |
+| **Total** | **165,5** |
 
 For more complete log, see below.
 
@@ -98,4 +98,5 @@ For more complete log, see below.
 | July 5th | Reviewed app Dockerfiles and deployment workflows | 3 |
 | July 6th | Added devbar to landing page in dev environment | 2 |
 | July 6th | Reviewed K3s deployments (terraform, ansible, kubernetes) and the related readme files | 2 | 
-| **Total** | | **16** |
+| July 7th | Reviewed and updated App documentation: docstrings, comments and readme files | 2 |
+| **Total** | | **18** |

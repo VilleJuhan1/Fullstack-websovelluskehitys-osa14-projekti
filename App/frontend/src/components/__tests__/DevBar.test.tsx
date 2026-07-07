@@ -2,6 +2,9 @@ import { render, screen } from '@testing-library/react';
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import DevBar from '../DevBar';
 
+/**
+ * Vitest tests for the DevBar component to ensure the development bar is rendered correctly.
+ */
 describe('DevBar Component', () => {
   afterEach(() => {
     vi.unstubAllEnvs();

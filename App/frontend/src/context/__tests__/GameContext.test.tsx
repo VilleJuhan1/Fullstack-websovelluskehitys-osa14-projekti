@@ -6,6 +6,9 @@ import { GameProvider } from '../GameContext';
 import { useGameContext } from '../../hooks/useGame';
 import React from 'react';
 
+/**
+ * Vitest tests for changing the game context between categories
+ */
 vi.mock('@apollo/client/react', async (importOriginal) => {
   const actual = await importOriginal<typeof import('@apollo/client/react')>();
   return {

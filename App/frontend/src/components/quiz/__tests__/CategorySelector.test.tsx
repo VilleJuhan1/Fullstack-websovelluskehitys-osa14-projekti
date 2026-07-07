@@ -3,6 +3,9 @@ import userEvent from '@testing-library/user-event';
 import { describe, it, expect, vi } from 'vitest';
 import { CategorySelector } from '../CategorySelector';
 
+/**
+ * Vitest tests for the CategorySelector component to ensure the category selector is rendered correctly and responds to user input.
+ */
 describe('CategorySelector Component', () => {
   const categories = ['all', 'europe', 'asia'];
 

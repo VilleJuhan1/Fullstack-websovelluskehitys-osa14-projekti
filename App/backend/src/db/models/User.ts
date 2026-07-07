@@ -2,7 +2,10 @@ import { Model, DataTypes, HasManyGetAssociationsMixin } from 'sequelize';
 import { sequelize } from '../sequelize';
 import { Score } from './Score';
 
-// Stores user data
+/**
+ * The User table in the database.
+ * Stores the user data.
+ */
 export class User extends Model {
   declare id: number;
   declare username: string;

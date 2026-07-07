@@ -2,6 +2,9 @@ import { describe, it, expect } from '@jest/globals';
 
 const API_test_url = process.env.API_URL || 'http://localhost:4000/';
 
+/**
+ * API tests for dota heroes quiz category.
+ */
 describe('Dota Heroes API E2E', () => {
   it('returns a list of dota heroes', async () => {
     const res = await fetch(API_test_url, {
