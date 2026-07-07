@@ -19,6 +19,17 @@
 
   - defaultExpanded: false
 
+### More playwright tests for frontend
+
+  - due: 2026-07-19
+  - tags: [frontend]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+    ```md
+    Review the playwright coverage and add the missing components
+    ```
+
 ## In progress
 
 ### 30 - Doc blocks for everything under App
