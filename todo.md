@@ -4,21 +4,6 @@
 
 ## Planned
 
-### Doc blocks for everything under App
-
-  - due: 2026-07-12
-  - tags: [frontend, backend, frontpage]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-  - steps:
-      - [ ] Frontpage docs
-      - [ ] Frontend docs
-      - [ ] Backend docs
-    ```md
-    Add doc blocks to all applications
-    ```
-
 ### Update everything
 
   - due: 2026-07-12
@@ -36,6 +21,23 @@
 
 ## In progress
 
+### 30 - Doc blocks for everything under App
+
+  - due: 2026-07-12
+  - tags: [frontend, backend, frontpage]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Frontpage docs
+      - [ ] Frontend docs
+      - [ ] Backend docs
+    ```md
+    Add doc blocks to all applications
+    ```
+
+## Done
+
 ### 29 - Review deployments
 
   - due: 2026-07-19
@@ -49,8 +51,6 @@
     ```md
     There are ansible, kubernetes and argocd deployments in the project. Review them and check if using only one or two would be a preferable way.
     ```
-
-## Done
 
 ### 28 - Devbar to frontpage
 
