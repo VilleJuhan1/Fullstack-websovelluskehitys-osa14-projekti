@@ -30,6 +30,22 @@
     Review the playwright coverage and add the missing components
     ```
 
+### If time, add a fourth category
+
+  - due: 2026-07-19
+  - tags: [backend, frontend, postgresql]
+  - priority: low
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Find an API
+      - [ ] Extract the data with Python script
+      - [ ] Create the changes to backend
+      - [ ] Make the required changed to frontend
+    ```md
+    As the project moves toward an end, if there is time, add atleast one extra quiz category
+    ```
+
 ## In progress
 
 ## Done
