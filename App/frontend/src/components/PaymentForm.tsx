@@ -6,11 +6,11 @@ import './PaymentForm.css';
 
 /**
  * PaymentForm component renders a mock payment form for upgrading a user's account to Premium.
- * 
+ *
  * Since this is a demonstration environment, the form fields are pre-filled, read-only,
  * and do not process real financial transactions. It triggers the `UPGRADE_TO_PREMIUM`
  * GraphQL mutation on submission.
- * 
+ *
  * @param props - The component props.
  * @param props.username - The current user's username, displayed as the cardholder name.
  */

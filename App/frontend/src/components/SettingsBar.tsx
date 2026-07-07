@@ -7,11 +7,11 @@ import './SettingsBar.css';
 
 /**
  * SettingsBar component opens when the cogwheel is clicked.
- * 
+ *
  *  - Shows the user's username
  *  - Shows account information link
  *  - Shows sign out link
- * 
+ *
  * @returns SettingsBar component
  */
 export default function SettingsBar() {

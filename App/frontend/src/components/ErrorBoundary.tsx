@@ -16,7 +16,7 @@ interface State {
  * ErrorBoundary catches unhandled JavaScript errors anywhere in its child
  * component tree, logs those errors to the console, and displays a fallback UI
  * to prevent the entire application from crashing.
- * 
+ *
  * It supports a custom fallback UI passed as a prop, otherwise rendering a default
  * full-page error view with the error message and a return-to-menu button.
  */

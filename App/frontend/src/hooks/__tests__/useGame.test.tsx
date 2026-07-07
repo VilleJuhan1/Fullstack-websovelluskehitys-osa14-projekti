@@ -8,7 +8,7 @@ import { useGameContext, GameContext } from '../useGame';
 describe('useGame Hook', () => {
   it('throws an error when used outside of GameProvider', () => {
     // Suppress React's error boundary console logs for expected errors
-    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => { });
+    const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
 
     expect(() => renderHook(() => useGameContext())).toThrow(
       'useGameContext must be used within a GameProvider'
