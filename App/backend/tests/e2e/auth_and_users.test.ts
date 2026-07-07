@@ -12,6 +12,9 @@ interface GraphQLScore {
   highestStreak: number;
 }
 
+/**
+ * API tests for user related functionalities.
+ */
 describe('Auth and User API E2E', () => {
   it('can login with test_admin_user', async () => {
     const res = await fetch(API_test_url, {

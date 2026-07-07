@@ -9,7 +9,7 @@ Includes a Python script for building data sets for the quiz game, see [scripts/
 | Component     | Used for                                                     | Status      |
 | ------------- | ------------------------------------------------------------ | ----------- |
 | Node.js       | Runtime environment                                          | Implemented |
-| Axios         | HTTP client for communicating with the mock payment provider | Planned     |
+| Axios         | HTTP client for communicating with the mock payment provider | Implemented |
 | Express       | Web framework                                                | Implemented |
 | Apollo Server | GraphQL framework                                            | Implemented |
 | Sequelize     | ORM for database                                             | Implemented |
@@ -26,7 +26,7 @@ Includes a Python script for building data sets for the quiz game, see [scripts/
 | Prettier      | Code formatter                                               | Implemented |
 | ESLint        | Linting utility                                              | Implemented |
 | Typescript    | TypeScript compiler                                          | Implemented |
-| Redis         |                                                              | Planned     |
+| Redis         |                                                              | Discarded   |
 
 ## Installation
 
@@ -72,15 +72,11 @@ npm start               # starts production server
 graph TD
     A[Client] --> B[Apollo Server]
     B --> C[Resolvers]
-    C --> D{Cache Check<br/>Redis}
-    D -->|Cache Hit| E[Return Cached Data]
-    D -->|Cache Miss| F[ORM Layer<br/>Sequelize]
-    F --> G[PostgreSQL]
-    G --> H[Fetch Data]
-    H --> I[Store in Cache<br/>Redis]
-    I --> J[Return Data]
-    E --> J
-    J --> C
+    C --> D[ORM Layer<br/>Sequelize]
+    D --> E[Database<br/>PostgreSQL]
+    E --> F[Fetch Data]
+    F --> G[Return Data]
+    G --> C
     C --> B
     B --> A
 ```
@@ -88,6 +84,7 @@ graph TD
 ## Files
 
 ```shell
+.
 ├── Dockerfile
 ├── eslint.config.mjs
 ├── jest.config.ts
@@ -100,6 +97,7 @@ graph TD
 ├── src
 │   ├── data
 │   │   ├── countries.json
+│   │   ├── dotaHeroes.json
 │   │   ├── pokemon.json
 │   │   ├── pokemonOriginal.json
 │   │   ├── testScores.json
@@ -108,6 +106,7 @@ graph TD
 │   │   ├── index.ts
 │   │   ├── models
 │   │   │   ├── Country.ts
+│   │   │   ├── DotaHero.ts
 │   │   │   ├── Pokemon.ts
 │   │   │   ├── Score.ts
 │   │   │   └── User.ts
@@ -118,7 +117,8 @@ graph TD
 │   │   ├── 01_initialize_users.ts
 │   │   ├── 02_seed_test_users_on_dev.ts
 │   │   ├── 03_initialize_scores.ts
-│   │   └── 04_seed_test_scores_on_dev.ts
+│   │   ├── 04_seed_test_scores_on_dev.ts
+│   │   └── 05_initialize_and_seed_dotaheroes.ts
 │   ├── models
 │   │   ├── ObjectType.ts
 │   │   └── User.ts
@@ -128,6 +128,7 @@ graph TD
 │   │   ├── resolvers
 │   │   │   ├── authResolvers.ts
 │   │   │   ├── countryResolvers.ts
+│   │   │   ├── dotaHeroResolvers.ts
 │   │   │   ├── pokemonResolvers.ts
 │   │   │   ├── scoreResolvers.ts
 │   │   │   └── userResolvers.ts
@@ -135,13 +136,16 @@ graph TD
 │   │   └── typeDefs.ts
 │   ├── server.ts
 │   └── utils
-│       └── logger.ts
+│       ├── logger.ts
+│       └── stripe.ts
 ├── tests
 │   ├── e2e
 │   │   ├── auth_and_users.test.ts
 │   │   ├── countries.test.ts
+│   │   ├── dotaHeroes.test.ts
 │   │   ├── pokemon.test.ts
-│   │   └── smoke.test.ts
+│   │   ├── smoke.test.ts
+│   │   └── stripe.test.ts
 │   ├── readme.md
 │   ├── rest
 │   │   ├── countries.http

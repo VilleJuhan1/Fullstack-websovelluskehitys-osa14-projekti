@@ -1,6 +1,9 @@
 import { DataTypes, QueryInterface } from 'sequelize';
 
-// Migration file that initializes the users table
+/**
+ * Migration file that initializes the users table
+ * @param queryInterface
+ */
 export const up = async ({
   context: queryInterface,
 }: {
