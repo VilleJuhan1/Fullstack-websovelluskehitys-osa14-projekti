@@ -68,19 +68,34 @@ jobs:
           DATE=$(date +'%Y-%m-%d')
           echo "date=$DATE" >> $GITHUB_OUTPUT
 
-          # Get Tags from Kustomize using yq
-          DEV_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/dev/kustomization.yaml)
-          PROD_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/prod/kustomization.yaml)
+          # Get Tags from Git history where deployment commits are pushed, falling back to files if not found
+          DEV_TAG=$(git log --grep="^Deploy dev: " -n 1 --format="%s" | sed 's/Deploy dev: //' | tr -d ' ')
+          PROD_TAG=$(git log --grep="^Deploy prod: " -n 1 --format="%s" | sed 's/Deploy prod: //' | tr -d ' ')
           
-          # If the dev tag is "latest", extract the actual unique generated tag from VITE_APP_VERSION in kustomization
-          if [ "$DEV_TAG" = "latest" ] || [ -z "$DEV_TAG" ]; then
-            EXTRACTED_DEV_TAG=$(grep -A 1 "VITE_APP_VERSION" Infrastructure/kubernetes/apps/dev/kustomization.yaml | grep "value:" | sed 's/.*value: //' | tr -d ' "')
-            if [ ! -z "$EXTRACTED_DEV_TAG" ]; then
-              DEV_TAG="$EXTRACTED_DEV_TAG"
-            fi
+          # Fallback for dev: check VITE_APP_VERSION in dev kustomization
+          if [ -z "$DEV_TAG" ] || [ "$DEV_TAG" = "null" ]; then
+            DEV_TAG=$(grep -A 1 "VITE_APP_VERSION" Infrastructure/kubernetes/apps/dev/kustomization.yaml | grep "value:" | sed 's/.*value: //' | tr -d ' "')
           fi
           
-          # Fallback to "unknown" if yq/grep fails
+          # Fallback for dev: check yq newTag
+          if [ -z "$DEV_TAG" ] || [ "$DEV_TAG" = "null" ]; then
+            DEV_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/dev/kustomization.yaml)
+          fi
+
+          # Fallback for prod: check yq newTag
+          if [ -z "$PROD_TAG" ] || [ "$PROD_TAG" = "null" ]; then
+            PROD_TAG=$(yq '.images[] | select(.name == "villejuhan1/quiz-backend") | .newTag' Infrastructure/kubernetes/apps/prod/kustomization.yaml)
+          fi
+          
+          # If the value resolved to a digest (e.g. from yq fallback), shorten it
+          if [[ "$DEV_TAG" == sha256:* ]]; then
+            DEV_TAG="${DEV_TAG:0:15}"
+          fi
+          if [[ "$PROD_TAG" == sha256:* ]]; then
+            PROD_TAG="${PROD_TAG:0:15}"
+          fi
+          
+          # Fallback to "unknown" if everything fails
           echo "dev_tag=${DEV_TAG:-unknown}" >> $GITHUB_OUTPUT
           echo "prod_tag=${PROD_TAG:-unknown}" >> $GITHUB_OUTPUT
 
