@@ -21,6 +21,8 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
@@ -67,6 +69,7 @@ jobs:
           cd App/backend
           npm ci
           npm run lint
+          npm audit --audit-level=high
           
           TAGS="-t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}"
           if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
@@ -94,6 +97,7 @@ jobs:
           cd App/frontend
           npm ci
           npm run lint
+          npm audit --audit-level=high
 
           # Use production/dev secrets for API URL
           API_URL="/graphql" # Proxied via Frontend Nginx
