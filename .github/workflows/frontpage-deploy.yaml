@@ -21,6 +21,8 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
@@ -59,6 +61,7 @@ jobs:
           cache-dependency-path: App/frontpage/package-lock.json
 
       - name: Build and Push Frontpage
+        id: build-frontpage
         env:
           TARGET_ENV: ${{ github.event.inputs.target_env }}
           IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
@@ -69,6 +72,7 @@ jobs:
           cd App/frontpage
           npm ci
           npm run lint
+          npm audit --audit-level=high
 
           TAGS="-t $DOCKERHUB_USERNAME/frontpage:$IMAGE_TAG"
           SHOW_DEV_BAR="false"
@@ -88,19 +92,24 @@ jobs:
           # Build and push production image for ARM64 (OCI Ampere) with full security attestations
           docker buildx build \
             -f Dockerfile.prod \
+            --metadata-file metadata-frontpage.json \
             --platform linux/arm64 \
             --provenance=true \
             --sbom=true \
             --push $TAGS .
+
+          FRONTPAGE_DIGEST=$(jq -r '."containerimage.digest"' metadata-frontpage.json)
+          echo "digest=$FRONTPAGE_DIGEST" >> $GITHUB_OUTPUT
 
       - name: Update Kustomize Manifests
         env:
           TARGET_ENV: ${{ github.event.inputs.target_env }}
           IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          FRONTPAGE_DIGEST: ${{ steps.build-frontpage.outputs.digest }}
         run: |
           cd Infrastructure/kubernetes/apps/$TARGET_ENV
-          kustomize edit set image villejuhan1/frontpage=$DOCKERHUB_USERNAME/frontpage:$IMAGE_TAG
+          kustomize edit set image villejuhan1/frontpage=$DOCKERHUB_USERNAME/frontpage@$FRONTPAGE_DIGEST
 
       - name: Commit and Push Changes
         run: |

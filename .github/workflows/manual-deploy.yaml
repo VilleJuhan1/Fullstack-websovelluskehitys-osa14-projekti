@@ -21,6 +21,8 @@ concurrency:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
@@ -62,10 +64,12 @@ jobs:
             App/frontend/package-lock.json
 
       - name: Build and Push Backend
+        id: build-backend
         run: |
           cd App/backend
           npm ci
           npm run lint
+          npm audit --audit-level=high
           
           TAGS="-t ${{ secrets.DOCKERHUB_USERNAME }}/quiz-backend:${{ steps.generate-tag.outputs.tag }}"
           if [ "${{ github.event.inputs.target_env }}" == "dev" ]; then
@@ -74,12 +78,17 @@ jobs:
           
           # Build and push image for ARM64 (OCI Ampere) with full security attestations
           docker buildx build \
+            --metadata-file metadata-backend.json \
             --platform linux/arm64 \
             --provenance=true \
             --sbom=true \
             --push $TAGS .
 
+          BACKEND_DIGEST=$(jq -r '."containerimage.digest"' metadata-backend.json)
+          echo "digest=$BACKEND_DIGEST" >> $GITHUB_OUTPUT
+
       - name: Build and Push Frontend
+        id: build-frontend
         env:
           TARGET_ENV: ${{ github.event.inputs.target_env }}
           IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
@@ -88,6 +97,7 @@ jobs:
           cd App/frontend
           npm ci
           npm run lint
+          npm audit --audit-level=high
 
           # Use production/dev secrets for API URL
           API_URL="/graphql" # Proxied via Frontend Nginx
@@ -113,20 +123,26 @@ jobs:
           # Build and push production image for ARM64 (OCI Ampere) with full security attestations
           docker buildx build \
             -f Dockerfile.prod \
+            --metadata-file metadata-frontend.json \
             --platform linux/arm64 \
             --provenance=true \
             --sbom=true \
             --push $TAGS .
+
+          FRONTEND_DIGEST=$(jq -r '."containerimage.digest"' metadata-frontend.json)
+          echo "digest=$FRONTEND_DIGEST" >> $GITHUB_OUTPUT
 
       - name: Update Kustomize Manifests
         env:
           TARGET_ENV: ${{ github.event.inputs.target_env }}
           IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          BACKEND_DIGEST: ${{ steps.build-backend.outputs.digest }}
+          FRONTEND_DIGEST: ${{ steps.build-frontend.outputs.digest }}
         run: |
           cd Infrastructure/kubernetes/apps/$TARGET_ENV
-          kustomize edit set image villejuhan1/quiz-backend=$DOCKERHUB_USERNAME/quiz-backend:$IMAGE_TAG
-          kustomize edit set image villejuhan1/quiz-frontend=$DOCKERHUB_USERNAME/quiz-frontend:$IMAGE_TAG
+          kustomize edit set image villejuhan1/quiz-backend=$DOCKERHUB_USERNAME/quiz-backend@$BACKEND_DIGEST
+          kustomize edit set image villejuhan1/quiz-frontend=$DOCKERHUB_USERNAME/quiz-frontend@$FRONTEND_DIGEST
           if [ "$TARGET_ENV" != "prod" ]; then
             # Update the version label in the UI to match the generated tag
             sed -i "/name: VITE_APP_VERSION/{n;s/value: .*/value: $IMAGE_TAG/}" kustomization.yaml
