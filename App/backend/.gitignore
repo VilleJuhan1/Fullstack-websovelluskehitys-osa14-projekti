@@ -4,3 +4,4 @@ scripts/venv
 prettier*
 .env
 dist
+coverage

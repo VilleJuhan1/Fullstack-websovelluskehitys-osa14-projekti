@@ -66,3 +66,4 @@
 | 2.6.1 | 2026-07-05 | Logs and todo | Just a minor late addition that wasn't pushed timely and missed the merge  | swift-lion-72d6d34 | brave-wolf-565ccc3 |
 | 2.6.2 | 2026-07-06 | Devbar to frontpage | Implemented the devbar component to frontpage in dev environment  | swift-lion-72d6d34 | brave-wolf-565ccc3 |
 | 2.6.3 | 2026-07-06 | Deployment strategies reviewed | Reviewed the deployment strategy and related readme files to verify and clarify why different components are installed and configured using different tools (ansible, kubectl, argocd)  | swift-lion-72d6d34 | brave-wolf-565ccc3 |
+| 2.6.4 | 2026-07-07 | Doc blocks | Reviewed and updated App documentation: Doc blocks, comments, readme files  | swift-lion-72d6d34 | brave-wolf-565ccc3 |
