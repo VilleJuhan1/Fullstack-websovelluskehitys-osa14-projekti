@@ -4,17 +4,6 @@
 
 ## Planned
 
-### Update everything
-
-  - due: 2026-07-12
-  - tags: [frontend, frontpage, backend, docker]
-  - priority: medium
-  - workload: Easy
-  - defaultExpanded: false
-    ```md
-    Ensure that apps/dockerfiles use the latest versions on all components.
-    ```
-
 ### Signed images
 
   - defaultExpanded: false
@@ -37,6 +26,19 @@
 
 ## In progress
 
+### 32 - Update everything
+
+  - due: 2026-07-12
+  - tags: [frontend, frontpage, backend, docker]
+  - priority: medium
+  - workload: Easy
+  - defaultExpanded: false
+    ```md
+    Ensure that apps/dockerfiles use the latest versions on all components.
+    ```
+
+## Done
+
 ### 31 - Review tests
 
   - due: 2026-07-19
@@ -45,13 +47,11 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Backend
-      - [ ] Frontend
+      - [x] Backend
+      - [x] Frontend
     ```md
     Review the test coverage on both components. Atleast on backend it's not currently shown.
     ```
-
-## Done
 
 ### 30 - Doc blocks for everything under App
 
