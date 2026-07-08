@@ -30,7 +30,7 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Dev and Prod are built separately and have differing naming conventions. The versions should be more easily tracked.
+      - [x] Dev and Prod are built separately and have differing naming conventions. The versions should be more easily tracked.
       - [ ] There's already SBOM in the build process, but we can add more security measures like SHA-sum check etc. Review this.
       - [ ] Other possible concerns that raise during the review
     ```md

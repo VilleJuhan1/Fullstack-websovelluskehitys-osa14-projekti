@@ -62,6 +62,7 @@ jobs:
             App/frontend/package-lock.json
 
       - name: Build and Push Backend
+        id: build-backend
         run: |
           cd App/backend
           npm ci
@@ -74,12 +75,17 @@ jobs:
           
           # Build and push image for ARM64 (OCI Ampere) with full security attestations
           docker buildx build \
+            --metadata-file metadata-backend.json \
             --platform linux/arm64 \
             --provenance=true \
             --sbom=true \
             --push $TAGS .
 
+          BACKEND_DIGEST=$(jq -r '."containerimage.digest"' metadata-backend.json)
+          echo "digest=$BACKEND_DIGEST" >> $GITHUB_OUTPUT
+
       - name: Build and Push Frontend
+        id: build-frontend
         env:
           TARGET_ENV: ${{ github.event.inputs.target_env }}
           IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
@@ -113,20 +119,26 @@ jobs:
           # Build and push production image for ARM64 (OCI Ampere) with full security attestations
           docker buildx build \
             -f Dockerfile.prod \
+            --metadata-file metadata-frontend.json \
             --platform linux/arm64 \
             --provenance=true \
             --sbom=true \
             --push $TAGS .
+
+          FRONTEND_DIGEST=$(jq -r '."containerimage.digest"' metadata-frontend.json)
+          echo "digest=$FRONTEND_DIGEST" >> $GITHUB_OUTPUT
 
       - name: Update Kustomize Manifests
         env:
           TARGET_ENV: ${{ github.event.inputs.target_env }}
           IMAGE_TAG: ${{ steps.generate-tag.outputs.tag }}
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
+          BACKEND_DIGEST: ${{ steps.build-backend.outputs.digest }}
+          FRONTEND_DIGEST: ${{ steps.build-frontend.outputs.digest }}
         run: |
           cd Infrastructure/kubernetes/apps/$TARGET_ENV
-          kustomize edit set image villejuhan1/quiz-backend=$DOCKERHUB_USERNAME/quiz-backend:$IMAGE_TAG
-          kustomize edit set image villejuhan1/quiz-frontend=$DOCKERHUB_USERNAME/quiz-frontend:$IMAGE_TAG
+          kustomize edit set image villejuhan1/quiz-backend=$DOCKERHUB_USERNAME/quiz-backend@$BACKEND_DIGEST
+          kustomize edit set image villejuhan1/quiz-frontend=$DOCKERHUB_USERNAME/quiz-frontend@$FRONTEND_DIGEST
           if [ "$TARGET_ENV" != "prod" ]; then
             # Update the version label in the UI to match the generated tag
             sed -i "/name: VITE_APP_VERSION/{n;s/value: .*/value: $IMAGE_TAG/}" kustomization.yaml
