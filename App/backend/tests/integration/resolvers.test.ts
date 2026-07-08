@@ -1,3 +1,4 @@
+// Generated with Gemini 3.5 Flash (High)
 import { userResolvers } from '../../src/schema/resolvers/userResolvers';
 import { authResolvers } from '../../src/schema/resolvers/authResolvers';
 import { countryResolvers } from '../../src/schema/resolvers/countryResolvers';
