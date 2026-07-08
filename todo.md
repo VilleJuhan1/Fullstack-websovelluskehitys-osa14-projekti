@@ -4,11 +4,7 @@
 
 ## Planned
 
-### Signed images
-
-  - defaultExpanded: false
-
-### If time, add a fourth category
+### 33 - If time, add a fourth category
 
   - due: 2026-07-19
   - tags: [backend, frontend, postgresql]
@@ -27,6 +23,21 @@
 ## In progress
 
 ## Done
+
+### 33 - Images review
+
+  - due: 2026-07-19
+  - tags: [docker, kubernetes]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Dev and Prod are built separately and have differing naming conventions. The versions should be more easily tracked.
+      - [x] There's already SBOM in the build process, but we can add more security measures like SHA-sum check etc. Review this.
+      - [x] Other possible concerns that raise during the review
+    ```md
+    There are some issues concerning how images are built and used, review and update them if needed.
+    ```
 
 ### 32 - Update everything
 
