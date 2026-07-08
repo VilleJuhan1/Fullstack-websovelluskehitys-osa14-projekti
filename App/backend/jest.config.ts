@@ -13,6 +13,6 @@ export default {
     '!src/schema/typeDefs.ts',
     '!src/schema/resolvers.ts',
     '!src/db/index.ts',
-    '!src/db/sequelize.ts'
+    '!src/db/sequelize.ts',
   ],
 };
