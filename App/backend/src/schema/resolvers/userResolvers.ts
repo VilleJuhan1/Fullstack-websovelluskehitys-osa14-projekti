@@ -1,4 +1,5 @@
 import { User } from '../../db/models/User';
+import { stripe } from '../../utils/stripe';
 
 // Resolvers for user queries
 export const userResolvers = {
@@ -39,8 +40,7 @@ export const userResolvers = {
         throw new Error('Not authenticated');
       }
 
-      // Import stripe dynamically or at the top of the file
-      const { stripe } = await import('../../utils/stripe.js');
+      // Stripe is imported at the top of the file
 
       try {
         // Simulate real-world network/processing delay (2 seconds)
