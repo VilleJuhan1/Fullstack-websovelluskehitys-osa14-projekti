@@ -19,17 +19,6 @@
 
   - defaultExpanded: false
 
-### More playwright tests for frontend
-
-  - due: 2026-07-19
-  - tags: [frontend]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-    ```md
-    Review the playwright coverage and add the missing components
-    ```
-
 ### If time, add a fourth category
 
   - due: 2026-07-19
@@ -47,6 +36,20 @@
     ```
 
 ## In progress
+
+### 31 - Review tests
+
+  - due: 2026-07-19
+  - tags: [frontend, backend, frontpage]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] Backend
+      - [ ] Frontend
+    ```md
+    Review the test coverage on both components. Atleast on backend it's not currently shown.
+    ```
 
 ## Done
 

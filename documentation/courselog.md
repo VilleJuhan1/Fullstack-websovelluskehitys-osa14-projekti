@@ -1,7 +1,7 @@
 # Course log
 
 ## Monthly hour total
-| Month | Total hours |
+| Month | Hours |
 | --- | --- |
 | April | 29 |
 | May | 81,5 |

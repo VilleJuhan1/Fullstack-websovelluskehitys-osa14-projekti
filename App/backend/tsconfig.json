@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
-    "types": ["jest", "node"],
+    "types": [
+      "jest",
+      "node"
+    ],
     "target": "ES2022",
     "module": "Node16",
     "moduleResolution": "node16",
@@ -16,6 +19,11 @@
     "noFallthroughCasesInSwitch": true,
     "isolatedModules": true
   },
-  "include": ["src"],
-  "exclude": ["tests", "node_modules"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "tests",
+    "node_modules"
+  ]
 }
