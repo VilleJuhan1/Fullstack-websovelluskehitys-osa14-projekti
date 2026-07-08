@@ -99,5 +99,5 @@ For more complete log, see below.
 | July 6th | Added devbar to landing page in dev environment | 2 |
 | July 6th | Reviewed K3s deployments (terraform, ansible, kubernetes) and the related readme files | 2 | 
 | July 7th | Reviewed and updated App documentation: docstrings, comments and readme files | 2 |
-| July 8th | Reviewed the test coverage for frontend and backend, added more tests for backend | 2 |
+| July 8th | Reviewed the test coverage for frontend and backend, added more tests for backend. Checked actions and Dockerfiles for versions and updated if newer was available. | 2 |
 | **Total** | | **20** |

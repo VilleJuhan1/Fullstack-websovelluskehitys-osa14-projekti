@@ -26,6 +26,8 @@
 
 ## In progress
 
+## Done
+
 ### 32 - Update everything
 
   - due: 2026-07-12
@@ -36,8 +38,6 @@
     ```md
     Ensure that apps/dockerfiles use the latest versions on all components.
     ```
-
-## Done
 
 ### 31 - Review tests
 
