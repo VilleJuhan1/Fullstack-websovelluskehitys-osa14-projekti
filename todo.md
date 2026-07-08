@@ -4,31 +4,9 @@
 
 ## Planned
 
-### Update everything
-
-  - due: 2026-07-12
-  - tags: [frontend, frontpage, backend, docker]
-  - priority: medium
-  - workload: Easy
-  - defaultExpanded: false
-    ```md
-    Ensure that apps/dockerfiles use the latest versions on all components.
-    ```
-
 ### Signed images
 
   - defaultExpanded: false
-
-### More playwright tests for frontend
-
-  - due: 2026-07-19
-  - tags: [frontend]
-  - priority: medium
-  - workload: Normal
-  - defaultExpanded: false
-    ```md
-    Review the playwright coverage and add the missing components
-    ```
 
 ### If time, add a fourth category
 
@@ -49,6 +27,31 @@
 ## In progress
 
 ## Done
+
+### 32 - Update everything
+
+  - due: 2026-07-12
+  - tags: [frontend, frontpage, backend, docker]
+  - priority: medium
+  - workload: Easy
+  - defaultExpanded: false
+    ```md
+    Ensure that apps/dockerfiles use the latest versions on all components.
+    ```
+
+### 31 - Review tests
+
+  - due: 2026-07-19
+  - tags: [frontend, backend, frontpage]
+  - priority: medium
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [x] Backend
+      - [x] Frontend
+    ```md
+    Review the test coverage on both components. Atleast on backend it's not currently shown.
+    ```
 
 ### 30 - Doc blocks for everything under App
 
