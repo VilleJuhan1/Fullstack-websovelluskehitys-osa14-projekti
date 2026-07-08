@@ -5,7 +5,14 @@ import { countryResolvers } from '../../src/schema/resolvers/countryResolvers';
 import { dotaHeroResolvers } from '../../src/schema/resolvers/dotaHeroResolvers';
 import { pokemonResolvers } from '../../src/schema/resolvers/pokemonResolvers';
 import { scoreResolvers } from '../../src/schema/resolvers/scoreResolvers';
-import { sequelize, User, Country, DotaHero, Pokemon, Score } from '../../src/db';
+import {
+  sequelize,
+  User,
+  Country,
+  DotaHero,
+  Pokemon,
+  Score,
+} from '../../src/db';
 import { stripe } from '../../src/utils/stripe';
 import Stripe from 'stripe';
 
@@ -137,10 +144,12 @@ describe('Resolvers Integration Tests', () => {
     });
 
     it('upgrades user to premium', async () => {
-      const spy = jest.spyOn(stripe.paymentIntents, 'create').mockResolvedValue({
-        id: 'pi_test123',
-        status: 'succeeded',
-      } as unknown as Stripe.Response<Stripe.PaymentIntent>);
+      const spy = jest
+        .spyOn(stripe.paymentIntents, 'create')
+        .mockResolvedValue({
+          id: 'pi_test123',
+          status: 'succeeded',
+        } as unknown as Stripe.Response<Stripe.PaymentIntent>);
 
       const context = { currentUser: createdUser };
       const updatedUser = await userResolvers.Mutation.upgradeToPremium(
@@ -174,13 +183,19 @@ describe('Resolvers Integration Tests', () => {
     });
 
     it('fetches country by name (case-insensitive)', async () => {
-      const country = await countryResolvers.Query.country({}, { name: 'finland' });
+      const country = await countryResolvers.Query.country(
+        {},
+        { name: 'finland' }
+      );
       expect(country).toBeDefined();
       expect(country?.name.toLowerCase()).toBe('finland');
     });
 
     it('returns null for non-existing country name', async () => {
-      const country = await countryResolvers.Query.country({}, { name: 'Atlantis' });
+      const country = await countryResolvers.Query.country(
+        {},
+        { name: 'Atlantis' }
+      );
       expect(country).toBeNull();
     });
   });
@@ -207,7 +222,10 @@ describe('Resolvers Integration Tests', () => {
     });
 
     it('fetches pokemon by name (case-insensitive)', async () => {
-      const pokemon = await pokemonResolvers.Query.pokemon({}, { name: 'pikachu' });
+      const pokemon = await pokemonResolvers.Query.pokemon(
+        {},
+        { name: 'pikachu' }
+      );
       expect(pokemon).toBeDefined();
       expect(pokemon?.name.toLowerCase()).toBe('pikachu');
     });

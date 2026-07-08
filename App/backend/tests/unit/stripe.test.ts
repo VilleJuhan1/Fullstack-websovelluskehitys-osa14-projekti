@@ -10,7 +10,9 @@ interface StripeWithApi {
 describe('Stripe Utility Unit Tests', () => {
   it('should initialize stripe with apiVersion', () => {
     expect(stripe).toBeDefined();
-    expect((stripe as unknown as StripeWithApi)._api.version).toBe('2026-06-24.dahlia');
+    expect((stripe as unknown as StripeWithApi)._api.version).toBe(
+      '2026-06-24.dahlia'
+    );
   });
 
   it('should resolve base configurations', () => {
