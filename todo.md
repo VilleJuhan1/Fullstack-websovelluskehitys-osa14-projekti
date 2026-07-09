@@ -16,6 +16,8 @@
 
 ## In progress
 
+## Done
+
 ### 33 - Add a fourth category
 
   - due: 2026-07-19
@@ -24,15 +26,13 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Find an API
-      - [ ] Extract the data with Python script
-      - [ ] Create the changes to backend
-      - [ ] Make the required changed to frontend
+      - [x] Find an API
+      - [x] Extract the data with Python script
+      - [x] Create the changes to backend
+      - [x] Make the required changed to frontend
     ```md
     As the project moves toward an end, if there is time, add atleast one extra quiz category
     ```
-
-## Done
 
 ### 33 - Images review
 
