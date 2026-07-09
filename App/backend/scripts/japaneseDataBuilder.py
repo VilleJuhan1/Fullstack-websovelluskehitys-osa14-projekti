@@ -9,8 +9,8 @@ KANA_DATASET = {
         "sa": "さ", "shi": "し", "su": "す", "se": "せ", "so": "そ",
         "ta": "た", "chi": "ち", "tsu": "つ", "te": "て", "to": "と",
         "na": "な", "ni": "に", "nu": "ぬ", "ne": "ね", "no": "の",
-        "ha": "は", "hi": "ひ", "fu": "ふ", "he": "he", "ho": "ほ",
-        "ma": "ま", "mi": "み", "mu": "む", "me": "め", "mo": "mo",
+        "ha": "は", "hi": "ひ", "fu": "ふ", "he": "へ", "ho": "ほ",
+        "ma": "ま", "mi": "み", "mu": "む", "me": "め", "mo": "も",
         "ya": "や", "yu": "ゆ", "yo": "よ",
         "ra": "ら", "ri": "り", "ru": "る", "re": "れ", "ro": "ろ",
         "wa": "わ", "wo": "を", "n": "ん"
@@ -35,7 +35,7 @@ def generate_kana_data_url(character: str) -> str:
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&amp;display=swap');
-        .text {{ font-family: 'Noto Sans JP', sans-serif; font-size: 110px; fill: #081e24; }}
+        .text {{ font-family: 'Noto Sans JP', sans-serif; font-size: 140px; fill: #FFFFFF; }}
       </style>
       <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="text">{character}</text>
     </svg>
