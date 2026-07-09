@@ -30,9 +30,11 @@ export const typeDefs = `#graphql
     allCountries: [CountryType!]!
     allPokemon: [PokemonType!]!
     allDotaHeroes: [DotaHeroType!]!
+    allKana: [KanaType!]!
     country(name: String!): CountryType
     pokemon(name: String!): PokemonType
     dotaHero(name: String!): DotaHeroType
+    kana(name: String!): KanaType
     allUsers: [User!]!
     user(username: String!): User
     topScores(category: String, limit: Int): [Score!]!
@@ -68,6 +70,14 @@ export const typeDefs = `#graphql
   }
 
   type DotaHeroType {
+    id: Int!
+    name: String!
+    translations: TranslationsType
+    categories: [String!]
+    imageUrl: String!
+  }
+
+  type KanaType {
     id: Int!
     name: String!
     translations: TranslationsType
