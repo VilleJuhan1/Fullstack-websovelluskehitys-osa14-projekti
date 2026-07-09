@@ -6,6 +6,7 @@ import { sequelize } from './sequelize';
 import { Country } from './models/Country';
 import { Pokemon } from './models/Pokemon';
 import { DotaHero } from './models/DotaHero';
+import { Kana } from './models/Kana';
 import { User } from './models/User';
 import { Score } from './models/Score';
 
@@ -13,7 +14,7 @@ import { Score } from './models/Score';
 User.hasMany(Score, { foreignKey: 'userId', as: 'scores' });
 Score.belongsTo(User, { foreignKey: 'userId', as: 'user' });
 
-export { Country, Pokemon, DotaHero, User, Score, sequelize };
+export { Country, Pokemon, DotaHero, Kana, User, Score, sequelize };
 
 // Sequelize migrator that takes into account production and development builds (js/ts)
 export const migrator = new Umzug({
