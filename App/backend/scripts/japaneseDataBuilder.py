@@ -55,7 +55,10 @@ def build_static_database():
                 "id": i,
                 "name": romaji,
                 "categories": [category],
-                "imageUrl": generate_kana_data_url(char)
+                "imageUrl": generate_kana_data_url(char),
+                "translations": {
+                    "jap": char
+                }
             })
             
     output_filename = "../src/data/kana.json"
@@ -64,8 +67,10 @@ def build_static_database():
         
     if len(kana_dataset) != 92:
         print(f"Error: {len(kana_dataset)} records generated. Expected 92.")
+        exit(1)
     else:
         print(f"Successfully generated {len(kana_dataset)} records in {output_filename}!")
+        exit()
 
 if __name__ == "__main__":
     build_static_database()
