@@ -18,19 +18,21 @@ export function GameProvider({ children }: { children: ReactNode }) {
       categories: hero.categories.map((c) => (c === 'all' ? 'universal' : c)),
     }));
   }, [data]);
+  const kana = useMemo(() => data?.allKana ?? [], [data]);
 
   const getItems = useCallback(
     (type: GameDataType): GameItem[] => {
       if (type === 'pokemon') return pokemon;
       if (type === 'dota') return dota;
+      if (type === 'kana') return kana;
       return countries;
     },
-    [pokemon, countries, dota]
+    [pokemon, countries, dota, kana]
   );
 
   return (
     <GameContext.Provider
-      value={{ pokemon, countries, dota, loading, error, getItems }}
+      value={{ pokemon, countries, dota, kana, loading, error, getItems }}
     >
       {children}
     </GameContext.Provider>

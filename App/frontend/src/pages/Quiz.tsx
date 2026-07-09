@@ -32,7 +32,9 @@ export default function Quiz() {
       ? 'countries'
       : category === 'dota'
         ? 'dota'
-        : 'pokemon'
+        : category === 'kana'
+          ? 'kana'
+          : 'pokemon'
   ) as GameDataType;
 
   const { getItems, loading, error } = useGameContext();
@@ -216,8 +218,8 @@ export default function Quiz() {
                   );
                   const updatedScores = hasCategory
                     ? currentScores.map((s: ScoreItem) =>
-                        s.category === updatedScore.category ? updatedScore : s
-                      )
+                      s.category === updatedScore.category ? updatedScore : s
+                    )
                     : [...currentScores, updatedScore];
 
                   cache.writeQuery<GetMeData>({
