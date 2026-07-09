@@ -8,6 +8,7 @@ export interface GameContextType {
   pokemon: GameItem[];
   countries: GameItem[];
   dota: GameItem[];
+  kana: GameItem[];
   loading: boolean;
   error: unknown;
   getItems: (type: GameDataType) => GameItem[];

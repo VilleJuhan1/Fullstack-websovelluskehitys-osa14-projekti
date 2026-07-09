@@ -22,6 +22,7 @@ describe('useGame Hook', () => {
       pokemon: [],
       countries: [],
       dota: [],
+      kana: [],
       loading: false,
       error: null,
       getItems: () => [],

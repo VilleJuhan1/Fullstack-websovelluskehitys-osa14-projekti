@@ -47,6 +47,13 @@ export default function Home() {
           >
             Countries
           </Link>
+          <Link
+            to="/quiz/kana"
+            className="quiz-option"
+            style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+            Kana
+          </Link>
           <a
             href="/quiz/dota"
             onClick={handleDotaClick}
