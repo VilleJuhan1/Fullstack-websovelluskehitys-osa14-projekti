@@ -69,3 +69,4 @@
 | 2.6.4 | 2026-07-07 | Doc blocks | Reviewed and updated App documentation: Doc blocks, comments, readme files  | swift-lion-72d6d34 | brave-wolf-565ccc3 |
 | 2.6.5 | 2026-07-08 | Backend test coverage | Added better test coverage for backend and also finished task 32 which included checking versions used in Actions and Dockerfiles and updating them if newer was available.  | swift-lion-72d6d34 | brave-wolf-565ccc3 |
 | 2.7.0 | 2026-07-08 | More secure build workflows | Switched to using sha256sums as kustomize identifiers instead of image tags. Added also an audit check and small privileges change to workflows. Respectively had to change the changelog workflow logic also.  | gentle-fox-0792a0e | happy-fox-0f53eff |
+| 2.8.0 | 2026-07-09 | Kana category for Quiz game | Added a fourth category: Kana (Japanese characters) to Quiz game  | swift-dolphin-7394a4e | happy-tiger-8c988e4 |
