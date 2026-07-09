@@ -16,6 +16,21 @@
 
 ## In progress
 
+### 35 - Bug fixes
+
+  - due: 2026-07-19
+  - tags: [frontend, backend]
+  - priority: high
+  - workload: Normal
+  - defaultExpanded: false
+  - steps:
+      - [ ] On iOS focus doesn't clear between rounds
+      - [ ] Some images aren't loading properly always, ie. blue/red pokemon
+      - [ ] If the previous correct answer is present on the next round, the focus stays around the box
+    ```md
+    Review some new bugs
+    ```
+
 ## Done
 
 ### 33 - Add a fourth category
