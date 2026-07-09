@@ -57,7 +57,7 @@ def build_static_database():
                 "categories": [category],
                 "imageUrl": generate_kana_data_url(char),
                 "translations": {
-                    "jap": char
+                    "jpn": char
                 }
             })
             

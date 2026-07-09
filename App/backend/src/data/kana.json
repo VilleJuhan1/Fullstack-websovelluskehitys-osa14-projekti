@@ -7,7 +7,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%82%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "あ"
+      "jpn": "あ"
     }
   },
   {
@@ -18,7 +18,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "い"
+      "jpn": "い"
     }
   },
   {
@@ -29,7 +29,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "う"
+      "jpn": "う"
     }
   },
   {
@@ -40,7 +40,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "え"
+      "jpn": "え"
     }
   },
   {
@@ -51,7 +51,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "お"
+      "jpn": "お"
     }
   },
   {
@@ -62,7 +62,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "か"
+      "jpn": "か"
     }
   },
   {
@@ -73,7 +73,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "き"
+      "jpn": "き"
     }
   },
   {
@@ -84,7 +84,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "く"
+      "jpn": "く"
     }
   },
   {
@@ -95,7 +95,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%91%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "け"
+      "jpn": "け"
     }
   },
   {
@@ -106,7 +106,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%93%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "こ"
+      "jpn": "こ"
     }
   },
   {
@@ -117,7 +117,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%95%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "さ"
+      "jpn": "さ"
     }
   },
   {
@@ -128,7 +128,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%97%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "し"
+      "jpn": "し"
     }
   },
   {
@@ -139,7 +139,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%99%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "す"
+      "jpn": "す"
     }
   },
   {
@@ -150,7 +150,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "せ"
+      "jpn": "せ"
     }
   },
   {
@@ -161,7 +161,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "そ"
+      "jpn": "そ"
     }
   },
   {
@@ -172,7 +172,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "た"
+      "jpn": "た"
     }
   },
   {
@@ -183,7 +183,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A1%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ち"
+      "jpn": "ち"
     }
   },
   {
@@ -194,7 +194,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "つ"
+      "jpn": "つ"
     }
   },
   {
@@ -205,7 +205,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "て"
+      "jpn": "て"
     }
   },
   {
@@ -216,7 +216,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "と"
+      "jpn": "と"
     }
   },
   {
@@ -227,7 +227,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "な"
+      "jpn": "な"
     }
   },
   {
@@ -238,7 +238,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "に"
+      "jpn": "に"
     }
   },
   {
@@ -249,7 +249,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AC%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ぬ"
+      "jpn": "ぬ"
     }
   },
   {
@@ -260,7 +260,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ね"
+      "jpn": "ね"
     }
   },
   {
@@ -271,7 +271,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AE%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "の"
+      "jpn": "の"
     }
   },
   {
@@ -282,7 +282,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "は"
+      "jpn": "は"
     }
   },
   {
@@ -293,7 +293,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ひ"
+      "jpn": "ひ"
     }
   },
   {
@@ -304,7 +304,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B5%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ふ"
+      "jpn": "ふ"
     }
   },
   {
@@ -315,7 +315,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3Ehe%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "he"
+      "jpn": "he"
     }
   },
   {
@@ -326,7 +326,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ほ"
+      "jpn": "ほ"
     }
   },
   {
@@ -337,7 +337,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BE%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ま"
+      "jpn": "ま"
     }
   },
   {
@@ -348,7 +348,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "み"
+      "jpn": "み"
     }
   },
   {
@@ -359,7 +359,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%80%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "む"
+      "jpn": "む"
     }
   },
   {
@@ -370,7 +370,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%81%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "め"
+      "jpn": "め"
     }
   },
   {
@@ -381,7 +381,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3Emo%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "mo"
+      "jpn": "mo"
     }
   },
   {
@@ -392,7 +392,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "や"
+      "jpn": "や"
     }
   },
   {
@@ -403,7 +403,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ゆ"
+      "jpn": "ゆ"
     }
   },
   {
@@ -414,7 +414,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "よ"
+      "jpn": "よ"
     }
   },
   {
@@ -425,7 +425,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%89%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ら"
+      "jpn": "ら"
     }
   },
   {
@@ -436,7 +436,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "り"
+      "jpn": "り"
     }
   },
   {
@@ -447,7 +447,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "る"
+      "jpn": "る"
     }
   },
   {
@@ -458,7 +458,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8C%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "れ"
+      "jpn": "れ"
     }
   },
   {
@@ -469,7 +469,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ろ"
+      "jpn": "ろ"
     }
   },
   {
@@ -480,7 +480,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "わ"
+      "jpn": "わ"
     }
   },
   {
@@ -491,7 +491,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%92%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "を"
+      "jpn": "を"
     }
   },
   {
@@ -502,7 +502,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%93%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ん"
+      "jpn": "ん"
     }
   },
   {
@@ -513,7 +513,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ア"
+      "jpn": "ア"
     }
   },
   {
@@ -524,7 +524,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "イ"
+      "jpn": "イ"
     }
   },
   {
@@ -535,7 +535,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ウ"
+      "jpn": "ウ"
     }
   },
   {
@@ -546,7 +546,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "エ"
+      "jpn": "エ"
     }
   },
   {
@@ -557,7 +557,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "オ"
+      "jpn": "オ"
     }
   },
   {
@@ -568,7 +568,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "カ"
+      "jpn": "カ"
     }
   },
   {
@@ -579,7 +579,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "キ"
+      "jpn": "キ"
     }
   },
   {
@@ -590,7 +590,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ク"
+      "jpn": "ク"
     }
   },
   {
@@ -601,7 +601,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B1%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ケ"
+      "jpn": "ケ"
     }
   },
   {
@@ -612,7 +612,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B3%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "コ"
+      "jpn": "コ"
     }
   },
   {
@@ -623,7 +623,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B5%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "サ"
+      "jpn": "サ"
     }
   },
   {
@@ -634,7 +634,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B7%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "シ"
+      "jpn": "シ"
     }
   },
   {
@@ -645,7 +645,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B9%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ス"
+      "jpn": "ス"
     }
   },
   {
@@ -656,7 +656,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "セ"
+      "jpn": "セ"
     }
   },
   {
@@ -667,7 +667,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ソ"
+      "jpn": "ソ"
     }
   },
   {
@@ -678,7 +678,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "タ"
+      "jpn": "タ"
     }
   },
   {
@@ -689,7 +689,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%81%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "チ"
+      "jpn": "チ"
     }
   },
   {
@@ -700,7 +700,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ツ"
+      "jpn": "ツ"
     }
   },
   {
@@ -711,7 +711,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "テ"
+      "jpn": "テ"
     }
   },
   {
@@ -722,7 +722,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ト"
+      "jpn": "ト"
     }
   },
   {
@@ -733,7 +733,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ナ"
+      "jpn": "ナ"
     }
   },
   {
@@ -744,7 +744,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ニ"
+      "jpn": "ニ"
     }
   },
   {
@@ -755,7 +755,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8C%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ヌ"
+      "jpn": "ヌ"
     }
   },
   {
@@ -766,7 +766,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ネ"
+      "jpn": "ネ"
     }
   },
   {
@@ -777,7 +777,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8E%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ノ"
+      "jpn": "ノ"
     }
   },
   {
@@ -788,7 +788,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ハ"
+      "jpn": "ハ"
     }
   },
   {
@@ -799,7 +799,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%92%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ヒ"
+      "jpn": "ヒ"
     }
   },
   {
@@ -810,7 +810,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%95%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "フ"
+      "jpn": "フ"
     }
   },
   {
@@ -821,7 +821,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%98%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ヘ"
+      "jpn": "ヘ"
     }
   },
   {
@@ -832,7 +832,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ホ"
+      "jpn": "ホ"
     }
   },
   {
@@ -843,7 +843,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9E%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "マ"
+      "jpn": "マ"
     }
   },
   {
@@ -854,7 +854,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ミ"
+      "jpn": "ミ"
     }
   },
   {
@@ -865,7 +865,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A0%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ム"
+      "jpn": "ム"
     }
   },
   {
@@ -876,7 +876,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A1%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "メ"
+      "jpn": "メ"
     }
   },
   {
@@ -887,7 +887,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "モ"
+      "jpn": "モ"
     }
   },
   {
@@ -898,7 +898,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ヤ"
+      "jpn": "ヤ"
     }
   },
   {
@@ -909,7 +909,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ユ"
+      "jpn": "ユ"
     }
   },
   {
@@ -920,7 +920,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ヨ"
+      "jpn": "ヨ"
     }
   },
   {
@@ -931,7 +931,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A9%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ラ"
+      "jpn": "ラ"
     }
   },
   {
@@ -942,7 +942,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "リ"
+      "jpn": "リ"
     }
   },
   {
@@ -953,7 +953,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ル"
+      "jpn": "ル"
     }
   },
   {
@@ -964,7 +964,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AC%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "レ"
+      "jpn": "レ"
     }
   },
   {
@@ -975,7 +975,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ロ"
+      "jpn": "ロ"
     }
   },
   {
@@ -986,7 +986,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ワ"
+      "jpn": "ワ"
     }
   },
   {
@@ -997,7 +997,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%B2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ヲ"
+      "jpn": "ヲ"
     }
   },
   {
@@ -1008,7 +1008,7 @@
     ],
     "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%B3%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
-      "jap": "ン"
+      "jpn": "ン"
     }
   }
 ]
