@@ -5,3 +5,4 @@ prettier*
 .env
 dist
 coverage
+__pycache__

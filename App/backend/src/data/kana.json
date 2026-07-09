@@ -1,0 +1,738 @@
+[
+  {
+    "id": 1,
+    "name": "a",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%82%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 2,
+    "name": "i",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 3,
+    "name": "u",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 4,
+    "name": "e",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 5,
+    "name": "o",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 6,
+    "name": "ka",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 7,
+    "name": "ki",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 8,
+    "name": "ku",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 9,
+    "name": "ke",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%91%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 10,
+    "name": "ko",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%93%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 11,
+    "name": "sa",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%95%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 12,
+    "name": "shi",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%97%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 13,
+    "name": "su",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%99%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 14,
+    "name": "se",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9B%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 15,
+    "name": "so",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9D%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 16,
+    "name": "ta",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9F%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 17,
+    "name": "chi",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A1%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 18,
+    "name": "tsu",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 19,
+    "name": "te",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 20,
+    "name": "to",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 21,
+    "name": "na",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 22,
+    "name": "ni",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 23,
+    "name": "nu",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AC%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 24,
+    "name": "ne",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 25,
+    "name": "no",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AE%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 26,
+    "name": "ha",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 27,
+    "name": "hi",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B2%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 28,
+    "name": "fu",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B5%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 29,
+    "name": "he",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3Ehe%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 30,
+    "name": "ho",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BB%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 31,
+    "name": "ma",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BE%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 32,
+    "name": "mi",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BF%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 33,
+    "name": "mu",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%80%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 34,
+    "name": "me",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%81%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 35,
+    "name": "mo",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3Emo%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 36,
+    "name": "ya",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 37,
+    "name": "yu",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 38,
+    "name": "yo",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 39,
+    "name": "ra",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%89%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 40,
+    "name": "ri",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 41,
+    "name": "ru",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 42,
+    "name": "re",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8C%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 43,
+    "name": "ro",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 44,
+    "name": "wa",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 45,
+    "name": "wo",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%92%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 46,
+    "name": "n",
+    "categories": [
+      "hiragana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%93%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 47,
+    "name": "a",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A2%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 48,
+    "name": "i",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 49,
+    "name": "u",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 50,
+    "name": "e",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 51,
+    "name": "o",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 52,
+    "name": "ka",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 53,
+    "name": "ki",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 54,
+    "name": "ku",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 55,
+    "name": "ke",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B1%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 56,
+    "name": "ko",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B3%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 57,
+    "name": "sa",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B5%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 58,
+    "name": "shi",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B7%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 59,
+    "name": "su",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B9%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 60,
+    "name": "se",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BB%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 61,
+    "name": "so",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BD%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 62,
+    "name": "ta",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BF%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 63,
+    "name": "chi",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%81%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 64,
+    "name": "tsu",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 65,
+    "name": "te",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 66,
+    "name": "to",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 67,
+    "name": "na",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 68,
+    "name": "ni",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 69,
+    "name": "nu",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8C%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 70,
+    "name": "ne",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 71,
+    "name": "no",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8E%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 72,
+    "name": "ha",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 73,
+    "name": "hi",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%92%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 74,
+    "name": "fu",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%95%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 75,
+    "name": "he",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%98%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 76,
+    "name": "ho",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9B%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 77,
+    "name": "ma",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9E%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 78,
+    "name": "mi",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9F%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 79,
+    "name": "mu",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A0%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 80,
+    "name": "me",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A1%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 81,
+    "name": "mo",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A2%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 82,
+    "name": "ya",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 83,
+    "name": "yu",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 84,
+    "name": "yo",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 85,
+    "name": "ra",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A9%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 86,
+    "name": "ri",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 87,
+    "name": "ru",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 88,
+    "name": "re",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AC%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 89,
+    "name": "ro",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 90,
+    "name": "wa",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 91,
+    "name": "wo",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%B2%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  },
+  {
+    "id": 92,
+    "name": "n",
+    "categories": [
+      "katakana"
+    ],
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20110px%3B%20fill%3A%20%23081e24%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%B3%3C/text%3E%0A%20%20%20%20%3C/svg%3E"
+  }
+]
