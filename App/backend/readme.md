@@ -84,7 +84,7 @@ graph TD
 ## Files
 
 ```shell
-.
+..
 ├── Dockerfile
 ├── eslint.config.mjs
 ├── jest.config.ts
@@ -93,11 +93,13 @@ graph TD
 ├── readme.md
 ├── scripts
 │   ├── dataBuilder.py
+│   ├── japaneseDataBuilder.py
 │   └── readme.md
 ├── src
 │   ├── data
 │   │   ├── countries.json
 │   │   ├── dotaHeroes.json
+│   │   ├── kana.json
 │   │   ├── pokemon.json
 │   │   ├── pokemonOriginal.json
 │   │   ├── testScores.json
@@ -107,6 +109,7 @@ graph TD
 │   │   ├── models
 │   │   │   ├── Country.ts
 │   │   │   ├── DotaHero.ts
+│   │   │   ├── Kana.ts
 │   │   │   ├── Pokemon.ts
 │   │   │   ├── Score.ts
 │   │   │   └── User.ts
@@ -118,7 +121,8 @@ graph TD
 │   │   ├── 02_seed_test_users_on_dev.ts
 │   │   ├── 03_initialize_scores.ts
 │   │   ├── 04_seed_test_scores_on_dev.ts
-│   │   └── 05_initialize_and_seed_dotaheroes.ts
+│   │   ├── 05_initialize_and_seed_dotaheroes.ts
+│   │   └── 06_initialize_and_seed_kana.ts
 │   ├── models
 │   │   ├── ObjectType.ts
 │   │   └── User.ts
@@ -129,6 +133,7 @@ graph TD
 │   │   │   ├── authResolvers.ts
 │   │   │   ├── countryResolvers.ts
 │   │   │   ├── dotaHeroResolvers.ts
+│   │   │   ├── kanaResolvers.ts
 │   │   │   ├── pokemonResolvers.ts
 │   │   │   ├── scoreResolvers.ts
 │   │   │   └── userResolvers.ts
@@ -143,14 +148,19 @@ graph TD
 │   │   ├── auth_and_users.test.ts
 │   │   ├── countries.test.ts
 │   │   ├── dotaHeroes.test.ts
+│   │   ├── kana.test.ts
 │   │   ├── pokemon.test.ts
 │   │   ├── smoke.test.ts
 │   │   └── stripe.test.ts
+│   ├── integration
+│   │   └── resolvers.test.ts
 │   ├── readme.md
 │   ├── rest
 │   │   ├── countries.http
 │   │   ├── country.http
 │   │   └── login.http
-│   └── tsconfig.json
+│   ├── tsconfig.json
+│   └── unit
+│       └── stripe.test.ts
 └── tsconfig.json
 ```
