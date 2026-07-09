@@ -9,7 +9,7 @@ export interface Translations {
 
 /**
  * Generic type object class that can be used in the quiz game.
- * Used by Pokemon, Countries and Dota heroes types.
+ * Used by Pokemon, Countries, Kana and Dota heroes types.
  */
 export class ObjectType {
   id: number;
