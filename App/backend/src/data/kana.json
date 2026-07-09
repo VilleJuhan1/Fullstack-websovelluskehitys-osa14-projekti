@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "a",
+    "name": "'a' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -12,7 +12,7 @@
   },
   {
     "id": 2,
-    "name": "i",
+    "name": "'i' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -23,7 +23,7 @@
   },
   {
     "id": 3,
-    "name": "u",
+    "name": "'u' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -34,7 +34,7 @@
   },
   {
     "id": 4,
-    "name": "e",
+    "name": "'e' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -45,7 +45,7 @@
   },
   {
     "id": 5,
-    "name": "o",
+    "name": "'o' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -56,7 +56,7 @@
   },
   {
     "id": 6,
-    "name": "ka",
+    "name": "'ka' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -67,7 +67,7 @@
   },
   {
     "id": 7,
-    "name": "ki",
+    "name": "'ki' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -78,7 +78,7 @@
   },
   {
     "id": 8,
-    "name": "ku",
+    "name": "'ku' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -89,7 +89,7 @@
   },
   {
     "id": 9,
-    "name": "ke",
+    "name": "'ke' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -100,7 +100,7 @@
   },
   {
     "id": 10,
-    "name": "ko",
+    "name": "'ko' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -111,7 +111,7 @@
   },
   {
     "id": 11,
-    "name": "sa",
+    "name": "'sa' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -122,7 +122,7 @@
   },
   {
     "id": 12,
-    "name": "shi",
+    "name": "'shi' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -133,7 +133,7 @@
   },
   {
     "id": 13,
-    "name": "su",
+    "name": "'su' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -144,7 +144,7 @@
   },
   {
     "id": 14,
-    "name": "se",
+    "name": "'se' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -155,7 +155,7 @@
   },
   {
     "id": 15,
-    "name": "so",
+    "name": "'so' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -166,7 +166,7 @@
   },
   {
     "id": 16,
-    "name": "ta",
+    "name": "'ta' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -177,7 +177,7 @@
   },
   {
     "id": 17,
-    "name": "chi",
+    "name": "'chi' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -188,7 +188,7 @@
   },
   {
     "id": 18,
-    "name": "tsu",
+    "name": "'tsu' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -199,7 +199,7 @@
   },
   {
     "id": 19,
-    "name": "te",
+    "name": "'te' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -210,7 +210,7 @@
   },
   {
     "id": 20,
-    "name": "to",
+    "name": "'to' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -221,7 +221,7 @@
   },
   {
     "id": 21,
-    "name": "na",
+    "name": "'na' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -232,7 +232,7 @@
   },
   {
     "id": 22,
-    "name": "ni",
+    "name": "'ni' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -243,7 +243,7 @@
   },
   {
     "id": 23,
-    "name": "nu",
+    "name": "'nu' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -254,7 +254,7 @@
   },
   {
     "id": 24,
-    "name": "ne",
+    "name": "'ne' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -265,7 +265,7 @@
   },
   {
     "id": 25,
-    "name": "no",
+    "name": "'no' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -276,7 +276,7 @@
   },
   {
     "id": 26,
-    "name": "ha",
+    "name": "'ha' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -287,7 +287,7 @@
   },
   {
     "id": 27,
-    "name": "hi",
+    "name": "'hi' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -298,7 +298,7 @@
   },
   {
     "id": 28,
-    "name": "fu",
+    "name": "'fu' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -309,7 +309,7 @@
   },
   {
     "id": 29,
-    "name": "he",
+    "name": "'he' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -320,7 +320,7 @@
   },
   {
     "id": 30,
-    "name": "ho",
+    "name": "'ho' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -331,7 +331,7 @@
   },
   {
     "id": 31,
-    "name": "ma",
+    "name": "'ma' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -342,7 +342,7 @@
   },
   {
     "id": 32,
-    "name": "mi",
+    "name": "'mi' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -353,7 +353,7 @@
   },
   {
     "id": 33,
-    "name": "mu",
+    "name": "'mu' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -364,7 +364,7 @@
   },
   {
     "id": 34,
-    "name": "me",
+    "name": "'me' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -375,7 +375,7 @@
   },
   {
     "id": 35,
-    "name": "mo",
+    "name": "'mo' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -386,7 +386,7 @@
   },
   {
     "id": 36,
-    "name": "ya",
+    "name": "'ya' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -397,7 +397,7 @@
   },
   {
     "id": 37,
-    "name": "yu",
+    "name": "'yu' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -408,7 +408,7 @@
   },
   {
     "id": 38,
-    "name": "yo",
+    "name": "'yo' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -419,7 +419,7 @@
   },
   {
     "id": 39,
-    "name": "ra",
+    "name": "'ra' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -430,7 +430,7 @@
   },
   {
     "id": 40,
-    "name": "ri",
+    "name": "'ri' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -441,7 +441,7 @@
   },
   {
     "id": 41,
-    "name": "ru",
+    "name": "'ru' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -452,7 +452,7 @@
   },
   {
     "id": 42,
-    "name": "re",
+    "name": "'re' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -463,7 +463,7 @@
   },
   {
     "id": 43,
-    "name": "ro",
+    "name": "'ro' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -474,7 +474,7 @@
   },
   {
     "id": 44,
-    "name": "wa",
+    "name": "'wa' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -485,7 +485,7 @@
   },
   {
     "id": 45,
-    "name": "wo",
+    "name": "'wo' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -496,7 +496,7 @@
   },
   {
     "id": 46,
-    "name": "n",
+    "name": "'n' (Hira)",
     "categories": [
       "hiragana"
     ],
@@ -507,7 +507,7 @@
   },
   {
     "id": 47,
-    "name": "a",
+    "name": "'a' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -518,7 +518,7 @@
   },
   {
     "id": 48,
-    "name": "i",
+    "name": "'i' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -529,7 +529,7 @@
   },
   {
     "id": 49,
-    "name": "u",
+    "name": "'u' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -540,7 +540,7 @@
   },
   {
     "id": 50,
-    "name": "e",
+    "name": "'e' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -551,7 +551,7 @@
   },
   {
     "id": 51,
-    "name": "o",
+    "name": "'o' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -562,7 +562,7 @@
   },
   {
     "id": 52,
-    "name": "ka",
+    "name": "'ka' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -573,7 +573,7 @@
   },
   {
     "id": 53,
-    "name": "ki",
+    "name": "'ki' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -584,7 +584,7 @@
   },
   {
     "id": 54,
-    "name": "ku",
+    "name": "'ku' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -595,7 +595,7 @@
   },
   {
     "id": 55,
-    "name": "ke",
+    "name": "'ke' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -606,7 +606,7 @@
   },
   {
     "id": 56,
-    "name": "ko",
+    "name": "'ko' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -617,7 +617,7 @@
   },
   {
     "id": 57,
-    "name": "sa",
+    "name": "'sa' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -628,7 +628,7 @@
   },
   {
     "id": 58,
-    "name": "shi",
+    "name": "'shi' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -639,7 +639,7 @@
   },
   {
     "id": 59,
-    "name": "su",
+    "name": "'su' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -650,7 +650,7 @@
   },
   {
     "id": 60,
-    "name": "se",
+    "name": "'se' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -661,7 +661,7 @@
   },
   {
     "id": 61,
-    "name": "so",
+    "name": "'so' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -672,7 +672,7 @@
   },
   {
     "id": 62,
-    "name": "ta",
+    "name": "'ta' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -683,7 +683,7 @@
   },
   {
     "id": 63,
-    "name": "chi",
+    "name": "'chi' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -694,7 +694,7 @@
   },
   {
     "id": 64,
-    "name": "tsu",
+    "name": "'tsu' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -705,7 +705,7 @@
   },
   {
     "id": 65,
-    "name": "te",
+    "name": "'te' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -716,7 +716,7 @@
   },
   {
     "id": 66,
-    "name": "to",
+    "name": "'to' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -727,7 +727,7 @@
   },
   {
     "id": 67,
-    "name": "na",
+    "name": "'na' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -738,7 +738,7 @@
   },
   {
     "id": 68,
-    "name": "ni",
+    "name": "'ni' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -749,7 +749,7 @@
   },
   {
     "id": 69,
-    "name": "nu",
+    "name": "'nu' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -760,7 +760,7 @@
   },
   {
     "id": 70,
-    "name": "ne",
+    "name": "'ne' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -771,7 +771,7 @@
   },
   {
     "id": 71,
-    "name": "no",
+    "name": "'no' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -782,7 +782,7 @@
   },
   {
     "id": 72,
-    "name": "ha",
+    "name": "'ha' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -793,7 +793,7 @@
   },
   {
     "id": 73,
-    "name": "hi",
+    "name": "'hi' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -804,7 +804,7 @@
   },
   {
     "id": 74,
-    "name": "fu",
+    "name": "'fu' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -815,7 +815,7 @@
   },
   {
     "id": 75,
-    "name": "he",
+    "name": "'he' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -826,7 +826,7 @@
   },
   {
     "id": 76,
-    "name": "ho",
+    "name": "'ho' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -837,7 +837,7 @@
   },
   {
     "id": 77,
-    "name": "ma",
+    "name": "'ma' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -848,7 +848,7 @@
   },
   {
     "id": 78,
-    "name": "mi",
+    "name": "'mi' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -859,7 +859,7 @@
   },
   {
     "id": 79,
-    "name": "mu",
+    "name": "'mu' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -870,7 +870,7 @@
   },
   {
     "id": 80,
-    "name": "me",
+    "name": "'me' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -881,7 +881,7 @@
   },
   {
     "id": 81,
-    "name": "mo",
+    "name": "'mo' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -892,7 +892,7 @@
   },
   {
     "id": 82,
-    "name": "ya",
+    "name": "'ya' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -903,7 +903,7 @@
   },
   {
     "id": 83,
-    "name": "yu",
+    "name": "'yu' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -914,7 +914,7 @@
   },
   {
     "id": 84,
-    "name": "yo",
+    "name": "'yo' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -925,7 +925,7 @@
   },
   {
     "id": 85,
-    "name": "ra",
+    "name": "'ra' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -936,7 +936,7 @@
   },
   {
     "id": 86,
-    "name": "ri",
+    "name": "'ri' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -947,7 +947,7 @@
   },
   {
     "id": 87,
-    "name": "ru",
+    "name": "'ru' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -958,7 +958,7 @@
   },
   {
     "id": 88,
-    "name": "re",
+    "name": "'re' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -969,7 +969,7 @@
   },
   {
     "id": 89,
-    "name": "ro",
+    "name": "'ro' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -980,7 +980,7 @@
   },
   {
     "id": 90,
-    "name": "wa",
+    "name": "'wa' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -991,7 +991,7 @@
   },
   {
     "id": 91,
-    "name": "wo",
+    "name": "'wo' (Kana)",
     "categories": [
       "katakana"
     ],
@@ -1002,7 +1002,7 @@
   },
   {
     "id": 92,
-    "name": "n",
+    "name": "'n' (Kana)",
     "categories": [
       "katakana"
     ],

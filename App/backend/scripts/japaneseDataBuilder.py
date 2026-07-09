@@ -49,11 +49,15 @@ def build_static_database():
     i = 0
     
     for category, core_kana in KANA_DATASET.items():
+        if category == "hiragana":
+            postfix = "Hira"
+        else:
+            postfix = "Kana"
         for romaji, char in core_kana.items():
             i += 1
             kana_dataset.append({
                 "id": i,
-                "name": romaji,
+                "name": f"'{romaji}' ({postfix})",
                 "categories": [category],
                 "imageUrl": generate_kana_data_url(char),
                 "translations": {
