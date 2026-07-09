@@ -32,13 +32,13 @@ export const kanaResolvers = {
       });
       return foundKana
         ? new ObjectType(
-          foundKana.id,
-          foundKana.name,
-          (foundKana.translations as unknown as Translations) ||
-          ({} as Translations),
-          foundKana.categories,
-          foundKana.imageUrl
-        )
+            foundKana.id,
+            foundKana.name,
+            (foundKana.translations as unknown as Translations) ||
+              ({} as Translations),
+            foundKana.categories,
+            foundKana.imageUrl
+          )
         : null;
     },
   },

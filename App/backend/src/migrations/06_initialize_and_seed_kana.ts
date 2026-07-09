@@ -45,19 +45,17 @@ export const up = async ({
     },
   });
 
-  const formattedKana = kanaData.map(
-    (h: Record<string, unknown>) => {
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { id, ...rest } = h; // Remove duplicate id=1
-      return {
-        ...rest,
-        translations: JSON.stringify(rest.translations),
-        categories: JSON.stringify(rest.categories),
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      };
-    }
-  );
+  const formattedKana = kanaData.map((h: Record<string, unknown>) => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { id, ...rest } = h; // Remove duplicate id=1
+    return {
+      ...rest,
+      translations: JSON.stringify(rest.translations),
+      categories: JSON.stringify(rest.categories),
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    };
+  });
   await queryInterface.bulkInsert('kana', formattedKana);
 };
 
