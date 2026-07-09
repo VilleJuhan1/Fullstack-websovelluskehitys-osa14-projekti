@@ -30,7 +30,7 @@ export const up = async ({
       defaultValue: [],
     },
     imageUrl: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     createdAt: {

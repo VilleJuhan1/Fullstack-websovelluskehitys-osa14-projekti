@@ -34,7 +34,7 @@ Kana.init(
       defaultValue: [],
     },
     imageUrl: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
   },

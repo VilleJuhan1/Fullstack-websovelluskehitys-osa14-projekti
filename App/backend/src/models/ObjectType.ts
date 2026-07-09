@@ -1,10 +1,11 @@
 //models/Object.ts
 
 export interface Translations {
-  common: string;
-  official: string;
-  fin: string;
-  swe: string;
+  common?: string;
+  official?: string;
+  fin?: string;
+  swe?: string;
+  jpn?: string;
 }
 
 /**

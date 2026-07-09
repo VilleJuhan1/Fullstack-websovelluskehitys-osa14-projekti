@@ -88,5 +88,6 @@ export const typeDefs = `#graphql
   type TranslationsType {
     fin: String
     swe: String
+    jpn: String
   }
 `;
