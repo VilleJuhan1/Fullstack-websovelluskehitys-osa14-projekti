@@ -4,7 +4,21 @@
 
 ## Planned
 
-### 33 - If time, add a fourth category
+### 34 - Final review of the project readme
+
+  - due: 2026-07-19
+  - priority: high
+  - workload: Easy
+  - defaultExpanded: false
+    ```md
+    Before submitting the project repository for review, check the project readme file and also the files it references.
+    ```
+
+## In progress
+
+## Done
+
+### 33 - Add a fourth category
 
   - due: 2026-07-19
   - tags: [backend, frontend, postgresql]
@@ -12,17 +26,13 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] Find an API
-      - [ ] Extract the data with Python script
-      - [ ] Create the changes to backend
-      - [ ] Make the required changed to frontend
+      - [x] Find an API
+      - [x] Extract the data with Python script
+      - [x] Create the changes to backend
+      - [x] Make the required changed to frontend
     ```md
     As the project moves toward an end, if there is time, add atleast one extra quiz category
     ```
-
-## In progress
-
-## Done
 
 ### 33 - Images review
 

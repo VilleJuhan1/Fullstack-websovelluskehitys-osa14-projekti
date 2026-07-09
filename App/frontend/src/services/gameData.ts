@@ -1,10 +1,11 @@
 import { gql } from '@apollo/client';
 
-export type GameDataType = 'pokemon' | 'countries' | 'dota';
+export type GameDataType = 'pokemon' | 'countries' | 'dota' | 'kana';
 
 export interface Translations {
   fin?: string;
   swe?: string;
+  jpn?: string;
 }
 
 // The backend serves list of some ObjectType objects which translate into 'GameItem' on the frontend
@@ -49,6 +50,15 @@ export const GET_ALL_DATA = gql`
       categories
       imageUrl
     }
+    allKana {
+      id
+      name
+      translations {
+        jpn
+      }
+      categories
+      imageUrl
+    }
   }
 `;
 
@@ -57,4 +67,5 @@ export interface AllGameData {
   allPokemon: GameItem[];
   allCountries: GameItem[];
   allDotaHeroes: GameItem[];
+  allKana: GameItem[];
 }

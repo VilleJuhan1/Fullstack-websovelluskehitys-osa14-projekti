@@ -148,9 +148,9 @@ images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
   newTag: front-digital-bot-43767bf
-- name: villejuhan1/quiz-backend
+- digest: sha256:b63267fb9f7da86ba8dc2305eaa2fe02e208ef98e6d85a313feb7d00f5d9e4a7
+  name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-  newTag: happy-fox-0f53eff
-- name: villejuhan1/quiz-frontend
+- digest: sha256:83692ecd1152d4d51f7e1ccab531c2b43a27c65ab5774e1555b0fa76dec7a62c
+  name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
-  newTag: happy-fox-0f53eff

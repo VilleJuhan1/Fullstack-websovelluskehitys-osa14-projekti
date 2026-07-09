@@ -1,5 +1,6 @@
 import requests
 import json
+from japaneseDataBuilder import build_static_database as kanaDataBuilder
 
 # This helper function fetches country data from the REST Countries API and saves it to a local JSON file.
 
@@ -138,5 +139,6 @@ if __name__ == "__main__":
     # countryDataBuilder()
     # pokemonDataBuilder()
     # expandedPokemonDataBuilder()
-    dotaHeroDataBuilder()
+    # dotaHeroDataBuilder()
+    kanaDataBuilder()
     print("Done")

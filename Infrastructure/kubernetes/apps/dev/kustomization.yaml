@@ -41,7 +41,7 @@ patches:
             - name: frontend
               env:
                 - name: VITE_APP_VERSION
-                  value: gentle-fox-0792a0e
+                  value: swift-dolphin-7394a4e
               resources:
                 limits:
                   cpu: 100m
@@ -120,10 +120,10 @@ images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
   newTag: front-playful-sandbox-15b3fe7
-- digest: sha256:b2c9f2e9aec137b4fa195dc242affc1cee418989e55689d7149614b023daa188
+- digest: sha256:34d8f0a6fa6716a775f4e97bd9689aa3b0f719d0f163e543c27947dea06955a1
   name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-- digest: sha256:820d9108cc4c7aade91479c0dafb4ee94c135d7edf9979997ffbc2e2c4019196
+- digest: sha256:913810da6ff0c5fe338cb05a296a63b35b19af80e64cc7d37b15b70a74998f45
   name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
 labels:
