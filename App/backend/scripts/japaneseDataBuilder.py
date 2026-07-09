@@ -35,9 +35,9 @@ def generate_kana_data_url(character: str) -> str:
     <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
       <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&amp;display=swap');
-        .text {{ font-family: 'Noto Sans JP', sans-serif; font-size: 140px; fill: #FFFFFF; }}
+        .text {{ font-family: 'Noto Sans JP', sans-serif; font-size: 160px; fill: #FFFFFF; }}
       </style>
-      <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="text">{character}</text>
+      <text x="50%" y="60%" dominant-baseline="middle" text-anchor="middle" class="text">{character}</text>
     </svg>
     """.strip()
     return f"data:image/svg+xml;utf8,{quote(svg_template)}"

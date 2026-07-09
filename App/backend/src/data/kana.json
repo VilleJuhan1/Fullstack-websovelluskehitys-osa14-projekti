@@ -5,7 +5,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%82%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%82%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "あ"
     }
@@ -16,7 +16,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "い"
     }
@@ -27,7 +27,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "う"
     }
@@ -38,7 +38,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "え"
     }
@@ -49,7 +49,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "お"
     }
@@ -60,7 +60,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "か"
     }
@@ -71,7 +71,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "き"
     }
@@ -82,7 +82,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "く"
     }
@@ -93,7 +93,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%91%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%91%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "け"
     }
@@ -104,7 +104,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%93%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%93%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "こ"
     }
@@ -115,7 +115,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%95%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%95%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "さ"
     }
@@ -126,7 +126,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%97%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%97%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "し"
     }
@@ -137,7 +137,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%99%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%99%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "す"
     }
@@ -148,7 +148,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "せ"
     }
@@ -159,7 +159,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "そ"
     }
@@ -170,7 +170,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%9F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "た"
     }
@@ -181,7 +181,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A1%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A1%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ち"
     }
@@ -192,7 +192,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "つ"
     }
@@ -203,7 +203,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "て"
     }
@@ -214,7 +214,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "と"
     }
@@ -225,7 +225,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "な"
     }
@@ -236,7 +236,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "に"
     }
@@ -247,7 +247,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AC%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AC%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ぬ"
     }
@@ -258,7 +258,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ね"
     }
@@ -269,7 +269,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AE%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AE%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "の"
     }
@@ -280,7 +280,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "は"
     }
@@ -291,7 +291,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ひ"
     }
@@ -302,7 +302,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B5%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B5%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ふ"
     }
@@ -313,7 +313,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%B8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "へ"
     }
@@ -324,7 +324,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ほ"
     }
@@ -335,7 +335,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BE%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BE%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ま"
     }
@@ -346,7 +346,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%81%BF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "み"
     }
@@ -357,7 +357,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%80%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%80%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "む"
     }
@@ -368,7 +368,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%81%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%81%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "め"
     }
@@ -379,7 +379,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%82%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%82%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "も"
     }
@@ -390,7 +390,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "や"
     }
@@ -401,7 +401,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ゆ"
     }
@@ -412,7 +412,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "よ"
     }
@@ -423,7 +423,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%89%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%89%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ら"
     }
@@ -434,7 +434,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "り"
     }
@@ -445,7 +445,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "る"
     }
@@ -456,7 +456,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8C%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8C%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "れ"
     }
@@ -467,7 +467,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ろ"
     }
@@ -478,7 +478,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "わ"
     }
@@ -489,7 +489,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%92%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%92%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "を"
     }
@@ -500,7 +500,7 @@
     "categories": [
       "hiragana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%93%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%93%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ん"
     }
@@ -511,7 +511,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ア"
     }
@@ -522,7 +522,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "イ"
     }
@@ -533,7 +533,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ウ"
     }
@@ -544,7 +544,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "エ"
     }
@@ -555,7 +555,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "オ"
     }
@@ -566,7 +566,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "カ"
     }
@@ -577,7 +577,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "キ"
     }
@@ -588,7 +588,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ク"
     }
@@ -599,7 +599,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B1%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B1%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ケ"
     }
@@ -610,7 +610,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B3%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B3%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "コ"
     }
@@ -621,7 +621,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B5%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B5%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "サ"
     }
@@ -632,7 +632,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B7%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B7%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "シ"
     }
@@ -643,7 +643,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B9%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%B9%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ス"
     }
@@ -654,7 +654,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "セ"
     }
@@ -665,7 +665,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ソ"
     }
@@ -676,7 +676,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%82%BF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "タ"
     }
@@ -687,7 +687,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%81%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%81%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "チ"
     }
@@ -698,7 +698,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%84%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ツ"
     }
@@ -709,7 +709,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%86%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "テ"
     }
@@ -720,7 +720,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%88%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ト"
     }
@@ -731,7 +731,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8A%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ナ"
     }
@@ -742,7 +742,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ニ"
     }
@@ -753,7 +753,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8C%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8C%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ヌ"
     }
@@ -764,7 +764,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8D%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ネ"
     }
@@ -775,7 +775,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8E%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8E%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ノ"
     }
@@ -786,7 +786,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%8F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ハ"
     }
@@ -797,7 +797,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%92%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%92%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ヒ"
     }
@@ -808,7 +808,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%95%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%95%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "フ"
     }
@@ -819,7 +819,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%98%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%98%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ヘ"
     }
@@ -830,7 +830,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9B%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ホ"
     }
@@ -841,7 +841,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9E%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9E%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "マ"
     }
@@ -852,7 +852,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%9F%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ミ"
     }
@@ -863,7 +863,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A0%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A0%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ム"
     }
@@ -874,7 +874,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A1%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A1%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "メ"
     }
@@ -885,7 +885,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "モ"
     }
@@ -896,7 +896,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A4%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ヤ"
     }
@@ -907,7 +907,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A6%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ユ"
     }
@@ -918,7 +918,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A8%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ヨ"
     }
@@ -929,7 +929,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A9%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%A9%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ラ"
     }
@@ -940,7 +940,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AA%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "リ"
     }
@@ -951,7 +951,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AB%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ル"
     }
@@ -962,7 +962,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AC%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AC%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "レ"
     }
@@ -973,7 +973,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AD%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ロ"
     }
@@ -984,7 +984,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%AF%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ワ"
     }
@@ -995,7 +995,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%B2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%B2%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ヲ"
     }
@@ -1006,7 +1006,7 @@
     "categories": [
       "katakana"
     ],
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20140px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2255%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%B3%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22200%22%20height%3D%22200%22%20viewBox%3D%220%200%20200%20200%22%3E%0A%20%20%20%20%20%20%3Cstyle%3E%0A%20%20%20%20%20%20%20%20%40import%20url%28%27https%3A//fonts.googleapis.com/css2%3Ffamily%3DNoto%2BSans%2BJP%3Awght%40700%26amp%3Bdisplay%3Dswap%27%29%3B%0A%20%20%20%20%20%20%20%20.text%20%7B%20font-family%3A%20%27Noto%20Sans%20JP%27%2C%20sans-serif%3B%20font-size%3A%20160px%3B%20fill%3A%20%23FFFFFF%3B%20%7D%0A%20%20%20%20%20%20%3C/style%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%2250%25%22%20y%3D%2260%25%22%20dominant-baseline%3D%22middle%22%20text-anchor%3D%22middle%22%20class%3D%22text%22%3E%E3%83%B3%3C/text%3E%0A%20%20%20%20%3C/svg%3E",
     "translations": {
       "jpn": "ン"
     }
