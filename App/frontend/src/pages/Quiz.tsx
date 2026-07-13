@@ -230,8 +230,8 @@ export default function Quiz() {
                   );
                   const updatedScores = hasCategory
                     ? currentScores.map((s: ScoreItem) =>
-                      s.category === updatedScore.category ? updatedScore : s
-                    )
+                        s.category === updatedScore.category ? updatedScore : s
+                      )
                     : [...currentScores, updatedScore];
 
                   cache.writeQuery<GetMeData>({

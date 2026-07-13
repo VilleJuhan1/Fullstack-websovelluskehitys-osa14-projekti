@@ -24,7 +24,7 @@
   - workload: Normal
   - defaultExpanded: false
   - steps:
-      - [ ] On iOS focus doesn't clear between rounds
+      - [x] On iOS focus doesn't clear between rounds
       - [ ] Some images aren't loading properly always, ie. blue/red pokemon
       - [ ] If the previous correct answer is present on the next round, the focus stays around the box
       - [ ] Check if more resources could be added to pods/cluster

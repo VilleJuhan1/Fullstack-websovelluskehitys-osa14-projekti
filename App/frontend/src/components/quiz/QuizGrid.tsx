@@ -32,7 +32,8 @@ const QuizGrid: React.FC<QuizGridProps> = ({
         const optionIdStr = String(option.id);
         const correctIdStr = correctId ? String(correctId) : null;
 
-        const isCorrectSelection = isAnyCorrectSelected && optionIdStr === correctIdStr;
+        const isCorrectSelection =
+          isAnyCorrectSelected && optionIdStr === correctIdStr;
         const isWrongSelection = wrongGuesses.map(String).includes(optionIdStr);
         const isDimmed = isAnyCorrectSelected && optionIdStr !== correctIdStr;
         const isButtonDisabled = disabled || isWrongSelection;
