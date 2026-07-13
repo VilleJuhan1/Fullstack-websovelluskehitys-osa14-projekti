@@ -16,7 +16,9 @@ export function GameProvider({ children }: { children: ReactNode }) {
       if (
         p.imageUrl &&
         typeof p.imageUrl === 'string' &&
-        p.imageUrl.startsWith('https://raw.githubusercontent.com/PokeAPI/sprites/master/')
+        p.imageUrl.startsWith(
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/'
+        )
       ) {
         return {
           ...p,
