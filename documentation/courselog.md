@@ -6,8 +6,8 @@
 | April | 29 |
 | May | 81,5 |
 | June | 37 |
-| July | 27 |
-| **Total** | **174,5** |
+| July | 28 |
+| **Total** | **175,5** |
 
 For more complete log, see below.
 
@@ -102,4 +102,5 @@ For more complete log, see below.
 | July 8th | Reviewed the test coverage for frontend and backend, added more tests for backend. Checked actions and Dockerfiles for versions and updated if newer was available. Reviewed image build process and added some additional security measures | 4 |
 | July 9th | Added a 4th category: Kana (japanese characters) to quiz game | 3 |
 | July 13th | Bug fixes | 2 |
-| **Total** | | **27** |
+| July 13th | Project review for course submission | 1 | 
+| **Total** | | **28** |
