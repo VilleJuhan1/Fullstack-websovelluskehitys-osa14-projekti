@@ -5,6 +5,9 @@ interface QuizButtonProps {
   item: GameItem;
   onClick: (item: GameItem) => void;
   disabled?: boolean;
+  isCorrectSelection?: boolean;
+  isWrongSelection?: boolean;
+  isDimmed?: boolean;
 }
 
 // A component that renders the quiz options as a button with the image of the item
@@ -12,10 +15,15 @@ const QuizButton: React.FC<QuizButtonProps> = ({
   item,
   onClick,
   disabled = false,
+  isCorrectSelection = false,
+  isWrongSelection = false,
+  isDimmed = false,
 }) => {
   return (
     <button
-      className="quiz-option"
+      className={`quiz-option ${isCorrectSelection ? 'correct-selection' : ''} ${
+        isWrongSelection ? 'wrong-selection' : ''
+      } ${isDimmed ? 'dimmed' : ''}`}
       onClick={() => onClick(item)}
       disabled={disabled}
       style={{
