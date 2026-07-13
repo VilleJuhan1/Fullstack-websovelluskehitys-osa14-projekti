@@ -82,6 +82,7 @@ export default function Quiz() {
   const [feedbackState, setFeedbackState] = useState<
     'idle' | 'correct' | 'wrong'
   >('idle');
+  const [wrongGuesses, setWrongGuesses] = useState<string[]>([]);
 
   const [initialHighestStreak, setInitialHighestStreak] = useState<number>(0);
   const prevTargetRef = useRef<GameItem | null>(null);
@@ -111,6 +112,7 @@ export default function Quiz() {
       setStreak(0);
       setAttempts(0);
       prevTargetRef.current = null;
+      setWrongGuesses([]);
       console.log('Streak reset to 0 (new game started)');
     });
   }, [category, selectedCategory]);
@@ -158,6 +160,7 @@ export default function Quiz() {
     setOptions(selected);
     setTargetItem(newTarget);
     setFeedbackState('idle');
+    setWrongGuesses([]);
 
     // Blur active element to prevent focus highlight from carrying over to the next round
     // to prevent an option being pre-highlighted at the start of a round
@@ -184,6 +187,15 @@ export default function Quiz() {
 
   const handleSelect = (selectedItem: GameItem) => {
     if (feedbackState === 'correct') return;
+
+    // Blur active element immediately to prevent iOS Safari from retaining focus/active states
+    // before the button is disabled or updated in the next round
+    if (
+      typeof document !== 'undefined' &&
+      document.activeElement instanceof HTMLElement
+    ) {
+      document.activeElement.blur();
+    }
 
     setAttempts((prev) => prev + 1);
     if (selectedItem.id === targetItem?.id) {
@@ -245,6 +257,7 @@ export default function Quiz() {
     } else {
       setFeedbackState('wrong');
       setStreak(0);
+      setWrongGuesses((prev) => [...prev, String(selectedItem.id)]);
       console.log('Streak reset to 0 (wrong answer)');
     }
   };
@@ -289,6 +302,9 @@ export default function Quiz() {
                 options={options}
                 onSelect={handleSelect}
                 disabled={feedbackState === 'correct'}
+                correctId={targetItem?.id}
+                feedbackState={feedbackState}
+                wrongGuesses={wrongGuesses}
               />
             )}
           </>

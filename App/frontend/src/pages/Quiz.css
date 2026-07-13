@@ -59,12 +59,44 @@
   transition: all var(--transition-bouncy);
 }
 
-.quiz-option:hover {
-  transform: translateY(-4px);
-  border-color: var(--color-primary);
-  box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
+@media (hover: hover) {
+  .quiz-option:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
+  }
 }
 
 .quiz-option:active {
   transform: scale(0.95);
+}
+
+/* Feedback Highlights: Explicit correct/wrong styling during feedback period */
+.quiz-option.correct-selection {
+  border-color: var(--color-success) !important;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.7) !important;
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  transform: scale(1.05);
+  z-index: 10;
+}
+
+.quiz-option.wrong-selection {
+  border-color: var(--color-danger) !important;
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.4) !important;
+  background-color: rgba(244, 63, 94, 0.1) !important;
+  opacity: 0.6 !important;
+  animation: shake 0.4s ease-in-out;
+}
+
+.quiz-option.dimmed {
+  opacity: 0.4 !important;
+  transform: scale(0.95);
+  filter: grayscale(40%);
+}
+
+/* Shake animation for wrong answers */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
 }
