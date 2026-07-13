@@ -6,8 +6,8 @@
 | April | 29 |
 | May | 81,5 |
 | June | 37 |
-| July | 25 |
-| **Total** | **172,5** |
+| July | 27 |
+| **Total** | **174,5** |
 
 For more complete log, see below.
 
@@ -101,4 +101,5 @@ For more complete log, see below.
 | July 7th | Reviewed and updated App documentation: docstrings, comments and readme files | 2 |
 | July 8th | Reviewed the test coverage for frontend and backend, added more tests for backend. Checked actions and Dockerfiles for versions and updated if newer was available. Reviewed image build process and added some additional security measures | 4 |
 | July 9th | Added a 4th category: Kana (japanese characters) to quiz game | 3 |
-| **Total** | | **25** |
+| July 13th | Bug fixes | 2 |
+| **Total** | | **27** |

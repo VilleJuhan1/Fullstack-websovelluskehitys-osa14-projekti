@@ -9,7 +9,28 @@ import { GameContext } from '../hooks/useGame';
 export function GameProvider({ children }: { children: ReactNode }) {
   const { data, loading, error } = useQuery<AllGameData>(GET_ALL_DATA);
 
-  const pokemon = useMemo(() => data?.allPokemon ?? [], [data]);
+  /* Pokemon logic changed to test out an alternative backend image source due to occasional loading issues */
+  const pokemon = useMemo(() => {
+    const list = data?.allPokemon ?? [];
+    return list.map((p) => {
+      if (
+        p.imageUrl &&
+        typeof p.imageUrl === 'string' &&
+        p.imageUrl.startsWith(
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/'
+        )
+      ) {
+        return {
+          ...p,
+          imageUrl: p.imageUrl.replace(
+            'https://raw.githubusercontent.com/PokeAPI/sprites/master/',
+            'https://cdn.jsdelivr.net/gh/PokeAPI/sprites@master/'
+          ),
+        };
+      }
+      return p;
+    });
+  }, [data]);
   const countries = useMemo(() => data?.allCountries ?? [], [data]);
   const dota = useMemo(() => {
     const heroes = data?.allDotaHeroes ?? [];
