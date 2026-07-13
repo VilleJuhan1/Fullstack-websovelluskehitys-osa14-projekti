@@ -6,6 +6,8 @@
 
 ## In progress
 
+## Done
+
 ### 34 - Final review of the project readme
 
   - due: 2026-07-19
@@ -15,8 +17,6 @@
     ```md
     Before submitting the project repository for review, check the project readme file and also the files it references.
     ```
-
-## Done
 
 ### 35 - Bug fixes
 
