@@ -72,3 +72,4 @@
 | 2.8.0 | 2026-07-09 | Kana category for Quiz game | Added a fourth category: Kana (Japanese characters) to Quiz game  | swift-dolphin-7394a4e | happy-tiger-8c988e4 |
 | 2.8.1 | 2026-07-13 | Bug fixes | Fixed (hopefully) some annoying bugs:<br>- Quiz option focus (highlight) not resetting between rounds on iOS devices<br>- Pokemon API failing to provide images fast enough<br>- Focus not resetting if the correct answer is an option on the next round  | happy-tiger-5a99b15 | obvious-lion-0195c6b |
 | 2.8.2 | 2026-07-13 | Course submission review | Reviewed the root readme and some other files before doing the course submission  | happy-tiger-5a99b15 | obvious-lion-0195c6b |
+| 2.8.3 | 2026-07-20 | Bug fixes | Fixed a bug where deployment workflow no longer used proper socials links and some broken links in the main project readme file.  | shiny-tiger-8a80d10 | happy-eagle-3f14c32 |
