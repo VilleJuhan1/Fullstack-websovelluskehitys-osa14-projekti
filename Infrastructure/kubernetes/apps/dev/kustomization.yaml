@@ -41,7 +41,7 @@ patches:
             - name: frontend
               env:
                 - name: VITE_APP_VERSION
-                  value: happy-tiger-5a99b15
+                  value: shiny-tiger-8a80d10
               resources:
                 limits:
                   cpu: 100m
@@ -120,10 +120,10 @@ images:
 - name: villejuhan1/frontpage
   newName: villejuhan1/frontpage
   newTag: front-playful-sandbox-15b3fe7
-- digest: sha256:2a13fb6eaa52f9d0bff4396576bccae2b0fb710731bc0eeac3a17ada8fa32b12
+- digest: sha256:84d04590e37a92f6e63d3f050f8ceaf54298cac93522bcbe9a852980ded1d26f
   name: villejuhan1/quiz-backend
   newName: villejuhan1/quiz-backend
-- digest: sha256:dc5056342ba55ba07f28de2bcbd4d1964f55a40be13c4a5dbe3dae8ccf841f1c
+- digest: sha256:1f052e86b4e9b669cb1b73bca294229fdcd56566cb107f650d53459e17eab2f9
   name: villejuhan1/quiz-frontend
   newName: villejuhan1/quiz-frontend
 labels:
