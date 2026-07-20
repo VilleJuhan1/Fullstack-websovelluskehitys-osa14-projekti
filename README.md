@@ -15,7 +15,7 @@ The main part of the project, in addition to all the infrastructure, is the Quiz
 
 ## Infrastructure Documentation
 
-- [Infrastructure Overview](Infrastructure/README.md)
+- [Infrastructure Overview](Infrastructure/readme.md)
 - [Installation](Infrastructure/ansible/readme.md)
 
 ## App Documentation
@@ -28,7 +28,7 @@ A simple cloud landing page was created as a late addition to work as a project 
 
 - [Frontend](App/frontend/readme.md)
 - [Backend](App/backend/readme.md)
-- [Cloud Sandbox Landing Page](App/frontpage/readme.md)
+- [Cloud Sandbox Landing Page](App/frontpage/README.md)
 
 ## Initial planning/requirements specification
 
