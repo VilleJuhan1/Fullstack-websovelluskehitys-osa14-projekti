@@ -4,7 +4,7 @@ This repository is my showcase project for the University of Helsinki [Fullstack
 
 - [Changelog](changelog.md)
 - [To-do Kanban Board](todo.md)
-- [Course journal](Documentation/courselog.md)
+- [Course journal](documentation/courselog.md)
 
 ## Live app
 
